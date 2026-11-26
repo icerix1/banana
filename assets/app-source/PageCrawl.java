@@ -3,12 +3,12 @@ import android.content.Context;
 import java.io.*;import java.net.*;import java.util.*;import java.util.regex.*;
 /** Bounded, same-site, level-order reading of the links found inside a page the user sent. Text only; nothing fetched is executed. */
 final class PageCrawl{
- static final int DEFAULT_DEPTH=3,MAX_DEPTH=10,DEFAULT_PAGES=40,MAX_PAGES=300,MAX_QUEUE=20000,PAGE_LINKS=4000;
- static final long TIME_MS=900000L;static volatile long pauseMs=400;
+ static final int DEFAULT_DEPTH=4,MAX_DEPTH=20,DEFAULT_PAGES=100,MAX_PAGES=1000,MAX_QUEUE=50000,PAGE_LINKS=4000;
+ static final long TIME_MS=3600000L;static volatile long pauseMs=400;
  static final Pattern SKIP_FILE=Pattern.compile("(?i).*\\.(?:pdf|jpe?g|png|gif|webp|svg|ico|bmp|tiff?|zip|rar|7z|gz|tgz|bz2|tar|mp[34]|m4[av]|avi|mov|mkv|webm|wav|ogg|flac|css|js|mjs|json|xml|rss|atom|woff2?|ttf|otf|eot|exe|msi|dmg|apk|iso|bin|docx?|xlsx?|pptx?|odt|ods|epub|csv)$");
  static final Pattern SKIP_ACTION=Pattern.compile("(?i)(?:^|[/?&=_.-])(?:login|logout|log-in|log-out|signin|signup|sign-in|sign-up|register|registro|carrito|cart|checkout)(?:$|[/?&=_.-])|[?&](?:action=(?:edit|history|raw|submit)|oldid=|diff=|printable=|share=|replytocom=|sessionid=|sid=)");
- static final Pattern WANTED=Pattern.compile("\\bsub ?(?:enlaces?|links?|paginas?|vinculos?)\\b|\\b(?:enlaces|links|vinculos|paginas) (?:internos|internas|que (?:tiene|contiene|incluye)|de adentro|relacionad[oa]s)\\b|\\btod[oa]s? (?:los|las|sus) (?:enlaces|links|vinculos|paginas)\\b|\\b(?:todo el|el) sitio (?:completo|entero)\\b|\\btodo el sitio\\b|\\btoda la (?:web|pagina web)\\b|\\b(?:[0-9]+|un|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|muchos|varios) niveles?\\b|\\ben profundidad\\b|\\bprofundidad (?:de )?[0-9]+\\b|\\b(?:recorre|recorra|recorras|rastrea|rastrees|explora|explores) \\b|\\b(?:segui|sigue|sigas) (?:los|sus) (?:enlaces|links|vinculos)\\b|\\by (?:sus|los) (?:enlaces|links|vinculos)\\b");
- static final String[] NUMBERS={"cero","un","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez"};
+ static final Pattern WANTED=Pattern.compile("\\bsub ?(?:enlaces?|links?|paginas?|vinculos?)\\b|\\b(?:enlaces|links|vinculos|paginas) (?:internos|internas|que (?:tiene|contiene|incluye)|de adentro|relacionad[oa]s)\\b|\\btod[oa]s? (?:los|las|sus) (?:enlaces|links|vinculos|paginas)\\b|\\b(?:todo el|el) sitio (?:completo|entero)\\b|\\btodo el sitio\\b|\\btoda la (?:web|pagina web)\\b|\\b(?:[0-9]+|un|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce|trece|catorce|quince|dieciseis|diecisiete|dieciocho|diecinueve|veinte|muchos|varios) niveles?\\b|\\ben profundidad\\b|\\bprofundidad (?:de )?[0-9]+\\b|\\b(?:recorre|recorra|recorras|rastrea|rastrees|explora|explores) \\b|\\b(?:segui|sigue|sigas) (?:los|sus) (?:enlaces|links|vinculos)\\b|\\by (?:sus|los) (?:enlaces|links|vinculos)\\b");
+ static final String[] NUMBERS={"cero","un","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez","once","doce","trece","catorce","quince","dieciseis","diecisiete","dieciocho","diecinueve","veinte"};
 
  static final class Plan{String url="";int depth=DEFAULT_DEPTH,pages=DEFAULT_PAGES;String note="";}
  interface Saver{String save(PageReader.Document d)throws Exception;}
@@ -28,12 +28,12 @@ final class PageCrawl{
  static boolean followUp(String raw){if(raw.matches("(?isu).*(?:https?://|www\\.).*"))return false;String q=wording(raw);return q.matches("(?:ahora |y |tambien |dale |si |bueno )*(?:lee|lea|leas|leeme|segui|sigue|sigas|recorre|recorra|rastrea|explora|aprende|aprendas|mira|abri|abre)(?: tambien| ahora)? (?:de )?(?:todos )?(?:los|sus|esos|estos) (?:sub ?enlaces|sub ?links|sub ?paginas|enlaces internos|enlaces|links|vinculos)(?: (?:de|en) (?:esa|esta|la|ese|este|el) (?:pagina|enlace|link|sitio|fuente|articulo))?(?: (?:con|hasta|en|a|de|maximo|max|y) .*)?");}
  static int number(String word){if(word.matches("[0-9]{1,6}"))return Integer.parseInt(word);for(int i=0;i<NUMBERS.length;i++)if(NUMBERS[i].equals(word))return i;return -1;}
  static Plan plan(String raw,String url){Plan p=new Plan();p.url=url;String q=wording(raw);StringBuilder note=new StringBuilder();
-  Matcher depth=Pattern.compile("\\b([0-9]{1,6}|un|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez) niveles?\\b|\\bprofundidad (?:de )?([0-9]{1,6})\\b").matcher(q);
+  Matcher depth=Pattern.compile("\\b([0-9]{1,6}|un|dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce|trece|catorce|quince|dieciseis|diecisiete|dieciocho|diecinueve|veinte) niveles?\\b|\\bprofundidad (?:de )?([0-9]{1,6})\\b").matcher(q);
   if(depth.find()){int n=number(depth.group(1)!=null?depth.group(1):depth.group(2));if(n>MAX_DEPTH){note.append("Pediste ").append(n).append(" niveles; el máximo es ").append(MAX_DEPTH).append(".\n");n=MAX_DEPTH;}if(n>=1)p.depth=n;}
-  else if(q.matches(".*\\b(?:muchos|varios) niveles\\b.*|.*\\ben profundidad\\b.*|.*\\b(?:todo el sitio|sitio completo|sitio entero|toda la web)\\b.*"))p.depth=6;
+  else if(q.matches(".*\\b(?:muchos|varios) niveles\\b.*|.*\\ben profundidad\\b.*|.*\\b(?:todo el sitio|sitio completo|sitio entero|toda la web)\\b.*"))p.depth=8;
   Matcher pages=Pattern.compile("\\b(?:hasta|maximo|max|como mucho|no mas de|tope de|limite de) ([0-9]{1,6}) (?:sub ?)?(?:paginas|enlaces|links|vinculos|documentos)\\b|\\b([0-9]{1,6}) (?:sub ?)?paginas\\b").matcher(q);
   if(pages.find()){int n=number(pages.group(1)!=null?pages.group(1):pages.group(2));if(n>MAX_PAGES){note.append("Pediste ").append(n).append(" páginas; el máximo por recorrido es ").append(MAX_PAGES).append(".\n");n=MAX_PAGES;}if(n>=1)p.pages=n;}
-  else if(p.depth>=6)p.pages=Math.max(p.pages,120);
+  else if(p.depth>=8)p.pages=Math.max(p.pages,300);
   p.note=note.toString();return p;}
 
  static String site(String host){String h=host.toLowerCase(Locale.ROOT);return h.startsWith("www.")?h.substring(4):h;}

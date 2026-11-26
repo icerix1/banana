@@ -1,3 +1,15 @@
+BANANA0.68 — RECORRIDOS DE SUBENLACES MÁS GRANDES
+
+Se ampliaron los límites de la lectura de subenlaces de0.67; el resto funciona igual.
+• Por defecto: 4 niveles y hasta 100 páginas (antes 3 y 40).
+• «Todo el sitio» o «muchos niveles»: 8 niveles y hasta 300 páginas (antes 6 y 120).
+• Máximo que podés pedir: 20 niveles y 1000 páginas por recorrido (antes 10 y 300). Ejemplo: «Recorré https://sitio con 12 niveles y hasta 800 páginas».
+• Tiempo total por recorrido: 60 minutos (antes 15).
+
+El tope de 1000 páginas existe porque la biblioteca admite 1024 documentos y 512MiB en total: un recorrido máximo la llena casi entera, y los documentos que ya tenías cuentan. Si se llena, el recorrido se detiene, conserva lo guardado y lo informa; para seguir hay que borrar conocimientos o respaldarlos antes. Un recorrido grande puede dejar el chat ocupado hasta una hora, sin botón para cancelar, y usa datos y batería en proporción. Donde la sección0.67 de abajo menciona los números anteriores, valen los de arriba.
+
+--- Funciones anteriores; prevalecen los cambios0.68 descritos arriba ---
+
 BANANA0.67 — SUBENLACES POR NIVELES
 
 Ahora puede leer, además de la página que le pasás, las páginas enlazadas desde ella, y las enlazadas desde esas, nivel por nivel. Cada página leída se guarda como un documento separado, con su propia dirección como fuente, y entra en la misma biblioteca, índice y cola de entrenamiento que una lectura normal.

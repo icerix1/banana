@@ -1,3 +1,9 @@
+# Banana0.68: límites ampliados del recorrido
+
+PageCrawl: DEFAULT_DEPTH4, MAX_DEPTH20, DEFAULT_PAGES100, MAX_PAGES1000, TIME_MS60min, cola50000; «muchos niveles/todo el sitio» usa8 niveles y300 páginas. Los números en palabras llegan a veinte. MAX_PAGES queda por debajo de NotebookDisk.MAX_DOCUMENTS(1024), que no cambió, igual que TOTAL_BYTES512MiB. Sin otros cambios de diseño respecto de0.67.
+
+--- Arquitectura previa ---
+
 # Banana0.67: lectura de subenlaces por niveles
 
 PageStream.extract recoge los href de las etiquetas a mientras extrae el texto, sin DOM: primero los del contenido main/article, después el resto del cuerpo, después menús/pies; quedan en PageReader.Document.links (máximo4000 por página). PageCrawl recorre en anchura desde la página inicial: resolve normaliza a HTTPS sin fragmento, descarta binarios, acciones de sesión/edición y otros esquemas, y codifica caracteres no ASCII; key deduplica (www y barra final). Sólo encola el mismo sitio. Robots interpreta robots.txt (grupo propio o *, coincidencia más larga, * y $, Crawl-delay hasta5s) y se aplica a los subenlaces, no a la página pedida.
