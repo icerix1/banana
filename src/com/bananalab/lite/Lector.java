@@ -4,7 +4,10 @@ import org.json.*;import java.io.*;import java.util.*;
 /** Own reader model: receives a saved fragment plus the question and answers by copying one sentence of that fragment.
  *  The app only shows an answer that is found literally in the fragment; anything else is discarded. */
 final class Lector{
- static final int CTX_TOKENS=330,QUESTION_TOKENS=40,ANSWER_TOKENS=110,MAX_WINDOWS=2;
+ static final int CTX_TOKENS=330,PROMPT_TOKENS=350,QUESTION_TOKENS=40,ANSWER_TOKENS=110,MAX_WINDOWS=2;
+ /** Whether the document title is placed before the fragment. Only a reader trained with titles (the Lector 2 attempt) can use it;
+  *  the shipped Lector 1 was not, so it stays off. */
+ static final boolean TITLES=false;
  /** Minimum confidence to show a sentence. Calibrated on set-aside examples: a chosen sentence that shares no content word with the
   *  question was right in 4 of 162 cases, so it is never shown (a value above 1 disables that route). */
  static final double SHARED_CONFIDENCE=.3,FREE_CONFIDENCE=2;
@@ -16,7 +19,9 @@ final class Lector{
  static synchronized void forget(){model=null;loaded="";}
 
  /** [bos][user] fragment [user] question [assistant]; null when a part does not fit. */
- static int[] prompt(BananaTransformer m,String fragment,String question){List<Integer> ctx=m.encode(fragment,CTX_TOKENS+1),q=m.encode(question,QUESTION_TOKENS+1);if(ctx.isEmpty()||q.isEmpty()||ctx.size()>CTX_TOKENS||q.size()>QUESTION_TOKENS)return null;int[] out=new int[ctx.size()+q.size()+4];int n=0;out[n++]=2;out[n++]=3;for(int v:ctx)out[n++]=v;out[n++]=3;for(int v:q)out[n++]=v;out[n++]=4;return out;}
+ static int[] prompt(BananaTransformer m,String fragment,String question){List<Integer> ctx=m.encode(fragment,PROMPT_TOKENS+1),q=m.encode(question,QUESTION_TOKENS+1);if(ctx.isEmpty()||q.isEmpty()||ctx.size()>PROMPT_TOKENS||q.size()>QUESTION_TOKENS)return null;int[] out=new int[ctx.size()+q.size()+4];int n=0;out[n++]=2;out[n++]=3;for(int v:ctx)out[n++]=v;out[n++]=3;for(int v:q)out[n++]=v;out[n++]=4;return out;}
+ /** The fragment preceded by «titulo : X .» when the title is informative and fits; the answer is still searched only in the fragment. */
+ static String context(BananaTransformer m,String title,String window){if(!TITLES||title==null)return window;String t=title.replaceAll("\\s+"," ").trim();if(t.length()<2||t.equals("Corrección del usuario")||t.equals("Documento de texto")||window.startsWith(t))return window;if(t.length()>80)t=t.substring(0,80);String with="titulo : "+t+" . "+window;return m.encode(with,PROMPT_TOKENS+1).size()<=PROMPT_TOKENS?with:window;}
  /** Greedy answer in the tokenizer's lower case, or null if the model did not finish inside the limits. */
  static String generate(BananaTransformer m,String fragment,String question)throws Exception{Out o=answer(m,fragment,question);return o==null?null:o.text;}
  static final class Out{final String text;final double confidence;Out(String t,double c){text=t;confidence=c;}}
@@ -44,7 +49,7 @@ final class Lector{
  static final class Found{final String sentence;final JSONObject row;Found(String s,JSONObject r){sentence=s;row=r;}}
  /** Reads the best windows of the retrieved documents until one yields a grounded sentence. */
  static Found read(BananaTransformer m,JSONArray rows,String question)throws Exception{Set<String> terms=ReadingKnowledge.words(question);String q=question.toLowerCase(Locale.ROOT).replaceAll("[¿?¡!]"," ").replaceAll("\\s+"," ").trim();int tried=0;
-  for(int i=0;i<rows.length()&&i<3&&tried<MAX_WINDOWS;i++){JSONObject row=rows.getJSONObject(i);for(String window:windows(m,row.getString("text"),terms,MAX_WINDOWS-tried)){tried++;JavaChat.phase("Leyendo el fragmento con el lector neuronal…");Out o=answer(m,window,q);String grounded=o==null?null:ground(window,o.text);if(grounded!=null&&o.confidence>=(ReadingKnowledge.common(terms,ReadingKnowledge.words(grounded))>0?SHARED_CONFIDENCE:FREE_CONFIDENCE))return new Found(grounded,row);if(tried>=MAX_WINDOWS)break;}}
+  for(int i=0;i<rows.length()&&i<3&&tried<MAX_WINDOWS;i++){JSONObject row=rows.getJSONObject(i);for(String window:windows(m,row.getString("text"),terms,MAX_WINDOWS-tried)){tried++;JavaChat.phase("Leyendo el fragmento con el lector neuronal…");Out o=answer(m,context(m,row.optString("title"),window),q);String grounded=o==null?null:ground(window,o.text);if(grounded!=null&&o.confidence>=(ReadingKnowledge.common(terms,ReadingKnowledge.words(grounded))>0?SHARED_CONFIDENCE:FREE_CONFIDENCE))return new Found(grounded,row);if(tried>=MAX_WINDOWS)break;}}
   return null;}
  /** Attributed answer text, or null when the reader is unavailable or found nothing literal. Never throws: the extractive route remains. */
  static String reply(Context c,JSONArray rows,String question){try{if(rows==null||rows.length()==0)return null;Found f=read(load(c),rows,question);if(f==null)return null;return "Mi lector neuronal leyó el fragmento guardado y señala esta oración:\n\n«"+f.sentence+"»\nFuente: "+ReadingKnowledge.source(f.row)+"\n\nEs una oración literal de la fuente, elegida por el modelo propio; puede no responder exactamente la pregunta y no es una verificación nueva.";}catch(Throwable unavailable){return null;}}

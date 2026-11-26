@@ -1,5 +1,7 @@
 # Mejoras propuestas después de0.69
 
+Estado tras0.70: hechos el 7 y el 8 (recorrido en segundo plano y reanudable), el 10 sólo para PDF por enlace, y la tendencia del examen para el 13. Los puntos 1, 2, 4 y 5 se intentaron con un Lector 2 que no resultó mejor y no se adoptó (ver VALIDACION-0.70.md). El resto sigue pendiente.
+
 Lista de trabajo pendiente, ordenada por cuánto aportaría. Nada de esto está hecho. Los números de partida salen de VALIDACION-0.69.md.
 
 ## Primero: comprobar0.69 en la tablet

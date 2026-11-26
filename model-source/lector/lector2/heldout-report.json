@@ -1,0 +1,83 @@
+{
+ "readerExactSentence": 121,
+ "note": "Ejemplos generados con las plantillas de entrenamiento sobre artículos no vistos; el extractor léxico se mide sobre el mismo fragmento único. No es un benchmark externo.",
+ "noSharedWordRight": [
+  5,
+  3,
+  2,
+  1,
+  0,
+  0,
+  0
+ ],
+ "sharedWordShown": [
+  123,
+  108,
+  70,
+  41,
+  34,
+  23,
+  14
+ ],
+ "byKind": {
+  "year": {
+   "lexical": 5,
+   "examples": 13,
+   "reader": 3
+  },
+  "define": {
+   "lexical": 48,
+   "examples": 57,
+   "reader": 43
+  },
+  "mention": {
+   "lexical": 98,
+   "examples": 199,
+   "reader": 60
+  },
+  "relation": {
+   "lexical": 14,
+   "examples": 81,
+   "reader": 15
+  }
+ },
+ "readerShownButOtherSentence": 130,
+ "lexicalSilent": 176,
+ "lexicalAnswered": 174,
+ "meanFragmentTokens": 136,
+ "examples": 350,
+ "fallbackShownWhenLexicalSilent": 37,
+ "noSharedWordShown": [
+  128,
+  93,
+  30,
+  5,
+  4,
+  2,
+  2
+ ],
+ "sharedWordRight": [
+  116,
+  101,
+  67,
+  40,
+  33,
+  23,
+  14
+ ],
+ "confidenceLevels": [
+  0,
+  0.3,
+  0.5,
+  0.7,
+  0.8,
+  0.9,
+  0.95
+ ],
+ "secondsPerExampleHostJvm": 0.45373993164285714,
+ "readerNothingShown": 99,
+ "lexicalSameSentence": 165,
+ "appGateRight": 101,
+ "appGateShown": 108,
+ "fallbackRightWhenLexicalSilent": 34
+}

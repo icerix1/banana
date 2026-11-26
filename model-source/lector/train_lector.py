@@ -1,5 +1,5 @@
 """Entrena desde cero el lector de Banana (inicio aleatorio; sin pesos ni profesor externos).
-Uso: train_lector.py rows.pkl tokenizer.json salida/ minutos"""
+Uso: train_lector.py rows.pkl tokenizer.json salida/ minutos [estado_inicial.pt nombre]"""
 import sys,os,time,math,random,pickle,json,collections,multiprocessing as mp,torch,torch.nn.functional as F
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import lector_tok as T,lector_data as D
@@ -43,22 +43,24 @@ def evaluate(model,tok,examples):
     model.train();return {k:round(hit[k]/total[k],3) for k in total},round(sum(hit.values())/max(1,sum(total.values())),3)
 if __name__=='__main__':
     rows=pickle.load(open(sys.argv[1],'rb'));merges=json.load(open(sys.argv[2]))['merges'];out=sys.argv[3];minutes=float(sys.argv[4]);os.makedirs(out,exist_ok=True)
-    tok=T.Tokenizer(merges);train_rows=rows[:60000];held=rows[84000:86000]
+    tok=T.Tokenizer(merges);train_rows=rows[:80000];held=rows[84000:86000];init=sys.argv[5] if len(sys.argv)>5 else None;name=sys.argv[6] if len(sys.argv)>6 else 'lector1';peak=LR*(.5 if init else 1)
     hp=D.Pool(held);rng=random.Random(99);examples=[]
     while len(examples)<120:
         ex=hp.example(rng);e=D.encode_example(tok,ex) if ex else None
         if e:examples.append((ex,e))
     json.dump([list(ex) for ex,_ in examples],open(os.path.join(out,'heldout-examples.json'),'w'),ensure_ascii=False)
     queue=mp.Queue(maxsize=64);mp.Process(target=producer,args=(train_rows,merges,queue,7),daemon=True).start()
-    torch.manual_seed(1);torch.set_num_threads(3);model=Lector(tok.vocab_size,**CFG);opt=torch.optim.AdamW(model.parameters(),lr=LR,weight_decay=.01,betas=(.9,.98))
+    torch.manual_seed(1);torch.set_num_threads(3);model=Lector(tok.vocab_size,**CFG)
+    if init:model.load_state_dict(torch.load(init))
+    opt=torch.optim.AdamW(model.parameters(),lr=LR,weight_decay=.01,betas=(.9,.98))
     params=sum(t.numel() for t in model.tensors());print('params exportados',params,'entrenados',sum(p.numel() for p in model.parameters()),flush=True)
     start=time.time();budget=minutes*60;step=0;seen=0;last=start;nextsave=600;log=open(os.path.join(out,'training-log.txt'),'a')
     def save(tag):
-        w=model.weights();open(os.path.join(out,'lector1.bin'),'wb').write(container(w,'\n'.join(tok.vocab_lines())+'\n',tok.tokenizer_json()));torch.save(model.state_dict(),os.path.join(out,'state.pt'))
+        w=model.weights();open(os.path.join(out,name+'.bin'),'wb').write(container(w,'\n'.join(tok.vocab_lines())+'\n',tok.tokenizer_json()));torch.save(model.state_dict(),os.path.join(out,'state.pt'))
     while True:
         el=time.time()-start
         if el>budget:break
-        frac=el/budget;lr=LR*min(1,(step+1)/600)*(0.08+0.92*0.5*(1+math.cos(math.pi*frac)))
+        frac=el/budget;lr=peak*min(1,(step+1)/(200 if init else 600))*(0.08+0.92*0.5*(1+math.cos(math.pi*frac)))
         for g in opt.param_groups:g['lr']=lr
         x,y,w=collate(queue.get());logits=model(x);loss_all=F.cross_entropy(logits.view(-1,logits.size(-1)),y.view(-1),ignore_index=-100,reduction='none').view_as(w)
         loss=(loss_all*w).sum()/w.sum();opt.zero_grad();loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.0);opt.step();step+=1;seen+=int((y!=-100).sum())
@@ -67,4 +69,4 @@ if __name__=='__main__':
         if el>nextsave:
             nextsave+=900;save('ckpt');by,em=evaluate(model,tok,examples[:60]);line=f'EVAL min {el/60:.1f} exact {em} {by}';print(line,flush=True);log.write(line+'\n');log.flush()
     save('final');by,em=evaluate(model,tok,examples);line=f'FINAL steps {step} tokens {seen} exact {em} {by}';print(line,flush=True);log.write(line+'\n')
-    json.dump({'name':'Banana Lector 1','external_weights':False,'initialization':'random','parameters':params,'layers':CFG['layers'],'width':CFG['d'],'heads':CFG['heads'],'context_tokens':CFG['context'],'ff':CFG['ff'],'vocab_size':tok.vocab_size,'tokenizer':'UTF-8 byte BPE por palabras entrenado sobre el mismo texto','training_text':'Wikipedia en español (dump 20231101, CC BY-SA 4.0), primeros 12000 caracteres de 60000 artículos','tasks':'respuesta = oración literal del fragmento o negativa fija; más continuación de texto','steps':step,'training_tokens':seen,'heldout_exact_match':em,'heldout_by_kind':by,'heldout_note':'120 ejemplos generados con las mismas plantillas sobre artículos no vistos; no es un benchmark externo','limitations':'Copia oraciones del fragmento; no razona ni responde sin fragmento. Sólo español.'},open(os.path.join(out,'model-card.json'),'w'),ensure_ascii=False,indent=1)
+    json.dump({'name':'Banana '+name.replace('lector','Lector '),'continues_from':'Lector 1' if init else None,'external_weights':False,'initialization':'random','parameters':params,'layers':CFG['layers'],'width':CFG['d'],'heads':CFG['heads'],'context_tokens':CFG['context'],'ff':CFG['ff'],'vocab_size':tok.vocab_size,'tokenizer':'UTF-8 byte BPE por palabras entrenado sobre el mismo texto','training_text':'Wikipedia en español (dump 20231101, CC BY-SA 4.0), primeros 12000 caracteres de 80000 artículos','tasks':'respuesta = oración literal del fragmento o negativa fija; más continuación de texto','steps':step,'training_tokens':seen,'heldout_exact_match':em,'heldout_by_kind':by,'heldout_note':'120 ejemplos generados con las mismas plantillas sobre artículos no vistos; no es un benchmark externo','limitations':'Copia oraciones del fragmento; no razona ni responde sin fragmento. Sólo español.'},open(os.path.join(out,'model-card.json'),'w'),ensure_ascii=False,indent=1)

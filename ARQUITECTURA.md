@@ -1,3 +1,13 @@
+# Banana0.70: recorrido reanudable y PDF
+
+CrawlJob guarda en banana-crawl-job el plan, el sitio, contadores, hasta5000 enlaces en cola y las claves de las páginas guardadas. start() lee y guarda la primera página en el hilo del chat; step() reconstruye «visto» con claves guardadas más cola, reutiliza PageCrawl (resolve, collect, Robots, pausa, detección de biblioteca llena) y persiste cada5 páginas. Una marca started evita que una tanda vieja pise un recorrido cancelado o reemplazado. LearningLoop.cycle atiende primero el recorrido pendiente (25 páginas o50s) y devuelve true para que LearningService siga llamando; KnowledgeNotebook.crawl elige el segundo plano sólo en la app instalada con el aprendizaje continuo activo y conserva PageCrawl.run en los demás casos.
+
+PdfText no usa bibliotecas: localiza «n g obj», decodifica FlateDecode/ASCII85/ASCIIHex (sin predictores), abre flujos de objetos, recorre el árbol de páginas con herencia de recursos, lee ToUnicode (bfchar/bfrange, códigos de1 o2 bytes) y, sin tabla, asume Windows-1252. Interpreta Tj, TJ, comillas, Td/TD/T*/Tm para espacios y saltos. Rechaza cifrados. PageReader.fetch acepta application/pdf hasta32MiB, PageReader.unwrap une renglones de párrafo y pdfDocument produce el mismo Document en archivo que una página.
+
+Lector.context y Lector.TITLES quedan preparados para un lector entrenado con título; con Lector 1 están apagados. LectorExam.history agrega la tendencia de los últimos seis exámenes.
+
+--- Arquitectura previa ---
+
 # Banana0.69: lector con fragmento, crecimiento, examen propio y banco de ejemplos
 
 BananaTransformer acepta ahora dimensiones generales acotadas (d32–512, hasta16 capas, contexto1024, vocabulario16384) además de las combinaciones históricas; Session.advance lee un token sin calcular la salida. BytePairs tiene un modo words (trozos palabra/signo con espacio inicial, fusión por rango con caché LRU) que debe coincidir con model-source/lector/lector_tok.py; el modo anterior de Chat3.4 no cambió. El lector viaja en un contenedor BRD1 = pesos + vocabulario + tokenizador, y ModelDepot lo maneja como tipo reader (assets/lector1/lector1.bin, límite96MB).

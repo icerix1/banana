@@ -18,7 +18,7 @@ final class MobileCore{
   BananaEngine.Result readingWeights=ReadingTraining.handle(c,message);if(readingWeights!=null)return readingWeights;
   BananaEngine.Result feedbackResult=ConversationFeedback.handle(c,message);if(feedbackResult!=null)return feedbackResult;
   BananaEngine.Result clarification=RequestDialogue.handle(c,message);if(clarification!=null)return clarification;
-  BananaEngine.Result examples=CodeBank.handle(c,message);if(examples!=null)return examples;
+  BananaEngine.Result examples=CodeBank.handle(c,message);if(examples!=null)return examples;BananaEngine.Result crawling=CrawlJob.handle(c,message);if(crawling!=null)return crawling;
   BananaEngine.Result notebook=KnowledgeNotebook.handle(c,message);if(notebook!=null)return notebook;
   BananaEngine.Result general=GeneralSourceChat.handle(c,message);if(general!=null)return general;
   BananaEngine.Result improvement=ImprovementFlow.handle(c,message);if(improvement!=null)return improvement;

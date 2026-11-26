@@ -1,0 +1,28 @@
+{
+ "name": "Banana Lector 2",
+ "continues_from": "Lector 1",
+ "external_weights": false,
+ "initialization": "random",
+ "parameters": 4344832,
+ "layers": 6,
+ "width": 192,
+ "heads": 6,
+ "context_tokens": 512,
+ "ff": 768,
+ "vocab_size": 4096,
+ "tokenizer": "UTF-8 byte BPE por palabras entrenado sobre el mismo texto",
+ "training_text": "Wikipedia en español (dump 20231101, CC BY-SA 4.0), primeros 12000 caracteres de 80000 artículos",
+ "tasks": "respuesta = oración literal del fragmento o negativa fija; más continuación de texto",
+ "steps": 17993,
+ "training_tokens": 57703321,
+ "heldout_exact_match": 0.35,
+ "heldout_by_kind": {
+  "mention": 0.288,
+  "negative": 0.486,
+  "relation": 0.167,
+  "year": 0.0,
+  "define": 0.545
+ },
+ "heldout_note": "120 ejemplos generados con las mismas plantillas sobre artículos no vistos; no es un benchmark externo",
+ "limitations": "Copia oraciones del fragmento; no razona ni responde sin fragmento. Sólo español."
+}

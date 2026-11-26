@@ -1,0 +1,98 @@
+step 200 min 1.5 loss 2.049 answer 0.157 lr 0.00050 tokens 643308 tok/s 6927
+step 400 min 2.9 loss 2.104 answer 0.143 lr 0.00050 tokens 1289905 tok/s 7371
+step 600 min 4.3 loss 1.990 answer 0.118 lr 0.00050 tokens 1930172 tok/s 7486
+step 800 min 5.9 loss 2.348 answer 0.108 lr 0.00050 tokens 2574019 tok/s 7321
+step 1000 min 7.2 loss 2.066 answer 0.123 lr 0.00050 tokens 3210784 tok/s 7422
+step 1200 min 8.7 loss 2.106 answer 0.108 lr 0.00049 tokens 3851708 tok/s 7394
+EVAL min 10.0 exact 0.283 {'mention': 0.148, 'negative': 0.526, 'relation': 0.143, 'year': 0.5, 'define': 0.2}
+step 1400 min 10.5 loss 1.971 answer 0.114 lr 0.00049 tokens 4490773 tok/s 7135
+step 1600 min 12.3 loss 2.250 answer 0.132 lr 0.00049 tokens 5129912 tok/s 6971
+step 1800 min 13.9 loss 2.064 answer 0.112 lr 0.00049 tokens 5767807 tok/s 6926
+step 2000 min 15.3 loss 2.130 answer 0.133 lr 0.00048 tokens 6410609 tok/s 7004
+step 2200 min 16.6 loss 1.927 answer 0.105 lr 0.00048 tokens 7047240 tok/s 7080
+step 2400 min 17.9 loss 1.978 answer 0.108 lr 0.00048 tokens 7688094 tok/s 7147
+step 2600 min 19.3 loss 2.147 answer 0.084 lr 0.00048 tokens 8331799 tok/s 7189
+step 2800 min 20.7 loss 1.947 answer 0.114 lr 0.00047 tokens 8971307 tok/s 7234
+step 3000 min 22.0 loss 2.011 answer 0.144 lr 0.00047 tokens 9609704 tok/s 7276
+step 3200 min 23.4 loss 2.091 answer 0.121 lr 0.00046 tokens 10251895 tok/s 7299
+step 3400 min 24.9 loss 2.275 answer 0.097 lr 0.00046 tokens 10887709 tok/s 7300
+EVAL min 25.0 exact 0.267 {'mention': 0.185, 'negative': 0.421, 'relation': 0.0, 'year': 0.0, 'define': 0.6}
+step 3600 min 26.3 loss 1.983 answer 0.094 lr 0.00046 tokens 11529767 tok/s 7320
+step 3800 min 27.7 loss 2.037 answer 0.128 lr 0.00045 tokens 12171893 tok/s 7316
+step 4000 min 29.2 loss 2.041 answer 0.088 lr 0.00045 tokens 12813965 tok/s 7317
+step 4200 min 30.6 loss 2.002 answer 0.121 lr 0.00044 tokens 13458126 tok/s 7336
+step 4400 min 31.9 loss 2.130 answer 0.294 lr 0.00044 tokens 14100234 tok/s 7374
+step 4600 min 33.2 loss 2.821 answer 0.096 lr 0.00043 tokens 14741846 tok/s 7397
+step 4800 min 34.6 loss 2.050 answer 0.089 lr 0.00042 tokens 15384550 tok/s 7401
+step 5000 min 36.1 loss 2.103 answer 0.063 lr 0.00042 tokens 16024204 tok/s 7407
+step 5200 min 37.5 loss 2.335 answer 0.109 lr 0.00041 tokens 16664941 tok/s 7402
+step 5400 min 38.9 loss 2.082 answer 0.130 lr 0.00041 tokens 17305419 tok/s 7407
+EVAL min 40.0 exact 0.217 {'mention': 0.296, 'negative': 0.105, 'relation': 0.143, 'year': 0.0, 'define': 0.4}
+step 5600 min 40.3 loss 2.087 answer 0.120 lr 0.00040 tokens 17938487 tok/s 7421
+step 5800 min 41.7 loss 2.162 answer 0.130 lr 0.00039 tokens 18575475 tok/s 7428
+step 6000 min 43.2 loss 1.817 answer 0.079 lr 0.00039 tokens 19220064 tok/s 7423
+step 6200 min 44.6 loss 2.212 answer 0.120 lr 0.00038 tokens 19858379 tok/s 7423
+step 6400 min 46.1 loss 1.965 answer 0.093 lr 0.00037 tokens 20499220 tok/s 7414
+step 6600 min 47.5 loss 2.215 answer 0.109 lr 0.00036 tokens 21138879 tok/s 7425
+step 6800 min 48.7 loss 1.966 answer 0.096 lr 0.00036 tokens 21784875 tok/s 7451
+step 7000 min 50.1 loss 1.976 answer 0.070 lr 0.00035 tokens 22434138 tok/s 7459
+step 7200 min 51.5 loss 1.845 answer 0.053 lr 0.00034 tokens 23076768 tok/s 7475
+step 7400 min 52.8 loss 1.841 answer 0.102 lr 0.00034 tokens 23715872 tok/s 7486
+step 7600 min 54.1 loss 1.982 answer 0.130 lr 0.00033 tokens 24356889 tok/s 7503
+EVAL min 55.0 exact 0.3 {'mention': 0.185, 'negative': 0.579, 'relation': 0.0, 'year': 0.0, 'define': 0.4}
+step 7800 min 55.5 loss 1.795 answer 0.067 lr 0.00032 tokens 24996977 tok/s 7511
+step 8000 min 56.8 loss 1.975 answer 0.116 lr 0.00032 tokens 25636217 tok/s 7520
+step 8200 min 58.2 loss 2.101 answer 0.061 lr 0.00031 tokens 26279785 tok/s 7530
+step 8400 min 59.6 loss 2.371 answer 0.144 lr 0.00030 tokens 26921811 tok/s 7534
+step 8600 min 61.0 loss 1.939 answer 0.125 lr 0.00029 tokens 27566537 tok/s 7532
+step 8800 min 62.4 loss 2.737 answer 0.051 lr 0.00028 tokens 28210624 tok/s 7535
+step 9000 min 63.9 loss 1.936 answer 0.086 lr 0.00028 tokens 28854837 tok/s 7530
+step 9200 min 65.4 loss 2.032 answer 0.087 lr 0.00027 tokens 29499989 tok/s 7518
+step 9400 min 66.8 loss 2.184 answer 0.058 lr 0.00026 tokens 30135268 tok/s 7522
+step 9600 min 68.2 loss 1.986 answer 0.094 lr 0.00025 tokens 30774694 tok/s 7524
+step 9800 min 69.6 loss 1.742 answer 0.041 lr 0.00024 tokens 31420839 tok/s 7528
+EVAL min 70.0 exact 0.333 {'mention': 0.185, 'negative': 0.684, 'relation': 0.0, 'year': 0.0, 'define': 0.4}
+step 10000 min 71.0 loss 2.555 answer 0.161 lr 0.00024 tokens 32058542 tok/s 7530
+step 10200 min 72.4 loss 2.319 answer 0.106 lr 0.00023 tokens 32696952 tok/s 7532
+step 10400 min 73.8 loss 2.437 answer 0.083 lr 0.00022 tokens 33334347 tok/s 7532
+step 10600 min 75.2 loss 1.839 answer 0.078 lr 0.00021 tokens 33972085 tok/s 7529
+step 10800 min 76.6 loss 1.958 answer 0.063 lr 0.00021 tokens 34610454 tok/s 7529
+step 11000 min 78.1 loss 1.978 answer 0.063 lr 0.00020 tokens 35252578 tok/s 7524
+step 11200 min 79.6 loss 2.020 answer 0.097 lr 0.00019 tokens 35889487 tok/s 7515
+step 11400 min 81.1 loss 1.988 answer 0.053 lr 0.00018 tokens 36530296 tok/s 7505
+step 11600 min 82.9 loss 2.100 answer 0.219 lr 0.00017 tokens 37169792 tok/s 7477
+step 11800 min 84.3 loss 1.887 answer 0.072 lr 0.00017 tokens 37812877 tok/s 7472
+EVAL min 85.0 exact 0.35 {'mention': 0.259, 'negative': 0.579, 'relation': 0.143, 'year': 0.0, 'define': 0.4}
+step 12000 min 85.8 loss 2.579 answer 0.080 lr 0.00016 tokens 38460311 tok/s 7473
+step 12200 min 87.2 loss 1.931 answer 0.064 lr 0.00015 tokens 39109513 tok/s 7474
+step 12400 min 88.7 loss 2.169 answer 0.087 lr 0.00015 tokens 39753579 tok/s 7470
+step 12600 min 90.1 loss 1.847 answer 0.069 lr 0.00014 tokens 40392394 tok/s 7468
+step 12800 min 91.7 loss 1.773 answer 0.068 lr 0.00013 tokens 41034695 tok/s 7462
+step 13000 min 93.2 loss 2.044 answer 0.070 lr 0.00013 tokens 41675803 tok/s 7454
+step 13200 min 94.7 loss 2.179 answer 0.098 lr 0.00012 tokens 42314752 tok/s 7450
+step 13400 min 96.1 loss 1.973 answer 0.188 lr 0.00011 tokens 42957870 tok/s 7450
+step 13600 min 97.5 loss 2.320 answer 0.060 lr 0.00011 tokens 43594290 tok/s 7450
+step 13800 min 99.0 loss 1.845 answer 0.046 lr 0.00010 tokens 44240266 tok/s 7449
+EVAL min 100.0 exact 0.333 {'mention': 0.259, 'negative': 0.526, 'relation': 0.143, 'year': 0.0, 'define': 0.4}
+step 14000 min 100.5 loss 1.885 answer 0.044 lr 0.00010 tokens 44886875 tok/s 7447
+step 14200 min 101.9 loss 1.822 answer 0.085 lr 0.00009 tokens 45531268 tok/s 7448
+step 14400 min 103.3 loss 2.334 answer 0.092 lr 0.00009 tokens 46172444 tok/s 7450
+step 14600 min 104.7 loss 2.363 answer 0.060 lr 0.00008 tokens 46810474 tok/s 7451
+step 14800 min 106.2 loss 1.924 answer 0.099 lr 0.00008 tokens 47453497 tok/s 7446
+step 15000 min 107.8 loss 1.690 answer 0.110 lr 0.00007 tokens 48097751 tok/s 7439
+step 15200 min 109.2 loss 2.032 answer 0.072 lr 0.00007 tokens 48735774 tok/s 7439
+step 15400 min 110.6 loss 2.323 answer 0.075 lr 0.00006 tokens 49371993 tok/s 7439
+step 15600 min 112.1 loss 1.826 answer 0.083 lr 0.00006 tokens 50014169 tok/s 7439
+step 15800 min 113.5 loss 1.753 answer 0.059 lr 0.00006 tokens 50657048 tok/s 7441
+step 16000 min 114.9 loss 1.897 answer 0.059 lr 0.00006 tokens 51296587 tok/s 7439
+EVAL min 115.0 exact 0.383 {'mention': 0.333, 'negative': 0.579, 'relation': 0.143, 'year': 0.0, 'define': 0.4}
+step 16200 min 116.5 loss 3.130 answer 0.054 lr 0.00005 tokens 51939270 tok/s 7433
+step 16400 min 118.0 loss 1.839 answer 0.081 lr 0.00005 tokens 52584287 tok/s 7428
+step 16600 min 119.6 loss 2.114 answer 0.074 lr 0.00005 tokens 53230539 tok/s 7421
+step 16800 min 121.0 loss 2.347 answer 0.126 lr 0.00005 tokens 53869486 tok/s 7417
+step 17000 min 122.5 loss 2.652 answer 0.103 lr 0.00004 tokens 54509933 tok/s 7417
+step 17200 min 124.0 loss 1.716 answer 0.078 lr 0.00004 tokens 55156059 tok/s 7411
+step 17400 min 125.5 loss 1.901 answer 0.065 lr 0.00004 tokens 55795791 tok/s 7408
+step 17600 min 127.1 loss 1.661 answer 0.043 lr 0.00004 tokens 56441808 tok/s 7402
+step 17800 min 128.6 loss 2.276 answer 0.043 lr 0.00004 tokens 57087836 tok/s 7401
+FINAL steps 17993 tokens 57703321 exact 0.35 {'mention': 0.288, 'negative': 0.486, 'relation': 0.167, 'year': 0.0, 'define': 0.545}

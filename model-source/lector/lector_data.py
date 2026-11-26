@@ -67,13 +67,16 @@ class Pool:
             if pars:self.articles.append((title(t),pars))
     def example(self,rng,kind=None):
         """Devuelve (contexto, pregunta, respuesta, tipo) o None."""
-        t,pars=rng.choice(self.articles);kind=kind or rng.choices(['define','mention','relation','year','negative'],[22,30,28,8,12])[0]
+        t,pars=rng.choice(self.articles);kind=kind or rng.choices(['define','mention','relation','year','negative'],[20,28,28,6,18])[0]
         pi=0 if kind=='define' and rng.random()<.8 else rng.randrange(len(pars));par=pars[pi]
         n=rng.randint(2,min(7,len(par)));start=rng.randrange(len(par)-n+1) if not (kind=='define' and pi==0) else 0
         ctx=list(par[start:start+n]);own=set(ctx)
         if rng.random()<.4:
             _,op=rng.choice(self.articles);extra=rng.choice(op);extra=extra[:rng.randint(1,min(3,len(extra)))]
             ctx=extra+ctx if rng.random()<.5 else ctx+extra
+        if len(ctx)>2 and rng.random()<.5:
+            cut=rng.randrange(1,len(ctx));ctx=ctx[cut:]+ctx[:cut]  # la respuesta no debe estar siempre al principio
+        head='titulo : '+t+' . ' if rng.random()<.5 else ''
         if kind=='negative':
             other=self.example(rng,rng.choice(['define','mention','relation']))
             if not other:return None
@@ -81,31 +84,35 @@ class Pool:
             body=plain(' '.join(ctx)).lower()
             words=[w for w in plain(other[1]).split() if len(w)>4 and w not in('sobre','donde','cuando','quien','cuanto','cuantos','tiene')]
             if not words or any(w in body for w in words):return None
-            return ' '.join(ctx),other[1],NEGATIVE,'negative'
+            return head+' '.join(ctx),other[1],NEGATIVE,'negative'
         if kind=='define':
             for s in ctx:
                 m=DEFINE.search(s)
                 if m and m.start()<120 and (plain(t).lower().split()[0] in plain(s[:m.start()+1]).lower()):
                     if sum(1 for o in ctx if o is not s and DEFINE.search(o) and plain(t).lower() in plain(o).lower())>0 and rng.random()<.7:continue
-                    return ' '.join(ctx),question(rng.choice(DEF_Q),rng,t=t),s,'define'
+                    return head+' '.join(ctx),question(rng.choice(DEF_Q),rng,t=t),s,'define'
             return None
         if kind=='mention':
             s=rng.choice(ctx);k=key_term(s,[o for o in ctx if o is not s],rng)
-            return (' '.join(ctx),question(rng.choice(MENTION_Q),rng,k=k),s,'mention') if k else None
+            return (head+' '.join(ctx),question(rng.choice(MENTION_Q),rng,k=k),s,'mention') if k else None
         if kind=='year':
             s=rng.choice(ctx);ys=YEAR.findall(s);rest=' '.join(o for o in ctx if o is not s)
             ys=[y for y in ys if y not in rest]
-            return (' '.join(ctx),question(rng.choice(YEAR_Q),rng,y=rng.choice(ys)),s,'year') if ys else None
+            return (head+' '.join(ctx),question(rng.choice(YEAR_Q),rng,y=rng.choice(ys)),s,'year') if ys else None
         order=list(range(len(RELATIONS)));rng.shuffle(order)
         for ri in order:
             pat,qs=RELATIONS[ri];hits=[s for s in ctx if pat.search(s)]
             if len(hits)==1:
                 s=hits[0];subject=t if s in own and rng.random()<.6 else (key_term(s,[o for o in ctx if o is not s],rng) or t)
-                return ' '.join(ctx),question(rng.choice(qs),rng,t=subject),s,'relation'
+                return head+' '.join(ctx),question(rng.choice(qs),rng,t=subject),s,'relation'
+        if rng.random()<.3:  # ninguna oración habla de eso: la respuesta correcta es la negativa
+            for ri in order:
+                pat,qs=RELATIONS[ri]
+                if not any(pat.search(s) for s in ctx):return head+' '.join(ctx),question(rng.choice(qs),rng,t=t),NEGATIVE,'negative'
         return None
     def text(self,rng):
         t,pars=rng.choice(self.articles);p=rng.choice(pars);return ' '.join(p)
-def encode_example(tok,ex,max_ctx=330,max_q=40,max_a=110):
+def encode_example(tok,ex,max_ctx=350,max_q=40,max_a=110):
     ctx,q,a,kind=ex;c=tok.encode(ctx);qq=tok.encode(q);aa=tok.encode(a)
     if len(c)>max_ctx or len(qq)>max_q or len(aa)>max_a or not aa:return None
     ids=[2,3]+c+[3]+qq+[4]+aa+[5];start=len(ids)-len(aa)-1

@@ -1,3 +1,28 @@
+BANANA0.70 — RECORRIDOS EN SEGUNDO PLANO Y LECTURA DE PDF
+
+RECORRIDO DE SUBENLACES SIN BLOQUEAR EL CHAT
+Cuando pedís leer los subenlaces de una página, el chat lee sólo esa primera página y te responde enseguida. El resto se lee en segundo plano, por tandas de hasta 25 páginas, con el mismo servicio del aprendizaje continuo. Podés seguir conversando.
+• «Estado del recorrido» o «¿cómo va el recorrido?»: páginas guardadas, por nivel, cuántas quedan en cola y qué falló.
+• «Pausá el recorrido» y «Seguí el recorrido».
+• «Cancelá el recorrido»: conserva lo ya guardado y descarta la cola.
+La cola queda guardada: si cerrás Banana o se reinicia el dispositivo, el recorrido continúa donde quedó cuando volvés a abrirla, sin releer lo ya guardado. Hay un recorrido por vez; para empezar otro, esperá o cancelá el actual. Siguen valiendo los límites de0.68 (hasta 20 niveles y 1000 páginas), el mismo sitio, robots.txt y la pausa entre páginas. Ya no rige el tope de 60 minutos.
+
+El recorrido avanza sólo mientras el aprendizaje continuo está activo y Android deja trabajar al servicio: con batería desde 25 % o cargador, sin ahorro de energía, y cediendo el paso cuando el chat o el editor trabajan. Mientras hay un recorrido pendiente, el entrenamiento espera. Si el aprendizaje continuo está pausado, el recorrido se hace como antes, dentro del chat y bloqueándolo.
+
+LECTURA DE PDF
+Un enlace a un PDF se lee ahora como una página: «leé https://sitio/documento.pdf». Extrae el texto de PDF con fuentes estándar o incrustadas, comprimidos y con flujos de objetos, respeta el orden de las páginas y une los renglones de cada párrafo. Límite: 32MiB por PDF. No lee PDF escaneados como imagen, ni protegidos con contraseña o cifrados, ni recupera bien texto de fuentes sin tabla de caracteres; en esos casos lo dice y no guarda nada. Las tablas y las columnas pueden salir desordenadas. Los recorridos de subenlaces todavía no siguen enlaces a PDF, y «aprendé de un archivo» sigue aceptando sólo TXT y Markdown.
+
+EXAMEN PROPIO: TENDENCIA
+«Estado del lector» y el panel muestran, a partir del sexto examen, si los últimos tres van mejor, igual o peor que los tres anteriores.
+
+EL LECTOR NO CAMBIÓ
+Se intentó un Lector 2, continuando el entrenamiento más de dos horas con ejemplos pensados para corregir que elija la primera oración. No salió mejor: se equivoca menos porque calla más, pero responde menos y acierta la mitad en preguntas como «cuándo nació». La app sigue con el Lector 1 de0.69. Los números están en VALIDACION-0.70.md.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.70.md. No se ejecutó en emulador ni en dispositivo; el recorrido dentro del servicio de Android queda por comprobar en tu tablet.
+
+--- Funciones anteriores; prevalecen los cambios0.70 descritos arriba ---
+
 BANANA0.69 — LECTOR NEURONAL, EXAMEN PROPIO Y EJEMPLOS DE JAVA
 
 UN MODELO NUEVO QUE LEE EL FRAGMENTO

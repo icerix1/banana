@@ -16,3 +16,24 @@ venv/bin/python train_lector.py rows.pkl tokenizer.json salida/ 100
 ```
 
 `training-log.txt` y `model-card.json` son los de la corrida que produjo `assets/lector1/lector1.bin`. Una primera corrida sin compartir embeddings no aprendió a copiar en 23 minutos y se descartó.
+
+## Lector 2: intento descartado (0.70)
+
+`lector2/` guarda el registro, la ficha y el informe de una continuación de 130 minutos desde los pesos de Lector 1 (17993 pasos, 57,7 millones de tokens, 80000 artículos). Cambios en `lector_data.py` para ese intento: oraciones del fragmento rotadas para que la respuesta no quede siempre primera, título del artículo antepuesto en la mitad de los ejemplos, más ejemplos con la negativa (18 % más negativas por relación ausente) y contexto de hasta 350 tokens. El `lector_data.py` actual es el de ese intento; el que entrenó a Lector 1 está en el commit a790664.
+
+Sobre las mismas 350 preguntas apartadas (sin título, sin rotación):
+
+| Medida | Lector 1 | Lector 2 |
+| --- | --- | --- |
+| readerExactSentence | 137 | 121 |
+| readerShownButOtherSentence | 148 | 130 |
+| appGateShown | 122 | 108 |
+| appGateRight | 110 | 101 |
+| fallbackShownWhenLexicalSilent | 45 | 37 |
+| fallbackRightWhenLexicalSilent | 39 | 34 |
+| aciertos en «year» | 1 | 3 |
+| aciertos en «define» | 43 | 43 |
+| aciertos en «mention» | 63 | 60 |
+| aciertos en «relation» | 30 | 15 |
+
+En diez fragmentos cortos escritos a mano: Lector 1 acertó 3 y mostró 7 oraciones equivocadas; Lector 2 acertó 4 y mostró 1. Lector 2 se equivoca menos porque calla más, pero responde menos y perdió la mitad de los aciertos en preguntas de relación. No hay evidencia de que sea mejor para la app, así que **la app sigue con Lector 1** y `Lector.TITLES` queda en falso. Sus pesos no se incluyen en el repositorio.
