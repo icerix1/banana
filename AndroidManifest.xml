@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bananalab.lite" android:versionCode="680000" android:versionName="0.68">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bananalab.lite" android:versionCode="690000" android:versionName="0.69">
  <uses-permission android:name="android.permission.INTERNET"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -7,7 +7,7 @@
  <uses-permission android:name="android.permission.WAKE_LOCK"/>
  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
- <application android:name=".LiteApplication" android:label="Banana" android:icon="@drawable/icon" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:largeHeap="false" android:hardwareAccelerated="false" android:supportsRtl="true">
+ <application android:name=".LiteApplication" android:label="Banana" android:icon="@drawable/icon" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:largeHeap="true" android:hardwareAccelerated="false" android:supportsRtl="true">
   <activity android:name=".BananaActivity" android:exported="false" android:launchMode="singleTop"/><activity android:name=".CharacterStudio" android:exported="false"/><activity android:name=".ChatActivity" android:exported="false"/><activity android:name=".MainActivity" android:exported="false"/><activity android:name=".StartActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
  <service android:name=".ResearchJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/><service android:name=".JavaTrialService" android:process=":banana_java_trial" android:exported="false"/><service android:name=".LearningService" android:exported="false" android:foregroundServiceType="specialUse"><property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-enabled continuous local training of the app own neural model from saved documents, with persistent progress, a visible pause action, and resource checks"/></service><service android:name=".LearningJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/><receiver android:name=".LearningBoot" android:exported="false"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/><action android:name="android.intent.action.MY_PACKAGE_REPLACED"/></intent-filter></receiver></application>
 </manifest>

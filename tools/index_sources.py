@@ -14,4 +14,4 @@ for p in sorted(src.glob('*.java')):
     (out/p.name).write_text(text)
     deps=sorted((set(re.findall(r'\b[A-Z][A-Za-z0-9]+\b',text)) & names)-{p.stem})
     files.append({'name':p.name,'path':'src/com/bananalab/lite/'+p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'references':deps})
-(root/'assets/code-map.json').write_text(json.dumps({'release':'0.68','files':files},ensure_ascii=False))
+(root/'assets/code-map.json').write_text(json.dumps({'release':'0.69','files':files},ensure_ascii=False))

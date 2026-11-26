@@ -1,3 +1,43 @@
+BANANA0.69 — LECTOR NEURONAL, EXAMEN PROPIO Y EJEMPLOS DE JAVA
+
+UN MODELO NUEVO QUE LEE EL FRAGMENTO
+Banana suma un segundo modelo propio, el Lector 1: 4.344.832 parámetros (Chat 3.4 tiene 783.518), 6 capas, ancho 192 y un vocabulario de 4096 piezas (antes 542). Chat 3.4 sigue igual y sigue siendo el que conversa. El lector hace una sola cosa: recibe un fragmento guardado más tu pregunta y copia la oración del fragmento que la responde.
+
+Se usa como segunda opción. Cuando preguntás sobre lo guardado, primero responde el buscador por palabras de siempre. Si ese buscador no encuentra nada, el lector lee los fragmentos candidatos y, si está seguro, muestra una oración con su fuente. Sólo se muestra texto que está literalmente en el fragmento: lo que no coincide letra por letra se descarta, así que no puede inventar. Tampoco se muestra una oración que no comparta ninguna palabra de contenido con la pregunta.
+
+CUÁNTO ACIERTA, MEDIDO
+Con 350 preguntas generadas sobre artículos que no vio al entrenarse: el buscador por palabras solo acierta la oración en 165; el lector solo, en 137. Usado como segunda opción con su filtro de confianza, el lector habló en 45 de los 176 casos donde el buscador no respondió y acertó 39. Juntos pasan de 165 a 204 aciertos de 350. En preguntas como «cuándo nació», «dónde queda» o «para qué sirve» el lector acierta más que el buscador (30 contra 14 de 81); en «qué es» y en búsquedas de un nombre acierta menos. Son preguntas de plantilla, no un examen externo. En fragmentos cortos inventados a mano acertó 2 de 6: es un lector débil, que tiende a elegir la primera oración.
+
+No responde sin fragmento, no razona, no resume y sólo entiende español. Agrega unos segundos a las preguntas que el buscador no resuelve. El texto con que se entrenó la base es Wikipedia en español, no corpus propio: ver INDEPENDENCIA.txt.
+
+APRENDE DE TUS LECTURAS Y SUMA PARÁMETROS
+El aprendizaje continuo ahora también entrena al lector con cada documento guardado: arma preguntas («qué es X», «qué dice sobre X») cuya respuesta es una oración literal del bloque, ajusta todos los pesos y sólo conserva el resultado si otra formulación de las mismas preguntas mejora y sus controles fijos no empeoran. Tus correcciones y aportes se estudian antes que las páginas web.
+
+Crece solo: al llegar a 150.000 y a 600.000 tokens de respuesta entrenados agrega una capa (unos 445.000 parámetros cada una), hasta 8. La capa nueva empieza sin efecto, de modo que las respuestas no cambian hasta que el entrenamiento la usa. «Hacé crecer el lector» agrega una capa a pedido, hasta 10. Cada capa hace más lenta la lectura y el entrenamiento. El vocabulario no crece en el dispositivo: quedó fijo en 4096 piezas.
+
+EXAMEN PROPIO EN SEGUNDO PLANO
+Uno de cada cinco bloques de cada documento se aparta y nunca se entrena. Cada 10 bloques entrenados, o cuando decís «tomate un examen», el lector se toma un examen de hasta 12 preguntas: tus correcciones, bloques apartados y bloques estudiados. Se anota cuántas oraciones exactas acertó, en total y en los bloques que nunca vio. Los documentos de menos de cinco bloques no tienen parte apartada.
+
+Antes de quedarse con un lector entrenado, lo compara con el mejor anterior en las mismas preguntas; si lee claramente peor, vuelve al anterior. Los bloques estudiados donde falla van a una cola de repaso que se atiende antes que material nuevo.
+
+Con el cargador puesto y Banana fuera de pantalla, al terminar la biblioteca empieza otra pasada, hasta 8 por día. Sin cargador no repite pasadas. Android puede igual suspender el proceso.
+
+«Estado del lector» o «progreso del lector» muestra tamaño, bloques aceptados y rechazados, tokens entrenados, los últimos exámenes y la cola de repaso. Lo mismo aparece en Proyecto → Aprendizaje continuo. El progreso es lento: un bloque lleva alrededor de un minuto en una tablet y cambia muy poco los pesos.
+
+EJEMPLOS DE JAVA DE LAS PÁGINAS
+Al leer una página o recorrer subenlaces, Banana separa los bloques de código que parecen Java y los guarda aparte, hasta 60. «Ejemplos de Java» los lista. «Mostrame el ejemplo 3» lo muestra con su fuente. «Probá el ejemplo 3» lo compila junto con todo Banana sin incorporarlo y guarda el veredicto del compilador. «Usá el ejemplo 3» sólo funciona si ya compiló: lo pasa al editor general de0.58, que lo prepara en la copia de fuentes y se puede deshacer. Un ejemplo no puede reemplazar una clase propia de Banana. No se ejecuta ningún ejemplo, y compilar no prueba qué hace. Banana todavía no escribe código nuevo por su cuenta a partir de estos ejemplos.
+
+AUTOPRUEBA
+Después de cada actualización, también de una APK reconstruida, Banana corre sola en segundo plano 9 comprobaciones: enlaces, pedidos, filtro de Java, extracción de texto, búsqueda, biblioteca, modelo de chat, lector y checkpoints. «Hacé una autoprueba» la repite y muestra el detalle. Si algo falla lo dice y sugiere reinstalar la APK anterior. Comprueba que las partes cargan y responden a entradas fijas; no prueba todas las funciones.
+
+OTROS CAMBIOS
+La APK pasa de unos 40 a unos 58 MB por el modelo nuevo. La app pide más memoria a Android (largeHeap) para entrenarlo. El progreso del lector, los exámenes y el banco de ejemplos no viajan en respaldos; la APK reconstruida sí incorpora los pesos entrenados del lector.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.69.md. Nada de esto se ejecutó en emulador ni en dispositivo: el entrenamiento, el examen y la autoprueba en Android quedan por comprobar en tu tablet.
+
+--- Funciones anteriores; prevalecen los cambios0.69 descritos arriba ---
+
 BANANA0.68 — RECORRIDOS DE SUBENLACES MÁS GRANDES
 
 Se ampliaron los límites de la lectura de subenlaces de0.67; el resto funciona igual.

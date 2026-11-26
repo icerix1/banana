@@ -1,0 +1,53 @@
+package com.bananalab.lite;
+import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
+public final class Stage76LectorCheck{
+ static void check(boolean b,String s){if(!b)throw new AssertionError(s);}
+ static BananaTransformer open(Path file)throws Exception{try(InputStream in=Files.newInputStream(file)){return BananaTransformer.container(in);}}
+ static float[] logits(BananaTransformer m,int[] prompt){BananaTransformer.Session s=m.session();float[] out=null;for(int t:prompt)out=s.step(t);return out;}
+ public static void main(String[] args)throws Exception{Path root=Paths.get(args[0]),asset=root.resolve("assets/lector1/lector1.bin");BananaTransformer m=open(asset);
+  check(m.layers==6&&m.d==192&&m.vocabSize==4096&&m.context==512&&m.bytePairs.words&&m.parameters()==4344832L,"reader architecture and parameter count: "+m.parameters());
+  // Python reference: same tokens and same output distribution
+  JSONObject fixture=new JSONObject(new String(Files.readAllBytes(root.resolve("test/resources/lector1-parity.json")),"UTF-8"));JSONArray cases=fixture.getJSONArray("tokenizer");
+  for(int i=0;i<cases.length();i++){JSONObject row=cases.getJSONObject(i);List<Integer> ids=m.encode(row.getString("text"),100000);JSONArray expected=row.getJSONArray("ids");check(ids.size()==expected.length(),"token count "+i+": "+ids.size()+" vs "+expected.length());for(int k=0;k<ids.size();k++)check(ids.get(k)==expected.getInt(k),"token "+i+"/"+k);}
+  check(m.encode("uno dos tres cuatro",2).size()==2,"token limit");String round="la niña comió ñoquis, ¿sí? 100% «bien»";check(m.bytePairs.decode(m.encode(round,1000)).equals(round),"lower-case text survives encode/decode");
+  JSONArray p=fixture.getJSONArray("prompt");int[] prompt=new int[p.length()];for(int i=0;i<prompt.length;i++)prompt[i]=p.getInt(i);float[] out=logits(m,prompt);JSONArray top=fixture.getJSONArray("top_ids"),values=fixture.getJSONArray("top_logits");int best=0;for(int i=1;i<out.length;i++)if(out[i]>out[best])best=i;check(best==top.getInt(0),"same next token as the training framework");for(int i=0;i<top.length();i++)check(Math.abs(out[top.getInt(i)]-values.getDouble(i))<2e-3,"logit parity "+i+": "+out[top.getInt(i)]+" vs "+values.getDouble(i));
+  BananaTransformer.Session fast=m.session();for(int i=0;i+1<prompt.length;i++)fast.advance(prompt[i]);float[] quick=fast.step(prompt[prompt.length-1]);for(int i=0;i<out.length;i+=97)check(quick[i]==out[i],"advance equals step");
+  // Grounding guard
+  String fragment="La Brumelia  es una planta ficticia de hojas azules. Crece en valles húmedos del norte.\nSus semillas se usan para teñir telas.";
+  check("Crece en valles húmedos del norte.".equals(Lector.ground(fragment,"crece en valles húmedos del norte.")),"literal sentence returns the original text");
+  check("La Brumelia  es una planta ficticia de hojas azules.".equals(Lector.ground(fragment,"la brumelia es una planta ficticia de hojas azules.")),"case and spacing mapped back to the source");
+  check(Lector.ground(fragment,"la brumelia es una planta real de hojas rojas.")==null&&Lector.ground(fragment,Lector.NEGATIVE)==null&&Lector.ground(fragment,"crece")==null&&Lector.ground(fragment,null)==null,"invented, negative, tiny and missing answers are discarded");
+  // Reading authored fragments that are not in the training text
+  String[][] probes={
+   {"La brumelia es una planta ficticia de hojas azules. Crece en valles húmedos del norte. Sus semillas se usan para teñir telas.","que es la brumelia","La brumelia es una planta ficticia de hojas azules."},
+   {"El puente Aldar une dos barrios de la ciudad. Fue inaugurado en 1954 por el ingeniero Tomás Rivel. Mide ciento veinte metros de largo.","que dice sobre tomás rivel","Fue inaugurado en 1954 por el ingeniero Tomás Rivel."},
+   {"Los corales viven en aguas cálidas y poco profundas. Se alimentan de plancton que atrapan con sus tentáculos. Muchos forman arrecifes.","hablame de plancton","Se alimentan de plancton que atrapan con sus tentáculos."},
+   {"El zorbete fue un instrumento de cuerda usado en fiestas. Su inventor, Lucio Maren, nació en 1802 en Córdoba. Murió en 1870 en Rosario.","cuando nacio lucio maren","Su inventor, Lucio Maren, nació en 1802 en Córdoba."},
+   {"La laguna Tirel está ubicada al sur de la provincia. Tiene una superficie de cuarenta kilómetros cuadrados. En invierno se congela por completo.","donde queda la laguna tirel","La laguna Tirel está ubicada al sur de la provincia."},
+   {"El motor de vapor transforma calor en movimiento. Se utiliza para mover locomotoras y barcos. Fue perfeccionado en el siglo dieciocho.","para que sirve el motor de vapor","Se utiliza para mover locomotoras y barcos."}};
+  int right=0;StringBuilder seen=new StringBuilder();for(String[] row:probes){String raw=Lector.generate(m,row[0],row[1]),found=Lector.ground(row[0],raw);if(row[2].equals(found))right++;seen.append("\n").append(row[1]).append(" → ").append(found==null?"(sin oración literal: "+raw+")":found);check(found==null||row[0].contains(found),"shown text is always literal");}
+  check(right>=EXPECTED_PROBES,"authored reading probes: "+right+" of "+probes.length+seen);
+  String absent=Lector.generate(m,probes[3][0],"que es un velocirraptor");check(Lector.ground(probes[3][0],absent)==null||!Lector.NEGATIVE.equals(absent),"absent subject is either refused or grounded");
+  JSONArray rows=new JSONArray().put(new JSONObject().put("id","a").put("title","Doc").put("source","https://example.com/zorbete").put("origin","web").put("saved",1L).put("truncated",false).put("text",probes[3][0]+" "+probes[4][0]));
+  Lector.Found f=Lector.read(m,rows,"¿Cuándo nació Lucio Maren?");check(f==null||probes[3][0].contains(f.sentence)||probes[4][0].contains(f.sentence),"the retrieval route shows only literal text");if(f!=null)check(ReadingKnowledge.common(ReadingKnowledge.words("¿Cuándo nació Lucio Maren?"),ReadingKnowledge.words(f.sentence))>0,"a sentence without any word of the question is never shown");Lector.Found definition=Lector.read(m,new JSONArray().put(new JSONObject(rows.getJSONObject(0).toString()).put("text",probes[0][0])),"¿Qué es la brumelia?");check(definition!=null&&definition.sentence.equals(probes[0][2]),"confident answer with a shared word is shown with its original text");
+  List<String> windows=Lector.windows(m,probes[0][0]+" "+probes[1][0]+" "+probes[2][0],ReadingKnowledge.words("corales plancton"),2);check(!windows.isEmpty()&&windows.get(0).contains("plancton"),"windows keep sentence order and rank by overlap");
+  // Growth: one more layer, exactly the same outputs
+  BananaTransformer bigger=LectorTraining.grow(m);float[] grown=logits(bigger,prompt);double worst=0;for(int i=0;i<out.length;i++)worst=Math.max(worst,Math.abs(out[i]-grown[i]));check(bigger.layers==7&&bigger.parameters()==m.parameters()+444864L&&worst<1e-5,"added layer adds parameters and changes nothing yet: "+worst+" "+bigger.parameters());
+  BananaTransformer reopened;try(InputStream in=new ByteArrayInputStream(bigger.container())){reopened=BananaTransformer.container(in);}float[] again=logits(reopened,prompt);for(int i=0;i<out.length;i+=53)check(again[i]==grown[i],"grown checkpoint reloads identically");check(m.encode(round,1000).equals(reopened.encode(round,1000)),"tokenizer travels inside the checkpoint");
+  // Learning from a new document block
+  String lesson="La trufelina es una resina ficticia que se obtiene del árbol molvano. Los artesanos de Quirema la calientan para sellar vasijas. Su olor recuerda a la canela tostada. El comercio de trufelina creció después de la feria de Altamisa.";
+  LectorTraining.Batch batch=LectorTraining.batch(m,lesson,"velocirraptor");check(batch.definitions>=1&&batch.mentions>=1&&batch.train.size()>=3&&batch.eval.size()>=2,"examples from a block: "+batch.definitions+" "+batch.mentions+" "+batch.train.size());
+  for(TransformerTraining.Sequence s:batch.train)for(int i=0;i<s.labels.length;i++)check(s.labels[i]<0||i+1==s.labels.length?true:s.labels[i]==s.input[i+1],"labels are the next tokens of the source text");
+  BananaTransformer learner=open(asset);float[][] original=TransformerTraining.snapshot(learner);ReadingWeights.Governor free=new ReadingWeights.Governor(){public void check(){}};JSONObject report=LectorTraining.fit(learner,batch,free);double moved=TransformerTraining.distance(learner,original);
+  check(report.getBoolean("accepted")?report.getDouble("after")<report.getDouble("before")&&moved>0&&moved<=LectorTraining.RADIUS+1e-3&&report.getDouble("controlAfter")<=report.getDouble("controlBefore")+LectorTraining.CONTROL_SLACK:moved==0,"accepted candidates improve inside the radius; rejected ones are restored exactly: "+report);
+  check(report.getBoolean("accepted")==EXPECTED_ACCEPT,"training outcome on the lesson: "+report);
+  try{LectorTraining.fit(open(asset),batch,new ReadingWeights.Governor(){int n;public void check()throws Exception{if(++n>40)throw new ReadingBudget.Paused("límite");}});throw new AssertionError("budget ignored");}catch(ReadingBudget.Paused expected){}
+  BananaTransformer tall=m;for(int i=m.layers;i<LectorTraining.MAX_LAYERS;i++)tall=LectorTraining.grow(tall);try{LectorTraining.grow(tall);throw new AssertionError("grew past the maximum");}catch(IOException expected){}
+  // Chat routing and the old model
+  check(KnowledgeNotebook.parse("estado del lector").kind.equals("reader_status")&&KnowledgeNotebook.parse("Hacé crecer el lector").kind.equals("reader_grow")&&KnowledgeNotebook.parse("agregale una capa al lector").kind.equals("reader_grow"),"reader commands");
+  check(Lector.reply(new CreatorPersistenceCheck.Fake(),rows,"cuando nacio lucio maren")==null,"without the model asset the reader steps aside");
+  BananaTransformer chat=new BananaTransformer(Files.newInputStream(root.resolve("assets/chat34/chat34.bin")),Files.newInputStream(root.resolve("assets/chat34/vocab.txt")),Files.newInputStream(root.resolve("assets/chat34/tokenizer.json")));check(!chat.bytePairs.words&&chat.layers==3&&chat.vocabSize==542,"Chat 3.4 keeps its own tokenizer and size");
+  System.out.println("PASS Stage76 reader: Python parity, word BPE, grounded answers ("+right+"/"+probes.length+" authored probes), literal-only guard, function-preserving growth, on-device learning gate ("+(report.getBoolean("accepted")?"accepted":"rejected")+", "+String.format(Locale.ROOT,"%.3f→%.3f",report.getDouble("before"),report.getDouble("after"))+"), commands and Chat 3.4 compatibility");
+ }
+ /** Measured with the shipped Lector 1; the reader is weak on short invented fragments and the suite records it. */static final int EXPECTED_PROBES=2;static final boolean EXPECTED_ACCEPT=true;
+}

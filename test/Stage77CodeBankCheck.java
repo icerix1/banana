@@ -1,0 +1,29 @@
+package com.bananalab.lite;
+import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
+public final class Stage77CodeBankCheck{
+ static void check(boolean b,String s){if(!b)throw new AssertionError(s);}
+ static boolean compiles(String name,String source)throws Exception{Map<String,String> files=new LinkedHashMap<>();files.put(name,source);try{Stage55EvolutionCheck.compile(files).close();return true;}catch(AssertionError failed){return false;}}
+ public static void main(String[] args)throws Exception{File dir=Files.createTempDirectory("code69").toFile();
+  String klass="import java.util.*;\n\npublic class Contador {\n    private final List<String> items = new ArrayList<>();\n    // suma un elemento\n    public int agregar(String s) {\n        if (s != null && s.length() < 10) items.add(s);\n        return items.size();\n    }\n}";
+  String methods="static int doble(int x) {\n    return x * 2; // comentario de linea\n}\n\nstatic String saludo(String n) {\n    return \"hola \" + n;\n}";
+  String statements="int total = 0;\nfor (int i = 0; i < 5; i++) {\n    total += i;\n}\nSystem.out.println(total);";
+  String broken="public class Rota {\n    int valor() {\n        return noExiste.metodo();\n    }\n}";
+  String html="<html><head><title>Tutorial</title></head><body><main><p>Este tutorial de prueba explica una clase contador sencilla con texto suficiente.</p><pre><code class=\"language-java\">"+klass.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")+"</code></pre><p>Otro ejemplo:</p><pre>"+methods.replace("<","&lt;")+"</pre><pre>pip install algo\nprint('no es java')\nfor x in range(3): pass   # python</pre><pre>corto;{}</pre><pre>"+statements.replace("<","&lt;").replace("\n","<br>")+"</pre><pre>"+broken+"</pre></main></body></html>";
+  List<String> blocks;try(PageReader.Document d=PageStream.extract(dir,"https://example.com/tutorial",new StringReader(html),true,new PageStream.Budget())){blocks=d.code;check(d.text.contains("tutorial de prueba"),"page text still extracted");}
+  check(blocks.size()==5&&blocks.get(0).equals(klass)&&blocks.get(1).contains("// comentario de linea\n}")&&blocks.get(3).equals(statements),"pre blocks keep line breaks, entities and br: "+blocks.size());
+  check(CodeBank.looksJava(klass)&&CodeBank.looksJava(methods)&&CodeBank.looksJava(statements)&&!CodeBank.looksJava(blocks.get(2))&&!CodeBank.looksJava("<div class=\"a\">{ x; }</div> texto largo suficiente para el mínimo")&&!CodeBank.looksJava("function f(){ console.log(1); return 2; } // javascript largo")&&!CodeBank.looksJava("public class A { void f() { ")&&!CodeBank.looksJava("def f(x):\n    return {1: 2}; # python con llaves y punto y coma"),"Java-shaped text only");
+  check(CodeBank.kind(klass).equals("clase")&&CodeBank.kind(methods).equals("metodos")&&CodeBank.kind(statements).equals("sentencias"),"kinds");
+  CreatorPersistenceCheck.Fake c=new CreatorPersistenceCheck.Fake();check(CodeBank.add(c,blocks,"https://example.com/tutorial")==4&&CodeBank.add(c,blocks,"https://example.com/otra")==0&&CodeBank.rows(c).length()==4,"stored once");
+  String list=CodeBank.list(c);check(list.contains("Ejemplos de Java leídos: 4")&&list.contains("sin comprobar: 4")&&list.contains("[clase · sin comprobar] import java.util.*;"),"list: "+list);check(CodeBank.show(c,2).contains("https://example.com/tutorial")&&CodeBank.show(c,2).contains("static int doble"),"show");
+  Set<String> existing=new HashSet<>(Arrays.asList("Scene.java","BananaActivity.java"));JSONArray rows=CodeBank.rows(c);
+  String[] a=CodeBank.candidate(existing,rows.getJSONObject(0),1),b=CodeBank.candidate(existing,rows.getJSONObject(1),2),s=CodeBank.candidate(existing,rows.getJSONObject(2),3),bad=CodeBank.candidate(existing,rows.getJSONObject(3),4);
+  check(a[0].equals("Contador.java")&&a[1].startsWith("package com.bananalab.lite;\nimport java.util.*;\npublic class Contador")&&b[0].equals("EjemploLeido2.java")&&s[1].contains("static void ejemplo()throws Exception{"),"candidates are placed in Banana's package");
+  check(compiles(a[0],a[1])&&compiles(b[0],b[1])&&compiles(s[0],s[1]),"class, method and statement examples compile with the real compiler");check(!compiles(bad[0],bad[1]),"a broken example is rejected by the compiler");
+  JSONObject clash=new JSONObject(rows.getJSONObject(0).toString()).put("code","public class Scene { int x; void f(){ x=1; } }");check(CodeBank.candidate(existing,clash,9)[0]==null,"an example cannot replace an existing Banana class");
+  check(Arrays.equals(CodeBank.parse("Qué ejemplos de Java aprendiste"),new String[]{"list",""})&&Arrays.equals(CodeBank.parse("probá el ejemplo 3"),new String[]{"verify","3"})&&Arrays.equals(CodeBank.parse("mostrame el ejemplo de java 12"),new String[]{"show","12"})&&Arrays.equals(CodeBank.parse("usá el ejemplo 2"),new String[]{"use","2"})&&CodeBank.parse("dame un ejemplo de escena")==null&&CodeBank.parse("que es un ejemplo")==null,"chat phrases");
+  check(CodeBank.use(c,1).contains("Primero tiene que compilar"),"an unverified example is never handed to the editor");try{CodeBank.show(c,9);throw new AssertionError("missing example");}catch(IllegalArgumentException expected){}
+  List<String> many=new ArrayList<>();for(int i=0;i<80;i++)many.add("class Extra"+i+" { int valor() { return "+i+"; } // relleno para superar el minimo\n}");CodeBank.add(c,many,"https://example.com/muchos");check(CodeBank.rows(c).length()==CodeBank.MAX,"bank is bounded");
+  check(CodeBank.clear(c).contains("Borré")&&CodeBank.rows(c).length()==0,"clear");String[] left=dir.list();check(left==null||left.length==0,"temporary files cleaned");
+  System.out.println("PASS Stage77 Java examples from pages: pre-block capture, Java filter, bounded bank, packaged candidates compiled by the real compiler, rejection of broken code, chat phrases and editor gate");
+ }
+}

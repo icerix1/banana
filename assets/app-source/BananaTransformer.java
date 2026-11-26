@@ -2,7 +2,7 @@ package com.bananalab.lite;
 import java.io.*;import java.util.*;
 /** Decoder causal propio. Inferencia incremental con cache K/V en Java. */
 final class BananaTransformer {
- BytePairs bytePairs;
+ BytePairs bytePairs;String tokenizerJson="";
  final int vocabSize,d,heads,layers,context,ff;final List<String> vocab=new ArrayList<>();final Map<String,Integer> ids=new HashMap<>();
  final float[][] embedding,position,head;final float[] normWeight,normBias,headBias;final Block[] blocks;
  static final class Block{float[] n1w,n1b,qkvb,ob,n2w,n2b,f1b,f2b;float[][] qkv,o,f1,f2;}
@@ -11,20 +11,27 @@ final class BananaTransformer {
   try(BufferedReader r=new BufferedReader(new InputStreamReader(words,"UTF-8"))){String s;while((s=r.readLine())!=null){ids.put(s,vocab.size());vocab.add(s);}}
   try(DataInputStream in=new DataInputStream(new BufferedInputStream(weights))){
    if(in.readInt()!=0x42544631)throw new IOException("Transformer incompatible");vocabSize=in.readInt();d=in.readInt();heads=in.readInt();layers=in.readInt();context=in.readInt();ff=in.readInt();
-   if(vocabSize!=vocab.size()||vocabSize<6||vocabSize>2048||!((d==48&&heads==4&&layers==2&&context==96&&ff==192)||(d==64&&heads==4&&layers==2&&(context==128||context==192)&&ff==256)||((d==96&&ff==384||d==128&&ff==512)&&heads==4&&layers==3&&context==384)))throw new IOException("Dimensiones del Transformer invalidas");
+   boolean general=vocabSize>=262&&d>=32&&d<=512&&heads>=1&&heads<=16&&d%heads==0&&layers>=1&&layers<=16&&context>=64&&context<=1024&&ff>=d&&ff<=4096;if(vocabSize!=vocab.size()||vocabSize<6||vocabSize>16384||!(general||(d==48&&heads==4&&layers==2&&context==96&&ff==192)||(d==64&&heads==4&&layers==2&&(context==128||context==192)&&ff==256)||((d==96&&ff==384||d==128&&ff==512)&&heads==4&&layers==3&&context==384)))throw new IOException("Dimensiones del Transformer invalidas");
    embedding=matrix(in,vocabSize,d);position=matrix(in,context,d);blocks=new Block[layers];
    for(int l=0;l<layers;l++){Block b=new Block();b.n1w=vector(in,d);b.n1b=vector(in,d);b.qkv=matrix(in,d,3*d);b.qkvb=vector(in,3*d);b.o=matrix(in,d,d);b.ob=vector(in,d);b.n2w=vector(in,d);b.n2b=vector(in,d);b.f1=matrix(in,d,ff);b.f1b=vector(in,ff);b.f2=matrix(in,ff,d);b.f2b=vector(in,d);blocks[l]=b;}
    normWeight=vector(in,d);normBias=vector(in,d);head=matrix(in,d,vocabSize);headBias=vector(in,vocabSize);
   }
  }
- BananaTransformer(InputStream weights,InputStream vocab,InputStream tokenizer)throws Exception{this(weights,vocab);bytePairs=new BytePairs(tokenizer,this.vocab);}
+ BananaTransformer(InputStream weights,InputStream vocab,InputStream tokenizer)throws Exception{this(weights,vocab);tokenizerJson=BytePairs.text(tokenizer);bytePairs=new BytePairs(tokenizerJson,this.vocab);}
+ static byte[] part(DataInputStream in,int limit)throws IOException{int n=in.readInt();if(n<0||n>limit)throw new IOException("Modelo lector inválido");byte[] b=new byte[n];in.readFully(b);return b;}
+ /** Reader checkpoint: weights, vocabulary and tokenizer in one immutable file, because they grow together. */
+ static BananaTransformer container(InputStream source)throws Exception{try(DataInputStream in=new DataInputStream(new BufferedInputStream(source,65536))){if(in.readInt()!=0x42524431)throw new IOException("Modelo lector incompatible");byte[] weights=part(in,96000000),words=part(in,2000000),tokenizer=part(in,4000000);return new BananaTransformer(new ByteArrayInputStream(weights),new ByteArrayInputStream(words),new ByteArrayInputStream(tokenizer));}}
+ byte[] container()throws IOException{ByteArrayOutputStream weights=new ByteArrayOutputStream();save(weights);StringBuilder words=new StringBuilder();for(String w:vocab)words.append(w).append('\n');ByteArrayOutputStream out=new ByteArrayOutputStream(weights.size()+200000);DataOutputStream data=new DataOutputStream(out);data.writeInt(0x42524431);for(byte[] b:new byte[][]{weights.toByteArray(),words.toString().getBytes("UTF-8"),tokenizerJson.getBytes("UTF-8")}){data.writeInt(b.length);data.write(b);}data.flush();return out.toByteArray();}
+ long parameters(){long n=0;for(float[] p:TransformerTraining.parameters(this))n+=p.length;return n;}
  private static float[] vector(DataInputStream in,int n)throws IOException{float[] a=new float[n];for(int i=0;i<n;i++){a[i]=in.readFloat();if(Float.isNaN(a[i])||Float.isInfinite(a[i]))throw new IOException("Pesos invalidos");}return a;}
  private static float[][] matrix(DataInputStream in,int n,int m)throws IOException{float[][] a=new float[n][];for(int i=0;i<n;i++)a[i]=vector(in,m);return a;}
  private static float[] linear(float[] x,float[][] w,float[] b){float[] y=b.clone();for(int i=0;i<x.length;i++)for(int j=0;j<y.length;j++)y[j]+=x[i]*w[i][j];return y;}
  private static float[] norm(float[] x,float[] weight,float[] bias){float mean=0,var=0;for(float z:x)mean+=z;mean/=x.length;for(float z:x)var+=(z-mean)*(z-mean);float scale=1f/(float)Math.sqrt(var/x.length+1e-5f);float[] y=new float[x.length];for(int i=0;i<x.length;i++)y[i]=(x[i]-mean)*scale*weight[i]+bias[i];return y;}
  final class Session{
   final float[][][] keys=new float[layers][context][d],values=new float[layers][context][d];int used=0;float[] features;
-  float[] step(int token){
+  float[] step(int token){advance(token);return linear(features,head,headBias);}
+  /** Reads a prompt token without computing the output distribution. */
+  void advance(int token){
    if(token<0||token>=vocabSize||used>=context)throw new IllegalArgumentException("Contexto excedido");
    float[] x=embedding[token].clone();for(int i=0;i<d;i++)x[i]+=position[used][i];
    for(int l=0;l<layers;l++){
@@ -37,7 +44,7 @@ final class BananaTransformer {
     }
     float[] residual=linear(att,b.o,b.ob);for(int j=0;j<d;j++)x[j]+=residual[j];float[] hidden=linear(norm(x,b.n2w,b.n2b),b.f1,b.f1b);for(int j=0;j<ff;j++)hidden[j]=Math.max(0,hidden[j]);residual=linear(hidden,b.f2,b.f2b);for(int j=0;j<d;j++)x[j]+=residual[j];
    }
-   used++;features=norm(x,normWeight,normBias);return linear(features,head,headBias);
+   used++;features=norm(x,normWeight,normBias);
   }
  }
  void save(OutputStream stream)throws IOException{DataOutputStream out=new DataOutputStream(new BufferedOutputStream(stream));out.writeInt(0x42544631);for(int n:new int[]{vocabSize,d,heads,layers,context,ff})out.writeInt(n);write(out,embedding);write(out,position);for(Block b:blocks){write(out,b.n1w);write(out,b.n1b);write(out,b.qkv);write(out,b.qkvb);write(out,b.o);write(out,b.ob);write(out,b.n2w);write(out,b.n2b);write(out,b.f1);write(out,b.f1b);write(out,b.f2);write(out,b.f2b);}write(out,normWeight);write(out,normBias);write(out,head);write(out,headBias);out.flush();}

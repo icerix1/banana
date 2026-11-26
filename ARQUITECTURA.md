@@ -1,3 +1,17 @@
+# Banana0.69: lector con fragmento, crecimiento, examen propio y banco de ejemplos
+
+BananaTransformer acepta ahora dimensiones generales acotadas (d32–512, hasta16 capas, contexto1024, vocabulario16384) además de las combinaciones históricas; Session.advance lee un token sin calcular la salida. BytePairs tiene un modo words (trozos palabra/signo con espacio inicial, fusión por rango con caché LRU) que debe coincidir con model-source/lector/lector_tok.py; el modo anterior de Chat3.4 no cambió. El lector viaja en un contenedor BRD1 = pesos + vocabulario + tokenizador, y ModelDepot lo maneja como tipo reader (assets/lector1/lector1.bin, límite96MB).
+
+Lector arma [bos][user] fragmento [user] pregunta [assistant], genera en modo voraz y devuelve también la probabilidad de sus tres primeros tokens. ground() sólo acepta una respuesta que sea subcadena literal del fragmento y devuelve el texto original. read() parte los documentos recuperados en ventanas de hasta330 tokens, lee a lo sumo2 y exige palabra compartida con la pregunta y confianza≥0.3. KnowledgeNotebook.reply lo llama sólo cuando ReadingKnowledge.answer no devolvió nada; cualquier fallo del lector se ignora y sigue la ruta anterior.
+
+LectorTraining: cursor por documento en banana-reader-training, ejemplos por bloque (definiciones, menciones, una negativa y continuación), SGD con TransformerTraining.Tape y forwardTail (la salida sólo se calcula donde hay etiquetas), proyección a radio0.6 y publicación sólo si baja la pérdida de las formulaciones apartadas y los controles fijos no suben más de0.03. grow() agrega un bloque con o y f2 en cero: la función no cambia. LearningLoop.cycle ejecuta el carril del lector después del de Chat.
+
+LectorExam: reserved(ordinal%5==4) nunca se entrena. items() mezcla correcciones, bloques apartados y estudiados y rota por ronda; grade() mide oración exacta y pérdida; record() guarda historia (30), encola fallos estudiados (40) y decide el regreso al mejor checkpoint (campeón), que prune() conserva. repass() permite hasta8 pasadas diarias con cargador y app no visible.
+
+CodeBank guarda bloques pre que superan un filtro conservador de Java; candidate() los ubica en el paquete propio sin pisar clases existentes; verify() usa JavaProject.compile sin preparar cambios; use() delega en GeneralSourceChat.apply. PageStream conserva saltos de línea dentro de pre. SelfCheck define9 pasos, se ejecuta una vez por versionCode desde LearningLoop.opened y guarda su informe.
+
+--- Arquitectura previa ---
+
 # Banana0.68: límites ampliados del recorrido
 
 PageCrawl: DEFAULT_DEPTH4, MAX_DEPTH20, DEFAULT_PAGES100, MAX_PAGES1000, TIME_MS60min, cola50000; «muchos niveles/todo el sitio» usa8 niveles y300 páginas. Los números en palabras llegan a veinte. MAX_PAGES queda por debajo de NotebookDisk.MAX_DOCUMENTS(1024), que no cambió, igual que TOTAL_BYTES512MiB. Sin otros cambios de diseño respecto de0.67.
