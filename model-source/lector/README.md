@@ -46,3 +46,7 @@ En diez fragmentos cortos escritos a mano: Lector 1 acertó 3 y mostró 7 oracio
 venv/bin/python train_select.py rows.pkl tokenizer.json etapa1/ 30 lector1-state.pt   # sin el bloque «near» de lector_select.py
 venv/bin/python train_select.py rows.pkl tokenizer.json etapa2/ 120 etapa1/state.pt
 ```
+
+## Lector 3.1 y prueba de 8 capas (0.71.1)
+
+`lector31/` guarda los registros. Dos continuaciones de 150 minutos desde Lector 3 con `train_select.py ... 6 2` y `... 8 2` (capas e hilos), con negativos de otros párrafos y de otra relación y seis relaciones nuevas en `lector_data.py`. `eval_hard.py` mide con unas 22 oraciones candidatas del mismo artículo: Lector 3 0,82; 6 capas 0,78; 8 capas 0,813. Sin diferencia real. La app usa la de 6 capas (`assets/lector3/lector31.bin`); la de 8 capas no se incluye.

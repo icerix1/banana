@@ -37,6 +37,21 @@ def training_item(pool,tok,rng,question_share=.15):
             k=ctx.index(answer);r=rng.random()
             if r<.35 and k+1<len(ctx) and ctx[k+1]!=answer:near=k+1
             elif r<.5 and k>0 and ctx[k-1]!=answer:near=k-1
+        if near is None and kind=='relation' and answer is not None and rng.random()<.4:
+            # negativo de OTRA relación (p. ej. «murió» ante «¿cuándo nació?»): el modelo debe distinguir de qué habla la oración
+            by=getattr(pool,'by',None)
+            if by is None:by=pool.by={title:pars for title,pars in pool.articles}
+            mine=[i for i,(pat,_) in enumerate(D.RELATIONS) if pat.search(answer)]
+            rival=[x for par in by.get(t,[]) for x in par if x!=answer and any(pat.search(x) for pat,_ in D.RELATIONS) and not any(D.RELATIONS[i][0].search(x) for i in mine)]
+            if rival:
+                x=rng.choice(rival);return encode_pair(tok,t if rng.random()<.5 else None,None,x,q,False)
+        if near is None and rng.random()<.3:
+            # negativo del mismo artículo pero de otro párrafo: como cuando la app trae muchas oraciones del documento
+            by=getattr(pool,'by',None)
+            if by is None:by=pool.by={title:pars for title,pars in pool.articles}
+            far=[x for par in by.get(t,[]) for x in par if x not in ctx]
+            if far:
+                x=rng.choice(far);return encode_pair(tok,t if rng.random()<.5 else None,None,x,q,False)
         if near is not None:
             title=t if rng.random()<.5 else None
             return encode_pair(tok,title,ctx[near-1] if near>0 else None,ctx[near],q,False)

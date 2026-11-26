@@ -1,5 +1,7 @@
 # Mejoras propuestas después de0.69
 
+Estado tras0.71.1: hechas las preguntas de dos pasos (forma fija), la detección de contradicciones entre definiciones y la biblioteca de 4096 documentos con limpieza a pedido. Se probó un modelo de 8 capas y no mejoró. Con este cómputo, el próximo salto de comprensión no saldrá de entrenar más acá sino de medir y corregir con uso real en la tablet.
+
 Estado tras0.71: el lector cambió a un selector de oraciones que acierta mucho más (ver VALIDACION-0.71.md), con lo que los puntos 1, 2 y 4 quedan atendidos por otro camino; hechos además exploración de internet por tema, autoestudio y preguntas escritas por el modelo (punto 15, en versión simple). Siguen pendientes los puntos 3, 5, 6, 9, 12, 14, 16 a 22.
 
 Estado tras0.70: hechos el 7 y el 8 (recorrido en segundo plano y reanudable), el 10 sólo para PDF por enlace, y la tendencia del examen para el 13. Los puntos 1, 2, 4 y 5 se intentaron con un Lector 2 que no resultó mejor y no se adoptó (ver VALIDACION-0.70.md). El resto sigue pendiente.

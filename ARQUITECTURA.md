@@ -1,3 +1,15 @@
+# Banana0.71.1: cadena de dos pasos, conflictos entre fuentes y red de seguridad del selector
+
+LectorChain reconoce una forma fija de pregunta, la parte en «quien VERBO COSA» y «CUÁNDO/DÓNDE VERBO %s», resuelve el primer paso con Lector.read, extrae un nombre propio de la oración (tras «por» o el primero que no sea la cosa) y resuelve el segundo con una nueva recuperación. KnowledgeNotebook.reply la intenta antes de la ruta normal.
+
+SourceConflicts agrupa ReadingKnowledge.definitions por término entre documentos distintos y marca cifras sin ninguna en común o menos de un quinto de palabras compartidas. Guarda los términos en disputa; LectorTraining.batch los excluye de las definiciones a estudiar.
+
+Lector.select puntúa cada candidata con y sin la oración anterior y toma el mayor (MAX_CANDIDATES12). Lector.MATTERS empareja lo que una pregunta pide con cómo lo nombra una oración. En select, una oración fuera del asunto pierde0.35 de seguridad y una dentro gana0.1 en el orden; los empates cercanos van a la que comparte más palabras.
+
+NotebookDisk.MAX_DOCUMENTS pasa a4096 (TOTAL_BYTES sin cambio) y ReadingTraining acepta colas de ese tamaño. forgetOldestWeb borra las páginas web más antiguas en una transacción del índice; room() informa el uso. El asset del lector es assets/lector3/lector31.bin, lo que retira un checkpoint de0.71 al actualizar.
+
+--- Arquitectura previa ---
+
 # Banana0.71: selector de oraciones, exploración abierta y autoestudio
 
 Lector 3 usa el mismo BananaTransformer y contenedor que Lector 1, con otra tarea: [bos][user] «titulo : T . antes : P oracion : S» [user] pregunta [assistant] → «si»/«no». Lector.yes compara los logits del primer token de cada etiqueta; Lector.select ordena las oraciones por palabras compartidas, puntúa hasta MAX_CANDIDATES y devuelve la mejor; Lector.read recorre hasta tres documentos recuperados y exige SELECT_CONFIDENCE0.7; Lector.confident agrega la elección cuando el buscador léxico ya respondió y la seguridad es0.9. Lector.ask genera una pregunta para una oración (segunda tarea del entrenamiento). Las funciones de copia (generate, ground, windows) quedan para pruebas y para partir bloques. El asset pasó a assets/lector3/lector3.bin; ModelDepot.retire descarta un checkpoint cuyo baseAsset es otro y LectorTraining.retire reinicia el progreso.

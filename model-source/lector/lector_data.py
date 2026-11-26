@@ -34,6 +34,12 @@ RELATIONS=[
  (r'\bvive[n]?\b|\bhabita[n]?\b|\bh[aá]bitat\b',['donde vive {t}','cual es el habitat de {t}']),
  (r'\bcolor(es)?\b',['de que color es {t}','que color tiene {t}']),
  (r'\bpertenece[n]?\b|\bfamilia\b|\bg[eé]nero\b|\bespecie\b',['a que familia pertenece {t}','que tipo de especie es {t}']),
+ (r'\bconstruid[oa]s?\b|\bconstruy[oó]\b|\bedificad[oa]s?\b',['quien construyo {t}','cuando se construyo {t}','cuando fue construido {t}']),
+ (r'\bdescubiert[oa]s?\b|\bdescubri[oó]\b',['quien descubrio {t}','cuando se descubrio {t}']),
+ (r'\bpintad[oa] por\b|\bpint[oó]\b|\bcompuso\b|\bcompuest[oa] por\b',['quien pinto {t}','quien compuso {t}']),
+ (r'\binaugurad[oa]s?\b|\binaugur[oó]\b',['cuando se inauguro {t}','quien inauguro {t}']),
+ (r'\bestudi[oó]\b|\bse gradu[oó]\b|\bse form[oó]\b',['donde estudio {t}','que estudio {t}']),
+ (r'\btrabaj[oó]\b',['donde trabajo {t}','en que trabajo {t}']),
 ]
 RELATIONS=[(re.compile(p,re.I),q) for p,q in RELATIONS]
 YEAR=re.compile(r'\b(1[0-9]{3}|20[0-2][0-9])\b');YEAR_Q=['que paso en {y}','que ocurrio en {y}','que sucedio en el año {y}','{y}']

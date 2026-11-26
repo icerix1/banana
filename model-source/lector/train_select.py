@@ -1,5 +1,6 @@
 """Entrena el selector (Lector 3) continuando desde los pesos de Lector 1.
-Uso: train_select.py rows.pkl tokenizer.json salida/ minutos estado_inicial.pt"""
+Uso: train_select.py rows.pkl tokenizer.json salida/ minutos estado_inicial.pt [capas hilos]
+Con más capas que el estado inicial, las nuevas empiezan con salida cero: el modelo calcula lo mismo hasta entrenarlas."""
 import sys,os,time,math,random,pickle,json,collections,multiprocessing as mp,torch,torch.nn.functional as F
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import lector_tok as T,lector_data as D,lector_select as S
@@ -50,7 +51,12 @@ if __name__=='__main__':
         if d and all(len(tok.encode(s))<150 for s in d[1]):examples.append(d)
     json.dump([list(e) for e in examples],open(os.path.join(out,'heldout-select.json'),'w'),ensure_ascii=False)
     queue=mp.Queue(maxsize=64);mp.Process(target=producer,args=(rows[:80000],merges,queue,11),daemon=True).start()
-    torch.manual_seed(3);torch.set_num_threads(3);model=Lector(tok.vocab_size,**CFG);model.load_state_dict(torch.load(init));opt=torch.optim.AdamW(model.parameters(),lr=LR,weight_decay=.01,betas=(.9,.98))
+    layers=int(sys.argv[6]) if len(sys.argv)>6 else CFG['layers'];CFG['layers']=layers;torch.manual_seed(3);torch.set_num_threads(int(sys.argv[7]) if len(sys.argv)>7 else 3);model=Lector(tok.vocab_size,**CFG);old=torch.load(init);state=model.state_dict()
+    for k,v in old.items():state[k]=v
+    had=1+max(int(k.split('.')[1]) for k in old if k.startswith('blocks.'))
+    for i in range(had,layers):
+        for name in ('o','ob','f2','f2b'):state[f'blocks.{i}.{name}']=torch.zeros_like(state[f'blocks.{i}.{name}'])
+    model.load_state_dict(state);opt=torch.optim.AdamW(model.parameters(),lr=LR,weight_decay=.01,betas=(.9,.98))
     start=time.time();budget=minutes*60;step=0;seen=0;nextsave=600;log=open(os.path.join(out,'training-log.txt'),'a')
     def save():
         open(os.path.join(out,'lector3.bin'),'wb').write(container(model.weights(),'\n'.join(tok.vocab_lines())+'\n',tok.tokenizer_json()));torch.save(model.state_dict(),os.path.join(out,'state.pt'))

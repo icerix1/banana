@@ -1,0 +1,25 @@
+{
+ "name": "Banana Lector 3.1 (selector)",
+ "external_weights": false,
+ "continues_from": "Lector 3",
+ "parameters": 4344832,
+ "layers": 6,
+ "width": 192,
+ "heads": 6,
+ "context_tokens": 512,
+ "vocab_size": 4096,
+ "task": "si/no: ¿esta oración responde la pregunta?; tarea menor: escribir una pregunta para una oración",
+ "training_text": "Wikipedia en español (dump 20231101, CC BY-SA 4.0), 80000 artículos",
+ "steps": 13923,
+ "training_tokens": 51009705,
+ "heldout_top1": 0.956,
+ "heldout_refuses_absent": 0.913,
+ "heldout_by_kind": {
+  "mention": 0.941,
+  "relation": 1.0,
+  "define": 0.917,
+  "year": 1.0
+ },
+ "heldout_note": "160 preguntas de plantilla sobre artículos no vistos; acierto = la oración mejor puntuada es la correcta",
+ "limitations": "Elige entre oraciones del fragmento; no redacta respuestas ni razona. Sólo español."
+}

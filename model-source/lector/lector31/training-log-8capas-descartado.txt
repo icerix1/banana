@@ -1,0 +1,65 @@
+step 200 min 2.8 loss 2.425 label 0.415 lr 0.00040 tokens 725081 seq/s 56
+step 400 min 5.3 loss 2.275 label 0.621 lr 0.00060 tokens 1450436 seq/s 77
+step 600 min 7.9 loss 2.208 label 0.592 lr 0.00060 tokens 2182626 seq/s 77
+EVAL min 10.0 top1 0.933 refuse_absent 0.85 {'mention': 0.919, 'relation': 0.929, 'define': 1.0, 'year': 1.0}
+step 800 min 10.5 loss 2.229 label 0.347 lr 0.00059 tokens 2915025 seq/s 62
+step 1000 min 13.2 loss 2.223 label 0.680 lr 0.00059 tokens 3649949 seq/s 76
+step 1200 min 15.7 loss 2.320 label 0.218 lr 0.00058 tokens 4382051 seq/s 60
+step 1400 min 18.4 loss 1.845 label 0.687 lr 0.00058 tokens 5126603 seq/s 106
+step 1600 min 21.1 loss 2.721 label 0.247 lr 0.00057 tokens 5861900 seq/s 44
+step 1800 min 23.6 loss 2.129 label 1.051 lr 0.00057 tokens 6597483 seq/s 85
+step 2000 min 26.1 loss 3.041 label 0.076 lr 0.00056 tokens 7331160 seq/s 29
+step 2200 min 28.5 loss 2.592 label 0.564 lr 0.00055 tokens 8057911 seq/s 50
+EVAL min 30.0 top1 0.95 refuse_absent 0.8 {'mention': 0.919, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 2400 min 31.0 loss 2.360 label 0.342 lr 0.00054 tokens 8782392 seq/s 63
+step 2600 min 33.6 loss 2.837 label 0.058 lr 0.00053 tokens 9514327 seq/s 31
+step 2800 min 36.0 loss 2.137 label 0.610 lr 0.00052 tokens 10246330 seq/s 74
+step 3000 min 38.5 loss 2.274 label 0.406 lr 0.00051 tokens 10982626 seq/s 61
+step 3200 min 41.0 loss 2.738 label 0.074 lr 0.00050 tokens 11724752 seq/s 43
+step 3400 min 43.5 loss 1.977 label 0.712 lr 0.00049 tokens 12457730 seq/s 89
+step 3600 min 46.0 loss 2.880 label 0.081 lr 0.00048 tokens 13189127 seq/s 38
+step 3800 min 48.5 loss 2.389 label 0.126 lr 0.00047 tokens 13914134 seq/s 52
+EVAL min 50.0 top1 0.95 refuse_absent 0.8 {'mention': 0.919, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 4000 min 51.2 loss 2.670 label 0.271 lr 0.00045 tokens 14645618 seq/s 44
+step 4200 min 53.6 loss 1.938 label 0.491 lr 0.00044 tokens 15378001 seq/s 93
+step 4400 min 56.2 loss 2.405 label 0.771 lr 0.00043 tokens 16116283 seq/s 57
+step 4600 min 58.6 loss 2.632 label 0.349 lr 0.00041 tokens 16844976 seq/s 47
+step 4800 min 61.1 loss 2.581 label 0.332 lr 0.00040 tokens 17582354 seq/s 46
+step 5000 min 63.7 loss 2.658 label 0.155 lr 0.00038 tokens 18318539 seq/s 41
+step 5200 min 66.3 loss 2.914 label 0.216 lr 0.00037 tokens 19047646 seq/s 13
+step 5400 min 68.9 loss 2.375 label 0.253 lr 0.00035 tokens 19780778 seq/s 57
+EVAL min 70.0 top1 0.967 refuse_absent 0.9 {'mention': 0.946, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 5600 min 71.6 loss 2.967 label 0.118 lr 0.00034 tokens 20524241 seq/s 17
+step 5800 min 74.2 loss 2.773 label 0.173 lr 0.00032 tokens 21265896 seq/s 38
+step 6000 min 76.7 loss 1.708 label 0.710 lr 0.00031 tokens 21993946 seq/s 108
+step 6200 min 79.4 loss 2.275 label 0.877 lr 0.00029 tokens 22719305 seq/s 69
+step 6400 min 81.9 loss 2.629 label 0.266 lr 0.00028 tokens 23442887 seq/s 47
+step 6600 min 84.7 loss 2.490 label 0.570 lr 0.00026 tokens 24173893 seq/s 52
+step 6800 min 87.4 loss 2.147 label 0.722 lr 0.00025 tokens 24904119 seq/s 69
+EVAL min 90.0 top1 0.95 refuse_absent 0.9 {'mention': 0.919, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 7000 min 90.1 loss 2.176 label 0.542 lr 0.00023 tokens 25637189 seq/s 69
+step 7200 min 92.7 loss 2.840 label 0.032 lr 0.00022 tokens 26367592 seq/s 30
+step 7400 min 95.3 loss 1.934 label 0.412 lr 0.00020 tokens 27096253 seq/s 78
+step 7600 min 98.2 loss 2.209 label 0.406 lr 0.00019 tokens 27836335 seq/s 63
+step 7800 min 101.0 loss 2.933 label 0.046 lr 0.00017 tokens 28575906 seq/s 31
+step 8000 min 103.9 loss 2.424 label 0.400 lr 0.00016 tokens 29308265 seq/s 60
+step 8200 min 106.7 loss 2.718 label 0.316 lr 0.00014 tokens 30041775 seq/s 36
+step 8400 min 109.5 loss 2.349 label 0.147 lr 0.00013 tokens 30772870 seq/s 51
+EVAL min 110.0 top1 0.95 refuse_absent 0.9 {'mention': 0.919, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 8600 min 112.1 loss 2.230 label 0.246 lr 0.00012 tokens 31508301 seq/s 56
+step 8800 min 114.8 loss 1.799 label 0.571 lr 0.00011 tokens 32237298 seq/s 105
+step 9000 min 117.3 loss 2.349 label 0.233 lr 0.00010 tokens 32967266 seq/s 51
+step 9200 min 119.8 loss 2.197 label 0.525 lr 0.00009 tokens 33704088 seq/s 56
+step 9400 min 122.4 loss 2.372 label 0.436 lr 0.00008 tokens 34444102 seq/s 55
+step 9600 min 124.9 loss 2.559 label 0.318 lr 0.00007 tokens 35170744 seq/s 45
+step 9800 min 127.5 loss 1.721 label 0.743 lr 0.00007 tokens 35908242 seq/s 111
+EVAL min 130.0 top1 0.967 refuse_absent 0.9 {'mention': 0.946, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 10000 min 130.2 loss 2.690 label 0.359 lr 0.00006 tokens 36641481 seq/s 36
+step 10200 min 132.9 loss 2.023 label 0.611 lr 0.00005 tokens 37365787 seq/s 77
+step 10400 min 135.5 loss 2.106 label 0.499 lr 0.00005 tokens 38090789 seq/s 74
+step 10600 min 138.1 loss 2.431 label 0.448 lr 0.00004 tokens 38819663 seq/s 51
+step 10800 min 140.8 loss 2.592 label 0.011 lr 0.00004 tokens 39559569 seq/s 41
+step 11000 min 143.4 loss 1.709 label 0.416 lr 0.00004 tokens 40294941 seq/s 107
+step 11200 min 146.2 loss 2.722 label 0.021 lr 0.00004 tokens 41032872 seq/s 19
+step 11400 min 148.8 loss 2.280 label 0.240 lr 0.00004 tokens 41766365 seq/s 61
+FINAL steps 11489 tokens 42091825 top1 0.956 refuse_absent 0.913 {'mention': 0.941, 'relation': 1.0, 'define': 0.917, 'year': 1.0}

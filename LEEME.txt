@@ -1,3 +1,30 @@
+BANANA0.71.1 — DOS LECTURAS UNIDAS, CONTRADICCIONES Y BIBLIOTECA MÁS GRANDE
+
+PREGUNTAS QUE JUNTAN DOS LECTURAS
+«¿Cuándo nació quien construyó el faro Brumel?» ahora se resuelve en dos pasos: primero busca quién lo construyó, toma el nombre de esa oración y después busca cuándo nació esa persona, aunque esté en otra página. Muestra las dos oraciones con sus fuentes.
+Sólo entiende esta familia: cuándo / dónde / cómo + nació, murió, vivió, estudió o trabajó + quien + fundó, creó, inventó, escribió, dirigió, descubrió, diseñó, desarrolló, construyó, pintó, compuso o inauguró + la cosa. Los dos pasos tienen que estar en lo guardado. Si hay dos personas con el mismo nombre puede unir mal; lo avisa y no lo verifica.
+
+CONTRADICCIONES ENTRE FUENTES
+«Buscá contradicciones» revisa las definiciones recientes («X es…») y marca los términos que dos fuentes definen con cifras distintas o de forma muy diferente. Muestra las dos versiones con su fuente y no decide cuál vale: si lo sabés, corregila con «Te corrijo: …». Mientras un término esté en disputa, el lector no estudia esa definición. Sólo compara definiciones del mismo término entre los últimos 64 bloques que las tienen; dos fuentes pueden contradecirse de otras formas que no detecta.
+
+BIBLIOTECA
+El tope de documentos sube de 1024 a 4096. El de texto total sigue en 512MiB. «Estado de la biblioteca» muestra cuánto hay. Cuando se llena, sigue sin borrar nada por su cuenta; para hacer lugar decí «borrá las 50 páginas más viejas» (cualquier número hasta 1000). Sólo borra páginas leídas de la web, las más antiguas primero; tus aportes, archivos y correcciones no se tocan. Lo que el modelo ya entrenó con esas páginas no se desentrena.
+
+EL LECTOR
+Se reentrenó dos horas y media más, con casos más difíciles (oraciones de otros párrafos del mismo documento y oraciones sobre otro asunto) y más verbos: construyó, descubrió, pintó, compuso, inauguró, estudió, trabajó. En la prueba de 343 preguntas quedó prácticamente igual que el de0.71 (331 aciertos contra 334), pero se equivoca menos cuando el dato no está (1 de 50, antes 4).
+También se probó agrandarlo a 8 capas: no acertó más (81 % contra 82 % en una prueba difícil de 22 oraciones candidatas) y es un tercio más lento, así que no se adoptó. Con el cómputo disponible, más tamaño no dio más comprensión.
+Ahora puntúa hasta 12 oraciones candidatas, cada una dos veces (con y sin la oración anterior como contexto), porque el contexto a veces le hacía descartar la respuesta correcta. Eso lo hace algo más lento por pregunta.
+Red de seguridad nueva: el modelo confundía «nació» con «murió» cuando las dos oraciones tenían un nombre y una fecha. Ahora, si la pregunta habla de un asunto conocido (nacer, morir, fundar, construir, capital, habitantes y otros), la oración elegida tiene que hablar de lo mismo; si no, pierde seguridad y normalmente no se muestra.
+En una prueba más parecida al uso real (elegir entre unas 22 oraciones del mismo artículo) acierta alrededor de 8 de cada 10, no 97 de cada 100.
+
+AL ACTUALIZAR
+Como cambió el lector base, lo que había aprendido en tu dispositivo con0.71 se descarta y el estudio empieza de nuevo. Tus documentos no se tocan.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.71.1.md. No se ejecutó en emulador ni en dispositivo.
+
+--- Funciones anteriores; prevalecen los cambios0.71.1 descritos arriba ---
+
 BANANA0.71 — LECTOR QUE COMPARA ORACIONES, EXPLORACIÓN DE INTERNET Y AUTOESTUDIO
 
 UN LECTOR NUEVO, MUCHO MÁS CERTERO
