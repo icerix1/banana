@@ -1,0 +1,44 @@
+package com.bananalab.lite;
+import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
+public final class Stage81ExploreCheck{
+ static void check(boolean b,String s){if(!b)throw new AssertionError(s);}
+ static String article(String title,String body,String... links){StringBuilder s=new StringBuilder("<html><head><title>"+title+"</title></head><body><main><p>"+body);for(int i=0;i<12;i++)s.append(" Este párrafo número ").append(i).append(" de ").append(title).append(" agrega contenido suficiente para que la página no se considere corta.");s.append("</p>");for(String l:links)s.append("<p><a href=\"").append(l).append("\">enlace</a></p>");return s.append("</main></body></html>").toString();}
+ public static void main(String[] args)throws Exception{PageCrawl.pauseMs=0;CrawlJob.ROBOTS.clear();File dir=Files.createTempDirectory("explore71").toFile();Stage75SubLinksCheck.Site web=new Stage75SubLinksCheck.Site(dir);
+  String a="https://uno.example.com",b="https://dos.example.org",c3="https://tres.example.net";
+  web.pages.put(a+"/volcanes",article("Volcanes uno","Los volcanes son aberturas de la corteza por donde sale magma.",b+"/volcan-activo",a+"/lava",a+"/cocina","https://www.facebook.com/volcanes",c3+"/copia",a+"/corta",a+"/privado/x"));
+  web.pages.put(a+"/lava",article("Lava","La lava de los volcanes es roca fundida que fluye por la superficie.",a+"/volcanes"));
+  web.pages.put(a+"/cocina",article("Recetas","Esta página habla de recetas de cocina con tomate y albahaca fresca."));
+  web.pages.put(a+"/corta","<html><body><main><p>Los volcanes en una página demasiado corta para ser útil al lector.</p></main></body></html>");
+  web.pages.put(a+"/privado/x",article("Privado","Los volcanes en una sección que robots no permite."));web.pages.put(a+"/robots.txt","User-agent: *\nDisallow: /privado\n# comentario para superar el mínimo de texto útil del lector\n");
+  web.pages.put(b+"/volcan-activo",article("Volcán activo","Un volcán activo es el que tuvo erupciones en tiempos históricos.",b+"/p1",b+"/p2",b+"/p3",c3+"/geologia"));
+  for(int i=1;i<=3;i++)web.pages.put(b+"/p"+i,article("Página "+i,"Otro texto distinto número "+i+" sobre volcanes y sus erupciones registradas."));
+  web.pages.put(c3+"/copia",article("Volcanes uno","Los volcanes son aberturas de la corteza por donde sale magma."));web.pages.put(c3+"/geologia",article("Geología","La geología estudia las rocas; los volcanes son uno de sus temas."));
+  web.pages.put("https://www.facebook.com/volcanes",article("Red social","Los volcanes en una red social que no debe visitarse."));
+  CreatorPersistenceCheck.Fake c=new CreatorPersistenceCheck.Fake();final List<String> saved=new ArrayList<>();PageCrawl.Saver saver=new PageCrawl.Saver(){public String save(PageReader.Document d){saved.add(d.url);return "ok";}};
+  // Phrases
+  check("los volcanes".equals(CrawlJob.topic("Explorá internet sobre los volcanes"))&&"energia solar".equals(CrawlJob.topic("investigá a fondo sobre energía solar en internet"))&&"ajolotes".equals(CrawlJob.topic("leé por toda la web sobre ajolotes"))&&CrawlJob.topic("investiga sobre volcanes")==null&&CrawlJob.topic("explora internet sobre https://example.com")==null&&CrawlJob.topic("que es internet")==null,"exploration phrases keep the old «investigá» route intact");
+  check("status".equals(CrawlJob.parse("estado de la exploración"))&&"cancel".equals(CrawlJob.parse("cancelá la exploración")),"exploration control phrases");
+  check(PageCrawl.wanted("lee https://example.com y otros sitios"),"link plus other sites is a crawl request");
+  // Seeds from the search page
+  final String results="<html><body><a class=\"result__a\" href=\"//duckduckgo.com/l/?uddg="+java.net.URLEncoder.encode(a+"/volcanes","UTF-8")+"&rut=x\">Volcanes</a><a class='result__a' href='"+b+"/volcan-activo'>Activo</a></body></html>";
+  List<String> seeds=CrawlJob.seeds("volcanes",new ResearchWeb.Transport(){public String get(String url,long deadline){check(url.contains("q=volcanes"),"query sent");return results;}});check(seeds.size()==3&&seeds.get(0).equals(a+"/volcanes")&&seeds.get(1).equals(b+"/volcan-activo")&&seeds.get(2).contains("es.wikipedia.org")&&seeds.get(2).contains("volcanes"),"seeds: "+seeds);
+  List<String> offline=CrawlJob.seeds("volcanes",new ResearchWeb.Transport(){public String get(String url,long deadline)throws Exception{throw new IOException("sin red");}});check(offline.size()==1&&offline.get(0).contains("wikipedia"),"search failure still leaves one starting point");
+  check(CrawlJob.exploreNow(c,"explorá internet sobre volcanes","volcanes",null).contains("aprendizaje continuo"),"without the background service the exploration is not started in the chat");check(CrawlJob.state(c)==null,"and nothing is queued");
+  // Exploration across sites
+  String started=CrawlJob.explore(c,"los volcanes",Arrays.asList(a+"/volcanes",b+"/volcan-activo"),2,60);check(started.contains("«los volcanes»")&&started.contains("2 páginas")&&saved.isEmpty()&&CrawlJob.pending(c),"nothing is read in the chat: "+started);
+  try{CrawlJob.explore(c,"otra cosa",Arrays.asList(a+"/lava"),2,10);throw new AssertionError("second job");}catch(IllegalStateException expected){}
+  check(!CrawlJob.step(c,web,saver,100,60000),"exploration finishes");JSONObject s=CrawlJob.state(c);
+  check(saved.contains(a+"/volcanes")&&saved.contains(b+"/volcan-activo")&&saved.contains(a+"/lava")&&saved.contains(c3+"/geologia")&&saved.contains(b+"/p1"),"pages of three sites are read: "+saved);
+  check(!saved.contains(a+"/cocina")&&s.getInt("offTopic")==1,"a page that never names the topic is not kept");check(!saved.contains(c3+"/copia")&&s.getInt("repeated")==1,"the same article on another address is not kept twice");check(!saved.contains(a+"/corta")&&s.getInt("short")==1,"a page with little text is not kept");
+  check(!web.requested.contains("https://www.facebook.com/volcanes")&&!web.requested.contains(a+"/privado/x")&&s.getInt("robots")==1,"avoided sites and robots.txt of each host are respected");check(web.requested.contains(a+"/robots.txt")&&web.requested.contains(b+"/robots.txt")&&web.requested.contains(c3+"/robots.txt"),"robots.txt is asked once per site");
+  check(Collections.frequency(web.requested,a+"/volcanes")==1&&s.getJSONObject("hosts").length()==3&&s.getBoolean("done"),"each page once, three sites counted");String report=CrawlJob.status(c);check(report.contains("Exploración terminada de internet sobre «los volcanes»")&&report.contains("sitios distintos: 3")&&report.contains("1 repetidas · 1 con poco texto · 1 que no nombraban el tema"),"report: "+report);
+  // Per-site cap
+  Stage75SubLinksCheck.Site big=new Stage75SubLinksCheck.Site(dir);String[] links=new String[40];for(int i=0;i<40;i++){links[i]="https://grande.example.com/n"+i;big.pages.put(links[i],article("Nota "+i,"Texto único "+i+" "+(i*7919)+" sobre volcanes con otro comienzo distinto cada vez."));}big.pages.put("https://grande.example.com/indice",article("Índice","Índice de notas sobre volcanes.",links));
+  saved.clear();CrawlJob.ROBOTS.clear();CrawlJob.explore(c,"volcanes",Arrays.asList("https://grande.example.com/indice"),2,200);CrawlJob.step(c,big,saver,500,60000);s=CrawlJob.state(c);check(saved.size()==CrawlJob.PER_HOST&&s.getInt("hostFull")==40-CrawlJob.PER_HOST+1&&big.requested.size()<=CrawlJob.PER_HOST+1,"one site cannot take more than its share: saved "+saved.size()+" skipped "+s.getInt("hostFull")+" requests "+big.requested.size());
+  // Link plus «otros sitios»
+  saved.clear();CrawlJob.ROBOTS.clear();web.requested.clear();String open=CrawlJob.start(c,PageCrawl.plan("lee "+a+"/volcanes y otros sitios, 1 nivel",a+"/volcanes"),web,saver,true);check(open.contains("otros sitios")&&saved.size()==1,"first page in chat: "+open);CrawlJob.step(c,web,saver,100,60000);check(saved.contains(b+"/volcan-activo")&&saved.contains(a+"/cocina")&&!saved.contains(b+"/p1")&&!saved.contains(c3+"/copia"),"without a topic every readable page of level one is kept, other sites included, repeated ones excluded: "+saved);
+  saved.clear();CrawlJob.ROBOTS.clear();CrawlJob.start(c,PageCrawl.plan("lee "+a+"/volcanes con 1 nivel",a+"/volcanes"),web,saver);CrawlJob.step(c,web,saver,100,60000);check(!saved.contains(b+"/volcan-activo")&&saved.contains(a+"/lava")&&saved.contains(a+"/corta"),"a normal crawl still stays inside the site and keeps its old rules: "+saved);
+  check(CrawlJob.quality("corto",new JSONArray(),new HashSet<String>()).equals("short")&&CrawlJob.fingerprint("Hola, Mundo! 123").equals(CrawlJob.fingerprint("hola mundo 123")),"quality helpers");String[] left=dir.list();check(left==null||left.length==0,"temporary files cleaned");
+  System.out.println("PASS Stage81 internet exploration: topic phrases, search seeds, several sites, per-site cap, topic/duplicate/short filters, avoided sites, robots per site, link plus other sites, same-site crawl unchanged");
+ }
+}

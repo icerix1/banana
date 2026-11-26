@@ -1,0 +1,19 @@
+package com.bananalab.lite;
+import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
+/** Host report, not a pass/fail suite: the selector reader vs the lexical extractor on generated held-out examples.
+ *  Usage: LectorSelectReport raiz ejemplos.json salida.json */
+public final class LectorSelectReport{
+ static final double[] LEVELS={0,.3,.5,.7,.8,.9,.95};
+ static String flat(String s){return new Lector.Flat(s,true).text.toString();}
+ public static void main(String[] a)throws Exception{Path root=Paths.get(a[0]);BananaTransformer m;try(InputStream in=Files.newInputStream(root.resolve("assets/lector3/lector3.bin"))){m=BananaTransformer.container(in);}
+  JSONArray examples=new JSONArray(new String(Files.readAllBytes(Paths.get(a[1])),"UTF-8"));Map<String,int[]> by=new TreeMap<>();int n=0,right=0,lexical=0,lexicalSilent=0,unaligned=0,absent=0;int[] shown=new int[LEVELS.length],good=new int[LEVELS.length],fallbackShown=new int[LEVELS.length],fallbackGood=new int[LEVELS.length],absentShown=new int[LEVELS.length];long time=System.nanoTime();
+  for(int i=0;i<examples.length();i++){JSONArray e=examples.getJSONArray(i);String ctx=e.getString(0),q=e.getString(1),target=e.getString(2),kind=e.getString(3);List<String> sentences=new ArrayList<>();for(String s:KnowledgeNotebook.chunks(ctx))if(s.length()>=20)sentences.add(s);if(sentences.isEmpty())continue;
+   if(kind.equals("negative")){absent++;Lector.Pick pick=Lector.select(m,null,sentences,q,Lector.MAX_CANDIDATES);for(int t=0;t<LEVELS.length;t++)if(pick!=null&&pick.confidence>=LEVELS[t])absentShown[t]++;continue;}
+   int goal=-1;String t=flat(target);for(int k=0;k<sentences.size();k++)if(flat(sentences.get(k)).equals(t))goal=k;if(goal<0){unaligned++;continue;}n++;int[] row=by.get(kind);if(row==null)by.put(kind,row=new int[3]);row[0]++;
+   Lector.Pick pick=Lector.select(m,null,sentences,q,Lector.MAX_CANDIDATES);boolean hit=pick!=null&&pick.index==goal;if(hit){right++;row[1]++;}
+   JSONArray rows=new JSONArray().put(new JSONObject().put("id","x").put("title","t").put("source","https://example.com").put("origin","web").put("saved",1L).put("truncated",false).put("text",ctx));String old=ReadingKnowledge.answer(rows,q);boolean silent=old==null;if(silent)lexicalSilent++;else{int start=old.indexOf('«'),end=old.indexOf("»\nFuente: ");String quote=start>=0&&end>start?flat(old.substring(start+1,end)):"";if(!quote.isEmpty()&&(t.contains(quote)&&quote.length()>=t.length()*2/3||quote.contains(t)&&quote.length()<=t.length()*3/2+40)){lexical++;row[2]++;}}
+   for(int k=0;k<LEVELS.length;k++)if(pick!=null&&pick.confidence>=LEVELS[k]){shown[k]++;if(hit)good[k]++;if(silent){fallbackShown[k]++;if(hit)fallbackGood[k]++;}}}
+  JSONObject kinds=new JSONObject();for(Map.Entry<String,int[]> k:by.entrySet())kinds.put(k.getKey(),new JSONObject().put("examples",k.getValue()[0]).put("reader",k.getValue()[1]).put("lexical",k.getValue()[2]));
+  JSONObject out=new JSONObject().put("examples",n).put("readerBestSentenceRight",right).put("lexicalSameSentence",lexical).put("lexicalSilent",lexicalSilent).put("byKind",kinds).put("confidenceLevels",new JSONArray(LEVELS)).put("shownAtLevel",new JSONArray(shown)).put("rightAtLevel",new JSONArray(good)).put("fallbackShownAtLevel",new JSONArray(fallbackShown)).put("fallbackRightAtLevel",new JSONArray(fallbackGood)).put("absentExamples",absent).put("absentWronglyShownAtLevel",new JSONArray(absentShown)).put("skippedBySentenceSplit",unaligned).put("appThreshold",Lector.SELECT_CONFIDENCE).put("secondsPerExampleHostJvm",(System.nanoTime()-time)/1e9/Math.max(1,n+absent)).put("note","Ejemplos de plantilla sobre artículos no vistos; el extractor léxico se mide sobre el mismo fragmento único. No es un benchmark externo.");
+  Files.write(Paths.get(a[2]),out.toString(1).getBytes("UTF-8"));System.out.println(out.toString());}
+}

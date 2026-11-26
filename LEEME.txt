@@ -1,3 +1,34 @@
+BANANA0.71 — LECTOR QUE COMPARA ORACIONES, EXPLORACIÓN DE INTERNET Y AUTOESTUDIO
+
+UN LECTOR NUEVO, MUCHO MÁS CERTERO
+El lector neuronal cambió de método. El anterior intentaba copiar la oración correcta de un fragmento y acertaba poco. El nuevo (Lector 3) mira una oración candidata por vez y decide si responde tu pregunta, «sí» o «no»; después se queda con la mejor puntuada. Tiene el mismo tamaño (4.344.832 parámetros) y se entrenó dos horas y media más.
+
+Medido con 343 preguntas sobre artículos que no vio: elige la oración correcta en 334. El buscador por palabras acierta 162 y el lector de0.69 acertaba 137 de 350. En preguntas como «cuándo nació», «dónde queda» o «para qué sirve» acierta 75 de 79; el buscador, 14. De 50 preguntas cuyo dato no estaba en el texto, respondió por error en 4. En seis fragmentos cortos que escribí a mano acertó los 6 (antes 2).
+
+Estos números son en condiciones favorables: preguntas de plantilla y fragmentos de pocas oraciones. Con tus páginas reales va a acertar menos, sobre todo si la oración no nombra al sujeto o la pregunta usa palabras muy distintas. Sigue sin redactar respuestas, sin razonar ni resumir: elige una oración que ya está escrita en lo guardado.
+
+CÓMO LO USA EL CHAT
+Si el buscador por palabras no encuentra nada, el lector puntúa hasta 16 oraciones candidatas y muestra la mejor si su seguridad es de 0,7 o más. Si el buscador sí respondió, el lector agrega su propia oración arriba sólo cuando está muy seguro (0,9 o más) y es una oración distinta. Como siempre elige entre oraciones guardadas, no puede inventar texto. Agrega unos segundos a cada pregunta sobre lo guardado.
+
+EXPLORAR INTERNET
+• «Explorá internet sobre los volcanes» (también «investigá a fondo sobre X en internet», «leé por toda la web sobre X»): busca páginas para empezar, y desde ahí sigue enlaces hacia cualquier sitio público, en segundo plano. Por defecto 60 páginas y 2 niveles; podés pedir otros números («hasta 200 páginas», «3 niveles»).
+• «Leé https://sitio/pagina y otros sitios»: parte de tu enlace y también sale del sitio.
+Reglas de la exploración: como mucho 15 páginas por sitio; no guarda páginas repetidas, con poco texto o que no nombran el tema; no entra a redes sociales, tiendas ni buscadores; respeta el robots.txt de cada sitio. Se controla igual que un recorrido: «estado de la exploración», «pausá», «seguí», «cancelá». Sólo trabaja con el aprendizaje continuo activo.
+No es «toda la internet»: son decenas o cientos de páginas por pedido, dentro del tope de la biblioteca (1024 documentos, 512MiB), que no cambió. Lo que lee no está verificado, y como después entrena con eso, una página falsa puede enseñarle errores.
+Corrección: «1 nivel» en singular no se entendía desde0.67; ahora sí.
+
+AUTOESTUDIO: SE PREGUNTA Y SE CORRIGE CON LA FUENTE
+Al estudiar cada bloque, el lector primero responde sus propias preguntas sin ayuda. Las que falla las estudia el doble. La respuesta correcta siempre sale del texto guardado, nunca de lo que el modelo dijo. Además escribe hasta dos preguntas propias por bloque para oraciones que las plantillas no cubrían; una pregunta propia sólo se usa con la oración para la que fue escrita y si comparte alguna palabra con ella. «Estado del lector» muestra cuántas preguntas se hizo, cuántas falló y las últimas que escribió sola.
+No conversa libremente consigo misma: eso haría que aprenda sus propios errores. Tampoco arma preguntas que junten dos lecturas ni detecta contradicciones entre fuentes.
+
+AL ACTUALIZAR
+Lo que el lector anterior había aprendido en tu dispositivo no sirve para el nuevo: al abrir0.71 se descarta y el estudio de tus lecturas empieza otra vez con el lector nuevo. Tus documentos no se tocan.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.71.md. No se ejecutó en emulador ni en dispositivo.
+
+--- Funciones anteriores; prevalecen los cambios0.71 descritos arriba ---
+
 BANANA0.70 — RECORRIDOS EN SEGUNDO PLANO Y LECTURA DE PDF
 
 RECORRIDO DE SUBENLACES SIN BLOQUEAR EL CHAT

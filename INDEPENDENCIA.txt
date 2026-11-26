@@ -52,3 +52,6 @@ MobileCore1 usa pesos propios entrenados desde cero y lecciones redactadas para 
 
 ACTUALIZACIÓN 0.69
 Lector 1 es un modelo propio nuevo: inicio aleatorio y entrenamiento desde cero con scripts incluidos en model-source/lector. No se usaron pesos preentrenados, profesores ni APIs de otros modelos. A diferencia de las entregas anteriores, su texto de entrenamiento NO es corpus propio: es texto público de Wikipedia en español (CC BY-SA 4.0), con preguntas generadas por plantillas del proyecto y respuestas que son oraciones literales de ese texto. Chat 3.4 y Pixel 2.3 no cambiaron. En el dispositivo, el lector sigue ajustándose sólo con los documentos que el usuario guarda.
+
+ACTUALIZACIÓN 0.71
+Lector 3 continúa los pesos propios de Lector 1 con otra tarea (decidir si una oración responde una pregunta). Mismo texto de entrenamiento público (Wikipedia en español, CC BY-SA 4.0), sin pesos, profesores ni APIs de otros modelos. La exploración de internet agrega a la biblioteca páginas públicas de sitios variados que después entrenan al lector en el dispositivo; esas páginas no se verifican.

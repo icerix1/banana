@@ -77,8 +77,9 @@ class Pool:
         if len(ctx)>2 and rng.random()<.5:
             cut=rng.randrange(1,len(ctx));ctx=ctx[cut:]+ctx[:cut]  # la respuesta no debe estar siempre al principio
         head='titulo : '+t+' . ' if rng.random()<.5 else ''
+        self.last=(t,list(ctx))  # para el selector: oraciones del fragmento por separado
         if kind=='negative':
-            other=self.example(rng,rng.choice(['define','mention','relation']))
+            mine=self.last;other=self.example(rng,rng.choice(['define','mention','relation']));self.last=mine
             if not other:return None
             term=re.sub(r'^(que es|quien es|que dice sobre) ','',plain(other[1]))
             body=plain(' '.join(ctx)).lower()

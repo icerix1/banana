@@ -37,3 +37,12 @@ Sobre las mismas 350 preguntas apartadas (sin título, sin rotación):
 | aciertos en «relation» | 30 | 15 |
 
 En diez fragmentos cortos escritos a mano: Lector 1 acertó 3 y mostró 7 oraciones equivocadas; Lector 2 acertó 4 y mostró 1. Lector 2 se equivoca menos porque calla más, pero responde menos y perdió la mitad de los aciertos en preguntas de relación. No hay evidencia de que sea mejor para la app, así que **la app sigue con Lector 1** y `Lector.TITLES` queda en falso. Sus pesos no se incluyen en el repositorio.
+
+## Lector 3: selector de oraciones (0.71, es el que usa la app)
+
+`lector_select.py` y `train_select.py`. El modelo no copia: decide «si»/«no» para una oración candidata, con el título y la oración anterior como contexto opcional; tarea menor (15 %), escribir una pregunta para una oración. Parte de los pesos de Lector 1. Dos etapas: 30 minutos sin negativos vecinos y 120 minutos agregando como negativos difíciles las oraciones contiguas a la respuesta (la primera etapa confundía «murió» con «nació» cuando la oración anterior traía la respuesta). `lector3/` guarda registro y ficha; el informe está en `test/resources/lector3-heldout-report.json`: 334 de 343 con la mejor oración correcta, contra 162 del buscador léxico.
+
+```sh
+venv/bin/python train_select.py rows.pkl tokenizer.json etapa1/ 30 lector1-state.pt   # sin el bloque «near» de lector_select.py
+venv/bin/python train_select.py rows.pkl tokenizer.json etapa2/ 120 etapa1/state.pt
+```

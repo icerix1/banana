@@ -1,3 +1,13 @@
+# Banana0.71: selector de oraciones, exploración abierta y autoestudio
+
+Lector 3 usa el mismo BananaTransformer y contenedor que Lector 1, con otra tarea: [bos][user] «titulo : T . antes : P oracion : S» [user] pregunta [assistant] → «si»/«no». Lector.yes compara los logits del primer token de cada etiqueta; Lector.select ordena las oraciones por palabras compartidas, puntúa hasta MAX_CANDIDATES y devuelve la mejor; Lector.read recorre hasta tres documentos recuperados y exige SELECT_CONFIDENCE0.7; Lector.confident agrega la elección cuando el buscador léxico ya respondió y la seguridad es0.9. Lector.ask genera una pregunta para una oración (segunda tarea del entrenamiento). Las funciones de copia (generate, ground, windows) quedan para pruebas y para partir bloques. El asset pasó a assets/lector3/lector3.bin; ModelDepot.retire descarta un checkpoint cuyo baseAsset es otro y LectorTraining.retire reinicia el progreso.
+
+LectorTraining.batch arma Probe(título, oraciones, objetivo, pregunta de estudio, pregunta de examen): por cada una, un ejemplo «si» con la oración objetivo y un «no» con una vecina. Con selfStudy, Lector.select responde antes; las falladas suman un segundo par. Las preguntas propias (hasta2) sólo entrenan. LectorExam.grade usa select. El criterio de publicación, el crecimiento, el examen con bloques apartados y el regreso al mejor checkpoint no cambiaron.
+
+CrawlJob abierto: estado open con hosts (cupo PER_HOST15), hashes de huella (primeras600 letras), términos del tema y contadores short/repeated/offTopic/hostFull. collectOpen acepta cualquier host público fuera de AVOID; rules() guarda robots por host. explore() parte de CrawlJob.seeds (resultados de ResearchWeb.parseSearch más la búsqueda de Wikipedia) sin leer nada en el chat; start(..., open) parte de un enlace. PageCrawl acepta «nivel» en singular.
+
+--- Arquitectura previa ---
+
 # Banana0.70: recorrido reanudable y PDF
 
 CrawlJob guarda en banana-crawl-job el plan, el sitio, contadores, hasta5000 enlaces en cola y las claves de las páginas guardadas. start() lee y guarda la primera página en el hilo del chat; step() reconstruye «visto» con claves guardadas más cola, reutiliza PageCrawl (resolve, collect, Robots, pausa, detección de biblioteca llena) y persiste cada5 páginas. Una marca started evita que una tanda vieja pise un recorrido cancelado o reemplazado. LearningLoop.cycle atiende primero el recorrido pendiente (25 páginas o50s) y devuelve true para que LearningService siga llamando; KnowledgeNotebook.crawl elige el segundo plano sólo en la app instalada con el aprendizaje continuo activo y conserva PageCrawl.run en los demás casos.
