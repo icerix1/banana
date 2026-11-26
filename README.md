@@ -1,10 +1,10 @@
 # Banana
 
-App Android (`com.bananalab.lite`) en Java puro: chat con Transformer propio, creación de escenas animadas, biblioteca de conocimiento y entrenamiento en el dispositivo. Versión de estas fuentes: **0.66**.
+App Android (`com.bananalab.lite`) en Java puro: chat con Transformer propio, creación de escenas animadas, biblioteca de conocimiento y entrenamiento en el dispositivo. Versión de estas fuentes: **0.67** (lectura de subenlaces por niveles).
 
 - `LEEME.txt`: guía de uso. `ARQUITECTURA.md`: mapa técnico. `VALIDACION-*.md`: pruebas por versión.
 - `src/`: código Java. `assets/`: modelos y recursos. `model-source/`: scripts y registros de entrenamiento.
-- `dist/Banana-0.66-Android.apk`: APK de distribución 0.66.
+- `dist/Banana-0.67-Android.apk`: APK de esta versión. `dist/Banana-0.66-Android.apk`: APK original 0.66.
 
 ## Compilar
 

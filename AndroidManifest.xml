@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bananalab.lite" android:versionCode="660000" android:versionName="0.66">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bananalab.lite" android:versionCode="670000" android:versionName="0.67">
  <uses-permission android:name="android.permission.INTERNET"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>

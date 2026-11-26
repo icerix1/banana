@@ -1,3 +1,13 @@
+# Banana0.67: lectura de subenlaces por niveles
+
+PageStream.extract recoge los href de las etiquetas a mientras extrae el texto, sin DOM: primero los del contenido main/article, después el resto del cuerpo, después menús/pies; quedan en PageReader.Document.links (máximo4000 por página). PageCrawl recorre en anchura desde la página inicial: resolve normaliza a HTTPS sin fragmento, descarta binarios, acciones de sesión/edición y otros esquemas, y codifica caracteres no ASCII; key deduplica (www y barra final). Sólo encola el mismo sitio. Robots interpreta robots.txt (grupo propio o *, coincidencia más larga, * y $, Crawl-delay hasta5s) y se aplica a los subenlaces, no a la página pedida.
+
+Límites: DEFAULT_DEPTH3, MAX_DEPTH10, DEFAULT_PAGES40, MAX_PAGES300, TIME_MS15min, cola20000, pausa mínima400ms. Una subpágina fallida se cuenta y se sigue; muchas fallas seguidas detienen el recorrido. Una redirección fuera del sitio se descarta. Biblioteca llena o interrupción detienen y conservan lo guardado.
+
+KnowledgeNotebook.parse agrega crawl_on/crawl_off (preferencia en banana-page-crawl), crawl_last (seguir la última fuente web) y marca Intent.crawl cuando el pedido con enlace nombra subenlaces/niveles; las palabras se evalúan sin la dirección. crawl() guarda cada página con rememberReader, igual que una lectura simple, por lo que NotebookDisk, ReadingTraining y LearningLoop no cambian. Cada fetch conserva las comprobaciones de PageReader.address (HTTPS, sin credenciales, sin direcciones locales) y el presupuesto por página de PageStream.Budget. La preferencia no viaja en respaldos ni en la APK reconstruida.
+
+--- Arquitectura previa ---
+
 # Banana0.66: entrenamiento continuo Android y ejercicios documentados
 
 LearningLoop coordina preferencias, métricas, historial12 ejercicios, condiciones, repasos y trabajo periódico6601. LearningService es un foreground service specialUse con notificación silenciosa y pausa; sólo se inicia desde actividad visible. LearningJob ejecuta una microtanda como fallback dentro de la cuota de JobScheduler sin lanzar un foreground service. LearningBoot programa al reiniciar/actualizar. LiteApplication registra visibilidad y BananaActivity señala trabajo de chat/editor, además del panel Proyecto → Aprendizaje continuo.

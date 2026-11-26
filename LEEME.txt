@@ -1,3 +1,30 @@
+BANANA0.67 — SUBENLACES POR NIVELES
+
+Ahora puede leer, además de la página que le pasás, las páginas enlazadas desde ella, y las enlazadas desde esas, nivel por nivel. Cada página leída se guarda como un documento separado, con su propia dirección como fuente, y entra en la misma biblioteca, índice y cola de entrenamiento que una lectura normal.
+
+CÓMO PEDIRLO
+• «Leé https://sitio/pagina y sus subenlaces»: 3 niveles y hasta 40 páginas.
+• «Recorré https://sitio/pagina con 5 niveles y hasta 100 páginas»: vos elegís los números.
+• «Leé todo el sitio https://sitio» o «…con muchos niveles»: 6 niveles y hasta 120 páginas.
+• Después de una lectura normal: «Leé los subenlaces» sigue los de la última página web guardada. La respuesta de una lectura normal avisa cuántos subenlaces del mismo sitio encontró.
+• «Siempre leé los subenlaces» lo deja activado para cada enlace que mandes. «No leas los subenlaces» vuelve a una sola página.
+Son frases admitidas, no una comprensión universal. Un enlace solo, sin esas palabras y sin la preferencia activada, sigue leyendo una sola página, como antes.
+
+LÍMITES
+Máximo 10 niveles y 300 páginas por recorrido, y 15 minutos en total. Si pedís más, usa el máximo y lo dice. Nivel 1 son los enlaces de la página que pasaste; nivel 2, los de esas páginas; y así. Recorre por niveles completos: primero todo el nivel 1, después el 2. Dentro de cada página sigue primero los enlaces del contenido principal y después los de menús y pies. Al llegar al tope informa cuántos subenlaces descubiertos quedaron sin leer.
+
+Sólo sigue enlaces del mismo sitio (el mismo dominio, con o sin www). No sale a otros dominios ni subdominios. Saltea archivos que no son páginas (PDF, imágenes, video, comprimidos), enlaces de sesión, carrito o edición, y direcciones repetidas. Respeta el robots.txt del sitio para los subenlaces y su pausa pedida hasta 5 segundos; entre página y página espera al menos 0,4 segundos. La página que vos pasás se lee siempre. Si una subpágina falla, sigue con las demás e informa cuántas fallaron; si falla la primera, no guarda nada y explica el motivo como antes.
+
+Cada página mantiene los límites de 0.64/0.65: HTTPS público, HTML o texto, sin sesión ni JavaScript, 64MiB. La biblioteca sigue admitiendo 1024 documentos y 512MiB; si se llena, el recorrido se detiene y conserva lo guardado. Volver a recorrer un sitio reemplaza las páginas con la misma dirección, no las duplica.
+
+MIENTRAS RECORRE
+El chat muestra el avance (páginas, nivel y cola) y queda ocupado hasta terminar; todavía no hay un botón para cancelar un recorrido en curso. Un recorrido grande usa datos y batería: empezá con pocos niveles. No verifica la información de las páginas ni ejecuta instrucciones que aparezcan en ellas. Leer muchas páginas amplía lo consultable; no garantiza mejor razonamiento.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.67.md. No se probó en la tablet física ni en emulador en esta etapa.
+
+--- Funciones anteriores; prevalecen los cambios0.67 descritos arriba ---
+
 BANANA0.66 — APRENDIZAJE CONTINUO Y EJERCICIOS DE LAS FUENTES
 
 Al abrir Banana, el modo continuo intenta trabajar con las lecturas guardadas sin que tengas que pedir cada tanda. Las pausas del entrenamiento de lecturas se respetan. El chat deja de esperar al entrenamiento al incorporar una fuente: guarda el documento, lo encola y puede seguir respondiendo. No necesita PC, API ni modelos externos. El límite web sigue en64MiB; esta fase no lo amplía a128MiB.

@@ -11,7 +11,7 @@ final class Diagnostics {
  static void record(Context context,Throwable error){
   try{
    StringWriter stack=new StringWriter();error.printStackTrace(new PrintWriter(stack));
-   String report="Banana 0.66 / Chat3.4 Pixel2.3\nAndroid "+Build.VERSION.RELEASE+" (API "+Build.VERSION.SDK_INT+")\nDispositivo: "+Build.MANUFACTURER+" "+Build.MODEL+"\nMódulos: revisión "+context.getSharedPreferences("banana-runtime-modules",0).getInt("revision",0)+"\nEtapa: "+phase+"\n\n"+stack.toString();
+   String report="Banana 0.67 / Chat3.4 Pixel2.3\nAndroid "+Build.VERSION.RELEASE+" (API "+Build.VERSION.SDK_INT+")\nDispositivo: "+Build.MANUFACTURER+" "+Build.MODEL+"\nMódulos: revisión "+context.getSharedPreferences("banana-runtime-modules",0).getInt("revision",0)+"\nEtapa: "+phase+"\n\n"+stack.toString();
    if(report.length()>16000)report=report.substring(0,16000);
    try(FileOutputStream out=context.openFileOutput("last-crash.txt",Context.MODE_PRIVATE)){out.write(report.getBytes("UTF-8"));}
   }catch(Throwable ignored){}
