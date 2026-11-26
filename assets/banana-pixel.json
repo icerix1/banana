@@ -1,0 +1,22 @@
+{
+  "name": "Banana Pixel 2.3",
+  "release": "2.3",
+  "app_release": "0.48",
+  "external_weights": false,
+  "components": {
+    "characters": "pixel-v2/character21.bin",
+    "objects": "pixel-v2/props.bin",
+    "references": "pixel22/vision22.bin",
+    "backgrounds": "background/background22.bin",
+    "tomato": "pixel-v2/tomato22.bin",
+    "faces": "pixel22/faces22.bin",
+    "compositional_creatures": "custom23/custom23.bin"
+  },
+  "animation": "Programmed 2D rig using layers cut from own neural textures; not 3D reconstruction or full neural video.",
+  "local_edits": "Face/body/accessory regions preserve pixels outside supported edits.",
+  "reference_support": "Image import, color/transparency analysis and own finite-catalog recognizer. Not general VLM.",
+  "character_model_card": "pixel-v2/model-card21.json",
+  "views": "Own learned front, profile and back; left mirrors right. Not arbitrary 3D reconstruction.",
+  "cleanup": "Flat-color targets, foreground/eye sampling, median and own palette cleanup of neural predictions.",
+  "compositional_scope": "6 own learned body forms,4 ear styles,3 tail styles; own previous learned facial/accessory patches. Not universal generation."
+}

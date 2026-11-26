@@ -1,0 +1,9 @@
+package com.bananalab.lite;
+import android.media.*;
+/** Background synthesis + bounded streaming buffer. Playback head drives lip timing. */
+final class PreviewSound{
+ private volatile AudioTrack track;private volatile boolean preparing;private volatile int generation;private Thread worker;private long lastHead,lastHeadAt;
+ void play(SceneDraft draft,int frames){stop();if(draft==null||!draft.sound)return;final int token=generation;preparing=true;worker=new Thread(()->{AudioTrack local=null;try{short[] pcm=Soundtrack.pcm(draft,frames);if(token!=generation)return;int size=Math.max(AudioTrack.getMinBufferSize(Soundtrack.RATE,AudioFormat.CHANNEL_OUT_MONO,AudioFormat.ENCODING_PCM_16BIT),Soundtrack.RATE);local=new AudioTrack(AudioManager.STREAM_MUSIC,Soundtrack.RATE,AudioFormat.CHANNEL_OUT_MONO,AudioFormat.ENCODING_PCM_16BIT,size,AudioTrack.MODE_STREAM);synchronized(this){if(token!=generation){local.release();return;}track=local;lastHead=0;lastHeadAt=android.os.SystemClock.uptimeMillis();preparing=false;local.setVolume(.7f);local.play();}int at=0;while(at<pcm.length&&token==generation){int n=local.write(pcm,at,Math.min(4096,pcm.length-at));if(n<=0)break;at+=n;}}catch(Exception e){if(token==generation)stop();}finally{if(token==generation)preparing=false;}},"banana-preview-audio");worker.start();}
+ long elapsedMillis(){if(preparing)return 0;AudioTrack current=track;if(current==null)return -1;try{long head=current.getPlaybackHeadPosition()&0xffffffffL,now=android.os.SystemClock.uptimeMillis();if(head!=lastHead){lastHead=head;lastHeadAt=now;}if(now-lastHeadAt>2000)return -1;return head*1000/Soundtrack.RATE;}catch(Exception e){return -1;}}
+ synchronized void stop(){generation++;preparing=false;if(worker!=null)worker.interrupt();worker=null;AudioTrack old=track;track=null;if(old!=null){try{old.pause();old.flush();old.stop();}catch(Exception ignored){}old.release();}}
+}

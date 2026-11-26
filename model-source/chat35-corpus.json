@@ -1,0 +1,1436 @@
+{
+  "origin": "authored own templates; no teacher",
+  "train_new": [
+    [
+      [],
+      "como continuo la escena",
+      "continuar agrega acciones despues de las existentes y conserva los diseños ."
+    ],
+    [
+      [],
+      "quiero agregar lo que sigue",
+      "continuar agrega acciones despues de las existentes y conserva los diseños ."
+    ],
+    [
+      [],
+      "continua sin borrar lo anterior",
+      "continuar agrega acciones despues de las existentes y conserva los diseños ."
+    ],
+    [
+      [],
+      "que significa el anterior",
+      "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre ."
+    ],
+    [
+      [],
+      "a quien se refiere el anterior",
+      "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre ."
+    ],
+    [
+      [],
+      "como elegis al anterior",
+      "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre ."
+    ],
+    [
+      [],
+      "el que recibio es quien tiene la caja",
+      "recibir describe un evento . quien tiene la caja depende de las entregas posteriores ."
+    ],
+    [
+      [],
+      "recibir y tener es lo mismo",
+      "recibir describe un evento . quien tiene la caja depende de las entregas posteriores ."
+    ],
+    [
+      [],
+      "que diferencia hay entre recibir y sostener",
+      "recibir describe un evento . quien tiene la caja depende de las entregas posteriores ."
+    ],
+    [
+      [],
+      "cambia solo su sombrero",
+      "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes ."
+    ],
+    [
+      [],
+      "modifica un accesorio y nada mas",
+      "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes ."
+    ],
+    [
+      [],
+      "como cambio solamente el sombrero",
+      "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes ."
+    ],
+    [
+      [],
+      "dos acciones juntas para el mismo personaje",
+      "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles ."
+    ],
+    [
+      [],
+      "puede bailar y saltar al mismo tiempo",
+      "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles ."
+    ],
+    [
+      [],
+      "hay acciones incompatibles",
+      "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles ."
+    ],
+    [
+      [],
+      "no tiene la caja y quiere entregarla",
+      "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan ."
+    ],
+    [
+      [],
+      "puede entregar una caja ajena",
+      "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan ."
+    ],
+    [
+      [],
+      "como verificas una entrega",
+      "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan ."
+    ],
+    [
+      [],
+      "quien es ese",
+      "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion ."
+    ],
+    [
+      [],
+      "a cual le decis ese",
+      "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion ."
+    ],
+    [
+      [],
+      "que significa esa referencia",
+      "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion ."
+    ],
+    [
+      [],
+      "que haces si el pedido es ambiguo",
+      "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior ."
+    ],
+    [
+      [],
+      "no sabes cual personaje quiero",
+      "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior ."
+    ],
+    [
+      [],
+      "si hay varios posibles personajes",
+      "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior ."
+    ],
+    [
+      [],
+      "como compruebo lo que cambiaste",
+      "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia ."
+    ],
+    [
+      [],
+      "que muestra el registro de pasos",
+      "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia ."
+    ],
+    [
+      [],
+      "para que sirve que hiciste",
+      "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia ."
+    ],
+    [
+      [],
+      "como corrijo un recuerdo",
+      "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan ."
+    ],
+    [
+      [],
+      "quiero cambiar una memoria",
+      "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan ."
+    ],
+    [
+      [],
+      "como edito un dato guardado",
+      "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan ."
+    ],
+    [
+      [],
+      "como borro un recuerdo",
+      "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo ."
+    ],
+    [
+      [],
+      "quiero olvidar solo un dato",
+      "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo ."
+    ],
+    [
+      [],
+      "como saco un dato guardado",
+      "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo ."
+    ],
+    [
+      [],
+      "los videos tienen audio",
+      "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados ."
+    ],
+    [
+      [],
+      "que sonido genera banana",
+      "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados ."
+    ],
+    [
+      [],
+      "el mp4 tiene sonido",
+      "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados ."
+    ],
+    [
+      [],
+      "ya sos como chatgpt",
+      "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto ."
+    ],
+    [
+      [],
+      "sos una inteligencia general",
+      "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto ."
+    ],
+    [
+      [],
+      "entendes cualquier pedido",
+      "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto ."
+    ],
+    [
+      [],
+      "que pasa si un paso falla",
+      "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion ."
+    ],
+    [
+      [],
+      "puede quedar un cambio a medias",
+      "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion ."
+    ],
+    [
+      [],
+      "si no entendes una parte del pedido",
+      "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion ."
+    ],
+    [
+      [],
+      "que se conserva al continuar",
+      "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia ."
+    ],
+    [
+      [],
+      "continuar cambia los diseños",
+      "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia ."
+    ],
+    [
+      [],
+      "que guarda una continuacion",
+      "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia ."
+    ],
+    [
+      [],
+      "reemplazar toda la secuencia",
+      "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita ."
+    ],
+    [
+      [],
+      "quiero una secuencia nueva",
+      "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita ."
+    ],
+    [
+      [],
+      "como borro el orden anterior",
+      "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es tony ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es tony ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es tony ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es tony ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es tony ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es tony ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es tony ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es tony ."
+    ],
+    [
+      [
+        [
+          "selecciona a tony",
+          "el foco es tony ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es tony ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es milo ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es milo ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es milo ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es milo ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es milo ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es milo ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es milo ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es milo ."
+    ],
+    [
+      [
+        [
+          "selecciona a milo",
+          "el foco es milo ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es milo ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es nora ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es nora ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es nora ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es nora ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es nora ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es nora ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es nora ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es nora ."
+    ],
+    [
+      [
+        [
+          "selecciona a nora",
+          "el foco es nora ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es nora ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es ana ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ana ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es ana ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es ana ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ana ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es ana ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es ana ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ana ."
+    ],
+    [
+      [
+        [
+          "selecciona a ana",
+          "el foco es ana ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es ana ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es kiari ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es kiari ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es kiari ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es kiari ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es kiari ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es kiari ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es kiari ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es kiari ."
+    ],
+    [
+      [
+        [
+          "selecciona a kiari",
+          "el foco es kiari ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es kiari ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es lucas ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es lucas ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es lucas ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es lucas ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es lucas ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es lucas ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es lucas ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es lucas ."
+    ],
+    [
+      [
+        [
+          "selecciona a lucas",
+          "el foco es lucas ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es lucas ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es sofia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es sofia ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es sofia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es sofia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es sofia ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es sofia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es sofia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es sofia ."
+    ],
+    [
+      [
+        [
+          "selecciona a sofia",
+          "el foco es sofia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es sofia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es bruno ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es bruno ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es bruno ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es bruno ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es bruno ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es bruno ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es bruno ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es bruno ."
+    ],
+    [
+      [
+        [
+          "selecciona a bruno",
+          "el foco es bruno ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es bruno ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "tony entrega la caja a milo",
+          "milo recibe la caja ."
+        ],
+        [
+          "milo entrega la caja a nora",
+          "nora tiene la caja ."
+        ]
+      ],
+      "quien tiene la caja",
+      "la tiene nora ."
+    ],
+    [
+      [
+        [
+          "tony entrega la caja a milo",
+          "milo recibe la caja ."
+        ],
+        [
+          "milo entrega la caja a nora",
+          "nora tiene la caja ."
+        ]
+      ],
+      "quien recibio primero",
+      "primero la recibio milo ."
+    ],
+    [
+      [
+        [
+          "ana entrega la caja a kiari",
+          "kiari recibe la caja ."
+        ],
+        [
+          "kiari entrega la caja a lucas",
+          "lucas tiene la caja ."
+        ]
+      ],
+      "quien tiene la caja",
+      "la tiene lucas ."
+    ],
+    [
+      [
+        [
+          "ana entrega la caja a kiari",
+          "kiari recibe la caja ."
+        ],
+        [
+          "kiari entrega la caja a lucas",
+          "lucas tiene la caja ."
+        ]
+      ],
+      "quien recibio primero",
+      "primero la recibio kiari ."
+    ]
+  ],
+  "heldout_new": [
+    [
+      [],
+      "como sigo con otra accion sin perder la secuencia",
+      "continuar agrega acciones despues de las existentes y conserva los diseños ."
+    ],
+    [
+      [],
+      "si digo el de antes a quien elegis",
+      "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre ."
+    ],
+    [
+      [],
+      "puede recibir la caja y luego pasarla a otro",
+      "recibir describe un evento . quien tiene la caja depende de las entregas posteriores ."
+    ],
+    [
+      [],
+      "quiero otro sombrero sin cambiar su cuerpo",
+      "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes ."
+    ],
+    [
+      [],
+      "que pasa si el mismo actor hace dos cosas en un tiempo",
+      "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles ."
+    ],
+    [
+      [],
+      "si otro sostiene el objeto puede pasarlo este personaje",
+      "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan ."
+    ],
+    [
+      [],
+      "como sabes de quien hablo cuando digo ese",
+      "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion ."
+    ],
+    [
+      [],
+      "elegis cualquier personaje cuando hay dudas",
+      "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior ."
+    ],
+    [
+      [],
+      "como reviso las modificaciones del ultimo pedido",
+      "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia ."
+    ],
+    [
+      [],
+      "puedo actualizar un dato sin borrar los otros",
+      "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan ."
+    ],
+    [
+      [],
+      "puedo eliminar una memoria individual",
+      "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo ."
+    ],
+    [
+      [],
+      "que escucho al exportar un video",
+      "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados ."
+    ],
+    [
+      [],
+      "podes resolver todo como una ia grande",
+      "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto ."
+    ],
+    [
+      [],
+      "un paso desconocido modifica el resto de la escena",
+      "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion ."
+    ],
+    [
+      [],
+      "seguir la historia reemplaza los personajes anteriores",
+      "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia ."
+    ],
+    [
+      [],
+      "como diferencio empezar de nuevo y seguir",
+      "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es celia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es celia ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es celia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es celia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es celia ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es celia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es celia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es celia ."
+    ],
+    [
+      [
+        [
+          "selecciona a celia",
+          "el foco es celia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es celia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es ramiro ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ramiro ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es ramiro ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es ramiro ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ramiro ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es ramiro ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es ramiro ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es ramiro ."
+    ],
+    [
+      [
+        [
+          "selecciona a ramiro",
+          "el foco es ramiro ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es ramiro ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es olivia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es olivia ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es olivia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es olivia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es olivia ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es olivia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es olivia ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es olivia ."
+    ],
+    [
+      [
+        [
+          "selecciona a olivia",
+          "el foco es olivia ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es olivia ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es gael ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es gael ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al pepino",
+          "el foco es pepino y el anterior es gael ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el pepino ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es gael ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es gael ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al tomate",
+          "el foco es tomate y el anterior es gael ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el tomate ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es gael ."
+        ]
+      ],
+      "quien era el anterior",
+      "el anterior es gael ."
+    ],
+    [
+      [
+        [
+          "selecciona a gael",
+          "el foco es gael ."
+        ],
+        [
+          "ahora selecciona al robot",
+          "el foco es robot y el anterior es gael ."
+        ]
+      ],
+      "quien esta seleccionado",
+      "esta seleccionado el robot ."
+    ],
+    [
+      [
+        [
+          "celia entrega la caja a gael",
+          "gael recibe la caja ."
+        ],
+        [
+          "gael entrega la caja a olivia",
+          "olivia tiene la caja ."
+        ]
+      ],
+      "quien tiene la caja",
+      "la tiene olivia ."
+    ],
+    [
+      [
+        [
+          "celia entrega la caja a gael",
+          "gael recibe la caja ."
+        ],
+        [
+          "gael entrega la caja a olivia",
+          "olivia tiene la caja ."
+        ]
+      ],
+      "quien recibio primero",
+      "primero la recibio gael ."
+    ]
+  ],
+  "previous_corpus": "train_chat34.py before BPE",
+  "train_identities": [
+    "tony",
+    "milo",
+    "nora",
+    "ana",
+    "kiari",
+    "lucas",
+    "sofia",
+    "bruno"
+  ],
+  "heldout_identities": [
+    "celia",
+    "ramiro",
+    "olivia",
+    "gael"
+  ]
+}

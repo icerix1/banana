@@ -1,0 +1,195 @@
+{
+  "name": "Banana contextual intent encoder1",
+  "external_weights": false,
+  "external_teacher": false,
+  "train_examples": 2016,
+  "heldout_examples": 30,
+  "heldout_accuracy_synthetic": 0.7666666507720947,
+  "confident_coverage": 0.5333333333333333,
+  "confident_accuracy": 0.875,
+  "threshold": 0.85,
+  "limitations": "Small authored project-help intent set, not a general conversational LLM; predicts help labels, never executes arbitrary generated commands.",
+  "heldout": [
+    {
+      "q": "de que manera puedo seguir con la misma historia",
+      "expected": "continue",
+      "actual": "continue",
+      "confidence": 0.9819582104682922
+    },
+    {
+      "q": "podemos sumar lo que pasa despues sin reemplazar",
+      "expected": "continue",
+      "actual": "ideas",
+      "confidence": 0.9814696311950684
+    },
+    {
+      "q": "podrias recordarme como quedo el trabajo",
+      "expected": "recap",
+      "actual": "recap",
+      "confidence": 0.8738946318626404
+    },
+    {
+      "q": "en que punto dejamos el proyecto",
+      "expected": "recap",
+      "actual": "recap",
+      "confidence": 0.8988326191902161
+    },
+    {
+      "q": "se les puede poner dialogos a los personajes",
+      "expected": "voice",
+      "actual": "voice",
+      "confidence": 0.9965499639511108
+    },
+    {
+      "q": "quiero escuchar al personaje decir hola",
+      "expected": "voice",
+      "actual": "voice",
+      "confidence": 0.6343706846237183
+    },
+    {
+      "q": "que tan humana es la voz de banana",
+      "expected": "voice_limits",
+      "actual": "unknown",
+      "confidence": 0.8767961859703064
+    },
+    {
+      "q": "la voz hablada es un modelo neuronal",
+      "expected": "voice_limits",
+      "actual": "voice_limits",
+      "confidence": 0.8037020564079285
+    },
+    {
+      "q": "me gustaria disenar un personaje nuevo",
+      "expected": "custom",
+      "actual": "custom",
+      "confidence": 0.9254583716392517
+    },
+    {
+      "q": "puedo mezclar diferentes cuerpos orejas y colas",
+      "expected": "custom",
+      "actual": "custom",
+      "confidence": 0.9673434495925903
+    },
+    {
+      "q": "necesito alargar el video que estoy haciendo",
+      "expected": "duration",
+      "actual": "duration",
+      "confidence": 0.9576566815376282
+    },
+    {
+      "q": "se pueden juntar escenas para tener mas tiempo",
+      "expected": "duration",
+      "actual": "duration",
+      "confidence": 0.9312835335731506
+    },
+    {
+      "q": "como hago que uno le pase la caja al otro",
+      "expected": "objects",
+      "actual": "objects",
+      "confidence": 0.45788639783859253
+    },
+    {
+      "q": "si no tiene la lampara puede entregarla",
+      "expected": "objects",
+      "actual": "objects",
+      "confidence": 0.9999247789382935
+    },
+    {
+      "q": "podemos arreglar una parte sin perder el resto",
+      "expected": "correction",
+      "actual": "ideas",
+      "confidence": 0.5596638917922974
+    },
+    {
+      "q": "el cambio no era para ese personaje",
+      "expected": "correction",
+      "actual": "correction",
+      "confidence": 0.5755382776260376
+    },
+    {
+      "q": "me propones alguna idea con este elenco",
+      "expected": "ideas",
+      "actual": "ideas",
+      "confidence": 0.9979202151298523
+    },
+    {
+      "q": "no se como seguir podrias sugerir algo",
+      "expected": "ideas",
+      "actual": "ideas",
+      "confidence": 0.658202052116394
+    },
+    {
+      "q": "explicame que se puede hacer con banana",
+      "expected": "capability",
+      "actual": "capability",
+      "confidence": 0.2840953469276428
+    },
+    {
+      "q": "que sabes crear dentro del proyecto",
+      "expected": "capability",
+      "actual": "unknown",
+      "confidence": 0.5641364455223083
+    },
+    {
+      "q": "como hago para que no olvides ese dato",
+      "expected": "memory",
+      "actual": "voice",
+      "confidence": 0.7341225743293762
+    },
+    {
+      "q": "quiero editar uno de mis recuerdos guardados",
+      "expected": "memory",
+      "actual": "memory",
+      "confidence": 0.9965531826019287
+    },
+    {
+      "q": "el mp4 sale con una pista de audio",
+      "expected": "audio",
+      "actual": "audio",
+      "confidence": 0.957150399684906
+    },
+    {
+      "q": "el gif exportado tambien tiene voces",
+      "expected": "audio",
+      "actual": "audio",
+      "confidence": 0.5828911066055298
+    },
+    {
+      "q": "quien gano la eleccion de ayer",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9989926218986511
+    },
+    {
+      "q": "cual es el tratamiento para la gripe",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.7682921886444092
+    },
+    {
+      "q": "como hago una pizza",
+      "expected": "unknown",
+      "actual": "duration",
+      "confidence": 0.47180473804473877
+    },
+    {
+      "q": "cuanto cuesta una casa",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9911487102508545
+    },
+    {
+      "q": "hay vida en otros planetas",
+      "expected": "unknown",
+      "actual": "duration",
+      "confidence": 0.2982044816017151
+    },
+    {
+      "q": "cual es mi numero de telefono",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.8152002096176147
+    }
+  ],
+  "promoted": true
+}

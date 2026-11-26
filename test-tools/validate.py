@@ -1,0 +1,12 @@
+from pathlib import Path
+import subprocess,os
+w=Path(__file__).resolve().parent;r=w.parent/'release067/Banana';c=Path('/workspace/scratch/f1fa469e81ab/banana/sdk');env=os.environ.copy();env.update(ANDROID_TOOLS=str(c/'android-15'),ANDROID_JAR=str(c/'android-35-ext15/android.jar'),ECJ_JAR=str(c/'ecj.jar'))
+if not (w/'ecj-old.jar').exists() or not (w/'lower-classes').exists():subprocess.run(['python3',str(r/'test-tools/bootstrap_host.py'),str(w),str(c)],check=True)
+def run(args,name):
+ with (w/name).open('w') as f:subprocess.run(args,env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
+if os.environ.get('BANANA_SKIP_BUILD')!='1':run(['sh',str(r/'build.sh')],'build.log')
+s=w/'stubs';t=w/'tests';s.mkdir(exist_ok=True);t.mkdir(exist_ok=True)
+run(['java','-jar',str(c/'ecj.jar'),'-8','-classpath',str(c/'android-35-ext15/android.jar'),'-d',str(s),str(r/'test-support/android/content/Context.java')],'stub.log');cp=':'.join(map(str,[s,r/'classes',c/'json.jar',c/'android-35-ext15/android.jar']))
+run(['java','-jar',str(c/'ecj.jar'),'-8','-encoding','UTF-8','-classpath',cp,'-d',str(t)]+[str(p) for p in (r/'test').glob('*.java')],'test-build.log');cp=str(t)+':'+cp
+for name in ['Stage73ContinuousCheck','Stage74SourceExercisesCheck','Stage71StreamingPageCheck','Stage72ReadingWeightsCheck','Stage70DiskKnowledgeCheck','Stage69FeedbackCheck','Stage68DirectLinkCheck','Stage67ReadingCheck','Stage66DialogueCheck','Stage64NotebookCheck','Stage65FontCheck','Stage63GeneralSourceCheck','Stage62ButtonIntentCheck','Stage61FullTransformerCheck','Stage59FormulaCheck','Stage60DeepPixelCheck','Stage58GoalsCheck','Stage57FullBuildCheck','Stage56TrainingCheck','Stage55EvolutionCheck','Stage54NaturalCheck','Stage53CoreCheck','Stage52DurableCheck','Stage51ReplacementCheck','Stage50SpecialistCheck','Stage49RepairCheck','Stage48ModularCheck','Stage47MethodCheck','Stage46CurveCheck','Stage45AppJavaCheck','Stage44JavaChatCheck','Stage43JavaPolicyCheck','Stage42ModulesCheck','Stage41KissCheck','Stage40CoreCheck','Stage39ResearchCheck','Stage38Check','Stage38ModelsCheck','Stage38ConversationCheck','Stage37Check','Stage36Check','Stage36MemoryCheck','Stage35Check','Stage34Check','Stage33Check','Stage35AudioCheck','CreatorCheck','CreatorPersistenceCheck','SharedSceneCheck','TenTurnCheck','AnimationRequestCheck','IncomingActorCheck']:
+ run(['java','-cp',cp,'com.bananalab.lite.'+name,str(r if name.startswith('Stage') else r/'assets/language')],name+'.log');print(name+' PASS',flush=True)

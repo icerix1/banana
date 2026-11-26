@@ -1,0 +1,15 @@
+{
+  "additional_reserved_names": [
+    "celia",
+    "ramiro",
+    "olivia"
+  ],
+  "java_reserved_name_probe": {
+    "celia": "se llama celia .",
+    "ramiro": "se llama riuno .",
+    "olivia": "se llama olivia .",
+    "raquel": "se llama ravi .",
+    "dario": "se llama d ."
+  },
+  "limitations": "Raw generative copy still fails on three of five probes; application scene-name lookup uses persisted project state."
+}

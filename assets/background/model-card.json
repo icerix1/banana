@@ -1,0 +1,21 @@
+{
+  "name": "Banana Pixel",
+  "external_weights": false,
+  "parameters": 21796,
+  "training_images": 780,
+  "heldout_images": 60,
+  "synthetic_heldout_RGB_MAE": 0.011988888176468511,
+  "training_size": 96,
+  "render_size": 128,
+  "types": [
+    "bosque/parque",
+    "playa",
+    "ciudad",
+    "montana",
+    "pasillo/interior"
+  ],
+  "channels": "RGB + learned foreground mask",
+  "limitations": "Own synthetic horror backgrounds, not universal scenes or neural video. Camera/compositing and animation remain code.",
+  "component": "escenarios",
+  "system_release": "0.30"
+}

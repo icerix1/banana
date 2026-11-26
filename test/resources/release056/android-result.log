@@ -1,0 +1,31 @@
+BOOT_READY
+Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_CHAT_SGD_CHECKPOINT_LIVE_RELOAD_AND_ROLLBACK_OK {"kind":"chat","method":"SGD output projection, frozen Transformer body","before":2.2502500020278724,"after":2.2380375168891504,"anchorKL":2.1320425933068185E-6,"weightDeltaL2":0.009986698858014781,"trainTokens":25,"evalTokens":25,"epochs":8,"accepted":true,"trainExamples":2,"evalExamples":2,"metric":"teacher_forced_token_NLL"}
+NATIVE_PIXEL_SGD_VISIBLE_PREVIEW_CACHE_INVALIDATION_AND_ROLLBACK_OK changed=1639 {"kind":"pixel","method":"SGD RGBA output layer, frozen neural features","trainedLayers":1,"before":0.002918807244563046,"after":0.002875299519390262,"anchorMSE":3.2961891682411104E-6,"weightDeltaL2":0.02008908852873671,"trainSamples":128,"evalSamples":128,"epochs":12,"accepted":true,"origin":"own_authored_procedural_target","type":0,"color":-470943,"accessory":0,"expression":0,"view":0,"metric":"alpha_weighted_RGBA_MSE_on_interleaved_pixels"}
+NATIVE_DEEP_PIXEL_ALL4_LAYERS_AND_ROLLBACK_OK {"kind":"pixel","method":"SGD backpropagation all four character model layers","trainedLayers":4,"before":0.002875299519390262,"after":0.0028672078950791233,"anchorMSE":3.3926853992990587E-9,"weightDeltaL2":0.001798800715338752,"trainSamples":128,"evalSamples":128,"epochs":2,"accepted":true,"origin":"own_authored_procedural_target","type":0,"color":-470943,"accessory":0,"expression":0,"view":0,"metric":"alpha_weighted_RGBA_MSE_on_interleaved_pixels"}
+NATIVE_FULL_SOURCE_REBUILD Recompilé 175 archivos y 363 clases; convertí 116 lambdas. No reutilicé clases del DEX anterior. Recursos empaquetados conservados.
+PASS STAGE56 real Chat/Pixel SGD, unchanged feature bodies, live model changes, rollback, full Java recompilation and normal APK with new model weights.
+
+
+NORMAL_APK_PULLED
+HOST_SIGNATURE_VERIFIED
+UPDATE_INSTALL Performing Push Install
+	pkg: /data/local/tmp/Banana.apk
+Success
+
+PASS STAGE56_REOPEN upgrade full-DX app starts, coordinated program works, trained model assets/hash/preview restored, data retained.
+
+
+PASS STAGE56_REOPEN fresh full-DX app starts, coordinated program works, trained model assets/hash/preview restored, data retained.
+
+
+FULL_REBUILT_GUI_EXECUTION_OK
+PRODUCTION_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PRODUCTION_CHAT_TRAINING_UI_OK
+NO_FATAL_EXCEPTION

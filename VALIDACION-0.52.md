@@ -1,0 +1,13 @@
+# Validación Banana 0.52
+
+32 suites de escritorio aprobadas, incluidas las 31 anteriores. Stage54 comprueba variantes de pedidos normales, negación y preguntas, preservación de órdenes de escena, continuaciones, rechazo de condiciones desconocidas y generación canónica de colores. Stage53 ejecuta las 46 variantes del generador y sus casos visibles/reservados, incluida la detección de candidatos ambiguos.
+
+En emulador Android6/API23, Stage54 usa BananaEngine.run como el chat normal: cambio azul compilado, recibo, deshacer al estilo original, dos cambios simultáneos (letra17 y botones verdes), rechazo de cláusula no soportada sin ajuste parcial, respuesta compilada y realmente usada al conversar, generación natural de método, ejecución con -3,2,5 →7 y reversión de su copia. También fuerza una base antigua y comprueba su migración automática con respaldo. No requiere abrir el núcleo ni un modo especial.
+
+Stage53 vuelve a comprobar síntesis, reparación, aprendizaje de ranking, compilación completa, análisis de referencias, sustitución del DEX principal y reconstrucción de Banana.apk. Instalación de la actualización: método nuevo ejecutado desde classes.dex, escena alternada conservando identidad de personajes y ajustes/respuesta activos. Instalación limpia de esa misma APK: ajustes verdes, letra17 y respuesta compilada recuperados desde portablev3; sin autoridad privada de firma incluida. Los planes se recompilan y prueban al primer arranque; no se confunden con reemplazo del DEX.
+
+Por separado se instala el APK de distribución y se envían frases normales en su interfaz: cambio de botones, creación de función y prueba del candidato →7. Sin excepción fatal observada. Las fuentes de producción son idénticas a las del paquete integrado, salvo las clases instrumentation adicionales de prueba. No se probó en una tablet física ni en Android16.
+
+Integridad: 151 fuentes coinciden con índice y assets; base de clases y herramientas verificadas porSHA256. 22 binarios de modelos idénticos a0.51. APK de distribución sin instrumentation ni claves privadas. APK reconstruida con DEX035 y firmas v1/v2/v3 verificadas mediante apksigner. Nombre normal Banana.apk; mismo paquete/certificado, versión520001 sobre base520000.
+
+Límites: el adaptador de intención usa reglas locales, no comprensión general. La búsqueda de archivos no prueba la causa ni corrige fallos arbitrarios. Los métodos siguen limitados a la gramática de0.51. Los fixtures reservados son de desarrollo, no un benchmark externo. No hay transacción conjunta entre ajustes, respuestas y métodos ni restauración atómica de todos los planes. La reinstalación y las futuras migraciones conservan sus restricciones documentadas.

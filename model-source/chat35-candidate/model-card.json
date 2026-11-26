@@ -1,0 +1,1065 @@
+{
+  "name": "Banana Chat 3.5",
+  "external_weights": false,
+  "external_teacher": false,
+  "base": "own Chat3.4",
+  "base_sha256": "a8df72aebdacf3599896fddf4aa2c6bd122e2bffd2a880cadca591c75d69b17a",
+  "parameters": 783518,
+  "new_train_examples": 100,
+  "replay_examples": 9513,
+  "new_heldout_examples": 42,
+  "steps": 1400,
+  "promoted": false,
+  "baseline": {
+    "exact": 0,
+    "total": 42,
+    "outputs": [
+      {
+        "query": "como sigo con otra accion sin perder la secuencia",
+        "history": [],
+        "expected": "continuar agrega acciones despues de las existentes y conserva los diseños .",
+        "actual": "consulios se saluda en la ciuio y acciones . ejemplos ."
+      },
+      {
+        "query": "si digo el de antes a quien elegis",
+        "history": [],
+        "expected": "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre .",
+        "actual": "el odete . es enerar texto erar te . propio . fexto crear la escenerar ?"
+      },
+      {
+        "query": "puede recibir la caja y luego pasarla a otro",
+        "history": [],
+        "expected": "recibir describe un evento . quien tiene la caja depende de las entregas posteriores .",
+        "actual": "el bosque ."
+      },
+      {
+        "query": "quiero otro sombrero sin cambiar su cuerpo",
+        "history": [],
+        "expected": "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes .",
+        "actual": "todavia ibitexto ensar texto y coris tados ."
+      },
+      {
+        "query": "que pasa si el mismo actor hace dos cosas en un tiempo",
+        "history": [],
+        "expected": "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles .",
+        "actual": "todavia disexperrijevimitidos personajes , asis personajes en tiempo ."
+      },
+      {
+        "query": "si otro sostiene el objeto puede pasarlo este personaje",
+        "history": [],
+        "expected": "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan .",
+        "actual": "el oso para ?"
+      },
+      {
+        "query": "como sabes de quien hablo cuando digo ese",
+        "history": [],
+        "expected": "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion .",
+        "actual": "el enerar el robot camina en la ciudad ."
+      },
+      {
+        "query": "elegis cualquier personaje cuando hay dudas",
+        "history": [],
+        "expected": "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior .",
+        "actual": "te llamas exto ial ."
+      },
+      {
+        "query": "como reviso las modificaciones del ultimo pedido",
+        "history": [],
+        "expected": "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia .",
+        "actual": "el gato caminloguspueschat que to . falte puedo ausar una hablo ."
+      },
+      {
+        "query": "puedo actualizar un dato sin borrar los otros",
+        "history": [],
+        "expected": "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan .",
+        "actual": "si conta en la ciudad ."
+      },
+      {
+        "query": "puedo eliminar una memoria individual",
+        "history": [],
+        "expected": "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo .",
+        "actual": "todavia que plierar escencia ."
+      },
+      {
+        "query": "que escucho al exportar un video",
+        "history": [],
+        "expected": "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados .",
+        "actual": "propios pequenerar ?"
+      },
+      {
+        "query": "podes resolver todo como una ia grande",
+        "history": [],
+        "expected": "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto .",
+        "actual": "el modes ."
+      },
+      {
+        "query": "un paso desconocido modifica el resto de la escena",
+        "history": [],
+        "expected": "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion .",
+        "actual": "el robot se saluda en el bosque ."
+      },
+      {
+        "query": "seguir la historia reemplaza los personajes anteriores",
+        "history": [],
+        "expected": "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia .",
+        "actual": "primero hpequenstiene con falabla ."
+      },
+      {
+        "query": "como diferencio empezar de nuevo y seguir",
+        "history": [],
+        "expected": "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita .",
+        "actual": "el pepino es azul ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "la ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "untorarias ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "no ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "te llamas biteeleel."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "te llamas sombexto corarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "te llamas via "
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "el pexperimental ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "te llamas bitrarillo ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "te llamas bitrarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "se llama escenarillo ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "te llamas via trarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "el orrarias ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "el pepino es ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "el pexperimente un modelo es ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "una banana ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "coras ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "via conservar de cual ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "te llamas arillas ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "te llamas sombexto rarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "te llamas adarillo ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "te llamas via trarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "te llamas imrarias ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "una estarillo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "pllas ."
+      },
+      {
+        "query": "quien tiene la caja",
+        "history": [
+          [
+            "celia entrega la caja a gael",
+            "gael recibe la caja ."
+          ],
+          [
+            "gael entrega la caja a olivia",
+            "olivia tiene la caja ."
+          ]
+        ],
+        "expected": "la tiene olivia .",
+        "actual": "te llamas luea ."
+      },
+      {
+        "query": "quien recibio primero",
+        "history": [
+          [
+            "celia entrega la caja a gael",
+            "gael recibe la caja ."
+          ],
+          [
+            "gael entrega la caja a olivia",
+            "olivia tiene la caja ."
+          ]
+        ],
+        "expected": "primero la recibio gael .",
+        "actual": "te llamas luea ."
+      }
+    ]
+  },
+  "candidate": {
+    "exact": 5,
+    "total": 42,
+    "outputs": [
+      {
+        "query": "como sigo con otra accion sin perder la secuencia",
+        "history": [],
+        "expected": "continuar agrega acciones despues de las existentes y conserva los diseños .",
+        "actual": "consuliocliocar personajes , acciones y los dea ."
+      },
+      {
+        "query": "si digo el de antes a quien elegis",
+        "history": [],
+        "expected": "el anterior es el personaje enfocado antes del actual . si no esta claro necesito su nombre .",
+        "actual": "el ante una accion por el pepino necesito sar conservo lioprecuanta en la plior ."
+      },
+      {
+        "query": "puede recibir la caja y luego pasarla a otro",
+        "history": [],
+        "expected": "recibir describe un evento . quien tiene la caja depende de las entregas posteriores .",
+        "actual": "si con un clucerar lar larlo ."
+      },
+      {
+        "query": "quiero otro sombrero sin cambiar su cuerpo",
+        "history": [],
+        "expected": "un cambio de accesorio conserva el color del cuerpo , la identidad , las acciones y los demas personajes .",
+        "actual": "esta mita ententomate escuenfincorregarlo . un personaje osun personaje oso ."
+      },
+      {
+        "query": "que pasa si el mismo actor hace dos cosas en un tiempo",
+        "history": [],
+        "expected": "cada personaje admite una accion por tiempo . necesito separar las acciones incompatibles .",
+        "actual": "el tomate perimalos tiempo ."
+      },
+      {
+        "query": "si otro sostiene el objeto puede pasarlo este personaje",
+        "history": [],
+        "expected": "antes de entregar verifico quien sostiene el objeto . si pertenece a otro personaje necesito corregir el plan .",
+        "actual": "el catacionor ambio personaje queres al ."
+      },
+      {
+        "query": "como sabes de quien hablo cuando digo ese",
+        "history": [],
+        "expected": "uso el personaje enfocado y el estado del proyecto . si hay varias opciones necesito una aclaracion .",
+        "actual": "el eshabla contino . logan ."
+      },
+      {
+        "query": "elegis cualquier personaje cuando hay dudas",
+        "history": [],
+        "expected": "si no hay una referencia unica necesito que nombres al personaje . conservo la escena anterior .",
+        "actual": "pequenfalili identirililarardo su nombre y uarte y cambiuental ."
+      },
+      {
+        "query": "como reviso las modificaciones del ultimo pedido",
+        "history": [],
+        "expected": "el registro describe pasos aplicados y cambios comprobados en el estado . la vista previa permite revisar la apariencia .",
+        "actual": "el go que queres ."
+      },
+      {
+        "query": "puedo actualizar un dato sin borrar los otros",
+        "history": [],
+        "expected": "pedi mis recuerdos y usa su numero para corregir uno . los demas recuerdos se conservan .",
+        "actual": "si conmiapeschablizsu ayectes de las entregas entregar la voplimis experimental ."
+      },
+      {
+        "query": "puedo eliminar una memoria individual",
+        "history": [],
+        "expected": "pedi mis recuerdos y usa su numero para borrar solamente ese recuerdo .",
+        "actual": "todavia que mavia nurecuerilior y cambia tinuso un moa ."
+      },
+      {
+        "query": "que escucho al exportar un video",
+        "history": [],
+        "expected": "el mp4 puede incluir ambiente y pasos sintetizados . todavia no genera voces ni dialogos hablados .",
+        "actual": "ese porir por oriopidemos penerir ordene y puedo expreparte reente perimente precuerior orior ."
+      },
+      {
+        "query": "podes resolver todo como una ia grande",
+        "history": [],
+        "expected": "soy un modelo propio pequeño y experimental . las herramientas resuelven operaciones limitadas del proyecto .",
+        "actual": "el "
+      },
+      {
+        "query": "un paso desconocido modifica el resto de la escena",
+        "history": [],
+        "expected": "si un paso no se puede aplicar conservo la escena anterior y explico que parte necesita aclaracion .",
+        "actual": "reeriboriboricas aciones mientconservantado y las s del ana ."
+      },
+      {
+        "query": "seguir la historia reemplaza los personajes anteriores",
+        "history": [],
+        "expected": "conservo los diseños y las acciones anteriores . agrego los nuevos pasos al final de la secuencia .",
+        "actual": "escuero ha si un evia las e esos ."
+      },
+      {
+        "query": "como diferencio empezar de nuevo y seguir",
+        "history": [],
+        "expected": "continuar agrega al final . reemplazar la secuencia cambia las acciones anteriores de forma explicita .",
+        "actual": "el pepino que gusa el . , epino conservar el restera los sepino ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "el anterior es celo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "esta seleccionado el pepino ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "el anterior es cenor es y ior es y estes y ares tony ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "esta celeccionado el tomate ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es celia ."
+          ]
+        ],
+        "expected": "el anterior es celia .",
+        "actual": "el anterior es crccionado el robot ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a celia",
+            "el foco es celia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es celia ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "esta seleccionado el robot ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "recia ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "estrarias ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "estrarias ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "estranta selo ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "el anterior es ramiro .",
+        "actual": "el anterior es norior es lo mia seleccionado el gato es lo mas terior es miterior es milo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a ramiro",
+            "el foco es ramiro ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es ramiro ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "el antrarias ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "el anta corregamenor es y anterior es corior es mis ta mbrevofor es milo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "el pepino ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "el anta selo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "esta seluno ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es olivia ."
+          ]
+        ],
+        "expected": "el anterior es olivia .",
+        "actual": "el anterior es las . resuliores y ro es y el tites mis personajes ta se es miterior una esta partes ena selados y corresulior es y estes tisaluda entrencia ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a olivia",
+            "el foco es olivia ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es olivia ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "esta seleccionado el s resuliores y pequeres y el proyecdees lior es y estes mites una esta selel personaje es hoy el esta selexs personajes necesito mis personajes es mitados sos resorregior es una esta ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "el anterior es gugasos selo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al pepino",
+            "el foco es pepino y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el pepino .",
+        "actual": "esta seleccionado el pepino ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "el anterior es gavia selecta es rlo ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al tomate",
+            "el foco es tomate y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el tomate .",
+        "actual": "esta seleccionado el tomate ."
+      },
+      {
+        "query": "quien era el anterior",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es gael ."
+          ]
+        ],
+        "expected": "el anterior es gael .",
+        "actual": "el anterior es forra ."
+      },
+      {
+        "query": "quien esta seleccionado",
+        "history": [
+          [
+            "selecciona a gael",
+            "el foco es gael ."
+          ],
+          [
+            "ahora selecciona al robot",
+            "el foco es robot y el anterior es gael ."
+          ]
+        ],
+        "expected": "esta seleccionado el robot .",
+        "actual": "esta seleccionado el robot ."
+      },
+      {
+        "query": "quien tiene la caja",
+        "history": [
+          [
+            "celia entrega la caja a gael",
+            "gael recibe la caja ."
+          ],
+          [
+            "gael entrega la caja a olivia",
+            "olivia tiene la caja ."
+          ]
+        ],
+        "expected": "la tiene olivia .",
+        "actual": "la ca ."
+      },
+      {
+        "query": "quien recibio primero",
+        "history": [
+          [
+            "celia entrega la caja a gael",
+            "gael recibe la caja ."
+          ],
+          [
+            "gael entrega la caja a olivia",
+            "olivia tiene la caja ."
+          ]
+        ],
+        "expected": "primero la recibio gael .",
+        "actual": "la sexperria ."
+      }
+    ]
+  },
+  "baseline_anchors": {
+    "exact": 4,
+    "total": 4,
+    "outputs": [
+      {
+        "query": "hola",
+        "history": [],
+        "expected": "hola ! que queres crear o conversar hoy ?",
+        "actual": "hola ! que queres crear o conversar hoy ?"
+      },
+      {
+        "query": "sos independiente",
+        "history": [],
+        "expected": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .",
+        "actual": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado ."
+      },
+      {
+        "query": "que significa mientras",
+        "history": [],
+        "expected": "mientras indica que dos acciones ocurren al mismo tiempo .",
+        "actual": "mientras indica que dos acciones ocurren al mismo tiempo ."
+      },
+      {
+        "query": "que significa entregar",
+        "history": [],
+        "expected": "entregar cambia quien sostiene un objeto . un personaje lo pasa a otro .",
+        "actual": "entregar cambia quien sostiene un objeto . un personaje lo pasa a otro ."
+      }
+    ]
+  },
+  "candidate_anchors": {
+    "exact": 4,
+    "total": 4,
+    "outputs": [
+      {
+        "query": "hola",
+        "history": [],
+        "expected": "hola ! que queres crear o conversar hoy ?",
+        "actual": "hola ! que queres crear o conversar hoy ?"
+      },
+      {
+        "query": "sos independiente",
+        "history": [],
+        "expected": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .",
+        "actual": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado ."
+      },
+      {
+        "query": "que significa mientras",
+        "history": [],
+        "expected": "mientras indica que dos acciones ocurren al mismo tiempo .",
+        "actual": "mientras indica que dos acciones ocurren al mismo tiempo ."
+      },
+      {
+        "query": "que significa entregar",
+        "history": [],
+        "expected": "entregar cambia quien sostiene un objeto . un personaje lo pasa a otro .",
+        "actual": "entregar cambia quien sostiene un objeto . un personaje lo pasa a otro ."
+      }
+    ]
+  },
+  "limitations": "Small authored synthetic probe only. Exact-match is not general understanding. Scene tools remain separately verified deterministic code.",
+  "initial_gain_gate_passed": true,
+  "promotion_review": {
+    "accepted": false,
+    "reason": "5/42 exact with many garbled held-out responses is insufficient for release; active Chat3.4 retained",
+    "minimum_exact_ratio": 0.5,
+    "policy_note": "Threshold strengthened after exploratory pilot inspection; these are exploratory synthetic results, not blind certification."
+  }
+}

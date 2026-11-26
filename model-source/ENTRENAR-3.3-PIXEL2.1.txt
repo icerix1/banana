@@ -1,0 +1,15 @@
+Sin pesos ni datos de un modelo externo. Todos los nuevos pesos parten de inicialización aleatoria.
+Requisitos de desarrollo: Python, PyTorch, NumPy, Pillow. Android usa Java puro.
+Desde model-source ejecutar, en orden:
+python train_pixel21.py
+python bake_pixel21.py
+python clean_props21.py
+python train_vision32.py
+python train_chat33.py
+El script de visión conserva el nombre histórico; entrena sobre el banco actual.
+Las métricas son sintéticas. Los resultados sin limpieza no son las imágenes del
+banco final: se aplican paleta y mediana explícitas, con procedencia documentada.
+Los scripts escriben pesos en assets y vectores de referencia para paridad Java.
+Compilación Android: build.sh, con ANDROID_TOOLS, ANDROID_JAR y ECJ_JAR.
+Stage33Instrumentation se compila solamente en una copia de pruebas separada.
+La inferencia no aprende nuevas habilidades al guardar una escena o una memoria.

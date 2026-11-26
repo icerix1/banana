@@ -1,0 +1,1 @@
+package com.bananalab.signcompat.stream; import com.bananalab.signcompat.OptionalInt;import com.bananalab.signcompat.function.IntPredicate;public interface IntStream {boolean anyMatch(IntPredicate p);OptionalInt min();int sum();}

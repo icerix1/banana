@@ -1,0 +1,20 @@
+Todos los entrenamientos nuevos parten de pesos aleatorios y datos propios.
+Requisitos de entrenamiento: Python, PyTorch, NumPy, Pillow. La app no necesita
+Python ni descarga pesos para funcionar.
+
+Desde model-source:
+python train_pixel_v2.py
+python bake_pixel_v2.py
+python train_props_v2.py
+python train_vision32.py
+python train_chat32.py
+
+Los scripts crean los pesos en assets y las referencias numéricas usadas para
+verificar que las inferencias Java y PyTorch coinciden. El entrenamiento de
+visión usa exclusivamente salidas del banco propio de Pixel 2.
+El rig 2D y las máscaras de ropa/cara son código explícito, no modelos generales.
+Los resultados reservados son sintéticos; no equivalen a pruebas del mundo real.
+
+Compilación Android: build.sh requiere ANDROID_TOOLS, ANDROID_JAR y ECJ_JAR.
+Pruebas Stage32Check y Stage32Instrumentation incluidas; esta última se usa
+solamente en una copia de pruebas, nunca en el APK de producción.

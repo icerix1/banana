@@ -1,0 +1,36 @@
+BOOT_READY
+LEGACY_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NEW_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_REAL_LEGACY_MIGRATION_OK
+NATIVE_FULL_STREAM_AND_FTS_TAIL_OK chars=1300068 chunks=637
+NATIVE_ARCHIVE_RESTORE_AND_CLEAR_GUARDS_OK
+NATIVE_BUILD_WITH_STREAMING_KNOWLEDGE_STARTED
+NATIVE_FULL_APK_WITH_DOCUMENT_ARCHIVE_OK
+PASS NATIVE64 actual migration, streamed1.3million-character source, real SQLite FTS tail, bounded retrieval, complete archive restore, failed-stream rollback, clear guards and normal rebuilt APK with streaming knowledge.
+
+
+NORMAL_APK_PULLED
+UPDATE_INSTALL Performing Push Install
+	pkg: /data/local/tmp/Banana.apk
+Success
+
+PASS NATIVE64_REOPEN upgrade complete source, checksum, index and attributed answer restored.
+
+
+PASS NATIVE64_REOPEN fresh complete source, checksum, index and attributed answer restored.
+
+
+FULL_DOCUMENT_ARCHIVE_UPDATE_AND_FRESH_OK
+PRODUCTION_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PRODUCTION_KNOWLEDGE_UI_OK
+PRODUCTION_DOCUMENT_PICKER_OPENED
+NO_FATAL_EXCEPTION

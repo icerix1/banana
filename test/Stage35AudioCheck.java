@@ -1,0 +1,5 @@
+package com.bananalab.lite;
+import java.util.*;
+public class Stage35AudioCheck{
+ public static void main(String[] args){SceneDraft d=new SceneDraft();d.cast.add(new SceneDraft.Actor("banana",50));for(int i=0;i<8;i++){d.actions.add(i%2==0?"camina":"espera");d.actors.add(0);d.slots.add(i/2);}short[] actual=Soundtrack.pcm(d,8),expected=new short[actual.length];Random random=new Random(31031);for(int n=0;n<expected.length;n++){double t=n/(double)Soundtrack.RATE,phase=n/(double)expected.length*4,fade=Math.min(1,Math.min(t*3,(expected.length-n)/(double)Soundtrack.RATE*3)),value=180*Math.sin(2*Math.PI*110*t)+100*Math.sin(2*Math.PI*165*t);for(int i=0;i<d.actions.size();i++){double local=phase-d.slot(i);if(local>=0&&local<1&&Timeline.walk(d.actions.get(i))){double step=local*3-Math.floor(local*3);value+=(random.nextDouble()*2-1)*1700*Math.exp(-step*28);}}expected[n]=(short)Math.max(-5000,Math.min(5000,value*fade));}if(!Arrays.equals(expected,actual))throw new AssertionError("audio changed");if(Soundtrack.pcm(d,96).length!=96000)throw new AssertionError("duration");System.out.println("PASS exact PCM preserved; action checks outside sample loop");}
+}

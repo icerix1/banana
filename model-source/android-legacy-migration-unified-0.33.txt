@@ -1,0 +1,25 @@
+BOOT_READY
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PNG_SNAPSHOT_OK blue=2840
+GIF_OK 7107537
+MP4_AV_OK
+PASS STAGE34 Android engine, inline-edit state, immutable export snapshot, PNG, GIF, MP4 AV, series and legacy history seed.
+
+
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+ONE_WORKSPACE True LEGACY_MESSAGES True
+INLINE_DESIGN True
+Traceback (most recent call last):
+  File "/tmp/banana34_android.py", line 49, in <module>
+    tap(node('Editar'));tap(node('Color'));tap(node('azul'));ts=await_text('Actualicé el diseño de tony.');print('INLINE_COLOR_EDIT',any('azul' in t for t in ts),flush=True)
+                            ^^^^^^^^^^^^^
+  File "/tmp/banana34_android.py", line 20, in node
+    def node(text):return next(n for n in ui().iter('node') if n.attrib.get('text')==text and n.attrib.get('enabled')=='true')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration

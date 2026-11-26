@@ -1,0 +1,29 @@
+{
+  "name": "Banana Chat 3.2",
+  "external_weights": false,
+  "parameters": 465602,
+  "layers": 3,
+  "width": 96,
+  "heads": 4,
+  "context_tokens": 384,
+  "tokenizer": "UTF-8 byte BPE trained on own corpus",
+  "vocab_size": 482,
+  "training_examples": 5970,
+  "test_examples": 484,
+  "heldout_loss_synthetic_only": 1.565730120241642,
+  "reserved_names": [
+    "uma",
+    "raquel",
+    "dario"
+  ],
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy ?",
+    "como te llamas": "soy banana chat 3.2 , un modelo experimental propio .",
+    "sos independiente": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .",
+    "que significa mientras": "mientras indica que dos acciones ocurren al mismo tiempo .",
+    "que es una animacion": "una animacion muestra imagenes sucesivas para representar movimiento .",
+    "quiero una idea de detectives": "una banana detective encuentra una puerta cerrada y escucha pasos del otro lado .",
+    "unseen_name": "se llama ua ."
+  },
+  "limitations": "Own small synthetic corpus; not a general-knowledge assistant or equivalent to ChatGPT. UTF-8 coverage does not imply understanding arbitrary text."
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Banana Pose1",
+  "parameters": 3842,
+  "external_weights": false,
+  "architecture": "coordinate MLP predicting inverse UV flow",
+  "poses": [
+    "quieto",
+    "paso A",
+    "paso B",
+    "saludo",
+    "giro lateral aproximado"
+  ],
+  "heldout_coordinate_MAE": 0.0043153055012226105,
+  "limitations": "Learns deformations, resamples the original neural character; not full pose synthesis or a reconstructed 3D side view. Preserves the original blur and texture."
+}

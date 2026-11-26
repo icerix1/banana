@@ -1,0 +1,41 @@
+BANANA0.45 — EDICIÓN DE UN MÉTODO REAL DEL CHAT
+
+Instalá el APK como actualización. Conserva el identificador y la firma. No borres los datos de Banana.
+
+PEDIDO SIMPLE
+cambia el metodo del chat: cuando diga "buenas banana" responde "Buenas, ¿qué creamos hoy?"
+
+Banana edita una copia de ChatLanguage.java, método socialReply(String message), y conserva las otras respuestas originales. También admite:
+cuando empiece con "buenas" responde "¡Buenas!"
+cuando termine con "taller" responde "Abrimos el taller"
+cuando contenga "dibujito" responde "Contame qué personaje querés"
+Siempre escribí estas instrucciones después de “cambia el metodo del chat:”. Las frases y respuestas van entre comillas dobles. Para descubrirlo en la app: Proyecto → Editor de métodos Java.
+
+VER Y APLICAR
+mostrame el cambio de java
+mostrame el archivo java editado
+aplica el cambio del metodo
+Después escribí la frase elegida en el chat para ver su respuesta real.
+O bien: descarta el cambio del metodo
+La preparación compila y prueba, pero no activa. El antes/después se refiere al cuerpo del método, conservando el resto del archivo de origen.
+
+REEMPLAZAR EL CUERPO, OPCIONAL
+reescribe el metodo del chat: if (text.startsWith("buenas")) return "Taller abierto"; return null;
+En este caso reemplaza todo el cuerpo admitido: las respuestas originales que no estén en ese cuerpo dejan de aplicarse. Al deshacer se recuperan.
+
+El subconjunto acepta hasta doce if de message/text.equals, startsWith, endsWith o contains, con condición y respuesta literales, y return null; al final. text es el mensaje normalizado y sin el prefijo inicial “banana”; message conserva el texto original. No admite regex nuevas, APIs arbitrarias, bucles, asignaciones, recursión ni respuestas calculadas. No es Java general.
+
+HISTORIAL
+versiones del metodo java
+deshace el cambio del metodo
+volve a la version 0 del metodo java
+También funciona “deshace ese ajuste” cuando éste fue el último subsistema modificado. Guarda ocho estados previos y permite recuperar por número. Los datos de conversación y escenas no se reemplazan al editar el método.
+
+CÓMO FUNCIONA REALMENTE
+Escribe una copia versionada y privada de ChatLanguage.java, genera una clase compilable equivalente y la compila con ECJ/DX en el dispositivo. Se comprueban respuestas esperadas, variantes y controles de creación en el proceso de prueba ya existente. La activación vuelve a validar la fuente, la copia guardada, la versión base y los resultados. Si algo falla, conserva el método anterior.
+La clase original del APK tiene un puente que llama al método editado compilado. Esto cambia el comportamiento del chat real; no reemplaza arbitrariamente clases ya cargadas ni reconstruye el APK entero. El proceso de prueba comparte UID y permisos: no es un sandbox para Java libre. La protección proviene del lenguaje admitido y de fuentes generadas de forma controlada.
+
+QUÉ SIGUE PENDIENTE
+Elegir cualquier método de cualquier archivo, editar varias clases libremente, generar soluciones nuevas con un programador propio y reconstruir todo el APK desde Android. Esta versión demuestra edición, comparación, prueba y ejecución de un método fuera del motor de saltos; no completa la meta de modificar toda la app.
+Los modelos propios no se cambiaron ni se agregaron modelos externos. Los módulos y funciones de versiones anteriores se conservan; ver GUIA-0.44.txt en las fuentes.
+La evidencia de pruebas y sus límites están en VALIDACION-0.45.md. No se probó en la tablet física del usuario.

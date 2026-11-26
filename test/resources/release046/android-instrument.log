@@ -1,0 +1,4 @@
+NATIVE_HOT_PACKAGE_CHAT_SCENE_PANELS_RELOAD_AND_ROLLBACK_OK
+NATIVE_TRAINING_CORRECTION_HELDOUT_AND_PERSISTENCE_OK
+PASS STAGE48 same-install atomic modules across UI, chat, scenes and panels; local parameter training, automatic correction reuse, heldout evaluation, conservative recall, persistence, pause and version recovery.
+

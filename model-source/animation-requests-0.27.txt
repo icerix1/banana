@@ -1,0 +1,25 @@
+PASS haceme una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer una animacion de un pepino caminando => Escena compartida · parque
+pepino: aspecto original, centro
+1. pepino camina
+PASS quiero una animacion de un gato saltando => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS quiero que hagas una animacion de un robot saludando => Escena compartida · parque
+robot: aspecto original, centro
+1. robot saluda
+PASS anima una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS genera un video de un conejo caminando => Escena compartida · parque
+conejo: aspecto original, centro
+1. conejo camina
+PASS me haces una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer que un gato salte => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS animacion ejecutable, acciones, borrador, aclaracion y limites

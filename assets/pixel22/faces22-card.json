@@ -1,0 +1,17 @@
+{
+  "name": "Banana Pixel 2.2",
+  "component": "shared facial anchors",
+  "external_weights": false,
+  "parameters": 38916,
+  "training_conditions": 356,
+  "heldout_conditions": 4,
+  "heldout_alpha_IoU_synthetic": 0.9287234792931707,
+  "features": [
+    "10 kinds",
+    "3 expressions",
+    "front and profile",
+    "3 eye sizes",
+    "glasses"
+  ],
+  "limitations": "Own synthetic facial patches composed with own body fields. Not general face recognition."
+}

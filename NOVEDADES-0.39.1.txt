@@ -1,0 +1,29 @@
+BANANA 0.39.1 — CORRECCIÓN DEL BESO ENTRE PERSONAJES
+
+Esta entrega corrige el pedido reportado: que el zorro bese a la banana. No implementa actualización autónoma del código ni la mega actualización propuesta.
+
+PROBÁ
+que el zorro bese a la banana
+el zorro besa a la banana
+continua con el zorro besa a la banana
+Fito le da un beso a Bani (si esos personajes ya están creados)
+
+El plan crea o identifica los dos personajes, conserva sus diseños, agrega acercamiento y prepara dos acciones coincidentes: dar y recibir el beso. Usa un contacto de caras coordinado, orientación, gesto de boca y corazones. El mismo estado y geometría se utilizan en pantalla y al exportar MP4. Es una animación 2D programada sobre los dibujos propios; no es un nuevo modelo neuronal de video.
+
+Los pedidos nuevos se agregan a la secuencia anterior. El beso también funciona dentro de los planes corregibles del núcleo móvil. Un destinatario inexistente o ambiguo, el mismo personaje como ambos participantes o un personaje fuera del encuadre producen una aclaración y conservan la escena. El sujeto y el destinatario deben ser tipos admitidos o nombres existentes. Las referencias importadas conservan su imagen: no se detecta su anatomía real ni se inventan perfiles de esa foto. Las formas besa, bese, besar y besando y la paráfrasis da un beso se reconocen con reglas compartidas entre planificación y comprobación.
+
+CAUSA CORREGIDA
+El verbo no estaba implementado como acción ejecutable ni tenía animación. Ahora el parser, la escena guardada, la validación de destinatarios y pares, el tiempo y el render reconocen la acción. Las formulaciones no interpretadas de beso no se convierten silenciosamente en otra acción genérica.
+
+MODELOS E INSTALACIÓN
+Los pesos de Chat3.4, MobileCore1 y Pixel2.3 no cambian. Todo sigue propio y sin Qwen. Instalar sobre0.39 con la misma firma. Las fuentes privadas conservan las claves de firma; no publicar el ZIP. Las instrucciones de las capacidades anteriores están en GUIA-NUCLEO-0.39.txt y sus guías previas.
+
+VERIFICACIÓN
+Stage41KissCheck y los dieciocho controles anteriores pasaron. La prueba nueva incluye la frase exacta, presencia de ambos personajes, destinatario correcto, posición de contacto real de las caras en el momento del beso, retorno a la postura, tamaños distintos, persistencia, paráfrasis con nombres, integración con planes y rechazo sin cambios parciales de destinatarios inválidos.
+La comprobación nativa y el MP4 se describen en los registros que acompañan esta entrega. La demo permite revisar la apariencia, que no se evalúa por la prueba geométrica sola.
+
+SOBRE LA IDEA DE AUTOACTUALIZACIÓN (PROPUESTA, SIN IMPLEMENTAR)
+Es viable incluir una copia del código y un índice de módulos para que un sistema de diagnóstico consulte dónde se interpreta una orden y cómo se anima. Se pueden comparar capacidades declaradas con lo pedido y guardar errores y pruebas reproducibles. Nuestro modelo actual no es un programador general; leer los archivos no lo convierte en uno.
+Para cambios acotados en datos, reglas o comportamientos declarativos, es viable validar un paquete y permitir volver a la versión previa sin recompilar toda la app, siempre que exista un intérprete que los admita. Hoy no se añadió ese intérprete ni descarga de código.
+Para cambiar lógica Java de la aplicación instalada, hace falta producir y probar otro APK, firmado con una identidad compatible, e instalarlo mediante los mecanismos de Android. Integrar herramientas de compilación compatibles con el propio Android es trabajo adicional; no están incluidas en Banana. La instalación puede requerir intervención del usuario según el mecanismo y la versión del sistema.
+La primera etapa propuesta sería diagnóstico explicable y propuestas de parches verificables, con pruebas y recuperación. Reparación general, fiable y autónoma de cualquier error no es una capacidad que podamos prometer con el modelo actual.

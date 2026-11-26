@@ -1,0 +1,17 @@
+BOOT_READY
+Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_WORKSPACE_FULL_COMPILE_ECJ_DX_SEPARATE_PROCESS_ACTIVATION_AND_ACTUAL_SCENE_POSE_OK
+NATIVE_COMPILED_CHAT_AND_ACTION_MODULES_COEXIST_WITH_ANIMATION_OK
+NATIVE_STALE_AND_INVALID_REJECTION_FLAT_HISTORY_UNDO_BASE_MIGRATION_OK
+PASS STAGE51 real Android full-project compilation, three compiled replacements, separate-process checks, real scene and chat dispatch, persistence, guards, undo and migration.
+
+
+PRODUCTION_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PRODUCTION_WORKSPACE_EDIT_COMPILE_TRIAL_APPLY_UNDO_UI_OK
+NO_FATAL_EXCEPTION

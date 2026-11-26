@@ -1,0 +1,62 @@
+package com.bananalab.lite;
+import android.content.Context;import android.graphics.Bitmap;import java.util.*;
+final class NeuralSprites{
+ private static final LinkedHashMap<String,RigRenderer> rigCache=new LinkedHashMap<>(32,.75f,true);
+ private static synchronized RigRenderer rig(String k,Bitmap image,int type){RigRenderer r=rigCache.get(k);if(r==null){r=new RigRenderer(image,type);rigCache.put(k,r);while(rigCache.size()>32)rigCache.remove(rigCache.keySet().iterator().next());}return r;}
+ private static final Object renderLock=new Object();
+ private static PixelGenerator model,tomato;private static PoseField poser;private static final LinkedHashMap<String,Bitmap> images=new LinkedHashMap<>(16,.75f,true);
+ static final class Batch{final Map<String,Bitmap> images=new HashMap<>();final Map<String,Bitmap> alternate=new HashMap<>();final Map<String,Bitmap[]> mouths=new HashMap<>();final Map<String,Bitmap[]> poses=new HashMap<>();NeuralBackdrop.Frame[] backdrop;Map<String,Bitmap[]> views=new HashMap<>();Map<String,RigRenderer> rigs=new HashMap<>();Map<String,Bitmap[]> objects=new HashMap<>();}
+ static void resetModels(){synchronized(renderLock){synchronized(NeuralSprites.class){model=null;tomato=null;images.clear();rigCache.clear();}}}
+ static int accessory(String look){boolean coat=Appearance.has(look,"sobretodo|gabardina|abrigo|detective"),hat=Appearance.has(look,"sombrero|detective");if(coat)return hat?4:3;if(Appearance.has(look,"lentes|anteojos|gafas"))return 5;return hat?1:Appearance.has(look,"corona")?2:0;}
+ private static Bitmap preset(Context c,int type,int color,int accessory,int expression){try(java.io.InputStream in=c.getAssets().open("pixel-v2/bank/k"+type+"-"+Integer.toHexString(color)+"-"+accessory+"-"+expression+".webp")){return android.graphics.BitmapFactory.decodeStream(in);}catch(Exception e){return null;}}
+ static int viewIndex(String view){return view.equals("right")?1:view.equals("left")?2:view.equals("back")?3:0;}
+ static Bitmap rawVariant(Context c,SceneDraft.Actor actor,int expression,int view,int acc)throws Exception{synchronized(renderLock){return rawVariantLocked(c,actor,expression,view,acc);}}
+ private static Bitmap rawVariantLocked(Context c,SceneDraft.Actor actor,int expression,int view,int acc)throws Exception{
+  if(!actor.reference.isEmpty()){Bitmap ref=BitmapFactoryCompat.decode(c,actor.reference);if(ref!=null)return ref;throw new java.io.IOException("No se encontró la referencia guardada.");}
+  if(actor.kind.equals("criatura")&&actor.reference.isEmpty())return CustomCharacter.image(c,actor,expression,view);
+  synchronized(NeuralSprites.class){if(model==null)model=new PixelGenerator(ModelDepot.open(c,"pixel"));if(tomato==null)tomato=new PixelGenerator(c.getAssets().open("pixel-v2/tomato22.bin"));}
+  int type=PixelGenerator.type(actor.kind),color=Scene.bodyColor(actor.kind,actor.look),neuralView=view==3?2:view==0?0:1;
+  boolean tuned=false;if(ModelDepot.tuned(c,"pixel")){org.json.JSONObject report=ModelDepot.report(c,"pixel");tuned=type==report.getInt("type")&&color==report.getInt("color")&&acc==report.getInt("accessory")&&expression==report.getInt("expression")&&neuralView==report.getInt("view");}
+  Bitmap image;if(neuralView==0)image=preset(c,type,color,acc,expression);else try(java.io.InputStream in=c.getAssets().open("pixel-v2/bank/k"+type+"-"+Integer.toHexString(color)+"-"+acc+"-0-v"+neuralView+".webp")){image=android.graphics.BitmapFactory.decodeStream(in);}catch(Exception e){image=null;}
+  if(tuned&&image!=null&&ModelDepot.preview(c,"pixel")!=null)image=PixelRetouch.apply(image,ModelDepot.preview(c,"pixel"));else if(tuned)image=null;
+  if(image==null){PixelGenerator field=type==9?tomato:model;float[] cond=field.conditionFor(type,color,acc,expression,0);int offset=type==9?12:23;cond[offset]=0;cond[offset+neuralView]=1;image=Bitmap.createBitmap(field.render(cond),128,128,Bitmap.Config.ARGB_8888);}
+  image=FaceAnchor.apply(c,type,color,acc,expression,neuralView,actor.look,image);
+  if(view==2){android.graphics.Matrix m=new android.graphics.Matrix();m.setScale(-1,1);image=Bitmap.createBitmap(image,0,0,128,128,m,true);}return image;
+ }
+ static Bitmap variant(Context c,SceneDraft.Actor actor,int expression,int view)throws Exception{synchronized(renderLock){return variantLocked(c,actor,expression,view);}}
+ private static Bitmap variantLocked(Context c,SceneDraft.Actor actor,int expression,int view)throws Exception{
+  if(actor.kind.equals("criatura")&&actor.reference.isEmpty())return CustomCharacter.image(c,actor,expression,view);int acc=accessory(actor.look);Bitmap base=rawVariant(c,actor,expression,view,acc);if(!actor.reference.isEmpty())return base;boolean glasses=acc!=5&&Appearance.has(actor.look,"lentes|anteojos|gafas")&&view!=3,crown=acc!=2&&Appearance.has(actor.look,"corona");if(!glasses&&!crown)return base;
+  int[] pixels=new int[128*128],overlay=new int[128*128];base.getPixels(pixels,0,128,0,0,128,128);if(crown){Bitmap crownImage=rawVariant(c,actor,0,view,2);crownImage.getPixels(overlay,0,128,0,0,128,128);pixels=AccessoryMix.apply(pixels,overlay,PixelGenerator.type(actor.kind),view,true);}if(glasses){Bitmap glassesImage=rawVariant(c,actor,0,view,5);glassesImage.getPixels(overlay,0,128,0,0,128,128);pixels=AccessoryMix.apply(pixels,overlay,PixelGenerator.type(actor.kind),view,false);}return Bitmap.createBitmap(pixels,128,128,Bitmap.Config.ARGB_8888);
+ }
+ static Bitmap design(Context c,SceneDraft.Actor actor,int expression)throws Exception{return variant(c,actor,expression,viewIndex(actor.view));}
+ private static String key(SceneDraft.Actor actor,long seed){return actor.designId+"|"+actor.kind+"|"+actor.reference+"|"+actor.look+"|"+actor.view+"|"+seed;}
+ private static boolean supported(SceneDraft.Actor actor){return PixelGenerator.type(actor.kind)>=0&&!Appearance.has(actor.look,"bufanda|bigote")&&!(actor.kind.equals("criatura")&&Appearance.has(actor.look,"sobretodo|abrigo|gabardina|detective"));}
+ static String limitation(SceneDraft draft){if(Knowledge.normalize(draft.setting).contains("desierto"))return "Todavía no puedo generar un desierto. Elegí bosque, playa, ciudad, montaña o pasillo";for(SceneDraft.Actor actor:draft.cast)if(!supported(actor))return "Todavía puedo dibujar banana, pepino, gato, conejo, robot, perro, oso, zorro, persona, tomate o criatura; con sombrero, corona, sobretodo o lentes. No pude generar: "+actor.name;return null;}
+ static synchronized boolean ready(SceneDraft draft,long seed){if(draft==null||NeuralBackdrop.cached(draft,seed)==null||SceneObjects.cached(draft).size()!=draft.props.size())return false;for(int i=0;i<draft.cast.size();i++){SceneDraft.Actor actor=draft.cast.get(i);String k=key(actor,seed);if(!images.containsKey(k+"|v:3"))return false;if(!supported(actor)||!images.containsKey(k)||!images.containsKey(k+"|pose:4"))return false;for(int j=0;j<draft.actions.size();j++)if(draft.actors.get(j)==i){String action=draft.actions.get(j);if(Timeline.walk(action)&&(!images.containsKey(k+"|pose:1")||!images.containsKey(k+"|pose:2")))return false;if(action.matches("saluda|aplaude")&&!images.containsKey(k+"|pose:3"))return false;if(action.matches("habla|canta|sorprende")&&!images.containsKey(k+"|mouth"))return false;}}return true;}
+
+ static synchronized Batch cached(SceneDraft draft,long seed){Batch result=new Batch();if(draft==null)return result;result.backdrop=NeuralBackdrop.cached(draft,seed);result.objects=SceneObjects.cached(draft);for(SceneDraft.Actor a:draft.cast){Bitmap image=images.get(key(a,seed));if(image!=null){result.images.put(a.name,image);Bitmap[] vs=new Bitmap[4];for(int v=0;v<4;v++){vs[v]=images.get(key(a,seed)+"|v:"+v);if(vs[v]!=null&&a.reference.isEmpty())result.rigs.put(a.name+"|v:"+v,rig(key(a,seed)+"|v:"+v,vs[v],Math.max(0,PixelGenerator.type(a.kind))));}result.views.put(a.name,vs);if(a.reference.isEmpty())result.rigs.put(a.name,rig(key(a,seed)+"|base",image,Math.max(0,PixelGenerator.type(a.kind))));}Bitmap mouth=images.get(key(a,seed)+"|mouth");if(mouth!=null)result.alternate.put(a.name,mouth);Bitmap[] ms=new Bitmap[4];for(int v=0;v<4;v++)ms[v]=images.get(key(a,seed)+"|mouth-v:"+v);result.mouths.put(a.name,ms);Bitmap[] poses=new Bitmap[5];poses[0]=image;for(int j=1;j<5;j++)poses[j]=images.get(key(a,seed)+"|pose:"+j);result.poses.put(a.name,poses);}return result;}
+ static Batch prepare(Context context,SceneDraft draft,long seed)throws Exception{synchronized(renderLock){return prepareLocked(context,draft,seed);}}
+ private static Batch prepareLocked(Context context,SceneDraft draft,long seed)throws Exception{
+  String limitation=limitation(draft);if(limitation!=null)throw new java.io.IOException(limitation);
+  synchronized(NeuralSprites.class){if(model==null)model=new PixelGenerator(ModelDepot.open(context,"pixel"));if(poser==null)poser=new PoseField(context.getAssets().open("pose/pose1.bin"));}
+  Batch result=new Batch();
+  for(SceneDraft.Actor actor:draft.cast){
+   if(Thread.currentThread().isInterrupted())throw new java.io.IOException("Cancelado");if(!supported(actor))throw new java.io.IOException("El motor neuronal admite banana, pepino, gato, conejo, robot, perro, oso, zorro, persona, tomate o criatura; con sombrero, corona, sobretodo o lentes. No pude generar: "+actor.name);
+   String key=key(actor,seed);Bitmap image;synchronized(NeuralSprites.class){image=images.get(key);}
+   if(image==null&&!actor.reference.isEmpty()){image=design(context,actor,0);synchronized(NeuralSprites.class){images.put(key,image);}}
+   if(image==null){int expression=Appearance.has(actor.look,"triste")?1:Appearance.has(actor.look,"sorprendido|sorprendida")?2:0;image=design(context,actor,expression);synchronized(NeuralSprites.class){images.put(key,image);}}
+
+   Bitmap[] variants=new Bitmap[4];for(int v=0;v<4;v++){String vk=key+"|v:"+v;Bitmap vb;synchronized(NeuralSprites.class){vb=images.get(vk);}if(vb==null){vb=actor.reference.isEmpty()?variant(context,actor,0,v):image;synchronized(NeuralSprites.class){images.put(vk,vb);}}variants[v]=vb;if(actor.reference.isEmpty())result.rigs.put(actor.name+"|v:"+v,rig(key+"|v:"+v,vb,Math.max(0,PixelGenerator.type(actor.kind))));}result.views.put(actor.name,variants);
+   result.images.put(actor.name,image);if(actor.reference.isEmpty())result.rigs.put(actor.name,rig(key+"|base",image,Math.max(0,PixelGenerator.type(actor.kind))));
+   boolean walk=false,wave=false;int actorIndex=draft.cast.indexOf(actor);for(int j=0;j<draft.actions.size();j++)if(draft.actors.get(j)==actorIndex){String a=draft.actions.get(j);walk|=Timeline.walk(a);wave|=a.matches("saluda|aplaude");}
+   Bitmap[] poses=new Bitmap[5];poses[0]=image;int[] original=new int[model.side*model.side];image.getPixels(original,0,model.side,0,0,model.side,model.side);
+   for(int pose=1;pose<5;pose++){if(model.side==128){poses[pose]=image;synchronized(NeuralSprites.class){images.put(key+"|pose:"+pose,image);}continue;}if((pose==1||pose==2)&&!walk||pose==3&&!wave)continue;String poseKey=key+"|pose:"+pose;Bitmap posed;synchronized(NeuralSprites.class){posed=images.get(poseKey);}if(posed==null){posed=Bitmap.createBitmap(poser.deform(original,PixelGenerator.type(actor.kind),pose),model.side,model.side,Bitmap.Config.ARGB_8888);synchronized(NeuralSprites.class){images.put(poseKey,posed);}}poses[pose]=posed;}result.poses.put(actor.name,poses);
+
+   boolean speaking=false;int index=draft.cast.indexOf(actor);for(int j=0;j<draft.actions.size();j++)if(draft.actors.get(j)==index&&draft.actions.get(j).matches("habla|canta|sorprende"))speaking=true;
+   if(speaking&&!actor.reference.isEmpty()){result.alternate.put(actor.name,image);synchronized(NeuralSprites.class){images.put(key+"|mouth",image);}}
+   if(speaking){Bitmap[] ms=new Bitmap[4];for(int v=0;v<4;v++){String mk=key+"|mouth-v:"+v;synchronized(NeuralSprites.class){ms[v]=images.get(mk);}if(ms[v]==null){ms[v]=actor.reference.isEmpty()?variant(context,actor,2,v):image;synchronized(NeuralSprites.class){images.put(mk,ms[v]);}}}result.mouths.put(actor.name,ms);}
+   if(speaking&&actor.reference.isEmpty()){String mouthKey=key+"|mouth";Bitmap mouth;synchronized(NeuralSprites.class){mouth=images.get(mouthKey);}if(mouth==null){mouth=variant(context,actor,2,0);synchronized(NeuralSprites.class){images.put(mouthKey,mouth);}}result.alternate.put(actor.name,mouth);}
+
+  }synchronized(NeuralSprites.class){while(images.size()>192)images.remove(images.keySet().iterator().next());}result.backdrop=NeuralBackdrop.prepare(context,draft,seed);result.objects=SceneObjects.prepare(context,draft);return result;
+ }
+}

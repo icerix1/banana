@@ -1,0 +1,7 @@
+PREPARE_MS 47295
+RENDER_OK sprites96 background_readable
+SINGLE_MP4_AV_OK
+SERIES_MP4_AV_OK
+SCENE_CONTINUITY_OK
+PASS STAGE31 Android render, neural presets, simultaneous timing, AAC/H264 mux, series and identity.
+

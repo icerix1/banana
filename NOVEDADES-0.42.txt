@@ -1,0 +1,41 @@
+BANANA 0.42 — AJUSTES DE JAVA HABLANDO CON EL CHATBOT
+
+Ahora se pueden pedir los ajustes admitidos en la misma conversación, sin escribir Java, números de revisión ni abrir el editor. Detrás sigue la cadena real de0.41: modifica un método de la clase preparada, valida, compila en Android, prueba y activa. Las funciones Java admitidas siguen siendo las mismas; no se amplía a todo el código del APK.
+
+PROBÁ
+crea a Fito un zorro
+cambia la celebracion para que salte y despues aplauda
+hace que Fito celebre
+agrega un giro al final de la celebracion
+mostrame como quedo la celebracion
+deshace ese ajuste
+
+También podés usar:
+hace que la celebracion sea saltar y aplaudir
+cambia el festejo a salto y aplauso
+quita el baile de la celebracion
+separa un poco el beso
+acerca un poco el beso
+hace que al besarse queden mas juntos
+que ajustes hiciste
+quiero mejorar la app
+busca como arreglar ese error
+mostrame el codigo que cambiaste
+
+CÓMO FUNCIONA
+Los movimientos se interpretan en el orden dicho. La celebración admite salto, baile, aplauso, saludo, giro y espera, de uno a ocho pasos. Agregar y quitar usan la secuencia actual como base. Una acción desconocida o un pedido ambiguo produce una aclaración y no modifica Java. Por ejemplo, no aplica solamente el salto si el pedido también exige volar, que este método no admite.
+El cambio se compila y activa directamente después del pedido. El chat muestra una descripción en palabras de lo que quedó y la barra informa preparación/compilación/carga. Si falla, conserva la clase activa anterior. No hace falta escribir compila y activa java, aunque los controles avanzados siguen disponibles.
+La celebración es un comportamiento general. Para usarlo con un personaje, decí hace que Fito celebre, Fito celebra o Fito festeja. Mostrame como quedo la celebracion usa el personaje seleccionado; si no puede identificarlo, pregunta. La prueba agrega los movimientos al final de la escena y conserva sus diseños.
+Los cambios de separación del beso son relativos de una unidad y quedan entre0 y4. Si ya está en contacto0, pedirlo más cerca no inventa una corrección: avisa que no cambió nada y que puede necesitar revisión visual. Estos ajustes son globales para el gesto de beso de la clase preparada, no un editor de anatomía por personaje.
+Deshace ese ajuste recupera la versión Java anterior solo si la revisión sigue correspondiendo al último ajuste del chat. No deshace automáticamente la escena creada para probarlo. Si hubo cambios por otra vía, pide revisar la versión para no recuperar un código distinto al esperado.
+Para ver las frases disponibles: Proyecto → Mejorar hablando o quiero mejorar la app. Java local sigue disponible como opción avanzada. El buscador de documentación y la vista del código son opcionales, a pedido del usuario.
+
+ALCANCE
+Es una interfaz de lenguaje natural acotada para el Java ya preparado, no un nuevo programador general. No escribe Java arbitrario a partir de cualquier frase. La búsqueda consulta referencias del último error con la infraestructura existente; no convierte una página web en un parche ejecutable. Los modelos propios y sus pesos no cambian. Sin Qwen ni servicios externos de generación.
+Instalar el APK una vez sobre0.41. Los ajustes posteriores del método se hacen en esa instalación y persisten al reiniciar. No requiere una PC ni Internet para compilar; la búsqueda de documentación sí necesita conexión. Sigue pendiente verificar la compilación en la tablet Android16 del usuario; la prueba nativa se realiza en emulador API23.
+
+VALIDACIÓN
+Stage44JavaChatCheck y los veintiún controles anteriores pasaron. Incluye frases naturales de reemplazo/agregado/quita, orden de movimientos, cambios relativos, aclaración de acciones no admitidas y conservación de fuente/revisión ante pedidos ambiguos o de escena.
+La instrumentación nativa comprueba conversación natural → reescritura Java → compilación y activación reales → respuesta sencilla → escena con los movimientos cambiados. También verifica separación relativa, rechazo de instrucción parcialmente no admitida y recuperación con deshace ese ajuste. La interfaz de producción se comprueba por separado con pedidos normales del chat.
+Las pruebas no miden comprensión universal. La explicación de las limitaciones y herramientas de0.41 queda en GUIA-JAVA-0.41.txt.
+El ZIP sigue siendo privado e incluye la firma: no publicar.

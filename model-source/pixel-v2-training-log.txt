@@ -1,0 +1,82 @@
+500 loss 0.2988 seconds 5
+1000 loss 0.1318 seconds 10
+1500 loss 0.2045 seconds 14
+2000 loss 0.0943 seconds 19
+2500 loss 0.1132 seconds 24
+3000 loss 0.1442 seconds 28
+3500 loss 0.0698 seconds 33
+4000 loss 0.0803 seconds 37
+4500 loss 0.0718 seconds 42
+5000 loss 0.0763 seconds 47
+5500 loss 0.0525 seconds 52
+6000 loss 0.0824 seconds 57
+6500 loss 0.0665 seconds 62
+7000 loss 0.0785 seconds 66
+7500 loss 0.0569 seconds 71
+8000 loss 0.0417 seconds 76
+8500 loss 0.0989 seconds 81
+9000 loss 0.0673 seconds 85
+9500 loss 0.0317 seconds 90
+10000 loss 0.0586 seconds 95
+10500 loss 0.0143 seconds 100
+11000 loss 0.0589 seconds 104
+11500 loss 0.0217 seconds 109
+12000 loss 0.0291 seconds 114
+12500 loss 0.0293 seconds 119
+13000 loss 0.0335 seconds 123
+13500 loss 0.0242 seconds 128
+14000 loss 0.02 seconds 133
+14500 loss 0.0379 seconds 138
+15000 loss 0.0181 seconds 142
+15500 loss 0.0072 seconds 147
+16000 loss 0.0214 seconds 152
+{
+  "name": "Banana Pixel 2",
+  "component": "personajes",
+  "system_release": "0.31",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 83716,
+  "external_weights": false,
+  "training_images": 1293,
+  "heldout_images": 3,
+  "unique_training_conditions": 1293,
+  "unique_heldout_conditions": 3,
+  "duplicate_note": "Two identical zero-latent variants per condition; synthetic evaluation only.",
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9967530811459735,
+  "heldout_foreground_RGB_MAE": 0.040422409772872925,
+  "size": 128,
+  "hidden": 192,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot",
+    "perro",
+    "oso",
+    "zorro",
+    "persona"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown",
+    "coat",
+    "hat_coat",
+    "glasses"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Background and motion remain procedural."
+}

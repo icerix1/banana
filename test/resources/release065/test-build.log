@@ -1,0 +1,184 @@
+----------
+1. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage63GeneralSourceCheck.java (at line 2)
+	import java.util.*;import java.net.*;import org.json.*;
+	                                            ^^^^^^^^
+The import org.json is never used
+----------
+----------
+2. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage45AppJavaCheck.java (at line 2)
+	import org.json.*;import java.util.*;
+	                         ^^^^^^^^^
+The import java.util is never used
+----------
+----------
+3. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage33Check.java (at line 2)
+	import java.io.*;import java.util.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+4. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage33Check.java (at line 2)
+	import java.io.*;import java.util.*;
+	                        ^^^^^^^^^
+The import java.util is never used
+----------
+----------
+5. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage37Check.java (at line 2)
+	import java.util.*;import org.json.*;
+	                          ^^^^^^^^
+The import org.json is never used
+----------
+6. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage37Check.java (at line 10)
+	d=apply(c,m,"Tony entrega una caja a Milo",d);SceneDraft first=d.copy();d=apply(c,m,"continua con Milo entrega la caja a Nora",d);check(SceneResolver.received(d,"caja","banana",false)==d.get("pepino"),"recipient event not final owner");check(SceneResolver.special(d,"el que tiene la caja")==d.get("tomate"),"final owner grounded");check(SceneGuide.reply("quien recibio la caja de Tony",d).contains("milo"),"event question answered from timeline");check(SceneGuide.reply("quien tiene la caja",d).contains("nora"),"owner question answered from timeline");
+	                                                         ^^^^^
+The value of the local variable first is not used
+----------
+----------
+7. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage48ModularCheck.java (at line 2)
+	import org.json.*;import java.util.*;
+	       ^^^^^^^^
+The import org.json is never used
+----------
+----------
+8. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage69FeedbackCheck.java (at line 15)
+	check(KnowledgeNotebook.TEXT==262144&&KnowledgeNotebook.MAX==128&&KnowledgeNotebook.BUDGET==4000000&&DurableCode.PORTABLE_LIMIT>KnowledgeNotebook.BUDGET*3,"capacity and compatible backup budget");
+	      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comparing identical expressions
+----------
+9. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage69FeedbackCheck.java (at line 15)
+	check(KnowledgeNotebook.TEXT==262144&&KnowledgeNotebook.MAX==128&&KnowledgeNotebook.BUDGET==4000000&&DurableCode.PORTABLE_LIMIT>KnowledgeNotebook.BUDGET*3,"capacity and compatible backup budget");
+	                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comparing identical expressions
+----------
+10. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage69FeedbackCheck.java (at line 15)
+	check(KnowledgeNotebook.TEXT==262144&&KnowledgeNotebook.MAX==128&&KnowledgeNotebook.BUDGET==4000000&&DurableCode.PORTABLE_LIMIT>KnowledgeNotebook.BUDGET*3,"capacity and compatible backup budget");
+	                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comparing identical expressions
+----------
+----------
+11. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/CapabilityCheck.java (at line 2)
+	import java.io.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+----------
+12. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage71StreamingPageCheck.java (at line 5)
+	public static void main(String[] args)throws Exception{File dir=Files.createTempDirectory("page65").toFile();String text="La lunitina es un sensor de prueba. Este documento termina con el dato correcto.";StringBuilder html=new StringBuilder("<html><head><title>Fuente propia</title></head><body><!--");for(int i=0;i<9*1024*1024;i++)html.append('x');html.append("--><nav>oculto</nav><main><p>").append(text).append(" &amp; &#128578;</p></main></body></html>");try(PageReader.Document d=PageStream.extract(dir,"https://example.com/a",new StringReader(html.toString()),true,new PageStream.Budget())){String actual=new String(Files.readAllBytes(d.file.toPath()),"UTF-8");check(actual.contains(text)&&actual.contains("🙂")&&!actual.contains("oculto"),"stream extraction after old8MiB boundary");check(d.title.equals("Fuente propia"),"title");}check(dir.list().length==0,"temporary cleanup");final long cap=67108864L;InputStream generated=new InputStream(){long left=cap;public int read(){return left-->0?97:-1;}public int read(byte[] b,int o,int n){if(left<=0)return -1;int k=(int)Math.min(n,left);left-=k;return k;}};check(PageStream.copy(generated,new OutputStream(){public void write(int b){}public void write(byte[] b,int o,int n){}},cap,new PageStream.Budget())==cap,"64MiB exact boundary");boolean failed=false;try{PageStream.copy(new ByteArrayInputStream(new byte[11]),new ByteArrayOutputStream(),10,new PageStream.Budget());}catch(IOException expected){failed=true;}check(failed&&PageReader.LIMIT==cap,"overflow rejection");System.out.println("PASS streaming9MiB HTML,64MiB boundary, hidden content, Unicode, cleanup and overflow");}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^
+Comparing identical expressions
+----------
+----------
+13. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage57FullBuildCheck.java (at line 2)
+	import java.io.*;import java.nio.file.*;import java.util.*;import java.net.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+14. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage57FullBuildCheck.java (at line 7)
+	Path fixture=Files.createTempDirectory("banana-lambda-fixture"),dest=fixture.resolve("out"),out=fixture.resolve("classes");Files.createDirectories(dest);Files.write(fixture.resolve("ClosureProbe.java"),("package probe;public class ClosureProbe{public static int sink;int value=7;int run(){return value;}public Runnable make(){return ()->{sink=run();};}public Runnable nested(){return ()->{Runnable inner=()->{sink+=this.value;};inner.run();};}public java.util.Comparator<String> compare(){return (a,b)->a.length()-b.length();}}").getBytes("UTF-8"));command(Arrays.asList("java","-cp",cp,"com.bananalab.tools.SourceLowerer",root.resolve("assets/java-tools/android-api.jar").toString(),fixture.toString(),dest.toString()));command(Arrays.asList("java","-jar",cache.resolve("ecj.jar").toString(),"-8","-d",out.toString(),dest.resolve("ClosureProbe.java").toString()));try(URLClassLoader loader=new URLClassLoader(new URL[]{out.toUri().toURL()})){Class<?> c=loader.loadClass("probe.ClosureProbe");Object instance=c.getConstructor().newInstance();((Runnable)c.getMethod("make").invoke(instance)).run();check(c.getField("sink").getInt(null)==7,"implicit lexical method preserved instead of recursive Runnable.run");((Runnable)c.getMethod("nested").invoke(instance)).run();check(c.getField("sink").getInt(null)==14,"nested capture and explicit lexical this preserved");java.util.Comparator<String> cmp=(java.util.Comparator<String>)c.getMethod("compare").invoke(instance);check(cmp.compare("abcd","x")==3,"grounded generic target preserved");}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Type safety: Unchecked cast from Object to Comparator<String>
+----------
+----------
+15. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage38ConversationCheck.java (at line 5)
+	public static void main(String[] args)throws Exception{String r=args[0];String[] labels=new String(Files.readAllBytes(Paths.get(r+"/assets/context1/labels.txt")),"UTF-8").trim().split("\\n");ContextEncoder model=new ContextEncoder(new FileInputStream(r+"/assets/context1/context1.bin"),labels);java.lang.reflect.Field cached=ContextEncoder.class.getDeclaredField("cached");cached.setAccessible(true);cached.set(null,model);CreatorPersistenceCheck.Fake ctx=new CreatorPersistenceCheck.Fake();Semilla m=SemillaCheck.load(r+"/assets/language");BananaEngine.run(ctx,"crea a Tony una banana detective; agrega un pepino llamado Milo; agrega un tomate llamado Nora",new ArrayList<String[]>(),"",true,m);String prior=SceneStore.load(ctx).json().toString();BananaEngine.Result result=BananaEngine.run(ctx,"hace al otro mas alto",new ArrayList<String[]>(),"",true,m);check(!result.changed&&!CreatorMemory.load(ctx).clarifyTemplate.isEmpty(),"ambiguous reference stored");result=BananaEngine.run(ctx,"Tony",new ArrayList<String[]>(),"",true,m);check(result.changed&&result.scene.get("banana").look.contains("alto")&&!result.scene.get("pepino").look.contains("alto"),"two-turn correction resumes intended actor");String reply=ConversationAssist.reply(ctx,"dame una idea para seguir",result.scene);check(reply!=null&&reply.contains("aplica esa idea")&&!CreatorMemory.load(ctx).proposal.isEmpty(),"learned project-help intent stores reviewable suggestion");result=BananaEngine.run(ctx,"aplica esa idea",new ArrayList<String[]>(),"",true,m);check(result.changed&&result.scene.dialogue.size()==1,"explicit proposal acceptance executes actual tool");ConversationAssist.reply(ctx,"dame una idea para seguir",result.scene);BananaEngine.run(ctx,"pone a Tony azul",new ArrayList<String[]>(),"",true,m);String before=SceneStore.load(ctx).json().toString();result=BananaEngine.run(ctx,"aplica esa idea",new ArrayList<String[]>(),"",true,m);check(!result.changed&&before.equals(SceneStore.load(ctx).json().toString()),"stale suggestion cannot overwrite later edits");System.out.println("PASS learned contextual help, two-turn actor repair, grounded suggestions, explicit acceptance and stale-scene rejection");}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^^^^^
+The value of the local variable prior is not used
+----------
+----------
+16. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage38Check.java (at line 2)
+	import java.io.*;import java.util.*;import org.json.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+17. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage38Check.java (at line 2)
+	import java.io.*;import java.util.*;import org.json.*;
+	                        ^^^^^^^^^
+The import java.util is never used
+----------
+18. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage38Check.java (at line 12)
+	Scene jump=new Scene(carry);SceneDraft.Actor a=carry.get(owner);SceneDraft jumping=carry.copy();jumping.actions.clear();jumping.actors.clear();jumping.slots.clear();jumping.targets.clear();jumping.recipients.clear();jumping.prop("caja").holder=owner;SceneDirector.step(jumping,jumping.get(owner),"salta",0,"","");jump=new Scene(jumping);float[] p=jump.objectPoint("caja",.5f),hand=jump.hand(owner,.5f);check(Math.abs(p[1]-hand[1])<.001&&p[1]<jump.objectPoint("caja",0)[1]-5,"held object follows jump pose");float[] pose=jump.pose(owner,.3f,null),world=ActorGeometry.world(52,55,pose),local=ActorGeometry.local(world[0],world[1],pose[0],pose[1],pose[2],pose[3],pose[4]);check(Math.abs(local[0]-52)<.001&&Math.abs(local[1]-55)<.001,"shared forward/inverse grip transform");
+	                                             ^
+The value of the local variable a is not used
+----------
+----------
+19. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage68DirectLinkCheck.java (at line 15)
+	String plain="La instrucción de prueba usa <Tipo> como notación literal y contiene suficiente texto para leerla.";check(PageReader.document("https://example.com/a",plain,false).text.equals(plain),"plain text preserves angle notation");
+	                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Resource leak: '<unassigned Closeable value>' is never closed
+----------
+----------
+20. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage49RepairCheck.java (at line 5)
+	static Method compile(String base,String body,boolean wanted)throws Exception{Path work=Files.createTempDirectory("banana-repair-check");Files.write(work.resolve("ChatLanguagePatched.java"),RepairSyntax.compileSource(base,body).getBytes("UTF-8"));Process process=new ProcessBuilder("java","-jar","/workspace/scratch/f1fa469e81ab/banana/sdk/ecj.jar","-8","-encoding","UTF-8","-d",work.toString(),work.resolve("ChatLanguagePatched.java").toString()).redirectErrorStream(true).start();ByteArrayOutputStream log=new ByteArrayOutputStream();byte[] buf=new byte[4096];int n;while((n=process.getInputStream().read(buf))!=-1)log.write(buf,0,n);int exit=process.waitFor();check((exit==0)==wanted,"actual compiler result: "+log.toString("UTF-8"));if(exit!=0)return null;return new URLClassLoader(new URL[]{work.toUri().toURL()}).loadClass("com.bananalab.patch.ChatLanguagePatched").getMethod("socialReply",String.class);}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Resource leak: '<unassigned Closeable value>' is never closed
+----------
+----------
+21. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage32Check.java (at line 2)
+	import java.io.*;import java.util.*;import org.json.*;
+	                                           ^^^^^^^^
+The import org.json is never used
+----------
+----------
+22. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/UnderstandingCheck.java (at line 10)
+	Map cast=(Map)field.get(scene);check(cast.size()==2,"cast: "+cast);
+	^^^
+Map is a raw type. References to generic type Map<K,V> should be parameterized
+----------
+23. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/UnderstandingCheck.java (at line 10)
+	Map cast=(Map)field.get(scene);check(cast.size()==2,"cast: "+cast);
+	          ^^^
+Map is a raw type. References to generic type Map<K,V> should be parameterized
+----------
+----------
+24. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage38ModelsCheck.java (at line 2)
+	import java.io.*;import java.nio.file.*;import java.util.*;import org.json.*;
+	                                               ^^^^^^^^^
+The import java.util is never used
+----------
+----------
+25. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/SharedSceneCheck.java (at line 2)
+	import java.io.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+----------
+26. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage59FormulaCheck.java (at line 2)
+	import java.net.*;import java.lang.reflect.*;import org.json.*;
+	                                                    ^^^^^^^^
+The import org.json is never used
+----------
+----------
+27. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage35Check.java (at line 2)
+	import java.io.*;import java.util.*;import org.json.*;
+	       ^^^^^^^
+The import java.io is never used
+----------
+28. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage35Check.java (at line 2)
+	import java.io.*;import java.util.*;import org.json.*;
+	                                           ^^^^^^^^
+The import org.json is never used
+----------
+----------
+29. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage36Check.java (at line 2)
+	import java.util.*;import org.json.*;
+	                          ^^^^^^^^
+The import org.json is never used
+----------
+----------
+30. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage39ResearchCheck.java (at line 2)
+	import java.net.*;import java.util.*;import org.json.*;
+	                                            ^^^^^^^^
+The import org.json is never used
+----------
+----------
+31. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage52DurableCheck.java (at line 2)
+	import org.json.*;import java.nio.file.*;import java.net.*;import java.lang.reflect.*;import java.util.*;
+	                                                                                             ^^^^^^^^^
+The import java.util is never used
+----------
+----------
+32. WARNING in /workspace/scratch/f1fa469e81ab/banana/release066/Banana/test/Stage50SpecialistCheck.java (at line 2)
+	import java.util.*;
+	       ^^^^^^^^^
+The import java.util is never used
+----------
+32 problems (32 warnings)

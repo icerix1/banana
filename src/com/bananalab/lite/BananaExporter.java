@@ -1,0 +1,17 @@
+package com.bananalab.lite;
+import android.content.*;import android.graphics.*;import android.net.Uri;import java.io.*;import java.util.*;import org.json.*;
+/** Exports immutable result snapshots; independent of the currently edited project. */
+final class BananaExporter{
+ static JSONObject request(Context c,String kind,SceneDraft scene)throws Exception{JSONObject q=new JSONObject().put("kind",kind).put("three",c.getSharedPreferences("cinema",0).getBoolean("three",false));if(kind.equals("series")){JSONArray snapshots=new JSONArray(),rows=SceneLibrary.list(c);CreatorSession creator=CreatorMemory.load(c);if(creator.takeMode||!creator.shots.isEmpty()){for(String shot:creator.shots)snapshots.put(SceneDraft.read(shot).json());SceneDraft current=scene!=null?scene:SceneStore.load(c);if(current!=null)snapshots.put(current.json());return q.put("scenes",snapshots);}if(rows.length()==0)throw new IOException("Primero guardá una escena en tu serie.");for(int i=0;i<rows.length();i++)snapshots.put(rows.getJSONObject(i).getJSONObject("scene"));q.put("scenes",snapshots);}else q.put("scene",scene.copy().json());return q;}
+ static Scene prepare(Context c,JSONObject data,boolean three)throws Exception{return BananaRender.prepare(c,SceneDraft.read(data.toString()),three);}
+ static void write(Context c,JSONObject request,Uri uri,VideoExporter.Monitor monitor)throws Exception{
+  String kind=request.getString("kind");boolean three=request.optBoolean("three");File temp=File.createTempFile("banana-result-","."+(kind.equals("series")?"mp4":kind),c.getCacheDir());Bitmap bitmap=null;boolean complete=false;
+  try{Motion motion=Learning.load(c);if(monitor.cancelled())throw new IOException("Guardado cancelado");
+   if(kind.equals("series")){SeriesExporter.write(c,request.getJSONArray("scenes"),three,temp,motion,monitor);}
+   else{Scene scene=prepare(c,request.getJSONObject("scene"),three);int frames=scene.frames();if(kind.equals("mp4"))VideoExporter.write(temp,scene,motion,frames,monitor);
+    else{int side=kind.equals("png")?384:256;bitmap=Bitmap.createBitmap(side,side,Bitmap.Config.ARGB_8888);Canvas canvas=new Canvas(bitmap);try(BufferedOutputStream out=new BufferedOutputStream(new FileOutputStream(temp))){if(kind.equals("png")){scene.draw(canvas,side,motion,(float)Math.max(0,Math.min(1,request.optDouble("time",0))));if(!bitmap.compress(Bitmap.CompressFormat.PNG,100,out))throw new IOException("No se pudo escribir la imagen");}else if(kind.equals("gif")){int[] pixels=new int[side*side];try(GifWriter writer=new GifWriter(out,side)){for(int f=0;f<frames;f++){if(monitor.cancelled())throw new IOException("Cancelado");scene.draw(canvas,side,motion,f/(float)Math.max(1,frames-1));bitmap.getPixels(pixels,0,side,0,0,side,side);writer.frame(pixels,f%2==0?6:7);monitor.progress(f,frames);}}}else throw new IOException("Formato no admitido");}}
+   }
+   if(monitor.cancelled())throw new IOException("Guardado cancelado");try(InputStream in=new FileInputStream(temp);OutputStream out=c.getContentResolver().openOutputStream(uri,"w")){if(out==null)throw new IOException("Destino no disponible");byte[] buffer=new byte[65536];int n;while((n=in.read(buffer))!=-1){if(monitor.cancelled())throw new IOException("Guardado cancelado");out.write(buffer,0,n);}}complete=true;
+  }finally{if(bitmap!=null)bitmap.recycle();temp.delete();if(!complete)try{android.provider.DocumentsContract.deleteDocument(c.getContentResolver(),uri);}catch(Exception ignored){}}
+ }
+}

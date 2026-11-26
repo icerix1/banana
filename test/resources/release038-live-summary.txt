@@ -1,0 +1,1 @@
+Consulta real mediante transporte HTTP del entorno: energía solar → una página pública legible; fotosíntesis → alternativa Wikipedia, cobertura limitada visible. La JVM directa no resolvió DNS; no se afirma prueba de internet público dentro de Android.

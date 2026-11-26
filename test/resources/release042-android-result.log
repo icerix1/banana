@@ -1,0 +1,18 @@
+BOOT_READY
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_NATURAL_CHAT_COMPILES_AND_PREVIEWS_OK
+NATIVE_RELATIVE_ADJUSTMENT_CLARIFICATION_AND_UNDO_OK
+PASS STAGE44 normal Spanish chat -> source rewrite -> real Android compilation -> activation -> friendly response -> scene preview; ambiguity guard and natural undo.
+
+
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATURAL_UPDATE_UI_OK
+NATURAL_PREVIEW_UI_OK
+NATURAL_UNDO_UI_OK
+FATAL_EXCEPTION False

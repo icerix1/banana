@@ -1,0 +1,11 @@
+Exception in thread "main" java.net.UnknownHostException: chatgpt.com: Temporary failure in name resolution
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at com.bananalab.lite.PageReader.address(PageReader.java:14)
+	at com.bananalab.lite.PageReader.fetch(PageReader.java:26)
+	at com.bananalab.lite.WebFetchProbe.main(WebFetchProbe.java:1)

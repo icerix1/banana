@@ -1,0 +1,9 @@
+PIXEL21_PARITY 1.4901161E-7
+CHAT33_PARITY 5.722046E-6
+RESERVED_NAME uma => se llama uma .
+RESERVED_NAME raquel => se llama ra .
+RESERVED_NAME dario => se llama dario .
+CHAT hola => hola ! que queres crear o conversar hoy que to .
+CHAT sos independiente => mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .
+CHAT que significa entregar => pognifinifiigniente pararte entandia gnio . tame como quedibia anquis pestado .
+CHAT quiero una idea de detectives => una banana detective encuentra una puerta cerrada y escucha pasos del otro lado .

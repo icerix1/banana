@@ -1,0 +1,6 @@
+NATIVE_COMPLETE_JAVA_PROJECT_BASELINE_COMPILES_OK
+NATIVE_MLP_METRICS base=36/36 dev=11/12 final=11/12
+NATIVE_OWN_MODEL_EDITS_REAL_NONCHAT_METHOD_AND_PROJECT_COMPILES_OK
+NATIVE_MULTI_FILE_WORKSPACE_ERROR_GUARD_AND_RECOVERY_OK
+PASS STAGE50 Android own-model training, frozen phrase evaluation, whole-project Java compilation, non-chat method generation, dependent class editing, compiler diagnostics, version guards and no arbitrary workspace execution.
+

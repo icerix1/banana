@@ -1,0 +1,64 @@
+Stage31Check
+PASS simultaneidad, orden, entrada/salida, correccion, camara, interaccion, migracion, Pixel2 3.5762787E-7, poses96, sonido y serie
+IncomingActorCheck
+PASS 60 pedidos: dos personajes, entrada asignada al segundo y visibilidad final en ambos modos
+CreatorCheck
+Quiero una serie de terror con una banana => Borrador guardado, sin publicar.
+Escena compartida · parque
+banana: aspecto original, centro
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+Que se llame Tony => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+Agregá un pepino pero todavía no lo dibujes => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+pepino: aspecto original, derecha
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+PASS borrador aislado, nombres, publicar, alias, ordinal, otro, revelar, persistir, deshacer/rehacer y rechazo
+CreatorPersistenceCheck
+PASS persisted draft, atomic publish/failure, undo/redo, related memory and clear
+SharedSceneCheck
+Preparé el dibujo.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, derecha
+Cámara: automática
+Podés abrirlo en Animaciones y seguir corrigiéndolo acá.
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, izquierda, pequeno
+Cámara: automática
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: verde, izquierda, pequeno, detras del arbol
+1. [tiempo 1] pepino salta
+2. [tiempo 2] pepino saluda
+Cámara: automática
+[salta, saluda]
+PASS escena compartida: crear, editar, relaciones, conservar, aclarar, persistir, acciones y conversacion
+TenTurnCheck
+PASS: diez turnos, persistencia y atributos independientes
+TransformerCheck
+PASS PyTorch completo vs Java incremental: max 2.861023E-6
+hola banana => la banana. [3]
+hola => hola! que queres crear o conversar hoy? [9]
+quien sos => me llamo banana. estoy aprendiendo a generar texto. [10]
+que podes hacer => puedo conversar sobre ejemplos sencillos y ayudarte a pensar escenas. todavia puedo equivocarme. [15]
+gracias => de nada! podemos seguir con otra idea. [9]
+dame una frase con gato => el gato camina en el bosque. [7]
+como me llamo => me llamo banana. estoy aprendiendo a generar texto incorrecto se todo. [13]
+CONTEXT => te llamas ana.
+PASS generacion acotada, contexto experimental, OOV y cancelacion
+T3HeldoutCheck
+HELDOUT_CONTEXT 177/177
+LocalMathCheck
+PASS calculadora local: suma, producto, negativos, cero y aislamiento
+BackdropCheck
+PASS fondo neuronal128, mascara, escenarios, suavizado y paridad Java/PyTorch max 1.3411045E-7; ms host 310

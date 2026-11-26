@@ -1,0 +1,5 @@
+NATIVE_OWN_TOPIC_MODEL_AND_OFFLINE_FOLLOWUPS_OK
+NATIVE_PLANS_ROLE_REPAIR_AND_ATOMICITY_OK
+NATIVE_TAUGHT_PHRASES_FEEDBACK_AND_STYLE_OK
+PASS STAGE40 native Android own model loading, local lessons, followups, style, quote-aware plans, role correction, atomic failure/repair, learned user phrase and trace. No PC or external model used for inference.
+

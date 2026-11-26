@@ -1,0 +1,9 @@
+BANANA T1
+Arquitectura y pesos propios. Semilla18018. Vocabulario y corpus sintetico
+construidos en el script de entrenamiento. Se necesita Python3 + PyTorch2.5.1
+CPU para reproducir el desarrollo. No se distribuye PyTorch dentro del APK.
+Referencia usada para revisar la atencion causal:
+https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html
+Los pesos se exportan en big-endian y se ejecutan en BananaTransformer.java.
+El archivo transformer-reference.bin prueba la equivalencia de inferencia.
+No se deben interpretar salidas sinteticas coherentes como conocimiento general.

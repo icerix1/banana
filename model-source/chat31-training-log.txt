@@ -1,0 +1,57 @@
+100 loss 0.8916 seconds 6
+200 loss 0.085 seconds 12
+300 loss 0.0895 seconds 18
+400 loss 0.3054 seconds 24
+500 loss 0.2256 seconds 30
+600 loss 0.0867 seconds 36
+700 loss 0.2509 seconds 42
+800 loss 0.0591 seconds 48
+900 loss 0.1768 seconds 54
+1000 loss 0.0019 seconds 60
+1100 loss 0.0368 seconds 65
+1200 loss 0.0734 seconds 71
+1300 loss 0.0203 seconds 77
+1400 loss 0.0632 seconds 83
+1500 loss 0.006 seconds 89
+1600 loss 0.0167 seconds 95
+1700 loss 0.0124 seconds 101
+1800 loss 0.0328 seconds 107
+1900 loss 0.0059 seconds 112
+2000 loss 0.0338 seconds 118
+2100 loss 0.0086 seconds 124
+2200 loss 0.0188 seconds 130
+2300 loss 0.0015 seconds 136
+2400 loss 0.0079 seconds 142
+2500 loss 0.0329 seconds 148
+2600 loss 0.0261 seconds 154
+2700 loss 0.0037 seconds 160
+2800 loss 0.0084 seconds 166
+{
+  "name": "Banana Chat 3.1",
+  "architecture": "causal decoder-only Transformer, pre-LN, ReLU FFN",
+  "parameters": 169144,
+  "layers": 2,
+  "heads": 4,
+  "width": 64,
+  "context_tokens": 192,
+  "external_weights": false,
+  "training_examples": 5192,
+  "test_examples": 481,
+  "heldout_reply_loss_synthetic_only": 0.15463074767012586,
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy ?",
+    "quien sos": "me llamo banana . estoy aprendiendo a generar texto .",
+    "que podes hacer": "puedo conversar sobre ejemplos sencillos y ayudarte a pensar escenas . todavia puedo equivocarme .",
+    "gracias": "de nada ! podemos seguir con otra idea .",
+    "dame una frase con gato": "el gato camina en el bosque .",
+    "sabes todo": "todavia tengo limites . conviene revisar mis respuestas y las fuentes .",
+    "como me llamo": "me llamo banana . estoy aprendiendo a generar texto incorrecto se todo .",
+    "contexto nombre": "te llamas ana .",
+    "color contextual": "el pepino es azul .",
+    "suma": "7 .",
+    "instruccion": "el gato salta en el bosque .",
+    "fuera alcance": "el motor de dibujo admite banana , pepino , gato , conejo y robot . ese personaje todavia no esta disponible .",
+    "tres turnos": "tony es azul ."
+  },
+  "limitations": "Tiny synthetic corpus; not general knowledge or reasoning. Can repeat or generate incorrect text. Initial training during development; inference in Android."
+}

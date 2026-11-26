@@ -1,0 +1,51 @@
+TransformerCheck
+PASS PyTorch completo vs Java incremental: max 3.8146973E-6
+hola banana => hola, soy banana. en que te puedo ayudar? [11]
+hola => hola, soy banana. en que te puedo ayudar? [11]
+quien sos => soy banana, un modelo propio pequeno y experimental. [10]
+que podes hacer => podemos pensar personajes y acciones. para dibujarlos, usa animaciones. [12]
+gracias => de nada! podemos seguir con otra idea. [9]
+dame una frase con gato => el gato camina en el bosque. [7]
+como me llamo => no me dijiste tu nombre en este contexto. [9]
+CONTEXT => te llamas ana.
+PASS generacion acotada, contexto experimental, OOV y cancelacion
+CapabilityCheck
+PASS | hola | hola, soy banana. en que te puedo ayudar?
+PASS | como me llamo | te llamas ana.
+PASS | de que color es pepino | el pepino es azul.
+PASS | de que color es gato | el gato es verde.
+PASS | 3 mas 4 | 7.
+PASS | 8 mas 6 | 14.
+PASS | escribi una frase donde gato salta en bosque | el gato salta en el bosque.
+PASS | dibuja un dragon | el motor de dibujo admite banana, pepino, gato, conejo y robot. ese personaje todavia no esta disponible.
+PASS | que paso hoy en el mundo | no tengo informacion actual verificada. usa el chat con fuentes para consultar referencias.
+CONTROLLED_SMOKE_SCORE 9/9
+SharedSceneCheck
+Preparé el dibujo.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, derecha
+Podés abrirlo en Animaciones y seguir corrigiéndolo acá.
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, izquierda, pequeno
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: verde, izquierda, pequeno, detras del arbol
+1. pepino salta
+2. pepino saluda
+[salta, saluda]
+PASS escena compartida: crear, editar, relaciones, conservar, aclarar, persistir, acciones y conversacion
+TenTurnCheck
+PASS: diez turnos, persistencia y atributos independientes
+LocalMathCheck
+PASS calculadora local: suma, producto, negativos, cero y aislamiento
+BackdropCheck
+PASS fondo neuronal128, mascara, escenarios, suavizado y paridad Java/PyTorch max 1.3411045E-7; ms host 317
+PixelCheck
+PASS paridad neuronal Java/PyTorch: 2.9802322E-8
+PASS RGBA64, condicion color/accesorio y cancelacion; pixeles opacos 1204, diferencias 3832, ms host 157
+CinemaCheck
+PASS poses neuronales (paridad 1.1920929E-7), imagen neutra conservada, 3 tomas y conversion YUV

@@ -1,0 +1,58 @@
+BOOT_READY
+LEGACY_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NEW_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_REAL_LEGACY_MIGRATION_OK
+NATIVE_FULL_STREAM_AND_FTS_TAIL_OK chars=1300068 chunks=637
+NATIVE_ARCHIVE_RESTORE_AND_CLEAR_GUARDS_OK
+NATIVE_READING_WEIGHTS_STARTED
+Entrenamiento pendiente por límite de tiempo de la tanda. Conservé los documentos y el último checkpoint válido.
+FAIL java.lang.AssertionError: real Android source training accepted
+	at com.bananalab.lite.Native65Instrumentation.check(Native65Instrumentation.java:4)
+	at com.bananalab.lite.Native65Instrumentation.onStart(Native65Instrumentation.java:14)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+
+
+WAITING_FOR_FIX_RETRY
+Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_REAL_LEGACY_MIGRATION_OK
+NATIVE_FULL_STREAM_AND_FTS_TAIL_OK chars=1300068 chunks=637
+NATIVE_ARCHIVE_RESTORE_AND_CLEAR_GUARDS_OK
+NATIVE_READING_WEIGHTS_STARTED
+Entrené y activé pesos conversacionales nuevos con una parte de esta lectura.
+Pérdida de validación: 7.95250 → 7.93226.
+No quedan bloques pendientes en esta cola.
+Son tandas pequeñas y evaluaciones locales: no garantizan comprensión general ni recordar toda la fuente en los pesos. El documento completo sigue disponible en la biblioteca.
+NATIVE_READING_WEIGHTS_CHECKPOINT_OK sha=42c5bd6bc1780d08164f6a07873560de965a0747b8d13da2b8c8deb0ea835591
+NATIVE_BUILD_WITH_STREAMING_KNOWLEDGE_STARTED
+NATIVE_FULL_APK_WITH_DOCUMENT_ARCHIVE_OK
+PASS NATIVE65 actual migration, streamed1.3million-character source, real SQLite FTS tail, bounded retrieval, complete archive restore, failed-stream rollback, clear guards and normal rebuilt APK with streaming knowledge.
+
+
+NORMAL_APK_PULLED
+UPDATE_INSTALL Performing Push Install
+	pkg: /data/local/tmp/Banana.apk
+Success
+
+PASS NATIVE65_REOPEN upgrade complete source, checksum, index and attributed answer restored.
+
+
+PASS NATIVE65_REOPEN fresh complete source, checksum, index and attributed answer restored.
+
+
+FULL_DOCUMENT_ARCHIVE_UPDATE_AND_FRESH_OK
+PRODUCTION_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PRODUCTION_KNOWLEDGE_UI_OK
+PRODUCTION_DOCUMENT_PICKER_OPENED
+NO_FATAL_EXCEPTION

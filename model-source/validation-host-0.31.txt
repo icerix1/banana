@@ -1,0 +1,6 @@
+PASS own vision Java/PyTorch parity 3.0517578E-5
+PASS Tony, coat/face identity, door, reveal/reaction, duplicate types, profile reuse, 9 visual types, Pixel128 1.0728836E-6, own Chat32 6.198883E-6 and UTF8 BPE
+CHAT hola => hola ! que queres crear o conversar hoy ?
+CHAT sos independiente => mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .
+CHAT que significa mientras => mientras indica que dos acciones ocurren al mismo tiempo .
+CHAT quiero una idea de detectives => una banana detective encuentra una puerta cerrada y escucha pasos del otro lado .

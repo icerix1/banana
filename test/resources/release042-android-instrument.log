@@ -1,0 +1,4 @@
+NATIVE_NATURAL_CHAT_COMPILES_AND_PREVIEWS_OK
+NATIVE_RELATIVE_ADJUSTMENT_CLARIFICATION_AND_UNDO_OK
+PASS STAGE44 normal Spanish chat -> source rewrite -> real Android compilation -> activation -> friendly response -> scene preview; ambiguity guard and natural undo.
+

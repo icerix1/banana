@@ -1,0 +1,53 @@
+100 loss 0.5953 seconds 6
+200 loss 0.3557 seconds 12
+300 loss 0.2375 seconds 18
+400 loss 0.0239 seconds 24
+500 loss 0.15 seconds 30
+600 loss 0.1446 seconds 36
+700 loss 0.1081 seconds 42
+800 loss 0.0563 seconds 48
+900 loss 0.0117 seconds 54
+1000 loss 0.0441 seconds 59
+1100 loss 0.0738 seconds 65
+1200 loss 0.1133 seconds 71
+1300 loss 0.0268 seconds 77
+1400 loss 0.0163 seconds 83
+1500 loss 0.0622 seconds 89
+1600 loss 0.0028 seconds 95
+1700 loss 0.0541 seconds 101
+1800 loss 0.0245 seconds 107
+1900 loss 0.0839 seconds 112
+2000 loss 0.0004 seconds 119
+2100 loss 0.03 seconds 125
+2200 loss 0.0231 seconds 130
+2300 loss 0.0277 seconds 136
+2400 loss 0.0419 seconds 142
+{
+  "name": "Banana T3",
+  "architecture": "causal decoder-only Transformer, pre-LN, ReLU FFN",
+  "parameters": 163726,
+  "layers": 2,
+  "heads": 4,
+  "width": 64,
+  "context_tokens": 192,
+  "external_weights": false,
+  "training_examples": 4642,
+  "test_examples": 481,
+  "heldout_reply_loss_synthetic_only": 0.13735045479552355,
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy ?",
+    "quien sos": "me llamo banana . estoy aprendiendo a generar texto .",
+    "que podes hacer": "podemos pensar personajes y acciones . para dibujarlos , usa animaciones .",
+    "gracias": "de nada ! podemos seguir con otra idea .",
+    "dame una frase con gato": "el gato camina en el bosque .",
+    "sabes todo": "no se todo . soy un modelo experimental y puedo generar .",
+    "como me llamo": "no me dijiste tu nombre en este contexto .",
+    "contexto nombre": "te llamas ana .",
+    "color contextual": "el pepino es azul .",
+    "suma": "6 .",
+    "instruccion": "el gato salta en el bosque .",
+    "fuera alcance": "el motor de dibujo admite banana , pepino , gato . te con fuentes para consultar referencias .",
+    "tres turnos": "tony es azul ."
+  },
+  "limitations": "Tiny synthetic corpus; not general knowledge or reasoning. Can repeat or generate incorrect text. Initial training during development; inference in Android."
+}

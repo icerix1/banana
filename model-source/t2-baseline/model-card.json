@@ -1,0 +1,28 @@
+{
+  "name": "Banana T2",
+  "architecture": "causal decoder-only Transformer, pre-LN, ReLU FFN",
+  "parameters": 153567,
+  "layers": 2,
+  "heads": 4,
+  "width": 64,
+  "context_tokens": 128,
+  "external_weights": false,
+  "training_examples": 1145,
+  "test_examples": 127,
+  "heldout_reply_loss_synthetic_only": 0.44852447509765625,
+  "manual_outputs": {
+    "hola": "hola , soy banana . en que te puedo ayudar ?",
+    "quien sos": "soy banana , un modelo propio pequeno y experimental .",
+    "que podes hacer": "podemos pensar personajes y acciones . para dibujarlos , usa animaciones .",
+    "gracias": "de nada ! podemos seguir con otra idea .",
+    "dame una frase con gato": "el gato camina en el bosque .",
+    "sabes todo": "no se todo . soy un modelo experimental y puedo generar texto incorrecto .",
+    "como me llamo": "no me dijiste tu nombre en este contexto .",
+    "contexto nombre": "te llamas ana .",
+    "color contextual": "el pepino es azul .",
+    "suma": "7 .",
+    "instruccion": "el gato salta en el bosque .",
+    "fuera alcance": "el motor de dibujo admite banana , pepino , gato , conejo y robot . ese personaje todavia no esta disponible ."
+  },
+  "limitations": "Tiny synthetic corpus; not general knowledge or reasoning. Can repeat or generate incorrect text. Initial training during development; inference in Android."
+}

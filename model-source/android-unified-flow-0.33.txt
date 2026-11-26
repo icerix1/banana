@@ -1,0 +1,15 @@
+BOOT_READY
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+ONE_WORKSPACE True
+INLINE_DESIGN True
+INLINE_COLOR_EDIT True
+INLINE_ANIMATION True
+DOCUMENT_PICKER [('Save', 'android:id/button1')]
+Traceback (most recent call last):
+  File "/tmp/banana34_ui_only.py", line 56, in <module>
+    tap(node('Guardar'));tap(node('Imagen PNG'));time.sleep(3);root=ui();print('DOCUMENT_PICKER',[(n.attrib.get('text'),n.attrib.get('resource-id')) for n in root.iter('node') if n.attrib.get('text') in ['SAVE','Guardar','Save']],flush=True);choices=[n for n in root.iter('node') if n.attrib.get('text') in ['SAVE','Guardar','Save'] and n.attrib.get('enabled')=='true'];tap(choices[-1]);await_text('Resultado guardado.',120);print('INLINE_PNG_SAVE_OK',flush=True)
+                                                                                                                                                                                                                                                                                                                                                                                      ~~~~~~~^^^^
+IndexError: list index out of range

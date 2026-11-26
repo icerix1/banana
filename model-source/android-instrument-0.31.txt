@@ -1,0 +1,10 @@
+PREPARE_MS 680
+RENDER_OK sprites128 background_readable
+SINGLE_MP4_AV_OK
+SERIES_MP4_AV_OK
+OWN_VISION_PARITY 3.0517578E-5
+REFERENCE_DESCRIPTION Referencia visual conservada. Colores dominantes: #907050, #303030, #505050. Este análisis mide color y transparencia; no identifica el contenido de cualquier foto. Coincidencia experimental con banana dentro del catálogo propio; no es una identificación fiable de fotos generales.
+OWN_CHAT32 mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .
+SCENE_CONTINUITY_OK
+PASS STAGE32 Android render, neural presets, simultaneous timing, AAC/H264 mux, series and identity.
+

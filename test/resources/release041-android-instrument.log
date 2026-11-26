@@ -1,0 +1,7 @@
+Java revisión 1 compilada y activada en Android.
+ECJ compiló el .java → .class; DX produjo DEX; ART cargó la clase.
+
+NATIVE_REAL_JAVA_COMPILE_DEX_LOAD_AND_SCENE_OK
+NATIVE_COMPILER_REJECTS_BAD_JAVA_OK
+PASS STAGE43 real Java source -> ECJ class -> DX DEX -> ART loaded method -> actual scene; invalid Java rejected; original behavior recovered.
+

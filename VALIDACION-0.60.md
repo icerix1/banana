@@ -1,0 +1,9 @@
+# Validación Banana0.60
+
+44 suites de escritorio aprobadas, incluidas las43 anteriores. Stage66 evalúa preguntas de nombre/color/fuente, elección delegada, tamaño numérico, estado deseado de botones, negación, respuesta compuesta, rechazo de entradas ajenas y vencimiento/revisión. Las suites previas conservan las comprobaciones de compilación, editor general, entrenamiento y memoria. Esta etapa no cambia pesos ni entrenadores.
+
+Android6/API23 emulado: el chat pregunta nombre, después color; no cambia la revisión mientras faltan datos. Responder Enviar/Rojo compila y activa el ajuste. Pregunta de fuente y respuesta Elegí vos compilan y activan sans-serif-medium. Se comprueban cancelación, expiración y descarte de la pregunta al enseñar otro tema. La Activity real muestra Enviar rojo y la fuente elegida. Se instala después la APK de producción como actualización sobre el paquete de prueba y el chat recupera el cuaderno guardado. Sin excepción fatal observada. No se probó en la tablet física Android16.
+
+Integridad: 181 fuentes coinciden con el índice, el APK y la copia de instrumentación. 23 binarios de modelos conservados idénticos a0.59. Producción DEX035, misma firma de Banana, versión600000. Sin claves privadas ni instrumentación en la distribución. La nueva prueba Android es específica de esta fase; no se repitió la reconstrucción completa en Android de0.59, cuyo resultado queda en su informe. Sí se volvió a ejecutar la suite host de compatibilidad de reconstrucción.
+
+Límites: diálogo acotado a ciertos ajustes de interfaz. No sintetiza cualquier función ni aprende reglas nuevas de programación de una página. Sigue usando recuperación léxica y los modelos propios de0.59. No se volvió a evaluar descarga HTTPS en Android ni se declara resuelta su limitación de DNS. La pregunta transitoria no se exporta; los ajustes aplicados conservan la persistencia ya existente. Los nombres sólo afectan botones con ese texto, cuando existen.

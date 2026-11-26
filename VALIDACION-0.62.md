@@ -1,0 +1,11 @@
+# Validación Banana0.62
+
+46 suites de escritorio aprobadas, incluidas las45 anteriores. Stage68 reproduce la clase de fallo informada: frases que contienen enlaces pero no empiezan por las antiguas palabras de lectura. Comprueba que se reconoce la URL directamente, Markdown/www, paréntesis, protección de código/lecciones, extracción y diagnóstico específico. No se modifican pesos ni entrenadores.
+
+Android6/API23 emulado: la frase Qué dice esta página con un enlace Markdown llega una vez al lector inyectado, guarda el contenido y permite preguntarle después por el término. Ese fixture es controlado, no una descarga real. La ruta normal del chat rechaza un enlace a localhost con un mensaje de lectura directa sin consultar el buscador. Se simula HTTP403 y se comprueba que no cambie el cuaderno; dos enlaces no provocan lectura parcial. Tras actualizar con la APK de producción, su interfaz responde con el conocimiento retenido. Sin excepción fatal observada. No se probó la tablet Android16 física ni el enlace concreto del usuario, que no se proporcionó.
+
+Intento separado de HTTPS real: no disponible en el entorno; ver NATIVE_LIVE_HTTPS_UNAVAILABLE en android-instrument.log, con el mensaje específico del lector. El fallo de red no se presenta como éxito de lectura. No se afirma compatibilidad con cualquier sitio, sesión, desafío automatizado o JavaScript.
+
+Integridad: 183 fuentes coinciden con índice, APK y copia probada; 23 binarios de modelos conservados respecto de0.61. DEX035, firma de Banana y versión620000; sin instrumentación ni claves privadas en distribución. La compatibilidad de reconstrucción se volvió a ejecutar en host, no se repitió la reconstrucción íntegra en Android de0.59.
+
+Límites: la corrección evita el desvío de enlaces reconocidos al buscador y mejora el diagnóstico; no garantiza que el servidor entregue contenido legible. El lector mantiene HTTPS y restricciones de red pública, tamaño y formatos. No renderiza JavaScript, no inicia sesión y no desactiva certificados. La extracción de URL conserva exclusiones de tareas de código/enseñanza y sólo procesa un enlace por pedido. La persistencia y el vocabulario derivado mantienen los límites anteriores.

@@ -1,0 +1,19 @@
+BOOT_READY
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+REFERENCES_APPEND_SCOPE_AND_GUARDS_OK
+PNG_OK
+MP4_AV_OK
+PASS STAGE37 persisted references, scoped accessory edit, append, ownership and simultaneous-action rejection, PNG and MP4 audio/video.
+
+
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+ONE_WORKSPACE_OK
+INLINE_CONTINUATION_OK
+INLINE_CONSISTENCY_OK
+FINAL_ACTIVITY True FATAL_EXCEPTION False

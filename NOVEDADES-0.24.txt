@@ -1,0 +1,16 @@
+BANANA 0.24
+Cambios implementados: historial local de 20 cambios con deshacer/rehacer,
+migracion del cambio anterior de 0.23, recuerdos explicitos del proyecto
+(recorda que..., mi proyecto es..., que recordas, que te dije sobre...,
+olvida mis recuerdos), referencias ordinales y correcciones breves de aspecto.
+Los recuerdos son declaraciones del usuario, no hechos verificados.
+Borrar chat borra tambien estos recuerdos; conserva escena y referencias.
+Conserva modelos, pesos, estilo borroso, poses y exportacion de 0.23.
+
+Validacion actual: compilacion Android API35/min23 y firma v1/v2/v3 correctas.
+SharedSceneCheck y TenTurnCheck ejecutados correctamente en JVM.
+No se probo esta version en dispositivo ni emulador. Memoria e historial
+persistente compilan pero su funcionamiento Android requiere validacion.
+No se entrenaron modelos nuevos: inteligencia general, mayor variedad visual,
+identidades repetidas por tipo y direccion neuronal de video siguen pendientes.
+No se conectaron servicios ni modelos externos.

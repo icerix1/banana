@@ -1,0 +1,21 @@
+{
+  "name": "Banana Pixel 2.2",
+  "component": "reference recognizer",
+  "external_weights": false,
+  "training_images": 3450,
+  "heldout_images": 150,
+  "heldout_accuracy_synthetic_only": 1.0,
+  "classes": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot",
+    "perro",
+    "oso",
+    "zorro",
+    "persona",
+    "tomate"
+  ],
+  "limitations": "Recognizes the own synthetic catalog only; not general image understanding or reliable classification of real photos."
+}

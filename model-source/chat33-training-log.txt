@@ -1,0 +1,59 @@
+200 loss 1.771 seconds 13
+400 loss 1.0391 seconds 25
+600 loss 0.071 seconds 37
+800 loss 0.0052 seconds 49
+1000 loss 0.1215 seconds 62
+1200 loss 0.3496 seconds 73
+1400 loss 0.003 seconds 85
+1600 loss 0.1404 seconds 97
+1800 loss 0.0032 seconds 109
+2000 loss 0.0017 seconds 121
+2200 loss 0.1422 seconds 132
+2400 loss 0.1029 seconds 144
+2600 loss 0.0061 seconds 155
+2800 loss 0.0009 seconds 167
+3000 loss 0.0213 seconds 179
+3200 loss 0.0005 seconds 192
+3400 loss 0.0222 seconds 203
+3600 loss 0.0676 seconds 215
+3800 loss 0.0023 seconds 226
+4000 loss 0.0005 seconds 238
+4200 loss 0.0212 seconds 250
+4400 loss 0.0265 seconds 261
+4600 loss 0.001 seconds 275
+4800 loss 0.0158 seconds 287
+5000 loss 0.0002 seconds 299
+5200 loss 0.0262 seconds 313
+5400 loss 0.0247 seconds 327
+5600 loss 0.0001 seconds 340
+5800 loss 0.0011 seconds 353
+6000 loss 0.0001 seconds 366
+{
+  "name": "Banana Chat 3.3",
+  "external_weights": false,
+  "parameters": 768098,
+  "layers": 3,
+  "width": 128,
+  "heads": 4,
+  "context_tokens": 384,
+  "tokenizer": "UTF-8 byte BPE trained on own corpus",
+  "vocab_size": 482,
+  "training_examples": 7768,
+  "test_examples": 484,
+  "heldout_loss_synthetic_only": 1.1777056584623642,
+  "reserved_names": [
+    "uma",
+    "raquel",
+    "dario"
+  ],
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy que to .",
+    "como te llamas": "soy banana chat 3.3 , un modelo experimental propio .",
+    "sos independiente": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .",
+    "que significa mientras": "mientras indica que dos acciones ocurren al mismo tiempo .",
+    "que es una animacion": "una animacion muestra imagenes sucesivas para representar movimiento .",
+    "quiero una idea de detectives": "una banana detective encuentra una puerta cerrada y escucha pasos del otro lado .",
+    "unseen_name": "se llama uma ."
+  },
+  "limitations": "Own small synthetic corpus; not a general-knowledge assistant or equivalent to ChatGPT. UTF-8 coverage does not imply understanding arbitrary text."
+}

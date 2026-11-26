@@ -1,0 +1,29 @@
+VALIDACIÓN VIGENTE 0.42
+
+VALIDACIÓN
+Stage44JavaChatCheck y los veintiún controles anteriores pasaron. Incluye frases naturales de reemplazo/agregado/quita, orden de movimientos, cambios relativos, aclaración de acciones no admitidas y conservación de fuente/revisión ante pedidos ambiguos o de escena.
+La instrumentación nativa comprueba conversación natural → reescritura Java → compilación y activación reales → respuesta sencilla → escena con los movimientos cambiados. También verifica separación relativa, rechazo de instrucción parcialmente no admitida y recuperación con deshace ese ajuste. La interfaz de producción se comprueba por separado con pedidos normales del chat.
+Las pruebas no miden comprensión universal. La explicación de las limitaciones y herramientas de0.41 queda en GUIA-JAVA-0.41.txt.
+El ZIP sigue siendo privado e incluye la firma: no publicar.
+
+ANDROID NATIVO E INTERFAZ
+BOOT_READY
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_NATURAL_CHAT_COMPILES_AND_PREVIEWS_OK
+NATIVE_RELATIVE_ADJUSTMENT_CLARIFICATION_AND_UNDO_OK
+PASS STAGE44 normal Spanish chat -> source rewrite -> real Android compilation -> activation -> friendly response -> scene preview; ambiguity guard and natural undo.
+
+
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATURAL_UPDATE_UI_OK
+NATURAL_PREVIEW_UI_OK
+NATURAL_UNDO_UI_OK
+FATAL_EXCEPTION False
+
+La prueba de producción usó únicamente frases normales: cambiar celebración, mostrar el resultado y deshacer el ajuste. No abrió el editor.

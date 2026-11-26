@@ -1,0 +1,110 @@
+IncomingActorCheck
+PASS 60 pedidos: dos personajes, entrada asignada al segundo y visibilidad final en ambos modos
+SharedSceneCheck
+Preparé el dibujo.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, derecha
+Podés abrirlo en Animaciones y seguir corrigiéndolo acá.
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: azul, izquierda, pequeno
+Listo, cambié solo a pepino.
+Escena compartida · parque
+banana: sombrero, izquierda
+pepino: verde, izquierda, pequeno, detras del arbol
+1. pepino salta
+2. pepino saluda
+[salta, saluda]
+PASS escena compartida: crear, editar, relaciones, conservar, aclarar, persistir, acciones y conversacion
+TenTurnCheck
+PASS: diez turnos, persistencia y atributos independientes
+AnimationRequestCheck
+PASS haceme una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer una animacion de un pepino caminando => Escena compartida · parque
+pepino: aspecto original, centro
+1. pepino camina
+PASS quiero una animacion de un gato saltando => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS quiero que hagas una animacion de un robot saludando => Escena compartida · parque
+robot: aspecto original, centro
+1. robot saluda
+PASS anima una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS genera un video de un conejo caminando => Escena compartida · parque
+conejo: aspecto original, centro
+1. conejo camina
+PASS me haces una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer que un gato salte => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS animacion ejecutable, acciones, borrador, aclaracion y limites
+SceneRevealCheck
+PASS ultimo personaje y 96 cuadros en ambas rutas
+CreatorCheck
+Quiero una serie de terror con una banana => Borrador guardado, sin publicar.
+Escena compartida · parque
+banana: aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Que se llame Tony => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Agregá un pepino pero todavía no lo dibujes => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+pepino: aspecto original, derecha
+Decí ‘ahora dibujalos’ cuando esté listo.
+Exception in thread "main" java.lang.AssertionError: reveal target
+	at com.bananalab.lite.CreatorCheck.check(CreatorCheck.java:3)
+	at com.bananalab.lite.CreatorCheck.main(CreatorCheck.java:16)
+CreatorCheck corrected
+Quiero una serie de terror con una banana => Borrador guardado, sin publicar.
+Escena compartida · parque
+banana: aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Que se llame Tony => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Agregá un pepino pero todavía no lo dibujes => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+pepino: aspecto original, derecha
+Decí ‘ahora dibujalos’ cuando esté listo.
+PASS borrador aislado, nombres, publicar, alias, ordinal, otro, revelar, persistir, deshacer/rehacer y rechazo
+AnimationRequestCheck corrected
+PASS haceme una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer una animacion de un pepino caminando => Escena compartida · parque
+pepino: aspecto original, centro
+1. pepino camina
+PASS quiero una animacion de un gato saltando => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS quiero que hagas una animacion de un robot saludando => Escena compartida · parque
+robot: aspecto original, centro
+1. robot saluda
+PASS anima una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS genera un video de un conejo caminando => Escena compartida · parque
+conejo: aspecto original, centro
+1. conejo camina
+PASS me haces una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer que un gato salte => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS animacion ejecutable, acciones, borrador, aclaracion y limites
+IncomingActorCheck corrected
+PASS 60 pedidos: dos personajes, entrada asignada al segundo y visibilidad final en ambos modos

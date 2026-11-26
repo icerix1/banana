@@ -1,0 +1,8 @@
+METRICS base=36/36 validation=11/12 final=11/12
++ prediction=+
+- prediction=-
+* prediction=*
+/ prediction=/
+min prediction=min
+max prediction=+
+PASS Stage50 own MLP training, phrase holdout, saved weights and actual source operator generation beyond chat method

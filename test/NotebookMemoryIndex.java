@@ -1,0 +1,20 @@
+package com.bananalab.lite;
+import java.util.*;
+/** Host-only index double. The Android test uses real SQLite/FTS4. */
+final class NotebookMemoryIndex implements NotebookDisk.Index{
+ Map<String,NotebookDisk.Doc> docs=new LinkedHashMap<>();Map<String,List<C>> chunks=new HashMap<>();Map<String,String> meta=new HashMap<>();Map<String,NotebookDisk.Doc> oldDocs;Map<String,List<C>> oldChunks;Map<String,String> oldMeta;
+ static final class C{String text,tokens;boolean hint;C(String t,String k,boolean h){text=t;tokens=k;hint=h;}}
+ public void begin(){if(oldDocs!=null)throw new IllegalStateException();oldDocs=new LinkedHashMap<>(docs);oldMeta=new HashMap<>(meta);oldChunks=new HashMap<>();for(String id:chunks.keySet())oldChunks.put(id,new ArrayList<>(chunks.get(id)));}
+ public void end(boolean success){if(oldDocs==null)return;if(!success){docs=oldDocs;chunks=oldChunks;meta=oldMeta;}oldDocs=null;oldChunks=null;oldMeta=null;}
+ public String meta(String k){return meta.getOrDefault(k,"");}public void meta(String k,String v){meta.put(k,v);}
+ public List<NotebookDisk.Doc> list(int limit){List<NotebookDisk.Doc> out=new ArrayList<>(docs.values());Collections.sort(out,(a,b)->Long.compare(b.saved,a.saved));return out.subList(0,Math.min(limit,out.size()));}
+ public NotebookDisk.Doc get(String id){return docs.get(id);}public long bytes(){long b=0;for(NotebookDisk.Doc d:docs.values())b+=d.bytes;return b;}public int count(){return docs.size();}public long chunks(){long n=0;for(List<C> l:chunks.values())n+=l.size();return n;}
+ public void remove(String id){docs.remove(id);chunks.remove(id);}public void doc(NotebookDisk.Doc d){docs.put(d.id,d);chunks.put(d.id,new ArrayList<>());}public void chunk(String id,int ordinal,String text,String tokens,boolean hint){chunks.get(id).add(new C(text,tokens,hint));}
+ boolean match(C c,Set<String> terms,boolean all){Set<String> words=new HashSet<>(Arrays.asList(c.tokens.split(" ")));int n=0;for(String t:terms)if(words.contains(t))n++;return all?n==terms.size():n>0;}
+ public List<NotebookDisk.Hit> search(Set<String> terms,int limit){List<NotebookDisk.Hit> out=new ArrayList<>();if(terms.isEmpty())return out;LinkedHashSet<String> ids=new LinkedHashSet<>();List<NotebookDisk.Doc> order=new ArrayList<>(list(NotebookDisk.MAX_DOCUMENTS));Collections.sort(order,(a,b)->Boolean.compare(b.origin.equals("user")&&b.title.equals("Corrección del usuario"),a.origin.equals("user")&&a.title.equals("Corrección del usuario")));for(boolean all:new boolean[]{true,false})for(NotebookDisk.Doc d:order)for(C c:chunks.get(d.id))if(match(c,terms,all)){if(ids.size()<12)ids.add(d.id);break;}
+  for(String id:ids){List<C> list=chunks.get(id);boolean all=false;for(C c:list)if(match(c,terms,true))all=true;int count=0,last=-3;for(int i=0;i<list.size();i++)if(match(list.get(i),terms,all)&&i-last>1){StringBuilder text=new StringBuilder();for(int j=Math.max(0,i-1);j<=Math.min(list.size()-1,i+1);j++)text.append(list.get(j).text).append(' ');out.add(new NotebookDisk.Hit(docs.get(id),text.toString()));last=i;if(++count>=8||out.size()>=limit)break;}if(out.size()>=limit)break;}return out;}
+ public List<NotebookDisk.Hit> sample(int limit){List<NotebookDisk.Hit> out=new ArrayList<>();for(NotebookDisk.Doc d:list(NotebookDisk.MAX_DOCUMENTS))for(C c:chunks.get(d.id))if(c.hint){out.add(new NotebookDisk.Hit(d,c.text));if(out.size()>=limit)return out;}return out;}
+ public List<NotebookDisk.Hit> slice(String id,int ordinal,int limit){List<NotebookDisk.Hit> out=new ArrayList<>();if(!docs.containsKey(id))return out;List<C> list=chunks.get(id);for(int i=ordinal;i<list.size()&&out.size()<limit;i++)out.add(new NotebookDisk.Hit(docs.get(id),list.get(i).text,i));return out;}
+ public List<NotebookDisk.Hit> first(String id,int limit){List<NotebookDisk.Hit> out=new ArrayList<>();if(!docs.containsKey(id))return out;for(C c:chunks.get(id)){out.add(new NotebookDisk.Hit(docs.get(id),c.text));if(out.size()>=limit)break;}return out;}
+ public void clear(){docs.clear();chunks.clear();}
+}

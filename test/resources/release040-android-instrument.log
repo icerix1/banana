@@ -1,0 +1,5 @@
+NATIVE_AUTOMATIC_GAP_REPAIR_OK
+NATIVE_CODE_EDIT_ACTIVATION_AND_ROLLBACK_OK
+NATIVE_LOCAL_REPAIR_AND_FAILED_TEST_GUARD_OK
+PASS STAGE42 Android: real source edit changes interpreter output, automatic tests, hot activation, rollback, local repair/retry and failed-test isolation. No APK rebuild between module changes.
+

@@ -1,0 +1,45 @@
+BANANA 0.44 — UNA FUNCIÓN JAVA NUEVA DESDE EL CHAT
+
+Instalá el APK como actualización de Banana. Misma firma e identificador; no hace falta borrar tus datos.
+
+INICIO FÁCIL
+En Proyecto → Función de salto, o escribí:
+como cambio la funcion del salto
+
+Ejemplo sin fórmulas:
+cambia la forma del salto: altura 18, subida 30, pausa hasta 60
+La altura son unidades de la escena. Subida30 = alcanzar la altura al30% del salto; pausa hasta60 = conservarla hasta el60%; después vuelve al suelo.
+
+Otro ejemplo:
+hace que el salto suba rapido y baje lento
+
+Banana genera BananaFunction.java con un método jump(float t) completo, lo compila junto con el puente del compilador y lo comprueba en otro proceso. El candidato no queda activo todavía.
+
+MOSTRAR Y APLICAR
+mostrame la prueba del salto
+mostrame la funcion del salto
+aplica la funcion del salto
+Para probarlo en una escena, creá un personaje y pedile que salte o reproducí una escena con saltos. La vista previa y el exportador comparten el método Scene.pose que consume esta función. Las escenas conservan sus datos; cambia su movimiento al reproducirlas.
+
+RECUPERAR
+Si no te gusta: deshace la funcion del salto
+También: deshace ese ajuste (elige el último subsistema modificado).
+Si aún no lo aplicaste: descarta la funcion del salto
+Las versiones de la función son independientes de las versiones de los módulos de app y del Java de celebración. Conserva ocho estados anteriores y se puede deshacer la recuperación para volver al estado que se abandonó.
+
+FÓRMULAS PROPIAS, OPCIONAL
+reescribe la funcion del salto: -100*t*(1-t)
+Esto produce una parábola con altura máxima25. No es una selección de constantes del catálogo anterior: podés componer la función completa.
+Variable: t de0 a1; operadores + - * /; sin, cos, abs, min, max. También condiciones como t < 0.3 ? expresión : expresión. La división sólo admite constantes positivas desde0,001. Admite literales float con o sin f y prefijo Math. para las funciones permitidas.
+Ejemplo: reescribe la funcion del salto: -abs(sin(t*3.1415926))*17
+El resultado se limita a -40..0; el salto debe comenzar y terminar en0. Luego se aplica el multiplicador global de altura que ya existía. Se conservan límites de tamaño, anidamiento y cantidad de operaciones.
+
+PRUEBA REAL Y LÍMITES
+ECJ compila Java, DX lo convierte a DEX y un servicio privado en otro proceso compara257 valores contra el evaluador de referencia. La activación vuelve a probar el candidato y rechaza versiones o fuentes desactualizadas. Las fórmulas inválidas conservan el funcionamiento activo.
+El proceso de prueba comparte UID y permisos con Banana; no es una frontera de seguridad ni un sandbox para Java arbitrario. La protección depende del lenguaje matemático acotado que no permite APIs, bucles, asignaciones, archivos, red ni llamadas recursivas. No se ejecuta código Java libre del usuario.
+Todavía no es un programador general: sólo esta función nueva tiene un punto de conexión en el motor. No reescribe todo el APK ni inventa nuevas funciones de la app. No se agregó ningún modelo externo ni entrenamiento nuevo.
+La búsqueda web existente continúa disponible; no fue ampliada en esta entrega.
+
+COMPATIBILIDAD
+Los módulos de interfaz, animación y contexto, sus versiones y las celebraciones/beso de versiones anteriores se conservan. Consultá GUIA-0.43.txt en las fuentes.
+Las pruebas y sus límites se detallan en VALIDACION-0.44.md. No se probó en la tablet física del usuario.

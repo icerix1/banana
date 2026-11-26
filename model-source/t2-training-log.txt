@@ -1,0 +1,54 @@
+100 loss 1.5944 seconds 5
+200 loss 0.763 seconds 11
+300 loss 0.1591 seconds 17
+400 loss 0.0679 seconds 22
+500 loss 0.0534 seconds 27
+600 loss 0.1003 seconds 31
+700 loss 0.0691 seconds 36
+800 loss 0.0389 seconds 41
+900 loss 0.01 seconds 46
+1000 loss 0.0055 seconds 51
+1100 loss 0.0105 seconds 56
+1200 loss 0.0147 seconds 61
+1300 loss 0.0019 seconds 66
+1400 loss 0.0062 seconds 70
+1500 loss 0.0097 seconds 75
+1600 loss 0.0067 seconds 80
+1700 loss 0.0114 seconds 84
+1800 loss 0.0009 seconds 89
+1900 loss 0.0019 seconds 93
+2000 loss 0.001 seconds 98
+2100 loss 0.0018 seconds 103
+2200 loss 0.0034 seconds 108
+2300 loss 0.0046 seconds 112
+2400 loss 0.0006 seconds 117
+2500 loss 0.014 seconds 121
+2600 loss 0.0006 seconds 126
+{
+  "name": "Banana T2",
+  "architecture": "causal decoder-only Transformer, pre-LN, ReLU FFN",
+  "parameters": 153567,
+  "layers": 2,
+  "heads": 4,
+  "width": 64,
+  "context_tokens": 128,
+  "external_weights": false,
+  "training_examples": 1145,
+  "test_examples": 127,
+  "heldout_reply_loss_synthetic_only": 0.44852447509765625,
+  "manual_outputs": {
+    "hola": "hola , soy banana . en que te puedo ayudar ?",
+    "quien sos": "soy banana , un modelo propio pequeno y experimental .",
+    "que podes hacer": "podemos pensar personajes y acciones . para dibujarlos , usa animaciones .",
+    "gracias": "de nada ! podemos seguir con otra idea .",
+    "dame una frase con gato": "el gato camina en el bosque .",
+    "sabes todo": "no se todo . soy un modelo experimental y puedo generar texto incorrecto .",
+    "como me llamo": "no me dijiste tu nombre en este contexto .",
+    "contexto nombre": "te llamas ana .",
+    "color contextual": "el pepino es azul .",
+    "suma": "7 .",
+    "instruccion": "el gato salta en el bosque .",
+    "fuera alcance": "el motor de dibujo admite banana , pepino , gato , conejo y robot . ese personaje todavia no esta disponible ."
+  },
+  "limitations": "Tiny synthetic corpus; not general knowledge or reasoning. Can repeat or generate incorrect text. Initial training during development; inference in Android."
+}

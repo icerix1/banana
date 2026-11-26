@@ -1,0 +1,18 @@
+BOOT_READY
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PNG_3_ACTORS_OK
+MP4_AV_OK
+PASS STAGE36 persisted compound scene, rollback, grounded replacement, memory CRUD, receipt, PNG and MP4 AV.
+
+
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+ONE_WORKSPACE_OK
+INLINE_COMPOUND_EDIT_OK
+INLINE_MEMORY_OK
+FINAL_ACTIVITY True FATAL_EXCEPTION False

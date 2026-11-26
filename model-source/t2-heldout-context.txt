@@ -1,0 +1,173 @@
+FAIL como se llama el personaje expected=tony actual=el pepino se.
+FAIL de que color es tony expected=rojo actual=el pepino la banana.
+FAIL donde esta tony expected=parque actual=la banana baila te llamas ana.
+FAIL como se llama el personaje expected=tony actual=el bosque.
+FAIL de que color es tony expected=amarillo actual=la banana baila.
+FAIL donde esta tony expected=bosque actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=luna actual=el pepino la banana.
+FAIL de que color es luna expected=azul actual=la banana baila.
+FAIL donde esta luna expected=playa actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=milo actual=el pepino se.
+FAIL de que color es milo expected=azul actual=el pepino la banana.
+FAIL donde esta milo expected=parque actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=nina actual=el bosque.
+FAIL de que color es nina expected=verde actual=la banana baila.
+FAIL donde esta nina expected=playa actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=leo actual=el bosque.
+FAIL de que color es leo expected=rojo actual=la banana baila.
+FAIL donde esta leo expected=ciudad actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=leo actual=el pepino se.
+FAIL de que color es leo expected=verde actual=la banana baila.
+FAIL donde esta leo expected=parque actual=la banana baila en la banana.
+FAIL de que color es ana expected=rojo actual=la banana baila.
+FAIL donde esta ana expected=bosque actual=la banana baila en la banana.
+FAIL de que color es ana expected=amarillo actual=la banana baila.
+FAIL donde esta ana expected=playa actual=la banana saluda en la banana.
+FAIL como se llama el personaje expected=kiari actual=el bosque.
+FAIL de que color es kiari expected=azul actual=la banana canta?
+FAIL donde esta kiari expected=ciudad actual=la banana saluda en la banana.
+FAIL como se llama el personaje expected=kiari actual=el pepino la banana.
+FAIL de que color es kiari expected=amarillo actual=la banana canta?
+FAIL donde esta kiari expected=parque actual=la banana saluda en la banana.
+FAIL como se llama el personaje expected=tiziano actual=el bosque.
+FAIL de que color es tiziano expected=azul actual=la banana baila.
+FAIL donde esta tiziano expected=bosque actual=la banana baila en la banana.
+FAIL como se llama el personaje expected=tony actual=el pepino la banana.
+FAIL de que color es tony expected=rojo actual=el pepino la banana.
+FAIL donde esta tony expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tony actual=el pepino la banana.
+FAIL de que color es tony expected=verde actual=el pepino la banana.
+FAIL donde esta tony expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el pepino baila.
+FAIL de que color es luna expected=rojo actual=el pepino la banana.
+FAIL donde esta luna expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el pepino la banana.
+FAIL de que color es luna expected=amarillo actual=el pepino la banana.
+FAIL donde esta luna expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el pepino la banana.
+FAIL de que color es milo expected=azul actual=el pepino la banana.
+FAIL donde esta milo expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el pepino la banana.
+FAIL de que color es milo expected=amarillo actual=el pepino la banana.
+FAIL donde esta milo expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=nina actual=el pepino baila.
+FAIL de que color es nina expected=azul actual=el pepino la banana.
+FAIL donde esta nina expected=bosque actual=te llamas lucas.
+FAIL como se llama el personaje expected=leo actual=el pepino la banana.
+FAIL de que color es leo expected=verde actual=el pepino la banana.
+FAIL donde esta leo expected=ciudad actual=te llamas la banana baila.
+FAIL de que color es ana expected=verde actual=el pepino la banana.
+FAIL donde esta ana expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=kiari actual=el pepino la banana.
+FAIL de que color es kiari expected=rojo actual=el pepino la banana.
+FAIL donde esta kiari expected=playa actual=te llamas kiari.
+FAIL como se llama el personaje expected=kiari actual=el pepino la banana.
+FAIL de que color es kiari expected=amarillo actual=el pepino la banana.
+FAIL donde esta kiari expected=ciudad actual=te llamas kiari.
+FAIL como se llama el personaje expected=tiziano actual=el pepino baila.
+FAIL de que color es tiziano expected=rojo actual=el pepino la banana.
+FAIL donde esta tiziano expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tiziano actual=el pepino la banana.
+FAIL de que color es tiziano expected=amarillo actual=el pepino la banana.
+FAIL donde esta tiziano expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tony actual=el bosque.
+FAIL de que color es tony expected=verde actual=el bosque.
+FAIL donde esta tony expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el bosque.
+FAIL de que color es luna expected=verde actual=el bosque.
+FAIL donde esta luna expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el chat con.
+FAIL de que color es milo expected=rojo actual=el chat con.
+FAIL donde esta milo expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el bosque.
+FAIL de que color es milo expected=amarillo actual=el chat con.
+FAIL donde esta milo expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=nina actual=te llamas lucas.
+FAIL de que color es nina expected=rojo actual=te llamas lucas.
+FAIL donde esta nina expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=nina actual=te llamas lucas.
+FAIL de que color es nina expected=amarillo actual=te llamas lucas.
+FAIL donde esta nina expected=bosque actual=te llamas lucas.
+FAIL como se llama el personaje expected=leo actual=el bosque.
+FAIL de que color es leo expected=azul actual=el bosque.
+FAIL donde esta leo expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=ana actual=el pepino azul.
+FAIL donde esta ana expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=kiari actual=el bosque.
+FAIL de que color es kiari expected=verde actual=el chat con, un en la banana,.
+FAIL donde esta kiari expected=playa actual=te llamas kiari.
+FAIL como se llama el personaje expected=tiziano actual=el bosque.
+FAIL de que color es tiziano expected=rojo actual=el bosque.
+FAIL donde esta tiziano expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tiziano actual=el bosque.
+FAIL de que color es tiziano expected=verde actual=el bosque.
+FAIL donde esta tiziano expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tony actual=el conejo baila.
+FAIL de que color es tony expected=azul actual=el conejo baila.
+FAIL donde esta tony expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el pepino la banana.
+FAIL de que color es luna expected=azul actual=el pepino la banana.
+FAIL donde esta luna expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el conejo baila.
+FAIL de que color es milo expected=verde actual=el conejo baila.
+FAIL donde esta milo expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=nina actual=te llamas lucas.
+FAIL de que color es nina expected=rojo actual=te llamas lucas.
+FAIL donde esta nina expected=ciudad actual=te llamas nina.
+FAIL como se llama el personaje expected=nina actual=el bosque.
+FAIL de que color es nina expected=verde actual=el conejo baila.
+FAIL donde esta nina expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=leo actual=el bosque.
+FAIL de que color es leo expected=rojo actual=el conejo baila.
+FAIL donde esta leo expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=leo actual=el conejo baila.
+FAIL de que color es leo expected=amarillo actual=el conejo baila.
+FAIL donde esta leo expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=ana actual=el conejo baila.
+FAIL de que color es ana expected=azul actual=el conejo baila.
+FAIL donde esta ana expected=ciudad actual=te llamas la banana baila.
+FAIL de que color es ana expected=amarillo actual=el conejo baila.
+FAIL donde esta ana expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=kiari actual=el conejo baila.
+FAIL de que color es kiari expected=azul actual=el conejo baila.
+FAIL donde esta kiari expected=bosque actual=el conejo, pensar personajes.
+FAIL como se llama el personaje expected=tiziano actual=el bosque.
+FAIL de que color es tiziano expected=verde actual=el bosque.
+FAIL donde esta tiziano expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tony actual=el bosque.
+FAIL de que color es tony expected=rojo actual=el bosque.
+FAIL donde esta tony expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=tony actual=el bosque.
+FAIL de que color es tony expected=amarillo actual=el chat con, un en.
+FAIL donde esta tony expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el bosque.
+FAIL de que color es luna expected=azul actual=el bosque.
+FAIL donde esta luna expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=luna actual=el pepino la banana.
+FAIL de que color es luna expected=amarillo actual=el pepino la banana.
+FAIL donde esta luna expected=parque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=milo actual=el bosque.
+FAIL de que color es milo expected=azul actual=el bosque.
+FAIL donde esta milo expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=nina actual=el bosque.
+FAIL de que color es nina expected=verde actual=te llamas lucas.
+FAIL donde esta nina expected=ciudad actual=te llamas lucas.
+FAIL como se llama el personaje expected=leo actual=el bosque.
+FAIL de que color es leo expected=verde actual=el bosque.
+FAIL donde esta leo expected=bosque actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=ana actual=el bosque.
+FAIL de que color es ana expected=rojo actual=el pepino la banana.
+FAIL donde esta ana expected=playa actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=ana actual=el bosque.
+FAIL de que color es ana expected=amarillo actual=el pepino la banana.
+FAIL donde esta ana expected=ciudad actual=te llamas la banana baila.
+FAIL como se llama el personaje expected=kiari actual=el pepino la banana.
+FAIL de que color es kiari expected=rojo actual=el pepino la banana.
+FAIL donde esta kiari expected=parque actual=te llamas kiari.
+FAIL como se llama el personaje expected=kiari actual=el bosque.
+FAIL de que color es kiari expected=amarillo actual=el bosque.
+FAIL donde esta kiari expected=bosque actual=te llamas kiari.
+FAIL como se llama el personaje expected=tiziano actual=el bosque.
+FAIL de que color es tiziano expected=azul actual=el bosque.
+FAIL donde esta tiziano expected=playa actual=te llamas la banana baila.
+HELDOUT_CONTEXT 5/177

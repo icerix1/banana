@@ -1,0 +1,112 @@
+[
+  {
+    "file": "assets/background/background1.bin",
+    "sha256": "dc11f20e1a2ac670b074eb3217c94e127567ffe2b42554b12a19caa09c7825d9",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/background/background22.bin",
+    "sha256": "3e07aaf881ee871f37acab998a6a146b2c7fae85ea70aa6d0c376de034b534fd",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/chat32/chat32.bin",
+    "sha256": "d4445f05ba8ca926bc94b05ee13d7eca349a8e0e1c28fff9174194b0125af454",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/chat33/chat33.bin",
+    "sha256": "48e52cd33db7c4cdd1651a768260e9a76b6f770acf9484b38779e185373d3e6e",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/chat34/chat34.bin",
+    "sha256": "a8df72aebdacf3599896fddf4aa2c6bd122e2bffd2a880cadca591c75d69b17a",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/context1/context1.bin",
+    "sha256": "5f082ecc9d39886a5a73882799543ba2d7e24d1bcb386e7ee34f3ba6f0952f0e",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/custom23/custom23.bin",
+    "sha256": "23d499cc19b3d9dd0ddb7e4acc5349667e70ba4b2b1c648a04f644269d7e1526",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/language/chat.bin",
+    "sha256": "d5dc74afb4cf293e76d161051e12ae437bd1d98e6db506902acd475677ee0972",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/language/semilla.bin",
+    "sha256": "2a2f5fc895018202824b0d6e0bb818da9554b976f7331de1fb6fd61f41d1d229",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/mobilecore1/mobilecore1.bin",
+    "sha256": "277bbddd598cfb6f58d7021c2a6442744a0b7aff9ce5dfd55b9994b560dabff3",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/motion.bin",
+    "sha256": "6c3d71d5e0c0f008ca9c757320e0e9762d01deb4e05aa6bb55d3c77bbcf2e1f9",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel-v2/character.bin",
+    "sha256": "74d71e4bb86d9a0d3fad01c0937a01475cbba1656558f1cf031d1991230b47ba",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel-v2/character21.bin",
+    "sha256": "90bceb617c44a0204a37cee6dfacd6bb1a2535cea4bb5ae295c097c63b72b291",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel-v2/props.bin",
+    "sha256": "4616b9e4d3d1a2e289260ada03740491c8fd9927b9e51a95553f173dc6f2b953",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel-v2/tomato22.bin",
+    "sha256": "3bc5f44eaeb3d0c0ab45b9ac3f3fc921008e68e88607284b78be24a966c6f9e8",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel-v2/vision.bin",
+    "sha256": "ef3751a2231036e3785d3f9002e6be039b2603d43136822597d7cb26629e106e",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel22/faces22.bin",
+    "sha256": "c89446f5e855213feeadb58aa11547e5600e49a5436e585b51de082727df1bdf",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixel22/vision22.bin",
+    "sha256": "5b31b5760d8517784c1cb67f2a34eb5a8b9908f060617137ea368c6937286198",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixels/pixel1.bin",
+    "sha256": "ea1e5047a0738f108acbb6701e390cdc311f478f6acbf275b947f0287ab88f44",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pixels2/pixel2.bin",
+    "sha256": "96e7d5af997c3e4c181cdd8378a43fe505c29254a2d43c3fc7c941b3ca846354",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/pose/pose1.bin",
+    "sha256": "f51b6c6ecf8eb8e75f861f4ab68c19ce7c84579cdbe5a36325a29c4fe6aca956",
+    "unchanged_from": "0.42"
+  },
+  {
+    "file": "assets/transformer/banana-t1.bin",
+    "sha256": "f492db16115639117f0549b94b8590bf8582ca8e3f04305b8f4cb7cdfa784eca",
+    "unchanged_from": "0.42"
+  }
+]

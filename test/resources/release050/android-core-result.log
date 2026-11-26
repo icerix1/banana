@@ -1,0 +1,16 @@
+BOOT_READY
+Performing Push Install
+	pkg: /data/local/tmp/baked.apk
+Success
+
+PASS STAGE52_REOPEN fresh compiled planner, animation and own learned weights restored; owner authority false
+
+
+CORE_UPDATE_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PASS STAGE52_REOPEN core compiled planner, animation and own learned weights restored; owner authority false
+
+
+REAL_CORE_UPDATE_RECOMPILED_PRESERVED_MODULES_AND_LEARNED_WEIGHTS_OK

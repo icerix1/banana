@@ -1,0 +1,205 @@
+----------
+1. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/lookup/BoundSet.java (at line 1251)
+	three = this.boundsPerVariable.get(outerVariables);
+	                                   ^^^^^^^^^^^^^^
+Unlikely argument type InferenceVariable[] for get(Object) on a Map<InferenceVariable,BoundSet.ThreeSets>
+----------
+----------
+2. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/lookup/BaseTypeBinding.java (at line 17)
+	import org.eclipse.jdt.internal.compiler.lookup.TypeIds;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.TypeIds is never used
+----------
+----------
+3. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/env/IBinaryTypeAnnotation.java (at line 14)
+	import org.eclipse.jdt.internal.compiler.codegen.AnnotationTargetTypeConstants;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.codegen.AnnotationTargetTypeConstants is never used
+----------
+----------
+4. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/parser/JavadocParser.java (at line 205)
+	protected Object createMethodReference(Object receiver, List arguments) throws InvalidInputException {
+	                                                        ^^^^
+List is a raw type. References to generic type List<E> should be parameterized
+----------
+5. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/parser/JavadocParser.java (at line 270)
+	arguments.toArray(expressions);
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Type safety: The method toArray(Object[]) belongs to the raw type List. References to generic type List<E> should be parameterized
+----------
+----------
+6. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/batch/Main.java (at line 69)
+	import org.eclipse.jdt.core.compiler.batch.BatchCompiler;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.core.compiler.batch.BatchCompiler is never used
+----------
+7. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/batch/Main.java (at line 4048)
+	AbstractAnnotationProcessorManager annotationManager = (AbstractAnnotationProcessorManager) c.newInstance();
+	                                                                                              ^^^^^^^^^^^^^
+The method newInstance() from the type Class is deprecated
+----------
+----------
+8. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/ast/NullAnnotationMatching.java (at line 15)
+	import org.eclipse.jdt.core.compiler.IProblem;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.core.compiler.IProblem is never used
+----------
+9. INFO in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/ast/NullAnnotationMatching.java (at line 717)
+	@SuppressWarnings("nls")
+	                  ^^^^^
+At least one of the problems in category 'nls' is not analysed due to a compiler option being ignored
+----------
+----------
+10. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/ast/MethodDeclaration.java (at line 167)
+	public void getAllAnnotationContexts(int targetType, List allAnnotationContexts) {
+	                                                     ^^^^
+List is a raw type. References to generic type List<E> should be parameterized
+----------
+----------
+11. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/ast/IPolyExpression.java (at line 17)
+	import org.eclipse.jdt.internal.compiler.lookup.InvocationSite;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.InvocationSite is never used
+----------
+12. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/ast/IPolyExpression.java (at line 19)
+	import org.eclipse.jdt.internal.compiler.lookup.PolyTypeBinding;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.PolyTypeBinding is never used
+----------
+----------
+13. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/classfmt/FieldInfo.java (at line 268)
+	this.wrappedConstantValue = new Float(fieldConstant.floatValue());
+	                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+14. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/classfmt/FieldInfo.java (at line 271)
+	this.wrappedConstantValue = new Double(fieldConstant.doubleValue());
+	                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+----------
+15. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/problem/ProblemReporter.java (at line 153)
+	import org.eclipse.jdt.internal.compiler.env.AccessRestriction;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.env.AccessRestriction is never used
+----------
+----------
+16. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/util/ArchiveFileObject.java (at line 57)
+	super.finalize();
+	      ^^^^^^^^^^
+The method finalize() from the type Object has been deprecated and marked for removal
+----------
+----------
+17. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/util/ManyToMany.java (at line 314)
+	Set<T1> keys = _reverse.get(key);
+	                            ^^^
+Unlikely argument type T1 for get(Object) on a Map<T2,Set<T1>>
+----------
+----------
+18. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/dispatch/BatchAnnotationProcessorManager.java (at line 131)
+	Object o = clazz.newInstance();
+	                 ^^^^^^^^^^^^^
+The method newInstance() from the type Class<capture#2-of ?> is deprecated
+----------
+----------
+19. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/AnnotationMemberValue.java (at line 14)
+	import org.eclipse.jdt.internal.compiler.lookup.AnnotationBinding;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.AnnotationBinding is never used
+----------
+20. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/AnnotationMemberValue.java (at line 15)
+	import org.eclipse.jdt.internal.compiler.lookup.ElementValuePair;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.ElementValuePair is never used
+----------
+21. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/AnnotationMemberValue.java (at line 16)
+	import org.eclipse.jdt.internal.compiler.lookup.FieldBinding;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.FieldBinding is never used
+----------
+22. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/AnnotationMemberValue.java (at line 18)
+	import org.eclipse.jdt.internal.compiler.lookup.TypeBinding;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.TypeBinding is never used
+----------
+----------
+23. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 574)
+	return new Double(b); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+24. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 576)
+	return new Float(b); // widening.
+	           ^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+25. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 602)
+	return new Double(s); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+26. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 604)
+	return new Float(s); // widening.
+	           ^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+27. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 630)
+	return new Double(c); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+28. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 632)
+	return new Float(c); // widening.
+	           ^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+29. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 659)
+	return new Double(i); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+30. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 661)
+	return new Float(i); // widening.
+	           ^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+31. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 685)
+	return new Double(l); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+32. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 687)
+	return new Float(l); // widening.			
+	           ^^^^^^^^
+The constructor Float(float) has been deprecated and marked for removal
+----------
+33. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/Factory.java (at line 710)
+	return new Double(f); // widening.
+	           ^^^^^^^^^
+The constructor Double(double) has been deprecated and marked for removal
+----------
+----------
+34. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/DeclaredTypeImpl.java (at line 21)
+	import javax.lang.model.element.TypeElement;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import javax.lang.model.element.TypeElement is never used
+----------
+----------
+35. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/AnnotationValueImpl.java (at line 33)
+	import org.eclipse.jdt.internal.compiler.lookup.ElementValuePair;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.internal.compiler.lookup.ElementValuePair is never used
+----------
+----------
+36. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/internal/compiler/apt/model/ElementImpl.java (at line 26)
+	import javax.lang.model.util.Elements;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import javax.lang.model.util.Elements is never used
+----------
+----------
+37. WARNING in /workspace/scratch/f1fa469e81ab/banana/work060/ecj-src/org/eclipse/jdt/core/compiler/CompilationProgress.java (at line 13)
+	import org.eclipse.jdt.core.compiler.batch.BatchCompiler;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.eclipse.jdt.core.compiler.batch.BatchCompiler is never used
+----------
+37 problems (0 errors, 36 warnings, 1 info)

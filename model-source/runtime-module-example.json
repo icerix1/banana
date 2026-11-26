@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": "celebracion",
+      "pattern": "{actor} celebra con {target}",
+      "steps": [
+        {
+          "op": "baila",
+          "who": "actor"
+        },
+        {
+          "op": "saluda",
+          "who": "target"
+        },
+        {
+          "op": "salta",
+          "who": "actor"
+        }
+      ],
+      "tests": [
+        {
+          "input": "Fito celebra con Bani",
+          "actions": [
+            "baila",
+            "saluda",
+            "salta"
+          ]
+        }
+      ]
+    }
+  ]
+}

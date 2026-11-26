@@ -1,0 +1,3 @@
+LIVE query=como funciona la fotosintesis millis=33 docs=0 warning=No pude consultar el buscador general.
+Exception in thread "main" java.lang.AssertionError: No live readable source
+	at com.bananalab.lite.Stage39LiveCheck.main(Stage39LiveCheck.java:4)

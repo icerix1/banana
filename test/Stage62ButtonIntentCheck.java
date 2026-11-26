@@ -1,0 +1,7 @@
+package com.bananalab.lite;
+import org.json.*;
+public final class Stage62ButtonIntentCheck{
+ static void check(boolean b,String s){if(!b)throw new AssertionError(s);}
+ public static void main(String[] args)throws Exception{for(String raw:new String[]{"cambiame el color del botón enviar a rojo","podes cambiar el color del boton enviar a rojo","quiero que cambies el color del boton enviar a rojo","pone el boton enviar rojo","pintame el boton enviar de color rojo","cambiale el color al boton enviar a rojo"}){NaturalCoding.Plan p=NaturalCoding.parse(raw,"");check(p.kind.equals("settings"),raw+" => "+p.kind);AppJavaChat.Plan plan=AppJavaChat.plan(p.command,new AppJavaWorkspace.Settings());check(plan.handled&&AppJavaWorkspace.buttonColor(plan.settings,"Enviar")==4,raw);check(AppJavaWorkspace.buttonColor(plan.settings,"Herramientas")==0,"only intended button");check(AppJavaWorkspace.Settings.read(plan.settings.json()).buttonColors.getInt("enviar")==4,"serialized target");check(AppJavaWorkspace.sources(plan.settings).get("BananaInterface.java").contains("buttonColors"),"compiled source");ChatEdits.validate(new JSONObject().put("settings",plan.settings.json()).put("replies",JSONObject.NULL));}
+ check(NaturalCoding.parse("no cambies el boton enviar a rojo","").kind.isEmpty(),"negation");check(ImprovementFlow.plan("quiero que mejores chat mas a fondo").get(0).kind.equals("chatDeep"),"full training natural route");System.out.println("PASS Stage62 real user sentence, named button target, isolated settings, canonical compiled source, backup and negation");}
+}

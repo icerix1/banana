@@ -1,0 +1,515 @@
+[
+  {
+    "key": "algoritmo",
+    "title": "Algoritmos",
+    "keywords": [
+      "algoritmo",
+      "algoritmos"
+    ],
+    "queries": [
+      "que es un algoritmo",
+      "explicame los algoritmos",
+      "como funciona un algoritmo",
+      "para que sirve un algoritmo",
+      "quiero entender algoritmos",
+      "que significa algoritmo"
+    ],
+    "explain": "Un algoritmo es una secuencia de instrucciones para resolver una tarea. Conviene definir qué recibe, qué produce y cuándo termina. Puede escribirse con palabras antes de programarlo.",
+    "why": "Dividir la tarea en pasos permite comprobar dónde aparece un error y repetir el procedimiento con otras entradas.",
+    "example": "Para ordenar tres números, comparás dos, colocás primero el menor y después insertás el tercero en su posición.",
+    "steps": "1. Definí entrada y salida.\n2. Escribí pasos concretos.\n3. Probá casos distintos.\n4. Revisá cuándo termina."
+  },
+  {
+    "key": "variable",
+    "title": "Variables",
+    "keywords": [
+      "variable",
+      "variables"
+    ],
+    "queries": [
+      "que es una variable",
+      "como uso variables",
+      "para que sirven las variables",
+      "explica variable de programacion",
+      "quiero entender una variable",
+      "que significa variable"
+    ],
+    "explain": "Una variable es un nombre asociado a un valor durante la ejecución de un programa. Según el lenguaje, ese valor puede cambiar y puede tener restricciones de tipo.",
+    "why": "Los nombres permiten usar y actualizar datos sin escribir cada valor de forma fija en todas partes.",
+    "example": "Si puntos empieza en cero y sumás uno después de un toque, puntos pasa a valer uno.",
+    "steps": "1. Elegí un nombre claro.\n2. Asigná un valor inicial.\n3. Actualizalo cuando corresponda.\n4. Comprobá el valor obtenido."
+  },
+  {
+    "key": "bucle",
+    "title": "Bucles",
+    "keywords": [
+      "bucle",
+      "bucles",
+      "iteracion"
+    ],
+    "queries": [
+      "que es un bucle",
+      "como funcionan los bucles",
+      "para que sirve un bucle",
+      "quiero aprender bucles",
+      "explicame una iteracion",
+      "que significa bucle"
+    ],
+    "explain": "Un bucle repite un bloque de instrucciones. Puede recorrer una colección o continuar mientras una condición sea verdadera.",
+    "why": "Evita repetir el mismo código, pero una condición que nunca cambia puede provocar un bucle infinito.",
+    "example": "Para sumar del uno al tres, acumulás uno, después dos y finalmente tres: el total es seis.",
+    "steps": "1. Definí qué repetís.\n2. Establecé la condición de salida.\n3. Actualizá el estado.\n4. Probá que termine."
+  },
+  {
+    "key": "funcion",
+    "title": "Funciones",
+    "keywords": [
+      "funcion",
+      "funciones"
+    ],
+    "queries": [
+      "que es una funcion de programacion",
+      "como funcionan las funciones",
+      "para que sirve una funcion",
+      "explicame funciones en codigo",
+      "quiero entender funciones",
+      "como organizar una funcion"
+    ],
+    "explain": "Una función reúne instrucciones bajo un nombre. Puede recibir argumentos y devolver un resultado. Sus reglas exactas dependen del lenguaje.",
+    "why": "Separar responsabilidades facilita reutilizar una operación y probarla sin ejecutar todo el programa.",
+    "example": "Una función doble recibe cinco y devuelve diez. Puede volver a usarse con otros números.",
+    "steps": "1. Definí una responsabilidad.\n2. Elegí sus entradas.\n3. Calculá la salida.\n4. Probá entradas normales y límites."
+  },
+  {
+    "key": "depuracion",
+    "title": "Depuración",
+    "keywords": [
+      "depuracion",
+      "depurar",
+      "bug",
+      "bugs",
+      "depuración"
+    ],
+    "queries": [
+      "que es depurar un programa",
+      "como encuentro un bug",
+      "explicame la depuracion",
+      "por que aparecen bugs",
+      "como corregir bugs",
+      "quiero aprender a depurar"
+    ],
+    "explain": "Depurar consiste en encontrar y corregir la causa de un comportamiento inesperado. Un mensaje de error es evidencia, pero no siempre señala el origen completo.",
+    "why": "Reproducir el problema y reducirlo evita cambiar muchas cosas a ciegas y perder la pista de qué lo solucionó.",
+    "example": "Si un personaje desaparece después de saltar, comprobá primero su posición, visibilidad y escala justo antes y después del salto.",
+    "steps": "1. Reproducí el fallo.\n2. Anotá lo esperado y lo ocurrido.\n3. Aislá una causa.\n4. Cambiá una cosa.\n5. Verificá que no rompiste otra."
+  },
+  {
+    "key": "fotosintesis",
+    "title": "Fotosíntesis",
+    "keywords": [
+      "fotosintesis",
+      "fotosíntesis"
+    ],
+    "queries": [
+      "que es la fotosintesis",
+      "como funciona la fotosintesis",
+      "por que las plantas necesitan luz",
+      "explicame fotosintesis",
+      "para que sirve la fotosintesis",
+      "quiero entender la fotosintesis"
+    ],
+    "explain": "En la fotosíntesis, plantas, algas y algunas bacterias utilizan energía luminosa para producir materia orgánica. En la fotosíntesis que libera oxígeno intervienen agua y dióxido de carbono.",
+    "why": "La luz aporta energía para las transformaciones químicas. No significa que las plantas solo vivan de luz: también necesitan agua, nutrientes y condiciones adecuadas.",
+    "example": "Una planta iluminada puede producir azúcares que después utiliza como fuente de energía y material para crecer.",
+    "steps": "1. Se capta energía luminosa.\n2. Se realizan transformaciones químicas.\n3. Se incorpora carbono a moléculas orgánicas.\n4. En el proceso oxigénico se libera oxígeno."
+  },
+  {
+    "key": "gravedad",
+    "title": "Gravedad",
+    "keywords": [
+      "gravedad",
+      "gravitacion"
+    ],
+    "queries": [
+      "que es la gravedad",
+      "por que caen las cosas",
+      "como funciona la gravedad",
+      "explicame la gravitacion",
+      "quiero entender gravedad",
+      "por que no flotamos"
+    ],
+    "explain": "La gravedad describe la interacción asociada con la masa y la energía. Cerca de la superficie terrestre hace que los objetos libres aceleren hacia el suelo.",
+    "why": "La Tierra atrae a los objetos y los objetos también atraen a la Tierra. La diferencia de masas hace que el movimiento terrestre resulte imperceptible en situaciones cotidianas.",
+    "example": "Una pelota soltada cae. El aire puede modificar su movimiento; en ausencia de resistencia, objetos distintos comparten la misma aceleración local de caída.",
+    "steps": "1. Identificá las masas.\n2. Considerá la distancia.\n3. Separá gravedad de otras fuerzas, como el rozamiento."
+  },
+  {
+    "key": "energia_solar",
+    "title": "Energía solar",
+    "keywords": [
+      "energia solar",
+      "panel solar",
+      "paneles solares",
+      "energía solar"
+    ],
+    "queries": [
+      "que es la energia solar",
+      "como funciona un panel solar",
+      "por que cambia la energia solar",
+      "explicame paneles solares",
+      "para que sirve la energia solar",
+      "quiero entender energia solar"
+    ],
+    "explain": "La energía solar proviene de la radiación del Sol. Los paneles fotovoltaicos convierten parte de esa energía en electricidad; otros sistemas aprovechan su calor.",
+    "why": "La generación fotovoltaica depende de la luz recibida, la orientación, la temperatura y el equipo. Tener un panel no garantiza energía constante durante todo el día.",
+    "example": "Un panel recibe luz y genera electricidad. Una batería puede almacenar parte de esa energía para usarla después, con pérdidas.",
+    "steps": "1. Distinguí electricidad de calor solar.\n2. Considerá la luz disponible.\n3. Separá generación y almacenamiento."
+  },
+  {
+    "key": "electricidad",
+    "title": "Electricidad",
+    "keywords": [
+      "electricidad",
+      "circuito",
+      "voltaje"
+    ],
+    "queries": [
+      "que es electricidad",
+      "como funciona un circuito",
+      "que significa voltaje",
+      "explicame la electricidad",
+      "para que sirve un circuito",
+      "quiero entender electricidad"
+    ],
+    "explain": "La electricidad está relacionada con las cargas eléctricas. En un circuito, la corriente es el flujo de carga; la tensión representa una diferencia de potencial eléctrico.",
+    "why": "Para una corriente sostenida hacen falta una fuente y un recorrido adecuado. Corriente y tensión son magnitudes diferentes.",
+    "example": "En un circuito sencillo de baja tensión, una pila puede alimentar una lámpara cuando el recorrido está cerrado.",
+    "steps": "1. Identificá fuente y componentes.\n2. Distinguí tensión y corriente.\n3. Usá solo ejemplos educativos de baja tensión; esta explicación no es una guía de instalación eléctrica."
+  },
+  {
+    "key": "agua",
+    "title": "Estados del agua",
+    "keywords": [
+      "agua",
+      "evaporacion",
+      "evaporación",
+      "hielo",
+      "estados del agua"
+    ],
+    "queries": [
+      "por que se evapora el agua",
+      "que es evaporacion",
+      "como cambia el estado del agua",
+      "por que se derrite el hielo",
+      "explicame los estados del agua",
+      "quiero entender evaporacion"
+    ],
+    "explain": "El agua puede encontrarse como sólido, líquido o vapor. Cambiar de estado requiere transferir energía; las condiciones dependen también de la presión.",
+    "why": "Al recibir energía, algunas moléculas pueden pasar del líquido al vapor. Por eso la evaporación puede ocurrir sin que todo el líquido hierva.",
+    "example": "La ropa mojada se seca porque parte del agua pasa al aire como vapor, incluso a temperatura ambiente.",
+    "steps": "1. Identificá el estado inicial.\n2. Observá si entra o sale energía.\n3. Considerá temperatura, presión y contacto con el aire."
+  },
+  {
+    "key": "sonido",
+    "title": "Sonido",
+    "keywords": [
+      "sonido",
+      "frecuencia",
+      "tono"
+    ],
+    "queries": [
+      "que es el sonido",
+      "como viaja el sonido",
+      "por que cambia el tono",
+      "que significa frecuencia de sonido",
+      "explicame el sonido",
+      "quiero entender ondas sonoras"
+    ],
+    "explain": "El sonido es una perturbación mecánica que se propaga por un medio. La frecuencia se relaciona con el tono percibido y la amplitud influye en la intensidad.",
+    "why": "Necesita un medio material para propagarse como onda mecánica. Por eso no viaja a través del vacío de la misma manera que la luz.",
+    "example": "Una cuerda que vibra mueve el aire cercano. Si aumenta la frecuencia de vibración, normalmente percibís un tono más agudo.",
+    "steps": "1. Identificá qué vibra.\n2. Identificá el medio.\n3. Separá frecuencia y amplitud."
+  },
+  {
+    "key": "color",
+    "title": "Color y luz",
+    "keywords": [
+      "color",
+      "colores",
+      "rgb",
+      "color y luz"
+    ],
+    "queries": [
+      "como funcionan los colores",
+      "que es rgb",
+      "por que vemos colores",
+      "explicame el color",
+      "como mezclar colores de luz",
+      "quiero entender colores"
+    ],
+    "explain": "El color percibido depende de la luz que llega al ojo y de cómo la procesa el sistema visual. Mezclar luces no produce los mismos resultados que mezclar pigmentos.",
+    "why": "Una pantalla combina emisiones rojas, verdes y azules. Un pigmento modifica qué parte de la luz se refleja o se absorbe.",
+    "example": "En una pantalla, rojo y verde intensos pueden producir amarillo. Mezclar pinturas requiere considerar sus pigmentos.",
+    "steps": "1. Distinguí luz y pigmento.\n2. Elegí el espacio de color.\n3. Comprobá contraste y legibilidad."
+  },
+  {
+    "key": "animacion",
+    "title": "Principios de animación",
+    "keywords": [
+      "animacion",
+      "animación",
+      "fotogramas",
+      "principios de animación"
+    ],
+    "queries": [
+      "como mejorar una animacion",
+      "que es animacion",
+      "para que sirven los fotogramas",
+      "explicame animacion",
+      "por que una animacion se ve rigida",
+      "quiero aprender animacion"
+    ],
+    "explain": "Una animación muestra estados sucesivos para producir sensación de movimiento. La trayectoria, el ritmo y las poses importan tanto como la cantidad de cuadros.",
+    "why": "Si todo cambia a velocidad constante y sin anticipación, un gesto puede verse rígido. Variar el tiempo y preparar el movimiento ayuda a comunicar intención.",
+    "example": "Antes de saltar, un personaje puede bajar un poco, despegar, subir y aterrizar con una pequeña compresión.",
+    "steps": "1. Elegí poses claras.\n2. Definí anticipación y acción.\n3. Ajustá aceleración y frenado.\n4. Revisá la silueta y el contacto con el suelo."
+  },
+  {
+    "key": "perspectiva",
+    "title": "Perspectiva",
+    "keywords": [
+      "perspectiva",
+      "profundidad"
+    ],
+    "queries": [
+      "que es perspectiva",
+      "como dibujar profundidad",
+      "por que los objetos lejanos se ven chicos",
+      "explicame perspectiva",
+      "quiero aprender perspectiva",
+      "como funciona un punto de fuga"
+    ],
+    "explain": "La perspectiva representa profundidad en una superficie. En la perspectiva lineal, líneas paralelas de ciertas direcciones pueden proyectarse hacia puntos de fuga.",
+    "why": "El tamaño aparente depende de la distancia y de la proyección. También ayudan la superposición y la posición relativa de los objetos.",
+    "example": "Los bordes de una calle recta parecen acercarse entre sí al alejarse, aunque la calle mantenga su ancho.",
+    "steps": "1. Definí el punto de vista.\n2. Ubicá el horizonte.\n3. Organizá los puntos de fuga.\n4. Compará tamaños y superposiciones."
+  },
+  {
+    "key": "guion",
+    "title": "Guion de una escena",
+    "keywords": [
+      "guion",
+      "guión",
+      "narracion",
+      "guion de una escena"
+    ],
+    "queries": [
+      "como escribir un guion",
+      "que necesita un guion",
+      "explicame narrativa de una escena",
+      "como organizar una historia corta",
+      "quiero aprender guion",
+      "como mejorar una narracion"
+    ],
+    "explain": "Un guion define qué ocurre, quién participa y qué se dice. Para una escena corta ayuda que el objetivo y el cambio final sean claros.",
+    "why": "Una sucesión de acciones no siempre comunica una historia. Un objetivo, un obstáculo y una consecuencia conectan los acontecimientos.",
+    "example": "Una banana busca una caja; un pepino la tiene; al hablar descubren que es un regalo para la banana.",
+    "steps": "1. Elegí un objetivo.\n2. Agregá un obstáculo.\n3. Escribí acciones visibles.\n4. Cerrá con una consecuencia."
+  },
+  {
+    "key": "memoria_ia",
+    "title": "Memoria de un asistente",
+    "keywords": [
+      "memoria de ia",
+      "memoria de una ia",
+      "memoria del chatbot",
+      "memoria de un asistente"
+    ],
+    "queries": [
+      "como funciona la memoria de una ia",
+      "recordar es aprender",
+      "diferencia entre memoria y entrenamiento",
+      "explicame memoria del chatbot",
+      "que guarda una ia",
+      "quiero entender memoria de ia"
+    ],
+    "explain": "Un asistente puede guardar información y recuperarla cuando responde. Eso es distinto de cambiar los parámetros de su modelo mediante entrenamiento.",
+    "why": "La memoria aporta datos a una respuesta; el entrenamiento modifica cómo el modelo transforma sus entradas. Tener más recuerdos no garantiza comprenderlos bien.",
+    "example": "Banana puede recordar quién tiene una caja leyendo la escena guardada, sin entrenar de nuevo sus pesos.",
+    "steps": "1. Guardá datos con origen.\n2. Recuperá solo lo pertinente.\n3. Separá hechos del usuario y fuentes externas.\n4. Permití corregir y borrar."
+  },
+  {
+    "key": "modelo_ia",
+    "title": "Modelos de inteligencia artificial",
+    "keywords": [
+      "modelo de ia",
+      "modelo neuronal",
+      "red neuronal",
+      "modelos de inteligencia artificial"
+    ],
+    "queries": [
+      "que es una red neuronal",
+      "como funciona un modelo de ia",
+      "explicame un modelo neuronal",
+      "por que una ia se equivoca",
+      "quiero entender redes neuronales",
+      "que significa modelo de inteligencia artificial"
+    ],
+    "explain": "Un modelo neuronal transforma entradas mediante operaciones con parámetros ajustados durante el entrenamiento. Puede detectar regularidades, pero sus resultados no son garantías de verdad.",
+    "why": "El aprendizaje depende de los ejemplos y del objetivo usado al entrenar. Un modelo puede acertar en casos conocidos y fallar ante cambios de redacción o situaciones nuevas.",
+    "example": "Un clasificador puede reconocer preguntas sobre dibujos sin ser capaz de explicar cualquier tema del mundo.",
+    "steps": "1. Definí la tarea.\n2. Reuní datos adecuados.\n3. Separá entrenamiento y evaluación.\n4. Medí errores con casos nuevos."
+  },
+  {
+    "key": "entrenamiento_ia",
+    "title": "Entrenamiento y evaluación",
+    "keywords": [
+      "entrenar",
+      "entrenamiento",
+      "sobreajuste",
+      "entrenamiento y evaluación"
+    ],
+    "queries": [
+      "que es entrenar una ia",
+      "como se entrena un modelo",
+      "que es sobreajuste",
+      "por que separar datos de prueba",
+      "explicame entrenamiento de ia",
+      "quiero entender el entrenamiento"
+    ],
+    "explain": "Entrenar ajusta los parámetros de un modelo para reducir un error definido sobre ejemplos. Evaluar con ejemplos separados permite estimar cuánto generaliza.",
+    "why": "Si se evalúa con los mismos ejemplos usados para ajustar el modelo, el resultado puede ocultar memorización o sobreajuste.",
+    "example": "Un modelo que reconoce diez frases conocidas pero falla con una frase nueva no mostró comprensión general de esa tarea.",
+    "steps": "1. Definí una medida útil.\n2. Separá los datos antes de entrenar.\n3. Ajustá con entrenamiento.\n4. Decidí la promoción usando evaluación nueva."
+  },
+  {
+    "key": "internet",
+    "title": "Internet y búsqueda",
+    "keywords": [
+      "internet",
+      "buscador",
+      "busqueda web",
+      "internet y búsqueda"
+    ],
+    "queries": [
+      "como funciona internet",
+      "que hace un buscador",
+      "buscar es lo mismo que saber",
+      "explicame busqueda web",
+      "como encuentra paginas un buscador",
+      "quiero entender internet"
+    ],
+    "explain": "Internet conecta redes que intercambian datos. La Web es uno de sus servicios. Un buscador ayuda a encontrar páginas; no garantiza que su contenido sea correcto.",
+    "why": "Una respuesta necesita distinguir lo que afirma una fuente de lo que está comprobado. La fecha de consulta tampoco asegura que la información esté actualizada.",
+    "example": "Encontrar un artículo sobre una noticia antigua hoy no convierte esa noticia en un suceso de hoy.",
+    "steps": "1. Formulá la pregunta.\n2. Revisá origen y fecha de publicación.\n3. Contrastá afirmaciones.\n4. Indicá lo que falta verificar."
+  },
+  {
+    "key": "fracciones",
+    "title": "Fracciones",
+    "keywords": [
+      "fraccion",
+      "fracción",
+      "fracciones"
+    ],
+    "queries": [
+      "que es una fraccion",
+      "como funcionan las fracciones",
+      "para que sirve una fraccion",
+      "explicame fracciones",
+      "quiero entender fracciones",
+      "que significa numerador"
+    ],
+    "explain": "Una fracción expresa una división entre numerador y denominador, con denominador distinto de cero. Puede representar una parte, una razón o un número.",
+    "why": "Para sumar partes de tamaños distintos primero necesitás expresarlas con un denominador común.",
+    "example": "Un medio equivale a dos cuartos. Si le sumás un cuarto, obtenés tres cuartos.",
+    "steps": "1. Identificá numerador y denominador.\n2. Buscá un denominador común para sumar.\n3. Operá los numeradores.\n4. Simplificá si corresponde."
+  },
+  {
+    "key": "porcentajes",
+    "title": "Porcentajes",
+    "keywords": [
+      "porcentaje",
+      "porcentajes",
+      "por ciento"
+    ],
+    "queries": [
+      "que es un porcentaje",
+      "como calculo un porcentaje",
+      "explicame porcentajes",
+      "para que sirven los porcentajes",
+      "quiero entender porcentajes",
+      "que significa por ciento"
+    ],
+    "explain": "Un porcentaje expresa una proporción por cada cien. Para calcular p por ciento de una cantidad, multiplicás la cantidad por p y dividís por cien.",
+    "why": "Un cambio porcentual se calcula respecto de una base. Cambiar la base puede cambiar el significado del mismo número.",
+    "example": "El diez por ciento de doscientos es veinte. Un aumento del diez por ciento lleva doscientos a doscientos veinte.",
+    "steps": "1. Identificá la cantidad base.\n2. Convertí el porcentaje a una razón sobre cien.\n3. Multiplicá.\n4. Separá porcentaje y puntos porcentuales."
+  },
+  {
+    "key": "probabilidad",
+    "title": "Probabilidad",
+    "keywords": [
+      "probabilidad",
+      "probabilidades",
+      "azar"
+    ],
+    "queries": [
+      "que es la probabilidad",
+      "como funciona el azar",
+      "explicame probabilidades",
+      "por que azar no significa garantia",
+      "quiero entender probabilidad",
+      "que significa una probabilidad"
+    ],
+    "explain": "La probabilidad cuantifica la posibilidad de un resultado dentro de un modelo. Un valor alto no garantiza que el resultado ocurra en un intento concreto.",
+    "why": "Una proporción observada en pocos intentos puede diferir bastante de la probabilidad teórica. También importa si los intentos son independientes.",
+    "example": "Una moneda equilibrada tiene probabilidad de un medio de dar cara en cada lanzamiento; eso no obliga a alternar cara y cruz.",
+    "steps": "1. Definí los resultados.\n2. Aclará los supuestos.\n3. Calculá o estimá la probabilidad.\n4. Distinguí expectativa y resultado individual."
+  },
+  {
+    "key": "logica",
+    "title": "Condiciones y lógica",
+    "keywords": [
+      "logica",
+      "lógica",
+      "condicion",
+      "condición",
+      "condiciones y lógica"
+    ],
+    "queries": [
+      "que es una condicion logica",
+      "como funciona si entonces",
+      "explicame logica de programacion",
+      "que significa y logico",
+      "para que sirve una condicion",
+      "quiero entender logica"
+    ],
+    "explain": "Una condición permite elegir un comportamiento según si una afirmación resulta verdadera o falsa. Operadores como y, o y no permiten combinar condiciones.",
+    "why": "Precisar las condiciones evita ejecutar una acción cuando faltan sus requisitos. El significado exacto de algunos operadores depende del lenguaje.",
+    "example": "Si Tony tiene la caja y Milo está cerca, se permite la entrega. Si falta una de las condiciones, se debe explicar cuál.",
+    "steps": "1. Escribí cada condición.\n2. Elegí cómo combinarlas.\n3. Probá casos verdaderos y falsos.\n4. Comprobá los límites."
+  },
+  {
+    "key": "compresion",
+    "title": "Compresión de archivos",
+    "keywords": [
+      "compresion",
+      "compresión",
+      "comprimir",
+      "compresión de archivos"
+    ],
+    "queries": [
+      "que es comprimir un archivo",
+      "como funciona la compresion",
+      "diferencia entre compresion con perdida y sin perdida",
+      "explicame compresion de video",
+      "para que sirve comprimir",
+      "quiero entender compresion"
+    ],
+    "explain": "La compresión representa datos usando menos espacio. La compresión sin pérdida permite recuperar los datos originales; la compresión con pérdida descarta información.",
+    "why": "El espacio ahorrado depende de la estructura de los datos y del método. Comprimir otra vez un archivo ya comprimido puede ahorrar muy poco.",
+    "example": "Un formato con pérdida puede reducir el tamaño de un video a costa de detalles, especialmente en movimiento o texturas finas.",
+    "steps": "1. Elegí si necesitás recuperar el original exacto.\n2. Ajustá tamaño y calidad.\n3. Compará el resultado.\n4. Conservá el original cuando importe."
+  }
+]

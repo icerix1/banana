@@ -1,0 +1,52 @@
+{
+  "name": "Banana Pixel 2",
+  "component": "personajes",
+  "system_release": "0.31",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 83716,
+  "external_weights": false,
+  "training_images": 1293,
+  "heldout_images": 3,
+  "unique_training_conditions": 1293,
+  "unique_heldout_conditions": 3,
+  "duplicate_note": "Each condition appears once; synthetic evaluation only.",
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9967530811459735,
+  "heldout_foreground_RGB_MAE": 0.040422409772872925,
+  "size": 128,
+  "hidden": 192,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot",
+    "perro",
+    "oso",
+    "zorro",
+    "persona"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown",
+    "coat",
+    "hat_coat",
+    "glasses"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Own synthetic catalog, not diffusion or universal text-to-image. Clothing and expressions use controlled regional compositing. Existing own neural backgrounds are retained. New limb animation is a programmed 2D cutout rig, not neural video generation.",
+  "native_resolution": 128,
+  "public_name": "Banana Pixel 2"
+}

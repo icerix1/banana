@@ -1,0 +1,53 @@
+BANANA0.47 — DIAGNÓSTICO Y REPARACIÓN EN ANDROID
+
+Instalá esta actualización una vez. El programador funciona en Android: lee el código instalado, compila con las herramientas incluidas, prueba en otro proceso y guarda los resultados en el dispositivo. No requiere una PC, un servidor ni un modelo externo. Mantiene tus proyectos, módulos y aprendizaje anterior.
+
+INICIO
+Proyecto → Programador Android
+O escribí: programador android
+
+REPARAR EL ÚLTIMO INTENTO
+Si escribiste un cuerpo con “reescribe el metodo del chat:” y falló:
+diagnostica mi ultimo cambio
+repara mi ultimo cambio
+ver reparacion android
+aplica reparacion android
+El último intento del editor se conserva para poder revisarlo. El diagnóstico compila una copia sin cambiar el editor. La reparación intenta hasta seis ciclos acotados, registra errores reales del compilador y resultados de las pruebas, y prepara un candidato únicamente si pasa. No activa el código por su cuenta.
+
+EJEMPLO DIRECTO
+repara metodo del chat: if (text.equal("hola taller")) return "Buenas, taller"; return null;
+Aquí equal está mal escrito. Banana debe detectar el fallo de compilación, proponer equals, volver a compilar y comprobar respuestas/controles.
+Después de aplicar: hola taller
+Otro ejemplo que compila pero tiene un problema de comportamiento:
+repara metodo del chat: if (message == "hola taller") return "Buenas, taller"; return null;
+Las pruebas utilizan cadenas nuevas para descubrir la comparación por identidad. La reparación admitida usa equals para comparar valores.
+
+VER O DESCARTAR
+ver diagnostico android
+ver reparacion android
+descarta reparacion android
+También están disponibles “mostrame el cambio de java” y “deshace el cambio del metodo”. Si empezás una reparación nueva y falla, el candidato anterior del reparador deja de estar habilitado para aplicar por accidente; el borrador del editor y el código activo se conservan.
+
+ARREGLOS ADMITIDOS
+• Punto y coma faltante tras return literal/null.
+• Nombres conocidos mal escritos: equal, Equals, startswith, StartsWith, endswith, EndsWith, Contains.
+• Comparación texto == literal, reemplazada por equals.
+• return null final faltante.
+• Llaves de un if simple que sólo devuelve un texto literal, normalizadas al subconjunto del editor.
+No modifica el texto dentro de las cadenas. No inventa una comilla o un texto faltante. No acepta bucles, APIs, campos, importaciones, llamadas recursivas, clases nuevas del usuario ni instrucciones generales Java.
+El objetivo sigue siendo ChatLanguage.socialReply. Se compila una copia y se activa por el puente existente; no se reemplaza cualquier clase ART ni se reconstruye toda la app.
+
+CÓDIGO DEL PROYECTO
+busca en el codigo: segundo personaje no aparece
+Busca archivos reales instalados y muestra rutas, líneas y fragmentos. La clasificación usa términos y correspondencias de nombres; no demuestra que haya encontrado la causa del fallo ni corrige automáticamente otros métodos.
+
+CASOS Y EVALUACIÓN
+casos del programador android
+evalua programador android
+El registro conserva hasta dieciséis arreglos compilados, probados y aplicados por el usuario. Prioriza las reglas conocidas que ya funcionaron. No registra una propuesta fallida como éxito ni entrena un programador neuronal general. Los registros guardan hashes del código, las reglas y las pruebas; el candidato pendiente conserva su antes/después.
+La evaluación compila y prueba cuatro tareas sintéticas de regresión en el dispositivo, sin cambiar el código activo ni el borrador del editor. Puede tardar, porque ejecuta varias compilaciones. Un resultado4/4 no significa que resuelva cuatro tipos cualesquiera de problemas ni tareas nunca vistas por las reglas.
+
+LÍMITES
+El proceso de pruebas comparte UID y permisos con Banana: no es un sandbox para Java arbitrario. La seguridad depende del lenguaje limitado y de la generación controlada de fuentes. Los resultados son comprobaciones de contrato, no una demostración completa de corrección visual o de intención del usuario.
+No se incorporó Qwen ni otro modelo externo. Los modelos base y el aprendizaje local de la versión0.46 se conservan. Ampliar la capacidad de programación general sigue siendo trabajo pendiente.
+Las pruebas y sus límites están en VALIDACION-0.47.md. Falta comprobarlo en tu tablet física Android16.

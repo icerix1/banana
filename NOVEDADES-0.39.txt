@@ -1,0 +1,64 @@
+BANANA 0.39 — NÚCLEO MÓVIL 1, SIN DEPENDER DE UNA PC
+
+El nuevo núcleo ejecuta interpretación acotada, memoria de trabajo, planes y recuperación neuronal de lecciones en Android. No requiere una computadora ni un servidor para estas funciones. La búsqueda web de 0.38 sigue disponible cuando se necesita conexión. Los modelos son propios: no usa Qwen ni pesos preentrenados de otro proveedor.
+
+QUÉ ES NUEVO
+• Memoria del último pedido, orden interpretada, ruta y efecto registrado sobre la escena.
+• Planes de hasta doce pasos: por listas, saltos de línea o primero/después/luego. Respeta punto y coma dentro de diálogos entre comillas.
+• Aplicación conjunta: si un paso falla, no publica cambios parciales. Se puede corregir ese paso y volver a aplicar. Los planes desactualizados se rechazan si la escena o el borrador cambiaron.
+• Referencias a personajes por acciones guardadas: el que entra, el que habla, el que baila y el que salta. Usa la última acción correspondiente y pide aclaración cuando no hay una identificación única; no inventa acciones futuras.
+• Equivalencias enseñadas por vos: hasta treinta y dos frases exactas que se convierten en órdenes de escena. No se ejecutan al guardarlas.
+• Registro de hasta cincuenta correcciones aportadas por el usuario, separado de hechos comprobados y de los pesos del modelo.
+• Veinticuatro lecciones introductorias originales: programación, ciencia básica, animación, dibujo, guion, matemática e IA. Un nuevo selector neuronal propio elige el tema con umbral de confianza y comprobaciones de alcance. Las explicaciones y ejemplos son textos preparados, no generación universal.
+• Repreguntas locales: dame un ejemplo / explicalo paso a paso / por qué. Un único ejemplo está preparado por lección; otro ejemplo avisa ese límite.
+• Estilo local breve, normal o detallado, persistente.
+• Panel Proyecto → Núcleo móvil.
+
+PROBÁ SIN INTERNET
+que es un algoritmo
+dame un ejemplo
+explicalo paso a paso
+modo detallado
+que es una variable
+estado del nucleo
+
+PLAN CON PERSONAJES Y DIÁLOGO
+planea: crea a Tony una banana detective; agrega un pepino llamado Milo; Tony baila; Milo entra por la derecha; Tony dice "Hola; vamos."
+aplica el plan
+no, el que entra tiene que ser azul
+que entendiste
+
+También puede aplicar directamente: primero pone a Tony rojo despues continua con Milo saluda
+Para preparar sin ejecutar: planea: …
+Para revisar: ver mi plan
+Para reparar: corrige paso 2: continua con Milo saluda
+Para ejecutar: aplica el plan
+Para descartar: descarta el plan
+Las operaciones de biblioteca, recuerdos, referencias, exportación o cambio de toma se realizan por separado de estos planes de escena.
+
+FRASES Y CORRECCIONES LOCALES
+cuando diga "fiesta verde" quiero decir "pone a Tony verde"
+fiesta verde
+mis frases
+olvida la frase fiesta verde
+eso no responde mi pregunta
+reformula mi pregunta: que es una variable
+anota esta correccion: la pregunta era sobre otro personaje
+mis correcciones
+borra mis correcciones
+
+Aprender una frase aquí es guardar una equivalencia exacta que vos elegiste. Anotar una corrección no cambia el modelo ni convierte el aporte en una verdad comprobada. El registro del último pedido permite explicar operaciones aplicadas; no representa pensamiento o razonamiento general inventado. Borrar la conversación limpia ese contexto de trabajo, conservando el proyecto, planes y reglas enseñadas.
+
+MODELOS Y ALCANCE REAL
+Chat3.4 sigue siendo el generador experimental anterior. Pixel2.3 y las voces sintéticas propias se conservan. El modelo nuevo MobileCore1 es un selector de temas de 1024 entradas y 64 unidades ocultas: veinticuatro temas más una salida desconocida. No es un nuevo LLM general. Se entrenó desde inicialización aleatoria con 2610 ejemplos propios y 80 de evaluación separados.
+Evaluación del selector: 75/80 correctos (93,75%); confianza ≥0,85 en63/80, correctos63/63. Con los filtros reales de pregunta y palabras de tema, seleccionó59/80 y acertó59/59. Son resultados sobre un pequeño conjunto sintético propio, no pruebas de comprensión general, exactitud factual universal ni rendimiento comparable con ChatGPT.
+Las lecciones son introductorias. Preguntas fuera de su alcance continúan por las herramientas anteriores o la investigación web. La aritmética reconocida conserva su calculadora. Las preferencias de estilo se aplican a las lecciones locales, no reescriben fuentes web ni justifican omitir límites importantes.
+
+VALIDACIÓN
+Stage40CoreCheck y los diecisiete controles previos pasaron. Incluyen inferencia Python/Java (error máximo1,91e-6), filtros de evaluación, contexto de lecciones, ejemplos, estilo, planes con comillas, orden y dos personajes, fallo sin cambios parciales, reparación por paso, bloqueo de planes viejos, referencia al personaje entrante, explicación de cambios, frases y correcciones.
+Android API23: carga del nuevo modelo desde el APK y respuesta local; repreguntas; plan de cinco pasos con diálogo; corrección del entrante; rechazo y reparación atómicos; frase enseñada; registro y estilo. Sin PC ni modelo externo para esa inferencia.
+Prueba de interfaz de producción: se comprueba por separado en los registros incluidos. El APK final no contiene la instrumentación.
+Después del test nativo se agregaron un guardado de métricas en la ficha, prioridad de calculadora y un texto de alcance más breve. Los controles del host se repitieron. No se afirma que una prueba sintética mida todos los usos reales.
+
+INSTALACIÓN
+Instalar el APK sobre0.38: misma firma, conservación del proyecto. Las nuevas preferencias tienen su propio espacio. El ZIP es privado e incluye las claves de firma: no publicar. Las instrucciones de Internet y creación anteriores están en GUIA-INTERNET-0.38.txt y GUIA-CREACION-0.37.txt.

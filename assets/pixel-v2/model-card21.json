@@ -1,0 +1,55 @@
+{
+  "name": "Banana Pixel 2.1",
+  "component": "personajes",
+  "system_release": "0.32",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 145156,
+  "external_weights": false,
+  "training_images": 3879,
+  "heldout_images": 9,
+  "unique_training_conditions": 3879,
+  "unique_heldout_conditions": 9,
+  "duplicate_note": "Unique condition includes view: front, profile, back. Synthetic evaluation only.",
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9870511957266694,
+  "heldout_foreground_RGB_MAE": 0.006633310294192698,
+  "views": [
+    "front",
+    "profile",
+    "back"
+  ],
+  "size": 128,
+  "hidden": 256,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot",
+    "perro",
+    "oso",
+    "zorro",
+    "persona"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown",
+    "coat",
+    "hat_coat",
+    "glasses"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Own neural backgrounds are retained; limb animation uses programmed 2D cutout rigs. Clothing/expression edits use controlled regional compositing."
+}

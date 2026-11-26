@@ -1,0 +1,8 @@
+package com.bananalab.lite;
+import org.json.*;
+public final class Stage65FontCheck{
+ static void check(boolean b,String m){if(!b)throw new AssertionError(m);}
+ public static void main(String[] args)throws Exception{for(String q:new String[]{"cambia todos los textos a la fuente que vos elijas","cambiame la tipografia de toda la app por la que quieras","quiero que cambies la fuente de todos los textos a tu gusto"}){NaturalCoding.Plan p=NaturalCoding.parse(q,"");check(p.kind.equals("settings"),q+" -> "+p.kind);AppJavaChat.Plan settings=AppJavaChat.plan(p.command,new AppJavaWorkspace.Settings());check(settings.handled&&settings.settings.font==4,"chosen font "+q);check(AppJavaWorkspace.Settings.read(settings.settings.json()).font==4,"persisted font");check(AppJavaWorkspace.sources(settings.settings).get("BananaInterface.java").contains("fontFamily"),"real compiled getter");ChatEdits.validate(new JSONObject().put("settings",settings.settings.json()).put("replies",JSONObject.NULL));}
+ check(NaturalCoding.parse("cambia la fuente de la app a monospace","").kind.equals("settings"),"named font");check(!AppJavaWorkspace.sources(new AppJavaWorkspace.Settings()).get("BananaInterface.java").contains("fontFamily"),"legacy module unchanged");check(NaturalCoding.parse("no cambies la fuente de la app a serif","").kind.isEmpty(),"negation");try{NaturalCoding.parse("cambia la fuente de la app a serif y borra todas mis escenas","");throw new AssertionError("partial font");}catch(IllegalArgumentException good){}
+ System.out.println("PASS Stage65 user typography request, choice delegation, named font, canonical source/backup, legacy behavior and complete-request rejection");}
+}

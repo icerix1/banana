@@ -1,0 +1,5 @@
+NATIVE_NEW_FUNCTION_COMPILED_AND_TESTED_IN_SEPARATE_PROCESS_OK
+NATIVE_LIVE_FUNCTION_AND_PERSISTED_RELOAD_OK
+NATIVE_FREE_EXPRESSION_AND_VERSION_RECOVERY_OK
+PASS STAGE46 generated function compilation, separate-process257-point contract, activation, persistent reload, API rejection, free expressions, undo, stale guard and scene preservation.
+

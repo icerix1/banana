@@ -1,0 +1,9 @@
+{
+  "name": "Banana chat 1",
+  "external_weights": false,
+  "parameters": 12716,
+  "training_examples": 3800,
+  "heldout_examples": 2200,
+  "heldout_accuracy_synthetic_only": 1.0,
+  "limitations": "Synthetic templates, not a general LLM. Neural intent selection plus sourced retrieval and programmed responses."
+}

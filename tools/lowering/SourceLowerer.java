@@ -1,0 +1,31 @@
+package com.bananalab.tools;
+import java.io.*;import java.util.*;
+import org.eclipse.jdt.internal.compiler.*;
+import org.eclipse.jdt.internal.compiler.ast.*;
+import org.eclipse.jdt.internal.compiler.lookup.*;
+import org.eclipse.jdt.internal.compiler.impl.*;
+import org.eclipse.jdt.internal.compiler.batch.*;
+import org.eclipse.jdt.internal.compiler.env.*;
+import org.eclipse.jdt.internal.compiler.problem.*;
+/** Own binding-aware Java8 lambda source lowering. Uses the bundled Eclipse compiler parser. */
+public final class SourceLowerer{
+ static final class Edit{int from,to;String text;Edit(int a,int b,String s){from=a;to=b;text=s;}}
+ static String text(char[] source,int from,int to,List<Edit> edits){StringBuilder s=new StringBuilder(new String(source,from,to-from));List<Edit> sorted=new ArrayList<Edit>();for(Edit e:edits)if(e.from>=from&&e.to<=to)sorted.add(e);Collections.sort(sorted,new Comparator<Edit>(){public int compare(Edit a,Edit b){return b.from-a.from;}});for(Edit e:sorted)s.replace(e.from-from,e.to-from,e.text);return s.toString();}
+ static String type(TypeBinding binding){if(binding==null)throw new IllegalArgumentException("Missing resolved lambda type.");return new String(binding.readableName()).replace('$','.');}
+ public static int lower(String api,String input,String output)throws Exception{
+  File[] sourceFiles=new File(input).listFiles(new FilenameFilter(){public boolean accept(File d,String n){return n.endsWith(".java");}});if(sourceFiles==null)throw new IOException("Missing sources.");Arrays.sort(sourceFiles);ICompilationUnit[] units=new ICompilationUnit[sourceFiles.length];String[] paths=new String[sourceFiles.length];for(int i=0;i<sourceFiles.length;i++){paths[i]=sourceFiles[i].getAbsolutePath();units[i]=new CompilationUnit(read(sourceFiles[i]).toCharArray(),paths[i],"UTF-8");}
+  final File destination=new File(output);destination.mkdirs();final List<String> errors=new ArrayList<String>();final int[] count={0};Map<String,String> options=new HashMap<String,String>();options.put(CompilerOptions.OPTION_Source,CompilerOptions.VERSION_1_8);options.put(CompilerOptions.OPTION_Compliance,CompilerOptions.VERSION_1_8);options.put(CompilerOptions.OPTION_TargetPlatform,CompilerOptions.VERSION_1_8);options.put(CompilerOptions.OPTION_Encoding,"UTF-8");options.put(CompilerOptions.OPTION_AnnotationBasedNullAnalysis,CompilerOptions.DISABLED);
+  FileSystem system=new FileSystem(new String[]{api},paths,"UTF-8");
+  org.eclipse.jdt.internal.compiler.Compiler compiler=new org.eclipse.jdt.internal.compiler.Compiler(system,DefaultErrorHandlingPolicies.proceedWithAllProblems(),new CompilerOptions(options),new ICompilerRequestor(){public void acceptResult(CompilationResult result){if(result.hasErrors())for(org.eclipse.jdt.core.compiler.CategorizedProblem problem:result.getErrors())errors.add(problem.getMessage());}},new DefaultProblemFactory(Locale.ROOT)){
+   @Override public void process(final CompilationUnitDeclaration unit,int index){super.process(unit,index);final char[] source=unit.compilationResult.compilationUnit.getContents();final List<Edit> edits=new ArrayList<Edit>();unit.traverse(new ASTVisitor(){int lambdaDepth=0;
+    @Override public boolean visit(LambdaExpression lambda,BlockScope scope){lambdaDepth++;return true;}
+    @Override public boolean visit(MessageSend node,BlockScope scope){if(lambdaDepth>0&&node.receiver instanceof ThisReference&&((ThisReference)node.receiver).isImplicitThis()&&node.binding!=null&&!scope.enclosingSourceType().isAnonymousType()){String owner=node.binding.isStatic()?type(node.binding.declaringClass.erasure()):new String(scope.enclosingSourceType().sourceName())+".this";edits.add(new Edit(node.sourceStart,node.sourceStart,owner+"."));}return true;}
+    @Override public boolean visit(ThisReference node,BlockScope scope){if(lambdaDepth>0&&!node.isImplicitThis()&&!scope.enclosingSourceType().isAnonymousType())edits.add(new Edit(node.sourceStart,node.sourceEnd+1,new String(scope.enclosingSourceType().sourceName())+".this"));return true;}
+    @Override public void endVisit(LambdaExpression lambda,BlockScope scope){try{MethodBinding sam=lambda.descriptor;if(sam==null)throw new IllegalStateException("Unresolved lambda.");String iface=type(lambda.resolvedType).replace("? super ","").replace("? extends ","");StringBuilder b=new StringBuilder("new "+iface+"(){public "+type(sam.returnType)+" "+new String(sam.selector)+"(");Argument[] args=lambda.arguments;for(int i=0;i<sam.parameters.length;i++){if(i>0)b.append(',');b.append(type(sam.parameters[i])).append(' ').append(args[i].name);}b.append(')');if(sam.thrownExceptions!=null&&sam.thrownExceptions.length>0){b.append(" throws ");for(int i=0;i<sam.thrownExceptions.length;i++){if(i>0)b.append(',');b.append(type(sam.thrownExceptions[i]));}}String body=text(source,lambda.body.sourceStart,lambda.body.sourceEnd+1,edits);if(lambda.body instanceof Block)b.append(body);else b.append('{').append(sam.returnType==TypeBinding.VOID?"":"return ").append(body).append(";}");b.append('}');for(Iterator<Edit> i=edits.iterator();i.hasNext();){Edit e=i.next();if(e.from>=lambda.sourceStart&&e.to<=lambda.sourceEnd+1)i.remove();}edits.add(new Edit(lambda.sourceStart,lambda.sourceEnd+1,b.toString()));count[0]++;}catch(Exception e){errors.add(e.toString());}finally{lambdaDepth--;}}
+   },unit.scope);try{String result=text(source,0,source.length,edits);write(new File(destination,new File(new String(unit.getFileName())).getName()),result);}catch(Exception e){errors.add(e.toString());}}
+  };compiler.compile(units);system.cleanup();if(!errors.isEmpty())throw new IOException("Lambda lowering failed: "+errors.subList(0,Math.min(15,errors.size())));return count[0];
+ }
+ static String read(File file)throws Exception{ByteArrayOutputStream b=new ByteArrayOutputStream();try(InputStream in=new FileInputStream(file)){byte[] a=new byte[8192];int n;while((n=in.read(a))!=-1)b.write(a,0,n);}return b.toString("UTF-8");}
+ static void write(File file,String text)throws Exception{try(OutputStream out=new FileOutputStream(file)){out.write(text.getBytes("UTF-8"));}}
+ public static void main(String[] args)throws Exception{System.out.println("Lowered lambdas: "+lower(args[0],args[1],args[2]));}
+}

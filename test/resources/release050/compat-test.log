@@ -1,0 +1,1 @@
+PASS signing compatibility:512 base64 round trips, rejection cases, sort/stream/overflow and actual v1/v2/v3 APK signature using adapted upstream engine

@@ -1,0 +1,492 @@
+BANANA0.66 — APRENDIZAJE CONTINUO Y EJERCICIOS DE LAS FUENTES
+
+Al abrir Banana, el modo continuo intenta trabajar con las lecturas guardadas sin que tengas que pedir cada tanda. Las pausas del entrenamiento de lecturas se respetan. El chat deja de esperar al entrenamiento al incorporar una fuente: guarda el documento, lo encola y puede seguir respondiendo. No necesita PC, API ni modelos externos. El límite web sigue en64MiB; esta fase no lo amplía a128MiB.
+
+CONTROL SIN COMANDOS
+Proyecto → Aprendizaje continuo muestra el estado, los contadores y los ejercicios recientes. Tiene Pausar/Reanudar. La notificación silenciosa del servicio también permite pausarlo. Android13 o superior puede pedir permiso para mostrar notificaciones; si lo denegás, el panel y el chat conservan sus controles y el sistema puede mostrar el servicio sólo en su administrador de tareas.
+
+También podés decir «Aprendé todo el tiempo», «Activá el aprendizaje continuo», «Pausá el aprendizaje continuo», «Estado del aprendizaje continuo» o «Mostrame tus ejercicios». Son ejemplos de frases admitidas, no una comprensión universal de cualquier formulación.
+
+QUÉ HACE
+Procesa microtandas de gradientes en el Transformer propio, con una época y ejemplos breves de fuente, diálogo y retención. Comprueba pérdida en una formulación distinta o continuación separada, controles de conversación/retención, identidad de la fuente y reproducción del checkpoint guardado. Sólo publica si pasa. Una menor pérdida local no equivale a comprender el tema ni a responder libremente bien.
+
+Crea ejercicios de definición, completar e identificar conceptos a partir de frases del documento; cuando no hay una definición corta, puede crear un ejercicio de completar una frase breve. Conserva el ID y SHA de la revisión, el fragmento de evidencia y la respuesta literal de la fuente. Antes de entrenar intenta responder con sus propios pesos, con máximo12 tokens, y compara el intento con la respuesta normalizada. Ese intento puede ser incorrecto o incoherente: se muestra como tal y nunca sustituye la respuesta de entrenamiento tomada del texto. No es una conversación generativa infinita usada como verdad ni verifica externamente los datos del documento. Las palabras nuevas siguen representándose con el tokenizador existente.
+
+Los bloques posteriores del fragmento continúan por ventanas de texto; no se repite sólo la definición inicial. Al agotar la cola, espera al menos15min para otro recorrido con variantes de ejercicios, con un máximo de tres recorridos por día UTC. Las fuentes nuevas o revisiones nuevas pueden añadirse aunque ya se hayan completado repasos. Sin material pendiente o útil, espera: no inventa conocimiento para mantener CPU ocupada. Se guarda un historial acotado a12 ejercicios recientes y el panel muestra los últimos tres.
+
+SEGUNDO PLANO EN ANDROID
+Usa un servicio visible de tipo specialUse para esta tarea prolongada iniciada al abrir la app, con notificación, pausa y prioridad de CPU baja. No reproduce audio para permanecer activo. Un bloqueo de CPU temporal se toma sólo durante cada tanda y se libera al terminar; no se mantiene durante esperas.
+
+Puede trabajar sin cargador si la batería tiene al menos25%, no está en ahorro de energía y los demás controles lo permiten. Mientras el chat/editor/exportador trabaja, el entrenamiento cede. Se pausa por falta de memoria o calor elevado, con las protecciones de0.65; las comprobaciones son periódicas y entre operaciones, no una garantía de temperatura exacta de CPU. Cada microtanda dispone de un plazo blando de360s comprobado entre operaciones y tokens de evaluación. Si se corta, conserva el checkpoint anterior y repite el bloque incompleto al continuar.
+
+Un trabajo periódico de Android intenta reanudar cuando el servicio no está disponible. El reinicio del dispositivo o una actualización sólo vuelven a programar esa tarea; no fuerzan un servicio desde el arranque. Android, Doze y el fabricante deciden cuándo permitirla y pueden retrasarla, detener el proceso o impedir reanudar tras forzar su cierre hasta abrir la app. No se garantiza funcionamiento24/7 ni se eluden esas restricciones. Si fallan recursos o una tanda, espera con reintentos espaciados en vez de repetir inmediatamente a máxima carga.
+
+PERSISTENCIA
+Las actualizaciones compatibles conservan documentos, checkpoints, cursores, estado de pausa e historial de ejercicios privados. La APK reconstruida incorpora pesos activos, biblioteca, progreso y ajustes/historial del modo continuo. Con datos vacíos restaura lo incluido; los datos privados existentes tienen prioridad. El ZIP de conocimiento sigue respaldando sólo documentos. Borrar la biblioteca también limpia cola e historial de ejercicios, pero no desentrena pesos ya publicados. Se indica si falla parte de esa limpieza.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.66.md y los registros incluidos en las fuentes. Las pruebas locales no demuestran mejora general de conversación; la tablet física Android16 y las restricciones específicas de su fabricante requieren comprobación en ese dispositivo. La extracción HTTPS pública sigue sin declararse verificada en este entorno.
+
+--- Funciones anteriores; prevalecen los cambios0.66 descritos arriba ---
+
+BANANA0.65 — LECTURAS QUE TAMBIÉN ENTRENAN PESOS PROPIOS
+
+Pasá una página pública al chat como antes. Se guarda el texto útil completo admitido y se encola por su identificador y SHA-256. Por defecto intenta una tanda pequeña en Android al guardar una lectura o una corrección concreta. No requiere Qwen, modelos externos ni una API. Los documentos se siguen consultando al conversar mediante el índice de fuentes; el modelo activo se recarga cuando cambian sus pesos.
+
+ENTRENAMIENTO REAL, CON ALCANCE LIMITADO
+Se ajustan mediante gradientes las capas del Transformer propio: embeddings, atención, redes internas y salida. Usa ventanas del texto y, cuando hay definiciones cortas completas, pares de pregunta/respuesta. Se añaden diálogos propios y ejemplos de retención. La validación usa otras formulaciones de las mismas definiciones y continuaciones de texto separadas; no es un examen independiente de comprensión. Sólo se activa un candidato si disminuye su pérdida local, conserva controles de diálogo/retención, contiene pesos válidos y reproduce el resultado después de guardarse y cargarse.
+
+No aprende toda una página en una tanda. Queda un cursor persistente por fuente/revisión para continuar por bloques. Una tanda rechazada no se activa; el bloque se considera recorrido, sin prometer que se aprendió. Leer datos falsos puede introducir errores: el entrenamiento no verifica la verdad de una fuente ni concede permiso para ejecutar sus instrucciones. El vocabulario BPE sigue siendo el mismo; los bytes permiten representar palabras nuevas, pero no se expande automáticamente el tokenizador.
+
+Podés pedir normalmente:
+• «Mejora tus pesos conversacionales»: recorre una tanda de lecturas; si no quedan, usa ejemplos de diálogo propios.
+• «Continúa entrenando con mis lecturas»: hasta tres tandas pequeñas.
+• «Qué aprendiste en tus pesos»: muestra el informe técnico y la cola.
+• «Pausa el entrenamiento de lecturas» o «Activa el entrenamiento de lecturas».
+• «Deshace el aprendizaje de las lecturas»: recupera el checkpoint anterior disponible y pausa las tandas automáticas. No borra documentos ni deshace todo el historial.
+
+Una tanda automática dispone de hasta180s; tres,360s. Se pausa antes de nuevos pasos si falta memoria, Android informa calor elevado o la batería informa43°C o más. No se omiten las protecciones térmicas. No hay entrenamiento continuo en segundo plano: avanza al incorporar una fuente y al pedírselo. Puede tardar y no garantiza conversación fluida ni inteligencia general. Al borrar documentos se limpia la cola, pero no se desentrenan los pesos.
+
+PÁGINAS DE HASTA64MiB
+Límite de descarga:64MiB; también se limita a64MiB la salida descomprimida. Se procesa HTML/texto por streaming en disco, con tiempo total240s, sin JavaScript ni sesiones privadas. El texto útil resultante debe seguir cabiendo en16millones de unidades UTF-16 y64MiB UTF-8 por documento. El límite de descarga no significa64millones de caracteres útiles. Si se excede, falla sin sustituir una fuente válida ni guardar sólo el principio. Hace falta espacio adicional para temporales e índice.
+
+CONSERVACIÓN
+Las actualizaciones compatibles mantienen documentos, pesos y progreso privados. Tu APK reconstruida incorpora los pesos activos, la biblioteca completa y cursores; con datos vacíos puede restaurarlos. La APK de distribución no contiene lo aprendido en tu dispositivo. El ZIP de conocimiento sólo respalda documentos, no pesos; guardá también tu APK reconstruida para conservar el modelo incorporado. Desinstalar sin respaldo puede perder datos. Un fallo del entrenamiento deja el documento guardado.
+
+--- Detalles de biblioteca y funciones anteriores; prevalecen los cambios0.65 ---
+
+BANANA0.64 — DOCUMENTOS COMPLETOS E ÍNDICE EN DISCO
+
+QUÉ SIGNIFICA MEMORIA
+Se conserva el texto completo de los documentos admitidos en archivos UTF-8 privados. SQLite/FTS4 guarda metadatos y fragmentos para localizar información sin abrir toda la biblioteca en RAM. Al responder, se seleccionan fragmentos y se conserva su fuente; no se envía el libro completo al Transformer; el entrenamiento nuevo se describe arriba. Guardar más texto amplía la información consultable, no garantiza mayor razonamiento general.
+
+CAPACIDAD NUEVA
+• Hasta16000000 de caracteres UTF-16 por documento (aproximadamente16millones; los emojis pueden ocupar dos unidades).
+• Hasta64MiB de texto UTF-8 por documento y1024 documentos.
+• Presupuesto total de512MiB de texto UTF-8 conservado. El índice, los respaldos temporales y la APK ocupan espacio adicional: también debe haber espacio libre para procesarlos.
+• Si se excede un límite, se rechaza la importación y se conserva la versión anterior; no se guarda sólo el principio ni se borran otras fuentes para hacer lugar.
+
+No es ilimitado. Se probaron documentos de más de un millón de caracteres; no se midió la biblioteca llena con512MiB ni todos los tamaños máximos en una tablet física. La importación inicial y la reconstrucción del índice pueden tardar. Para páginas web, se amplía el límite de descarga a64MiB de HTML/texto sin sesión ni JavaScript; ahora todo el texto útil admitido puede ir al almacén nuevo, sin el anterior recorte de262144 caracteres.
+
+CÓMO INGRESAR TEXTOS GRANDES
+Podés decir «Aprendé de un archivo», «Leé un archivo» o «Importá un texto». Se abre el selector de Android para elegir un TXT o Markdown codificado en UTF-8. Se copia y procesa por partes, sin poner el libro completo en el campo de chat ni conservar permiso permanente sobre el archivo original. No extrae contenido de PDF, Word o archivos binarios. El texto guardado conserva Unicode y saltos de línea; la búsqueda mantiene las limitaciones lingüísticas de normalización del chat.
+
+El texto pegado directamente en el chat mantiene su límite práctico anterior para no sobrecargar EditText e historial. Para millones de caracteres, usá el archivo. También podés pasar el enlace de una página pública; su HTML se extrae por streaming a archivos temporales, sin una cadena o DOM del tamaño de toda la página.
+
+MIGRACIÓN Y VERSIONES
+Al actualizar, se migra el cuaderno de preferencias antiguo a archivos/SQLite. Se retira la copia antigua sólo después de guardar e indexar sus documentos. Un fallo deja la copia previa para reintentar; los archivos son inmutables y el índice se actualiza con transacciones. Se recupera lo que estaba guardado: si una versión anterior ya había recortado un artículo, su parte ausente requiere volver a cargar el original. Las actualizaciones compatibles conservan estos datos privados; desinstalar o borrar los datos de Android puede perderlos.
+
+RESPALDO COMPLETO
+«Respaldá mi conocimiento», «Exportá mis conocimientos» o «Guardá todo lo que aprendiste» prepara un ZIP y abre el selector para guardarlo donde elijas. Incluye el texto completo y metadatos/fuentes con huellas SHA-256. Es un respaldo del conocimiento, no de todos los proyectos, modelos y ajustes de la app.
+
+«Restaurá mis conocimientos», «Importá mis conocimientos» o «Recuperá mi memoria» permite elegir ese ZIP. Se comprueba el lote antes de activarlo; una entrada incompleta o una huella incorrecta no importa una parte. La restauración añade documentos que faltan y conserva la versión privada si tiene el mismo identificador. Una biblioteca borrada explícitamente no se restaura automáticamente desde la APK; una restauración manual sí puede recuperarla.
+
+El antiguo JSON de «Exportá mi código» sólo admite un cuaderno que siga dentro del formato anterior. Si el conocimiento ya es demasiado grande, falla con una explicación y pide el ZIP de conocimiento; no genera un respaldo que aparente incluirlo todo. Para bibliotecas grandes, guardá el conocimiento con la nueva opción.
+
+INCORPORACIÓN A LA APK
+Cuando reconstruís tu propia APK, el código/ajustes quedan en su manifiesto portable y la biblioteca completa va como un archivo independiente copiado por partes. Se vuelve a comprobar que no haya cambiado durante la reconstrucción. En una actualización se conserva la biblioteca privada existente; con datos vacíos se reconstruyen archivos e índice desde lo incluido en esa APK. La APK reconstruida y los ZIP contienen el texto completo admitido, además de sus fuentes. La APK de distribución que recibís aquí no contiene lo aprendido en tu dispositivo.
+
+CONSULTAS
+Preguntá normalmente sobre los términos o hechos del texto. La consulta utiliza un conjunto acotado de fragmentos de hasta12 documentos candidatos, con contexto vecino. Puede no encontrar un dato si no hay coincidencia suficiente o si la pregunta necesita inferencias. «Qué aprendiste» muestra estadísticas y títulos; «Qué palabras aprendiste» muestra una muestra de definiciones del índice, no un listado completo de toda la biblioteca. «Resumilo» conserva su extracción de fragmentos iniciales de la última fuente; no es una síntesis generativa de un libro entero.
+
+--- Funciones conservadas de0.63; los límites y comportamientos nuevos de arriba prevalecen ---
+
+BANANA0.63 — CORRECCIONES DEL CHAT, RESPUESTAS Y MÁS CAPACIDAD
+
+CORREGIR SIN ABRIR EL EDITOR
+«No me entendiste», «Eso está mal», «Te estoy corrigiendo» y «No abras el editor del video» se atienden antes de las rutas de escenas/herramientas. Se pide el dato o la interpretación que faltó, sin abrir el editor ni cambiar la escena. «No, [dato correcto]» o «Te corrijo: [dato]», cuando se reconoce como afirmación, lo guardan como aporte del usuario en el cuaderno. Se conserva la pregunta anterior para intentar responderla con lo corregido; no se convierte una queja vaga en entrenamiento ni se presenta una corrección como verdad verificada.
+
+Las correcciones identificadas del usuario tienen prioridad en respuestas posteriores sobre ese contenido. Las fuentes previas se conservan y pueden aparecer como otra versión. Las correcciones visuales explícitas ya admitidas, como «no, el que entra tiene que ser azul», siguen usando su ruta de escena; las correcciones de pasos/código conservan sus rutas. Un «no gracias» sigue siendo conversación social. Son patrones y contexto acotados, no comprensión infalible de todas las formas de corregir.
+
+RESPONDER DE OTRA FORMA
+«No me respondas tan largo», «Respondeme más corto» o «Respuestas más breves» cambian a breve. «Explicame con más detalle», «Respondeme más detallado» o «Desarrollá más» cambian a detallado. Se aplican a las respuestas del conocimiento guardado y las lecciones locales: breve usa el primer fragmento con su fuente y lo puede abreviar; detallado puede añadir hasta dos fragmentos relacionados. No se reescriben libremente los datos ni se garantiza cambiar el estilo del generador neuronal experimental. La preferencia queda en datos privados y también en los nuevos respaldos; una preferencia privada existente tiene prioridad al restaurar.
+
+CAPACIDAD
+• Antes:12000 caracteres por fuente. Ahora:262144, más de21 veces esa cantidad.
+• Hasta128 fuentes, con presupuesto total de4000000 caracteres JSON serializados. No son128 fuentes completas si antes se alcanza el presupuesto total.
+• Descarga de página: hasta8MiB; retiene hasta262144 caracteres y avisa si recortó.
+• Texto pegado para aprender: hasta262144 caracteres de contenido; el historial sólo muestra una vista de8000 caracteres, pero el contenido admitido se conserva en el cuaderno.
+• Mensajes de conversación: hasta8000 caracteres de entrada. Eso no aumenta el contexto ni la comprensión del Transformer.
+• Respaldo/importación/incorporación a la APK: hasta32MiB serializados, con el mismo límite al leerlos. La exportación usa JSON compacto para coincidir con su límite de importación.
+
+No se ofrece almacenamiento ilimitado: el cuaderno todavía usa datos privados y trabaja con JSON en memoria. Los límites protegen RAM, tiempos de respuesta y respaldos en Android. La búsqueda prefiltra documentos por términos antes de calcular frases y frecuencias, pero libros extensos o bibliotecas llenas todavía pueden tardar. No descarga en segundo plano ni consulta todo Internet para ampliarse sola. Borrar datos o desinstalar puede perder lo guardado; actualizar esta misma app conserva los datos compatibles.
+
+LO QUE MEJORA Y LO QUE NO
+Lo leído y las correcciones pueden cambiar las respuestas porque aportan contenido consultable y prioridad explícita. Esta etapa no cambia los pesos ni el tamaño del vocabulario neuronal, ni demuestra una mejora de razonamiento general. Se conserva el entrenamiento propio separado de versiones anteriores. Un salto general de comprensión requiere un modelo y un entrenamiento evaluados, no sólo guardar más páginas.
+
+--- Funciones conservadas de0.62; los límites y el comportamiento nuevos de arriba prevalecen ---
+
+BANANA0.62 — LOS ENLACES VAN AL LECTOR DIRECTO
+
+Se corrigió una ruta que podía interpretar «Qué dice esta página https://…», «Podés aprender de esta página…», «Mirá…» o «Te paso este link…» como una búsqueda general. Los enlaces explícitos ahora se reconocen por su dirección, independientemente de esas frases. No se consulta DuckDuckGo para leer ese enlace ni se manda el resto del mensaje al buscador.
+
+Acepta un enlace HTTP/HTTPS reconocible dentro de la frase o una dirección www, además de enlaces Markdown. www se convierte en HTTPS; los enlaces HTTP se reconocen pero el lector mantiene su requisito de HTTPS y explica el rechazo. Quita cierres de Markdown y puntuación sobrante, conservando los paréntesis que forman parte de la dirección. Si hay varios enlaces, no realiza una lectura parcial: pide uno por vez.
+
+Se conservan las rutas de código Java, bloques de código, reglas de respuestas y lecciones explícitas sobre una dirección: no visita automáticamente una URL que forma parte de esas instrucciones. «Aprendé que mi página es https://…» guarda ese aporte; para leerla, pegá el enlace o pedí que lea la página.
+
+Cuando falla una lectura directa, la respuesta identifica esa ruta y distingue resolución DNS, conexión, tiempo de espera, TLS/certificado, rechazo HTTP401/403, límite429, error404 o HTML sin texto útil. No presenta un error del buscador como si hubiera fallado la página que pasaste. No desactiva certificados, inicia sesión ni sortea restricciones del sitio. Que una página sea visible en Chrome no garantiza que un lector sin sesión ni JavaScript reciba el mismo contenido.
+
+La lectura HTML conserva selección de main/article y limpieza de scripts. Se aceptan tipos MIME HTML/texto sin depender de sus mayúsculas; el texto plano conserva notaciones como <Tipo>. El contenido que se pudo leer entra en el mismo cuaderno y vocabulario de0.61. No borra conocimientos previos y la APK se instala como actualización compatible.
+
+Para investigar un caso que siga fallando hace falta el enlace exacto y el mensaje nuevo del lector. Las pruebas de red de este entorno tienen una limitación DNS; su resultado real y el de las pruebas con fuente controlada se distinguen en VALIDACION-0.62.md.
+
+--- Funciones conservadas de0.61 ---
+
+BANANA0.61 — APRENDER CONTENIDO Y VOCABULARIO DE LAS PÁGINAS
+
+Al leer y guardar una página pública, su texto alimenta automáticamente un índice local de consulta. No necesitás dar una orden adicional de entrenamiento: al preguntarle, puede recuperar datos y palabras nuevos procedentes del texto. Funciona también con los contenidos que ya estaban en el cuaderno0.59/0.60 y con textos que le enseñes.
+
+Ejemplo: pegá el enlace de un artículo que defina un término. Después preguntá «Qué es [término]», «Qué significa [término]» o «Para qué sirve [término]». Las respuestas extraen frases del contenido guardado y muestran la fuente y fecha; no inventan una explicación libre ni verifican la página. Para ver lo incorporado podés decir «Qué palabras aprendiste» o «Mostrame tu vocabulario».
+
+Se detectan hasta256 definiciones explícitas del tipo «X es…», «X significa…» o «X: …», con reglas orientadas al español. Además se indexan los términos del resto del texto. Para responder se ponderan las palabras poco frecuentes y la coincidencia con el cuerpo de las frases. Un título relacionado por sí solo no alcanza para atribuirle una respuesta a una página. Las preguntas sobre utilidad priorizan frases de uso cuando existen. Si conoce el término definido pero no encuentra el dato solicitado, lo dice; puede pedir otra fuente.
+
+Si dos fuentes contienen versiones distintas, conserva las dos y cita hasta dos fuentes; no decide automáticamente cuál es verdadera. Las palabras aprendidas pueden aparecer en respuestas porque se recuperan del texto original. Este vocabulario de consulta NO cambia el tamaño del vocabulario neuronal, los tokens ni los pesos del Transformer. No implica comprensión universal, traducción automática, inferencias complejas ni que aprenda a programar a partir de cualquier tutorial.
+
+El índice es derivado del cuaderno: al restaurar las fuentes puede reconstruirlo sin descargar la página otra vez. Borrar el cuaderno elimina también este conocimiento derivado. No duplica las páginas dentro de ejemplos de entrenamiento. Las instrucciones contenidas en las fuentes permanecen como texto y no se ejecutan. La herramienta antigua Leer página también alimenta el cuaderno nuevo, además de intentar conservar su memoria anterior.
+
+Los límites de lectura siguen siendo los de0.59: páginas HTTPS públicas HTML/texto, sin inicio de sesión ni JavaScript; hasta1MB recibido y12000 caracteres retenidos por fuente,32 fuentes y160000 caracteres serializados en total. Esta fase no promete eliminar las limitaciones de red del entorno de pruebas; el resultado de la prueba de descarga real queda documentado en VALIDACION-0.61.md.
+
+--- Funciones conservadas de0.60 ---
+
+BANANA0.60 — PEDIDOS INCOMPLETOS Y CONTINUIDAD DEL PROGRAMADOR
+
+Ahora puede completar ciertos ajustes de interfaz en una conversación corta:
+Vos: «Cambiá el color del botón».
+Banana: pregunta qué botón.
+Vos: «Enviar».
+Banana: pregunta el color.
+Vos: «Rojo».
+Banana: prepara, compila y activa el ajuste mediante el editor existente.
+
+También: «Cambiá la fuente de la app» → pregunta la familia → «Elegí vos»; «Cambiá el tema de la app» → «Azul». Antes de completar los datos no cambia la interfaz. «Cancelalo», «Dejalo» o «No importa» descartan la pregunta pendiente.
+
+Los nombres cortos admitidos como respuesta incluyen Enviar, Herramientas, Proyectos, Crear video, Guardar, Generar, Reproducir y Cerrar. Para otro nombre se puede responder «el botón Nombre». El ajuste por nombre sólo se verá cuando exista un botón con ese texto; no crea botones nuevos.
+
+Entiende también «Quiero que el botón Enviar sea rojo», «Cambiá el tamaño de la letra a 20 puntos» y «Poné la letra del chat en 18». El tamaño se aplica al texto del chat, no a los textos de videos o de Android.
+
+La pregunta pendiente vence a los diez minutos, se invalida si cambia la revisión de interfaz y se descarta al comenzar otro pedido o reiniciar la conversación. No forma parte de respaldos: es contexto transitorio. No interpreta una frase libre cualquiera como nombre de botón y no ejecuta una parte de una respuesta compuesta. Si empezás otra tarea, después hay que volver a nombrar el ajuste.
+
+Esto amplía rutas concretas de lenguaje y el seguimiento de preguntas, no la síntesis universal de Java ni la inteligencia general del modelo. Conserva los modelos propios y las funciones de aprendizaje0.59; esta etapa no agrega entrenamiento neuronal ni nuevas capacidades de acceso web. Sigue vigente la limitación de prueba de lectura HTTPS0.59: el emulador no resolvía dominios; no se declara resuelta en esta etapa.
+
+--- Funciones conservadas de0.59 ---
+
+BANANA0.59 — PEDIDOS DE FUENTE, CONOCIMIENTO Y ENLACES
+
+TU EJEMPLO DE FUENTE
+Podés escribir «cambia todos los textos a la fuente que vos elijas». Elige sans-serif-medium del sistema y prepara/compila un módulo de interfaz. También entiende variantes sobre tipografía y familias sans serif, serif, monospace u original. La respuesta dice qué fuente eligió. Se conserva el estilo de negrita/cursiva y el color de los botones.
+
+El estilo se aplica a TextView y derivados de las pantallas de Banana, a vistas añadidas después y a los diálogos de la app. Incluye mensajes, títulos, botones y entrada del chat. No cambia la tipografía de Android, teclados, avisos del sistema, imágenes o textos pintados dentro del video/canvas. No descarga fuentes externas; usa familias disponibles en Android. Para regresar: «cambia la fuente de la app a original».
+
+ENSEÑAR SIN COMANDOS ESPECIALES
+• «Aprende que el motor de mi proyecto se llama Nucleo Naranja».
+• «Aprende esto:» seguido del contenido que quieras guardar.
+• «Aprende sobre Java» o «Aprende Java»: consulta una fuente enciclopédica y guarda la información que pudo obtener, mostrando su procedencia.
+• «Qué aprendiste» o «Mostrame lo que aprendiste» muestra el cuaderno.
+Después podés preguntar normalmente sobre el contenido. Recupera fragmentos con fuente y fecha; no genera una respuesta que aparente verificar esa información. Si el dato no comparte suficientes términos con la pregunta, puede no encontrarlo. No es recuperación semántica universal ni resuelve automáticamente contradicciones entre fuentes.
+
+«Recordá que…» conserva el sistema anterior de recuerdos del proyecto. Las correcciones supervisadas y el entrenamiento completo del Transformer siguen separados. «Hacete más inteligente» explica las vías concretas y pide un tema/texto/enlace; no dice que haya cambiado pesos o código si no hizo nada. «Aprende esto» sin contenido pide que se lo pases, en lugar de guardar la palabra esto.
+
+LEER Y RETENER UN ENLACE
+Podés pegar un enlace HTTPS solo, o decir «leé este enlace y recordalo https://…». Lee una página pública por pedido. Acepta HTML y texto hasta1MB, con límite de redirecciones y tiempos de espera. Prioriza main/article cuando existen y quita menús, scripts y estilos cuando puede. No inicia sesión ni ejecuta JavaScript. Un muro de acceso, contenido dinámico, PDF o respuesta sin texto útil puede impedir la lectura; en ese caso informa el error y no afirma haberlo aprendido.
+
+Guarda hasta12000 caracteres de cada fuente y avisa si recortó el texto. El cuaderno admite32 fuentes y un presupuesto total de160000 caracteres serializados; rechaza el exceso sin borrar recuerdos silenciosamente. Conserva título, enlace final, fecha y si fue un aporte tuyo o contenido web. No toma páginas como verdades verificadas ni ejecuta instrucciones que aparezcan en ellas. «Resumilo» o «Qué dice ese enlace» devuelve fragmentos de la última fuente, no un resumen generativo completo.
+
+PERSISTENCIA
+El cuaderno queda en datos privados. Las actualizaciones compatibles conservan esos datos. También se incluye en los respaldos y APK que reconstruís, por lo que ese contenido pasa a formar parte del archivo generado. Al restaurar se conserva el cuaderno privado existente, incluso si lo vaciaste explícitamente. «Borra todos los conocimientos guardados» vacía sólo este cuaderno, conservando escenas, recuerdos del proyecto y modelos. El respaldo total para incorporación se limita a480KB para que pueda recuperarse de forma íntegra.
+
+MEMORIA Y ENTRENAMIENTO SON DIFERENTES
+Guardar textos y recuperarlos no cambia los pesos del Transformer. El entrenamiento completo existente se pide por separado, por ejemplo «mejora Chat más a fondo», y conserva sus límites y controles. Leer una documentación no convierte automáticamente al modelo en un programador general. Esta versión mejora interpretación de pedidos de interfaz y acceso a conocimiento explícito; todavía no genera cualquier función Android desde una descripción libre. Se mantienen los modelos propios, sin Qwen ni otros modelos externos.
+
+BANANA0.58 — EDITOR GENERAL DE FUENTES JAVA
+
+ALCANCE REAL
+El editor ya puede preparar cambios sobre cualquier archivo Java del paquete de Banana y añadir clases; no se limita a los módulos de interfaz o a la gramática de listas. El proyecto entero se compila antes de guardar la edición. Esto no convierte al modelo en un generador capaz de diseñar cualquier cambio Android a partir de una descripción libre. Para funciones generales que no sabe sintetizar, hay que proporcionar el Java. El soporte actual sigue siendo Java8 y el paquete com.bananalab.lite, con los recursos y bibliotecas existentes.
+
+PEDIDOS NORMALES
+• Cambia el texto "Enviar" por "Mandar" en toda la app.
+• Cambia el texto "Antes" por "Después" en BananaActivity.java.
+• Renombra el identificador nombreAnterior por nombreNuevo en toda la app.
+
+Los reemplazos de texto actúan sobre literales completos, no sobre palabras dentro de frases más largas ni comentarios. Admiten escapes comunes compatibles con JSON; algunos escapes específicos de Java pueden rechazarse. La renombración es léxica global, sin resolución de símbolos por ámbito: cambia los identificadores exactos fuera de comentarios y literales. Rechaza casos evidentes de nombres usados también como texto y escapes Unicode en archivos afectados. No detecta todas las referencias dinámicas o persistidas. Si cambiás un texto usado como nombre de un botón, su configuración por nombre puede necesitar el nuevo nombre.
+
+JAVA PROPORCIONADO
+Podés enviar en el mismo chat:
+Cambia el metodo nombre de Archivo.java por:
+```java
+// cuerpo Java del método
+```
+
+O:
+Crea NuevaClase.java con:
+```java
+package com.bananalab.lite;
+final class NuevaClase {
+    static int calcular() {
+        int total=0;
+        for(int i=1;i<=7;i++) total+=i;
+        return total;
+    }
+}
+```
+
+También acepta «reemplaza Archivo.java con:» y el archivo completo en un bloque Java. No necesita activar un núcleo especial. Para métodos sobrecargados, firmas ambiguas o escapes Unicode, usá el archivo completo. Los métodos admiten cuerpos hasta8000 caracteres; archivos hasta150000; la interfaz permite mensajes de12000 y la copia editada hasta1MB. El motor interno admite lotes de hasta16 operaciones, aunque el intérprete de estos pedidos procesa una operación por mensaje, que puede afectar varios archivos.
+
+COMPROBACIÓN Y RECUPERACIÓN
+Se compila el candidato completo sin incorporarlo a la copia. Si falla, las fuentes y la prueba previa de compilación se conservan; se guarda sólo el diagnóstico. Si pasa, se contrasta la revisión/base y se guarda el lote. Un punto pendiente permite recuperar el registro si la app se interrumpe entre guardar fuentes y registro. Un conflicto se conserva para revisión, no se sobrescribe a ciegas.
+Podés pedir «deshace la edición de código» antes de incorporar o hacer otras ediciones. Esto recupera la copia de fuentes previa, no revierte una APK ya instalada. «Mostrame la edición de código» muestra el último recibo. Para incorporarla, pedí actualizar la app o incorporarlo a la app: el constructor recompila todo Java y prepara Banana.apk, que Android te pide instalar.
+
+Compilar no prueba el comportamiento. El código general no se ejecuta dentro del proceso de edición ni recibe automáticamente una prueba funcional. La validación de esta versión sí instala una clase de prueba con un bucle y verifica su ejecución después de reconstruir la APK. No se agregan recursos, permisos, dependencias externas, manifiestos nuevos ni soporte de todo Java moderno. Se conservan los modelos propios y los entrenadores de0.57.
+
+BANANA0.57 — BOTONES POR NOMBRE Y ENTRENAMIENTO COMPLETO DE CHAT
+
+CASO CORREGIDO
+«cambiame el color del botón enviar a rojo» ahora prepara y activa un módulo Java con el color específico de Enviar, sin cambiar el color global de los botones. Admite variantes como «pintame el boton enviar de color rojo», «podes cambiar el color del boton enviar a rojo» y «quiero que cambies el color del boton enviar a rojo». Los controles se identifican por su texto normalizado. Se pueden personalizar hasta16 nombres, con rojo, azul, verde, violeta, amarillo u original. El ajuste se aplica cuando un botón de ese nombre está visible; no crea controles ni comprueba que un nombre inventado exista. Dos botones con el mismo texto comparten el ajuste.
+
+El sistema compila y comprueba el módulo antes de activarlo. Cambia el estilo en la interfaz y devuelve un recibo. Se conserva en datos privados y en el estado incorporado a la APK normal reconstruida. La versión anterior sigue pudiendo recuperarse. El worker muestra un error explícito si el motor devuelve una respuesta vacía o falla de una forma que antes escapaba al manejo de excepciones. Esto no garantiza resolver toda causa posible de cierres, falta de memoria o lentitud.
+
+CHAT COMPLETO
+Podés pedir normalmente «quiero que mejores chat mas a fondo». El nuevo entrenador Java propio diferencia toda la secuencia causal: embeddings, posiciones, normalizaciones, las matrices de atención y las capas internas de los tres bloques Transformer, y salida. No congela el cuerpo como el entrenador de salida anterior. Que todas las familias sean entrenables no significa que cada fila de vocabulario o posición cambie en cada muestra.
+
+Usa dos épocas, SGD con norma de gradiente limitada, replay de los controles etiquetados propios y norma global del cambio<=0.01. Por tiempo y memoria del entrenamiento en Android admite hasta6 ejemplos de entrenamiento por grupo, incluyendo los dos de base; rechaza un conjunto mayor sin elegir una parte silenciosamente. Mantiene48 tokens de pregunta y24 de respuesta. Evalúa preguntas distintas y distribuciones de control antes de publicar; verifica que el checkpoint recargado reproduzca la evaluación. Sólo activa si baja la pérdida y la divergencia de control<=0.003. Se puede recuperar el modelo anterior y reconstruir la APK con el nuevo.
+
+El modelo conserva su arquitectura y vocabulario propios. Los ejemplos actuales son muy pequeños: el entrenamiento completo no garantiza conversación buena, comprensión general o nivel ChatGPT. Mejorar ampliamente la comprensión requiere un corpus mucho mayor, evaluaciones de tareas nuevas y entrenamiento sostenido. El ajuste del botón se corrige en el intérprete de acciones; no se atribuye esa corrección al entrenamiento neuronal.
+
+ALCANCE ANDROID
+Se amplían ajustes Java por nombre de control, además de interfaz, respuestas, programas y reconstrucción existentes. No se genera todavía cualquier modificación Android de forma libre: nuevos flujos arbitrarios, recursos y bibliotecas siguen pendientes. La app devuelve resultados explícitos para los ajustes reconocidos. No hay activación por comandos especiales ni modelos externos.
+
+BANANA0.56 — FÓRMULAS JAVA Y APRENDIZAJE INTERNO DE PIXEL
+
+NUEVO EN0.56
+En la conversación normal, por ejemplo:
+• «Crea una funcion que transforme cada numero en su doble mas tres».
+• «Crea una funcion que transforme cada numero en si x es mayor que 0 entonces x menos uno sino cero; quita duplicados; suma».
+• «Crea una funcion que conserve cada numero si x%3==0; transforma cada numero en abs(x)+1; suma».
+• «Quiero que mejores Pixel mas a fondo».
+Después de preparar Java podés pedir «probalo con 3,1,3,-2» e «incorporalo a la app».
+
+El nuevo compilador de expresiones genera Java real con aritmética, comparaciones, filtros, condiciones y cortocircuito. No elige sólo entre una lista fija de46 métodos: combina un árbol tipado con constantes, x, + - * / %, abs, > < >= <= == !=, && || ! y ramas ?: . Acepta equivalencias sencillas en castellano, como su doble, su triple, su cuadrado, números cero..diez y si/entonces/sino. No entiende cualquier frase libre ni programa clases Android arbitrarias. Cada parte debe entenderse completa.
+
+Conserva hasta12 pasos, listas de128 enteros -1000..1000, constantes hasta1000, fórmulas de240 caracteres, hasta64 nodos y profundidad24. Limita intermedios a±1.000.000 y salida de cada transformación a±1000. División entera; división por cero o desbordamiento se rechazan. &&, || y ramas sólo evalúan la parte necesaria. Compila y prueba64 entradas generadas en otro proceso antes de preparar los archivos. No es una prueba de corrección para cualquier entrada ni de inteligencia general.
+
+PIXEL MÁS A FONDO
+Entrena por retropropagación las cuatro capas del modelo principal de personajes (145.156 parámetros), no sólo los1.028 de salida. Usa dos épocas, replay del modelo anterior y limita la norma del cambio conjunto a0.03. Publica únicamente si mejora la evaluación y pasa la retención; guarda un checkpoint compatible y permite recuperar el anterior. La referencia y la identidad de la escena se conservan. La vista rápida compara las características del modelo entrenado con las del banco original, también cuando cambiaron capas internas.
+
+Usa la referencia importada del personaje enfocado o la banana propia incluida. Las muestras de entrenamiento y evaluación son píxeles distintos de una misma imagen. Esto no demuestra generalización a otras imágenes o mejor arte universal. Las demás redes de Pixel conservan sus pesos. Chat conserva su entrenamiento de proyección de salida; esta versión amplía sus herramientas de programación, no reentrena su Transformer completo. Sin Qwen ni modelos externos.
+
+APK normal, misma app y certificado. La incorporación requiere instalar la actualización que Android presenta. El constructor conserva recursos existentes y recompila todo el Java admitido. Todavía falta síntesis general de cambios Android, pruebas específicas de cada función y entrenamiento de Chat más profundo con datos suficientes.
+
+BANANA0.55 — PEDIDOS NORMALES Y MEJORAS COORDINADAS
+
+NUEVO EN0.55
+Escribí normalmente en la misma conversación. No hace falta activar un núcleo ni recordar comandos:
+• «Podés mejorar los pesos de Banana Chat».
+• «Mejora Banana Pixel con la referencia actual».
+• «Agranda la letra y mejora los pesos de chat y pixel y actualiza la app con todo».
+• «Quiero que mejores Banana Chat y prepares la app con las mejoras».
+• «Recupera los pesos anteriores de chat».
+• «Mostrame los entrenamientos» o «Qué falta mejorar».
+
+Son ejemplos de frases reconocidas, no comprensión libre de cualquier frase. Antes de iniciar un pedido combinado, el sistema comprueba todas sus partes. Una parte desconocida impide iniciar el pedido. Los pasos completados se registran; si falla una ejecución, se detiene lo restante y se informa qué quedó hecho. No es una transacción global. La reconstrucción va al final y conserva el botón para guardar Banana.apk; Android pide confirmar su instalación.
+
+Los programas propios de listas y texto admiten ahora hasta12 operaciones coordinadas (antes6), en dos archivos Java, con compilación y64 casos generados en otro proceso. Hasta24 ejemplos propios de entrenamiento/evaluación de Chat (antes8), con los mismos límites por ejemplo y controles. Esto amplía el trabajo acotado; no lo convierte en un generador Java general.
+
+Estos entrenamientos cambian pesos numéricos reales de nuestros modelos. No son las reglas de comprensión de0.53. En esta fase se ajusta la proyección de salida del Transformer de Chat y la capa RGBA del modelo principal de personajes de Pixel. Se congelan sus demás capas y los demás modelos (fondos, poses, caras, objetos, tomate y criatura). No es entrenamiento completo de todas las capas ni inteligencia general.
+
+CHAT
+Usa SGD con entropía cruzada, ocho épocas, replay de distribuciones anteriores y un límite global de0.01 sobre la norma del cambio de pesos/sesgos. Parte de los pesos activos propios; no importa modelos externos. Incluye dos ejemplos propios de entrenamiento, dos preguntas distintas de evaluación y controles. Sólo publica si baja la pérdida de evaluación y la divergencia KL en controles queda <=0.003.
+
+Podés aportar hasta24 ejemplos propios, separados por su función:
+ejemplo chat entrenamiento: "como se llama mi proyecto" => "mi proyecto se llama banana ."
+ejemplo chat evaluacion: "cual es el nombre de mi proyecto" => "mi proyecto se llama banana ."
+Después: entrena chat
+Las preguntas compartidas entre entrenamiento y evaluación se rechazan. No toma sus propias respuestas como etiquetas. Cada ejemplo admite hasta160 caracteres por campo,48 tokens de pregunta y24 de respuesta; se rechaza si excede el límite en lugar de truncarlo.
+
+La evaluación mide pérdida por token con la respuesta esperada suministrada, no exactitud de conversaciones generadas ni comprensión general. Las preguntas locales tienen respuestas compartidas de plantillas conocidas; no son un benchmark externo. Una bajada pequeña de pérdida no garantiza que la respuesta visible cambie ni que todos los temas mejoren. Las herramientas y respuestas deterministas pueden seguir resolviendo un pedido antes del Transformer.
+
+PIXEL
+«entrena pixel» usa la imagen de referencia importada del personaje enfocado, si la hay. Si no, usa una referencia propia de banana incluida. La referencia se conserva. Para usar la generación en ese personaje después de entrenar: usa el modelo entrenado pixel
+
+Sólo se ajusta la capa de salida del modelo principal de9 tipos. No admite entrenar tomate o criatura en esta fase. La imagen debe representar el personaje alineado en su vista y con transparencia adecuada; se adapta a128×128. Una imagen arbitraria no enseña un concepto nuevo a todas las redes.
+
+Se usan128 muestras de entrenamiento y128 posiciones distintas de evaluación, más64 controles de otra condición. SGD por doce épocas con pérdida RGBA ponderada por alfa. Sólo publica si baja el error de evaluación y el cambio en controles queda <=0.002. Los puntos de evaluación pertenecen a la misma imagen; esto no prueba generalización a otras imágenes ni calidad artística universal.
+
+Al activar se vacían las cachés de personajes para evitar mostrar imágenes anteriores. Para las condiciones con imagen del banco propio, la vista rápida interpola sobre una malla16×16 la diferencia de logits causada por la capa entrenada. Conserva el detalle del banco neuronal original. Esa vista es una aproximación; no vuelve a ejecutar toda la red en cada píxel. El checkpoint completo sí permite la inferencia neuronal exacta. Sin banco compatible se usa esa inferencia más costosa. Las anclas faciales y referencias importadas conservan sus reglas anteriores.
+
+CHECKPOINTS Y APK
+Los pesos se guardan en binarios con las dimensiones/formato originales, hash SHA256 y archivos privados de sólo lectura. Se verifica el guardado volviendo a cargarlo. Antes de activar se conserva un checkpoint anterior real, incluso si era el modelo base: deshacer recupera sus bytes, no sólo una configuración. Chat recarga el modelo al cambiar su identidad; Pixel invalida imágenes y modelos en caché.
+
+Los pesos entrenados activos se incorporan dentro de la APK reconstruida junto con sus informes y la malla de vista rápida. Tras una instalación sin datos se usan los pesos incluidos. Los ejemplos de texto que vos cargaste quedan como preferencias locales y se conservan al actualizar, pero no se incorporan como texto a la APK; una instalación sin datos conserva los pesos, no ese conjunto de ejemplos. Los controles de retención son limitados, no una garantía de conservar todo lo aprendido. El APK nunca incorpora la clave privada de actualización.
+
+RECONSTRUCCIÓN DE TODO JAVA
+«incorporalo a la app» ahora resuelve y convierte las lambdas usando el parser y los tipos de Eclipse ECJ, recompila TODOS los Java de la copia y genera un DEX nuevo completo con DX. No copia las clases sin cambiar del DEX anterior ni exige conservar sus firmas internas: los cambios de interfaz coordinados son posibles si todo el proyecto compila. Para API23 hay un pequeño backport propio de String.join.
+
+Esto amplía el constructor; el generador del chatbot sigue limitado a los programas/reglas/ajustes admitidos. No inventa por sí solo todo el Java de cualquier app. La conversión fue probada con las lambdas actuales, capturas, this léxico, anidamiento y comparadores genéricos. No es un desugaring general de cualquier característica futura de Java. Construcciones no admitidas o un exceso de índices DEX bloquean la reconstrucción.
+
+Los recursos compilados actuales y el manifiesto se conservan, salvo el código de versión de actualización. No recompila XML/recursos nuevos, no cambia permisos ni agrega bibliotecas externas libremente. Casi toda la interfaz actual se construye en Java, por lo que este backend permite rehacerla sin sustituir recursos. Las migraciones de datos y el comportamiento de Java arbitrario todavía requieren pruebas propias: compilar no garantiza corrección.
+
+Ver VALIDACION-0.54.md para los resultados finales y limitaciones de esta entrega. Las pruebas se realizan en emulador API23, no en la tablet física Android16.
+
+REFERENCIA DE0.53 Y FASES ANTERIORES
+
+NUEVO EN0.53
+Todo se pide en el chat normal, sin abrir un modo:
+• Mejora como entendes pedidos con dos personajes.
+• Mostrame tu evaluacion.
+• Registra este fallo: el segundo personaje no hizo lo que pedi.
+• Memoria de fallos.
+• Entiende el proyecto.
+• Impacto de ScenePlanner.java.
+• Crea una funcion que ordene la lista y quite duplicados y sume.
+• Probalo con 3,1,3,-2.
+• Incorporalo a la app.
+
+QUÉ SIGNIFICA QUE SE MEJORE
+Banana propone código para una clase preparada, UnderstandingRules.java. Puede añadir transformaciones para «le da un besito», «pega un brinco / hace una reverencia» y «seguido de que», además de equivalencias de escena que vos especifiques. Busca una combinación, genera Java, compila una copia y compara sus efectos con la versión anterior en otro proceso. Revisa acciones, destinatarios, conservación de diseños y pedidos que deben conservarse sin cambios, incluido el contenido dicho por un personaje con o sin comillas. Sólo activa si mejora el resultado sin perder un caso que antes pasaba.
+
+Se trata de programación acotada de su interpretación de escenas. No reentrena los modelos generales de Chat/Pixel, no inventa habilidades ilimitadas y no reconstruye libremente todos los recursos/permisos de la app. La búsqueda propone sobre12 casos visibles y los casos que vos aportaste. Las48 pruebas generadas para publicar usan otra semilla creada después de compilar y varían nombres y tipos sobre problemas locales conocidos; no son48 habilidades ni un benchmark externo. Las reglas y el evaluador siguen siendo componentes de desarrollo propios. Los módulos de planificador personalizados se desactivan sólo durante estas pruebas, que evalúan el planificador base.
+
+La evaluación no modifica tu escena: usa copias. Una mejora aceptada ya interpreta los próximos pedidos, mediante una clase compilada. Para incorporarla físicamente al classes.dex de Banana.apk, pedí incorporalo a la app e instalá la actualización normal. Si no hay otra mejora comprobable, conserva la anterior; pedirlo muchas veces no genera inteligencia nueva por acumulación.
+
+ENSEÑAR UN SIGNIFICADO Y COMPROBARLO
+Con Fito y Bani ya en la escena:
+cuando pida "Fito hace piruetas mientras Bani salta" entende "Fito baila mientras Bani salta"
+Después: mejora como entendes los pedidos
+
+La corrección se guarda como especificación tuya, no como verdad descubierta por la IA. Se comprueba que el significado propuesto pueda planificarse sobre una copia de esa escena. Se admiten hasta8 casos, de hasta200 caracteres por frase. Cada caso aportado se añade a las48 pruebas; conserva también los controles anteriores. La equivalencia sólo generaliza por coincidencia normalizada de esa frase; las transformaciones predefinidas sí pueden aplicarse a distintos nombres de personajes.
+«Deshace tu ultima mejora» recupera la clase activa y la copia de fuentes previa, si la base y sus hashes no cambiaron. No desinstala una APK ya actualizada.
+
+MEMORIA CON ORIGEN
+Los reportes tuyos permanecen user_report sin verificar. Los programas y mejoras sólo reciben registros verified_program / verified_understanding después de compilar y ejecutar sus pruebas. Los candidatos rechazados se registran por separado. Hay un máximo de48 registros; no usa sus propias respuestas como hechos verdaderos ni entrena un modelo general con ellos.
+
+PROGRAMAS DE VARIOS PASOS
+De1 a6 pasos del mismo tipo:
+Listas: ordenar ascendente/descendente, quitar duplicados, valor absoluto, cuadrados, sumar o multiplicar por una constante, filtrar positivos/negativos/pares/impares/mayores/menores y reducir por suma/cuenta/mínimo/máximo.
+Texto: recortar, minúsculas, mayúsculas, invertir, conservar letras/dígitos y quitar espacios.
+Ejemplos avanzados: programa estos pasos: solo positivos; multiplica por -2; ordena descendente
+programa estos pasos: recorta texto; minusculas; invierte
+
+Genera JavaAlgorithm.java y ProgramKernel.java coordinados, sobre ProgramSupport.java. Sus pasos usan llamadas, condiciones, variables y bucles reales. El lote de fuentes se guarda junto en una operación. No es Java arbitrario ni permite APIs o bibliotecas nuevas. Las operaciones de lista mantienen hasta128 enteros entre-1000 y1000 en cada paso; una transformación que salga de ese rango se rechaza. Una reducción debe ser el último paso. Texto: hasta128 caracteres.
+
+El evaluador ejecuta64 entradas generadas con una semilla creada después de compilar, contra una referencia separada basada en colecciones. Hay casos inválidos que deben rechazarse. Se guarda la semilla para reproducirlos. Las familias y el oráculo son conocidos; aleatorizar las entradas no equivale a una evaluación independiente de inteligencia. «Deshace ese cambio» recupera los dos archivos anteriores mientras no haya cambios posteriores. La compilación del proyecto entero y la comprobación ABI siguen siendo necesarias antes de incorporar la copia a la APK.
+
+Después de instalar una APK con el programa, «ejecutalo con 3,1,3,-2» usa el código del núcleo instalado, incluso sin un candidato de prueba guardado.
+
+MAPA Y PERSISTENCIA
+«Entiende el proyecto» muestra archivos, estimación de métodos y responsabilidades conocidas. «Impacto de Archivo.java» recorre dependientes de fuentes hasta dos niveles. No es un análisis completo del despacho dinámico ni una demostración de corrección.
+Portablev4 conserva la memoria y las especificaciones de comprensión, además de todo lo de v1/v2/v3. En una APK reconstruida, UnderstandingRules y el programa coordinado se incorporan realmente al DEX principal. En un respaldo, una especificación distinta se recompila y se vuelve a evaluar antes de recuperarse; las preferencias existentes tienen prioridad. Las restauraciones de varios componentes no son una transacción atómica.
+
+VALIDACIÓN ACTUAL
+Ver VALIDACION-0.53.md para pruebas y límites de esta entrega. No se probó en la tablet física Android16.
+
+REFERENCIA DE0.52 Y HERRAMIENTAS ANTERIORES
+
+NUEVO: PEDILO DIRECTAMENTE
+No hace falta abrir un modo ni escribir «nucleo programador». En el chat normal:
+• Quiero que cambies el color de los botones a azul.
+• Agranda la letra y cambia los botones a verde.
+• Cuando te diga "saludo exclusivo" respondas "Buenas desde mi Banana".
+• Crea una funcion que sume los positivos de una lista.
+• Probalo con -3,2,5.
+• Incorporalo a la app.
+
+Los ajustes de interfaz y las respuestas se compilan, prueban y activan directamente. Los métodos de listas/texto/turnos se preparan y prueban en una copia; el núcleo instalado cambia tras reconstruir e instalar Banana.apk. «Incorporalo a la app» produce esa actualización normal; Android pide confirmar su instalación. Si falta la clave privada, hay que configurarla una vez con el archivo existente.
+
+Si la app cambió de versión, actualiza la base de la copia Java y conserva un respaldo previo y tus ediciones antes de generar o reconstruir. Los errores de compilación y compatibilidad siguen bloqueando la incorporación.
+
+«Qué cambiaste» muestra el último resultado de esta ruta. Después de agrandar el texto o los botones podés decir «y más grande». «Deshace ese cambio» recupera el ajuste anterior de interfaz/respuesta o la copia anterior del método; rechaza una reversión si cambió por otra vía. No desinstala una actualización ni revierte automáticamente la APK instalada.
+
+El color de botones admite azul, verde, violeta, rojo, amarillo y original. Se aplica al estilo de botones de la pantalla principal y conserva sus colores originales para deshacer. El tema/fondo, tamaños, proyectos, saltos, gestos y contexto conservan sus límites anteriores. Los pedidos de personajes siguen su ruta de escena.
+
+Se comprueba el pedido completo antes de modificar: una segunda cláusula no admitida evita el ajuste parcial. Los cambios agrupados de interfaz pueden separarse con «y» o «;», hasta ocho; no hay transacciones conjuntas de métodos, respuestas y escenas. Las respuestas nuevas requieren frase y respuesta entre comillas para identificar ambas sin adivinar.
+
+No es comprensión libre de cualquier pedido: usa reglas locales de intención. Si pedís corregir un fallo arbitrario, localiza archivos candidatos por búsqueda en las fuentes y dice que no lo corrigió; esa búsqueda no prueba la causa. No inventa una reparación. Un pedido como «arregla que el segundo personaje no aparece» recibe diagnóstico, no una afirmación falsa de arreglo.
+
+RESPALDOS Y APK
+El formato portable v3 agrega los ajustes compilados y el plan de respuestas del chat. Mantiene lectura de v1/v2. Estos planes quedan físicamente dentro de la APK reconstruida y se recompilan/verifican al primer arranque sin datos; no son una sustitución de clases del núcleo. Los datos locales existentes tienen prioridad y no se pisan. La modificación compatible de JavaAlgorithm sigue entrando en classes.dex real. La clave privada nunca viaja dentro de las APK generadas.
+
+REFERENCIA DE HERRAMIENTAS ANTERIORES
+Los comandos siguientes siguen disponibles como acceso avanzado; no son necesarios para los ejemplos anteriores.
+
+La reconstrucción produce un único Banana.apk: la actualización normal de la misma Banana, con igual nombre, paquete y certificado. No crea una segunda app ni una APK de firma. Firmar es un paso interno necesario para que Android acepte la actualización. Si ya importaste tu clave en0.50, se conserva. Si falta, el chat pide configurarla una sola vez mediante el archivo privado; ese archivo no es una app.
+
+INICIO
+Proyecto → Núcleo programador
+O escribí: nucleo programador
+Si venís de una copia Java anterior: actualiza base proyecto java
+
+GENERAR, EJECUTAR PRUEBAS E INSTALAR
+1. genera metodo java: suma los positivos de una lista
+2. prueba mi metodo: -3,2,5
+   Resultado esperado:7. Se ejecuta el candidato compilado y validado, no un texto inventado.
+3. ver mi metodo
+4. reconstruye mi apk
+5. Guardá Banana.apk y abrila para confirmar la actualización normal de Android.
+6. ejecuta mi metodo: -3,2,5
+   Ahora se usa JavaAlgorithm.process del classes.dex instalado, no el candidato de pruebas.
+
+El código aparece en la copia de JavaAlgorithm.java y, al reconstruir, sustituye esa clase dentro del DEX principal. También se actualizan la copia de fuentes del APK, su índice y la base de clases para las siguientes modificaciones. Las escenas y preferencias permanecen como datos de la misma app.
+Si la copia no cambió desde que generaste la APK, el siguiente arranque la sincroniza con los fuentes instalados. Se guarda una copia de la base anterior y se conservan los checkpoints de fuentes traducidos. Si editaste de nuevo mientras esperabas la instalación, no pisa esos cambios: pedí actualizar la base y revisalos.
+
+TAREAS ADMITIDAS EN ESTA FASE
+Listas: suma, cantidad, mínimo o máximo; filtros todos, positivos, negativos, pares o impares. Hasta128 enteros entre-1000 y1000. Entrada: -3,2,5 o [-3,2,5]. Mínimo/máximo de selección vacía devuelve0.
+Texto: invertir, minúsculas, mayúsculas o recorte de extremos; filtros letras o dígitos. Hasta128 caracteres. Una transformación de caso/recorte por programa, combinable con filtro e inversión.
+Turnos: alternar personajes desde el primero o el último. Entrada turno0..31,personajes1..4; por ejemplo0,2. Los índices de salida comienzan en0.
+Ejemplos:
+genera metodo java: cuenta los impares de una lista
+genera metodo java: invierte texto en minusculas
+genera metodo java: alterna turnos desde el ultimo personaje
+No ignora condiciones desconocidas: una petición como «suma los positivos excepto cinco» se rechaza como no soportada, en vez de generar una solución parcial.
+JavaAlgorithm.java es un archivo generado y administrado por este núcleo: regenerarlo sustituye ese archivo. Para otros cambios manuales usá los archivos correspondientes del proyecto.
+
+PRUEBAS, REPARACIÓN Y APRENDIZAJE
+La búsqueda enumera46 programas de una gramática tipada y compone filtros, acumuladores, condiciones, bucles limitados, texto y aritmética de turnos. Descarta candidatos usando ejemplos visibles y compila el seleccionado con ECJ+DX. Ejecuta el Java resultante en otro proceso privado y compara contra un oráculo de especificación.
+Listas:4 ejemplos visibles y4 reservados; texto/turnos:3 visibles y3 reservados. Los reservados se usan como puerta de publicación, no para orientar la búsqueda en el dispositivo. Durante el desarrollo se usaron fallos para mejorar la batería de ejemplos; no se presenta como evaluación independiente de problemas nunca vistos.
+repara mi metodo
+Repite la búsqueda desde la última especificación reconocida, prueba y reemplaza la copia generada. No ejecuta Java arbitrario que hayas escrito para decidir si es seguro. No es reparación universal de cualquier clase.
+El ranking propio usa64 características por programa y hasta32 instrucciones con soluciones verificadas. Aprende a ordenar los intentos, y publica pesos sólo si conserva sus ejemplos previos. No consume pesos externos, no entrena con los valores de los casos reservados y no es un modelo generador de lenguaje/código libre. El aprendizaje persiste como datos y se incluye en el respaldo y en las APK reconstruidas.
+
+EJEMPLO CON EFECTO EN UNA ESCENA
+Generá «alterna turnos desde el ultimo personaje», reconstruí Banana.apk e instalala.
+crea a Fito un zorro; agrega una banana llamada Bani
+alterna dialogo 4 turnos
+La escena usa el método de turnos del núcleo instalado: Bani, Fito, Bani, Fito. Conserva sus identidades/diseños y valida la secuencia. Prepara acciones de hablar; no inventa el contenido de las frases. Si no instalaste un algoritmo de turnos, utiliza el orden normal desde el primer personaje.
+
+ANÁLISIS DEL PROYECTO
+analiza proyecto java
+analiza dependencias java JavaAlgorithm.java
+Compila la copia cuando hace falta y lee firmas, campos y referencias simbólicas de los .class. No ejecuta esas clases. El listado orienta sobre dependencias, pero no resuelve todos los destinos virtuales ni demuestra comprensión semántica completa.
+
+RECONSTRUCCIÓN DEL NÚCLEO
+Esta fase compila todo el proyecto y convierte las clases modificadas compatibles aDEX. Fusiona esas clases con el DEX instalado, dando prioridad a las nuevas, y vuelve a firmar/verificar Banana.apk. Ya no se limita a guardar módulos en assets.
+Controla que las firmas, campos, constantes en línea, acceso y jerarquía existentes no cambien incompatiblemente. Se pueden modificar cuerpos y añadir funciones/clases compatibles. No elimina clases antiguas.
+Todavía rechaza clases con lambdas/invokedynamic o interfaces con implementaciones que necesitan desugaring, y núcleos multidex. No genera una APK parcial si una clase modificada no es compatible. No recompila recursos nuevos ni cambia permisos/manifiesto libremente. Las clases que no cambiaste se conservan, incluidas las lambdas ya desugared del núcleo.
+Las ediciones generales sólo tienen comprobación de compilación/ABI: sus comportamientos no se consideran probados por esa comprobación. Las pruebas ejecutables automáticas se aplican a los métodos de la gramática admitida. Un proceso separado comparte UID: no es un sandbox para ejecutar código libre.
+
+CÓDIGO PERMANENTE Y FIRMA
+codigo permanente
+importa firma privada
+reconstruye mi apk
+exporta mi codigo
+importa mi codigo
+No hay una APK adicional de firma. La clave del propietario se protege mediante AndroidKeyStore, se contrasta con el certificado instalado y nunca se incluye en Banana.apk. Se reutiliza el archivo privado de0.50 si necesitás configurarla.
+Las actualizaciones compatibles conservan datos y aprendizaje. La APK reconstruida contiene además el núcleo cambiado y el estado portable; una instalación sin datos previos conserva ese método instalado y puede recuperar los pesos incluidos, pero no la clave de firma.
+El código de versión base0.59 es590000, con9999 incrementos locales. Los siguientes núcleos deberán usar600000 o más. Para conservar modificaciones al instalar un núcleo futuro hay que respetar sus contratos/migraciones; esta fase no garantiza compatibilidad con cualquier cambio futuro. Guardá también fuentes/respaldo antes de cambiar de núcleo.
+
+SIGUEN DISPONIBLES
+Los módulos de salto/baile, chat, celebración y recetas del planificador de0.50. Sus contratos y mecanismos de deshacer siguen separados. Banana Chat y Pixel conservan sus modelos propios. Esta fase no reentrena el modelo general de conversación ni el de dibujo y no promete comprensión universal.
+Pruebas y límites anteriores: VALIDACION-0.51.md. Esta fase: VALIDACION-0.52.md. No se probó en la tablet física Android16 del usuario.
+
+VALIDACIÓN Y LÍMITE DE BÚSQUEDA
+31 suites y reconstrucción/instalación reales en emulador API23. Algunas variantes coinciden en ejemplos visibles: si el primer candidato falla un caso reservado, se rechaza; el buscador actual puede no resolver todas las variantes. No es un programador Java general ni aprende capacidades ilimitadas. Ver VALIDACION-0.51.md.
+
+VALIDACIÓN ACTUAL0.55
+36 suites de escritorio y prueba completa en emulador Android6/API23: pedidos naturales, entrenamiento real de ambas capas de salida, programa coordinado, ajuste de interfaz y reconstrucción completa, instalación como actualización y con datos limpios, ejecución desde la interfaz y entrenamiento pedido desde la interfaz del APK de distribución. Detalle y límites en VALIDACION-0.55.md. Los apartados anteriores conservan el historial de las fases previas.
+
+VALIDACIÓN ACTUAL0.56
+38 suites de escritorio;1.536 casos generados de fórmulas compiladas; gradientes numéricos en las4 capas de Pixel y checkpoints reales. En emulador Android6/API23: entrenamiento profundo, recuperación exacta del modelo anterior, programa con condiciones, reconstrucción e instalación de la APK normal, conservación al actualizar y con datos limpios, ejecución desde la interfaz. Detalles y límites: VALIDACION-0.56.md. Los apartados previos conservan el historial de versiones.
+
+VALIDACIÓN ACTUAL0.57
+40 suites de escritorio y pruebas en emulador Android6/API23. La frase del usuario activa un color exclusivo para Enviar; la Activity real verifica su tinte rojo después de actualizar y con datos limpios. Entrenamiento completo del Transformer, embeddings activos cambiados, recuperación exacta y checkpoint incorporado en la APK normal. Detalles y límites: VALIDACION-0.57.md. No se probó en tablet física Android16.
+
+VALIDACIÓN ACTUAL0.58
+41 suites de escritorio; prueba Android6/API23 de rechazo sin guardar, recuperación exacta, clase Java nueva y edición posterior de literal. La APK reconstruida ejecuta value()==28 y marker()==general-v2 tanto al actualizar como con datos limpios. Color de Enviar y entrenadores propios conservados. Detalles: VALIDACION-0.58.md. No se probó en tablet física Android16.

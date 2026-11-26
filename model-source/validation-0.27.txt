@@ -1,0 +1,39 @@
+AnimationRequestCheck
+PASS haceme una animacion de una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS podes hacer una animacion de un pepino caminando => Escena compartida · parque
+pepino: aspecto original, centro
+1. pepino camina
+PASS quiero una animacion de un gato saltando => Escena compartida · parque
+gato: aspecto original, centro
+1. gato salta
+PASS quiero que hagas una animacion de un robot saludando => Escena compartida · parque
+robot: aspecto original, centro
+1. robot saluda
+PASS anima una banana bailando => Escena compartida · parque
+banana: aspecto original, centro
+1. banana baila
+PASS genera un video de un conejo caminando => Escena compartida · parque
+conejo: aspecto original, centro
+1. conejo camina
+PASS animacion ejecutable, acciones, borrador, aclaracion y limites
+CreatorCheck
+Quiero una serie de terror con una banana => Borrador guardado, sin publicar.
+Escena compartida · parque
+banana: aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Que se llame Tony => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+Decí ‘ahora dibujalos’ cuando esté listo.
+Agregá un pepino pero todavía no lo dibujes => Borrador guardado, sin publicar.
+Escena compartida · parque
+tony (banana): aspecto original, centro
+pepino: aspecto original, derecha
+Decí ‘ahora dibujalos’ cuando esté listo.
+PASS borrador aislado, nombres, publicar, alias, ordinal, otro, revelar, persistir, deshacer/rehacer y rechazo
+CreatorPersistenceCheck
+PASS persisted draft, atomic publish/failure, undo/redo, related memory and clear
+TenTurnCheck
+PASS: diez turnos, persistencia y atributos independientes

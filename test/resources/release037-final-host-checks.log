@@ -1,0 +1,120 @@
+Stage38Check PASS
+PASS contextual clarification, paraphrases, compositional bodies, dialogue, voice, lip envelope, long duration, shots and animated grip
+Stage38ModelsCheck PASS
+CUSTOM_MASK_PARITY 2.1827873E-10
+CONTEXT_PARITY 2.1457672E-6; own held-out confidence routing 30/30
+Stage38ConversationCheck PASS
+PASS learned contextual help, two-turn actor repair, grounded suggestions, explicit acceptance and stale-scene rejection
+Stage37Check PASS
+PASS discourse references, scoped edits, append/replacement, chronological ownership, contradictions, ambiguity and persistent rollback
+Stage36Check PASS
+PASS compound tasks, targeted replacement/traits, atomic failure, draft undo, grounded queries, stable memory CRUD, persistence and combined project summary
+Stage36MemoryCheck PASS
+PASS legacy memory migration, provenance, duplicate handling, stable IDs after clear, corruption isolation and capacity without eviction
+Stage35Check PASS
+PASS heldout Tony habla con el pepino mientras entra el tomate y despues el pepino entrega una caja a Tony y los tres reaccionan
+PASS heldout Tony conversa con el pepino mientras el tomate llega por la derecha y luego el pepino pasa una caja a Tony y todos se sorprenden
+PASS heldout Tony charla con el pepino mientras aparece el tomate y despues el pepino regala una caja a Tony y los tres se sorprenden
+PASS ten types, request audit, design identity, context references, environment, hand path and output guard
+Stage34Check PASS
+PASS unified engine, immutable cards, shared editing/undo/memory, draft isolation/publication, stale edits, export snapshots and old history compatibility
+Stage33Check PASS
+PASS variant Tony baila mientras entra el pepino y despues el pepino le entrega una caja a Tony y ambos se sorprenden
+PASS variant el pepino entra mientras Tony baila y luego el pepino entrega una caja a Tony y los dos reaccionan
+PASS variant primero Tony baila mientras el pepino llega por la derecha y despues el pepino pasa una caja a Tony y ambos reaccionan
+PASS atomic plans, ambiguity, object transfer, gaze, legacy and persistent views
+Stage35AudioCheck PASS
+PASS exact PCM preserved; action checks outside sample loop
+CreatorCheck PASS
+Quiero una serie de terror con una banana => Borrador guardado, sin publicar.
+Escena compartida · parque · luz auto
+banana: aspecto original, centro
+Duración: 3.0 s
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+Que se llame Tony => Borrador guardado, sin publicar.
+Escena compartida · parque · luz auto
+tony (banana): aspecto original, centro
+Duración: 3.0 s
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+Agregá un pepino pero todavía no lo dibujes => Borrador guardado, sin publicar.
+Escena compartida · parque · luz auto
+tony (banana): aspecto original, centro
+pepino: aspecto original, derecha
+Duración: 3.0 s
+Cámara: automática
+Decí ‘ahora dibujalos’ cuando esté listo.
+PASS borrador aislado, nombres, publicar, alias, ordinal, otro, revelar, persistir, deshacer/rehacer y rechazo
+CreatorPersistenceCheck PASS
+PASS persisted draft, atomic publish/failure, undo/redo, related memory and clear
+SharedSceneCheck PASS
+Preparé el dibujo.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: azul, derecha
+Duración: 3.0 s
+Cámara: automática
+Podés editarlo y reproducirlo en el resultado de este mensaje.
+Listo, cambié solo a pepino.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: azul, izquierda, pequeno
+Duración: 3.0 s
+Cámara: automática
+Listo, cambié solo a pepino.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: verde, izquierda, pequeno, detras del arbol
+1. [tiempo 1] pepino salta
+2. [tiempo 2] pepino saluda
+Duración: 3.0 s
+Cámara: automática
+[salta, saluda]
+PASS escena compartida: crear, editar, relaciones, conservar, aclarar, persistir, acciones y conversacion
+TenTurnCheck PASS
+PASS: diez turnos, persistencia y atributos independientes
+AnimationRequestCheck PASS
+PASS haceme una animacion de una banana bailando => Escena compartida · parque · luz auto
+banana: aspecto original, centro
+1. [tiempo 1] banana baila
+Duración: 3.0 s
+Cámara: automática
+PASS podes hacer una animacion de un pepino caminando => Escena compartida · parque · luz auto
+pepino: aspecto original, centro
+1. [tiempo 1] pepino camina
+Duración: 3.0 s
+Cámara: automática
+PASS quiero una animacion de un gato saltando => Escena compartida · parque · luz auto
+gato: aspecto original, centro
+1. [tiempo 1] gato salta
+Duración: 3.0 s
+Cámara: automática
+PASS quiero que hagas una animacion de un robot saludando => Escena compartida · parque · luz auto
+robot: aspecto original, centro
+1. [tiempo 1] robot saluda
+Duración: 3.0 s
+Cámara: automática
+PASS anima una banana bailando => Escena compartida · parque · luz auto
+banana: aspecto original, centro
+1. [tiempo 1] banana baila
+Duración: 3.0 s
+Cámara: automática
+PASS genera un video de un conejo caminando => Escena compartida · parque · luz auto
+conejo: aspecto original, centro
+1. [tiempo 1] conejo camina
+Duración: 3.0 s
+Cámara: automática
+PASS me haces una animacion de una banana bailando => Escena compartida · parque · luz auto
+banana: aspecto original, centro
+1. [tiempo 1] banana baila
+Duración: 3.0 s
+Cámara: automática
+PASS podes hacer que un gato salte => Escena compartida · parque · luz auto
+gato: aspecto original, centro
+1. [tiempo 1] gato salta
+Duración: 3.0 s
+Cámara: automática
+PASS animacion ejecutable, acciones, borrador, aclaracion y limites
+IncomingActorCheck PASS
+PASS 60 pedidos: dos personajes, entrada asignada al segundo y visibilidad final en ambos modos

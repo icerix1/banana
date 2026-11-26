@@ -1,0 +1,1 @@
+PASS Stage57 Lowered lambdas: 116, 380 classes compatible with DX; binding-aware nested captures, lexical this and generic comparator semantics

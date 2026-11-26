@@ -1,0 +1,50 @@
+BANANA0.46 — MÓDULOS SIN REINSTALAR Y APRENDIZAJE LOCAL
+
+Instalá esta actualización una vez. Conserva firma, identificador y proyectos. Después, los paquetes modulares y el aprendizaje funcionan en esa misma instalación, sin generar otro APK por cada cambio.
+
+PAQUETE MODULAR
+prepara actualizacion modular: pone el tema de la app violeta; agranda el texto del chat; respuesta "hola taller" => "Taller listo"; comportamiento fiesta: salta y aplaude; herramienta "Estudio" con "Personajes" para "mis personajes"
+ver actualizacion modular
+aplica actualizacion modular
+Después: hola taller / Fito fiesta / mis herramientas modulares
+Podés usar hasta ocho instrucciones separadas con punto y coma. Las comillas dentro de textos se escriben como \"; los puntos y coma dentro de las comillas son texto, no separadores de instrucciones.
+
+El paquete controla tamaño de texto y botones, separación entre mensajes, cuatro temas oscuros, acceso a proyectos, contexto reciente, altura global de saltos y gestos. También agrega hasta doce respuestas de igualdad, dieciséis secuencias de hasta ocho movimientos y cuatro paneles de hasta seis herramientas. Los botones ejecutan órdenes admitidas sólo cuando los tocás; no cambian proyectos al preparar el paquete.
+Las secuencias componen movimientos existentes, no inventan animaciones nuevas. Usá nombres de comportamiento sin tildes, por ejemplo fiesta. Las órdenes de perfil son las mismas de Java por chat: pone el texto del chat a 18; hace los gestos mas suaves; usa seis pares de mensajes como contexto, etc.
+Mientras un paquete defina un valor de perfil, ese valor prevalece sobre el ajuste Java anterior. Deshacé o reiniciá el paquete para volver a usar esos ajustes directamente.
+
+RECUPERACIÓN MODULAR
+estado de banana modular
+deshace actualizacion modular
+descarta actualizacion modular
+reinicia banana modular
+Mantiene cinco paquetes previos. El deshacer restaura las cuatro partes juntas y no borra las escenas creadas. El reinicio elimina los paquetes y su historial, conservando los proyectos.
+
+ENSEÑAR RESPUESTAS
+aprende esta respuesta: "como se llama mi estudio" => "Banana Studio"
+Preguntá después: como se llama mi estudio
+También podés hacer una pregunta y luego: anota esta correccion: la respuesta correcta que querés guardar
+Cuando la corrección corresponde a una pregunta informativa admitida, Banana guarda el ejemplo y entrena automáticamente un recuperador propio. Las correcciones de escenas siguen el registro anterior y sus motores. El registro antiguo se conserva, pero no se importa automáticamente a los pesos; el entrenamiento usa los nuevos ejemplos del recuperador.
+
+VARIANTES Y EVALUACIÓN
+aprende esta variante: "como se llama el estudio" para "como se llama mi estudio"
+estado del aprendizaje
+mis correcciones
+La evaluación separa la última variante de cada pregunta del entrenamiento de prueba y del filtro léxico de ese ejemplo. Es una comprobación pequeña, no una medida de inteligencia general. Una variante muy distinta puede fallar: se informa el resultado en vez de fingir comprensión. La versión publicada conserva los ejemplos para usarlos después.
+
+CONTROL DEL APRENDIZAJE
+pausa autoaprendizaje
+activa autoaprendizaje
+entrena mis correcciones
+deshace ultimo aprendizaje
+borra mis correcciones
+El borrado elimina ejemplos, pesos y copias del recuperador, además del registro antiguo de correcciones. El deshacer recupera juntos modelo y ejemplos anteriores. Guardar una corrección mientras está pausado no cambia las respuestas activas hasta entrenar.
+
+ALCANCE REAL DEL APRENDIZAJE
+Hay un clasificador propio de128 características por respuesta, entrenado localmente con aportes explícitos del usuario y ejemplos negativos de control. Cambian sus pesos y puede recuperar respuestas para preguntas cercanas. Las coincidencias exactas se conservan y las variantes requieren similitud léxica y margen. Se evitan transferencias automáticas entre preguntas negadas o con números distintos. Se identifica siempre la fuente como aporte del usuario no verificado externamente.
+No entrena el generador grande de conversación, no convierte información inventada por Banana en verdad, no aprende solo mirando todas sus respuestas y no garantiza mejorar en cada tema. No se añadieron modelos externos. Los veintidós archivos de modelos originales permanecen iguales; los pesos nuevos del recuperador se guardan en los datos privados del dispositivo. El máximo es32 respuestas y cuatro variantes por pregunta.
+Las preguntas de controles de app, Java y módulos conservan su ruta original en esta primera versión del recuperador.
+
+QUÉ QUEDA FIJO
+El núcleo Android, permisos, bibliotecas y motores básicos siguen en el APK. No es edición libre de toda la app, reconstrucción del APK ni un programador general. La interfaz modular permite paneles y herramientas dentro de las capacidades instaladas, no pantallas arbitrarias de Android.
+La evidencia de pruebas está en VALIDACION-0.46.md. Falta la comprobación en la tablet física del usuario. Las funciones y módulos de versiones anteriores siguen incluidos; ver GUIA-0.45.txt en las fuentes.

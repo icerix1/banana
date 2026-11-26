@@ -1,0 +1,27 @@
+{
+  "name": "Banana",
+  "app_release": "0.48",
+  "experience": "Unified conversation with immutable inline scene cards",
+  "entry": "BananaActivity",
+  "orchestration": "MobileCore / BananaEngine",
+  "project_state": "BananaProject / CreatorMemory / SceneStore",
+  "history": "BananaConversation",
+  "preview_and_export": "BananaRender",
+  "editor": "BananaEditor",
+  "export": "BananaExporter",
+  "references": "BananaReferences",
+  "internal_models": {
+    "language": "Banana Chat 3.4 + Context1",
+    "visual": "Banana Pixel 2.3",
+    "local_topic_router": "Banana Mobile Core topic router 1 (own, random initialization)"
+  },
+  "external_weights": false,
+  "weights_changed_this_release": false,
+  "research": "ResearchConversation / ResearchWeb / ResearchStore / ResearchJob",
+  "research_mode": "Extractive sourced retrieval, offline library, contextual followups and periodic topic updates",
+  "mobile_core": "MobileCore1: working memory, atomic editable plans, event-role corrections, user-taught phrases and authored local lessons",
+  "kiss_action": "Paired deterministic 2D contact; ScenePlanner / KissMotion / Scene",
+  "runtime_modules": "Versioned bounded JSON behavior interpreter; on-device edit/test/activate/rollback; template-based limited auto repair",
+  "java_local": "Prepared Java class source -> ECJ -> DX -> ART on device; constrained methods, not arbitrary APK rewriting",
+  "java_chat": "Bounded Spanish conversational adjustments -> real Java rewrite/compile/test/activation, natural preview and revision-aware undo"
+}

@@ -1,0 +1,10 @@
+BOOT_READY
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+ONE_WORKSPACE True
+INLINE_DESIGN True
+DOCUMENT_PICKER [('Save', 'android:id/button1')]
+INLINE_PNG_SAVE_OK
+FINAL_ACTIVITY True FATAL_EXCEPTION False

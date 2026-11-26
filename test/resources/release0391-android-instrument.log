@@ -1,0 +1,4 @@
+NATIVE_KISS_PARSE_AND_RENDER_CONTACT_OK
+NATIVE_KISS_MP4_OK
+PASS STAGE41 exact reported kiss request, both characters, paired geometry used by actual renderer and MP4 export.
+

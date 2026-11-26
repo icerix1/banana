@@ -1,0 +1,16 @@
+{
+  "name": "Banana Pixel 2",
+  "component": "objects",
+  "external_weights": false,
+  "parameters": 22084,
+  "training_images": 60,
+  "types": [
+    "puerta",
+    "mesa",
+    "silla",
+    "caja",
+    "lampara"
+  ],
+  "size": 128,
+  "limitations": "Synthetic object shapes and open/closed door state. Not a universal image generator."
+}

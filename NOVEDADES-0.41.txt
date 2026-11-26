@@ -1,0 +1,47 @@
+BANANA 0.41 — JAVA LOCAL EXPERIMENTAL: EDITAR, COMPILAR Y ACTIVAR
+
+Esta fase incorpora compilación REAL de una clase Java preparada: BananaBehavior.java. La fuente se modifica, ECJ produce archivos .class, DX los convierte a DEX y Android carga la clase resultante con DexClassLoader. No es una simulación de Java mediante JSON. Se instala este APK una vez para incorporar el compilador y el punto de conexión. Las revisiones de esa clase se activan después dentro de Android, sin otro APK ni una PC.
+
+ALCANCE REAL
+No reescribe todo el Java de la aplicación ni recompila todo su APK. La clase preparada tiene tres métodos; el editor admite un subconjunto estricto para poder comprobar sus efectos y evitar bucles, recursión, acceso a red/archivos o código arbitrario. Nuestro modelo conversacional todavía no es un programador general. La reparación automática usa transformaciones propias de métodos conocidos; no inventa cualquier solución a partir de una página web.
+
+MÉTODOS CONECTADOS A LA APP
+celebration(): devuelve una secuencia de uno a ocho movimientos entre baila, salta, saluda, gira, aplaude y espera. Un pedido ‘Fito celebra en java’ llama al método Java compilado y aplica su resultado a la escena real.
+kissGap(): devuelve una separación entre0 y4 unidades. El método Java compilado determina la separación de las anclas del beso que usa el render. El valor original0 mantiene el contacto. No cambia ni genera los dibujos.
+rewrite(String input): puede tener hasta ocho condiciones if (input.equals("texto")) return "orden"; y termina con return input;. Permite reescrituras exactas hacia órdenes de escena acotadas. La entrada se compara normalizada, y una entrada sin coincidencia conserva el mensaje original y sus comillas.
+Conservá el paquete com.bananalab.patch y el nombre de la clase. Se rechazan imports, otros métodos, comentarios, escapes Unicode, bucles, llamadas externas y expresiones fuera del subconjunto admitido. Esto es una limitación explícita del prototipo, no soporte para todo Java.
+
+PROBÁ
+crea a Fito un zorro
+prepara prueba java
+compila y activa java
+Fito celebra en java
+estado java
+ver java
+revierte java
+
+‘Prepara prueba java’ modifica el cuerpo de celebration en un borrador. También podés pedir modificaciones directas:
+corrige java: celebracion salta,aplaude,baila
+corrige java: separacion del beso 2.0
+
+Estas órdenes reescriben los métodos existentes, validan su alcance y compilan/prueban/activan el resultado. Si algo falla, la clase activa anterior se conserva. Para restaurar contacto exacto: corrige java: separacion del beso 0.0
+
+EDITOR
+Proyecto → Java local → Editar fuente Java.
+Guardá la fuente y después elegí Compilar, probar y activar. El registro muestra si se ejecutaron ECJ, DX y la carga de Android. Guardar texto no lo activa. El editor rechaza una revisión vieja. El resultado permanece después de cerrar y abrir el proceso.
+Se conserva una versión anterior recuperable. Si el archivo activo no carga al iniciar, se usa el comportamiento base y se registra el error. Este mecanismo no reemplaza las clases de interfaz ya cargadas ni garantiza corregir errores generales del APK.
+
+INTERNET
+‘Busca este error java’ consulta documentación con la infraestructura web existente. Usa un fragmento limitado del diagnóstico, con rutas de archivo reemplazadas, y no envía las fuentes completas. Los resultados son referencias, no parches que se descargan y ejecutan. La consulta puede fallar o quedar limitada a Wikipedia como en0.38. Leer documentación no garantiza producir una corrección correcta.
+
+IMPLEMENTACIÓN Y MODELOS
+Se incluyen ECJ4.6.1 (Eclipse, EPL1.0) y DX1.7 (Android Open Source Project, Apache2.0), símbolos Java y recursos de compilación. Son herramientas estándar de terceros, no modelos de IA. Los avisos de licencia y procedencia están en assets/java-tools; las fuentes de ECJ se incluyen en las fuentes privadas. Los modelos propios Chat3.4, MobileCore1 y Pixel2.3 no cambian ni se reemplazan por Qwen.
+El código DEX se guarda en almacenamiento interno; los archivos cargados se marcan de solo lectura antes de escribirlos por el descriptor abierto. Los cambios se hacen en copias de compilación y solo se activa una clase que pasó la validación. Los archivos .java de trabajo y las versiones anteriores se conservan para diagnóstico; no se promete que no se creen archivos intermedios.
+
+VERIFICACIÓN Y LÍMITES DE PRUEBA
+Stage43JavaPolicyCheck y los veinte controles anteriores pasaron. Incluye reescritura del cuerpo de métodos, separación efectiva en geometría y rechazo de operaciones no admitidas.
+Prueba nativa en emulador Android API23: ECJ compiló una fuente editada; DX generó DEX; ART cargó la clase; celebration produjo acciones reales distintas en la escena; kissGap devolvió el valor editado. Java inválido fue rechazado y se recuperó el método original. Después se compiló otra revisión y se comprobó su ejecución tras reiniciar el proceso. El editor de fuente abrió en el APK de producción sin cierre fatal.
+No se verificó todavía la compilación en la tablet Android16 del usuario ni en todas las arquitecturas/versiones de Android. Tampoco se recompiló una aplicación Android completa. El primer ensayo encontró recursos parser.rsc faltantes; se corrigió su empaquetado y la repetición pasó. La compilación ocurrió dentro del emulador, no fue una compilación del host presentada como prueba Android.
+Después de la prueba nativa se simplificó el reescritor automático de literales y se repitieron sus pruebas y la regresión del host. Los límites del subconjunto y la compilación nativa no cambiaron.
+
+Instalar sobre0.40 con la misma firma. El ZIP es privado e incluye la firma: no publicar. Las guías de las funciones anteriores permanecen dentro de las fuentes.

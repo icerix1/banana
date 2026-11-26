@@ -1,0 +1,119 @@
+500 loss 1.8733 seconds 8
+1000 loss 0.9342 seconds 16
+1500 loss 1.1628 seconds 23
+2000 loss 0.7879 seconds 31
+2500 loss 0.6401 seconds 37
+3000 loss 1.0773 seconds 44
+3500 loss 0.6832 seconds 52
+4000 loss 0.7072 seconds 60
+4500 loss 0.6297 seconds 68
+5000 loss 0.7842 seconds 75
+5500 loss 0.476 seconds 82
+6000 loss 0.4498 seconds 90
+6500 loss 0.5512 seconds 97
+7000 loss 0.3376 seconds 105
+7500 loss 0.4205 seconds 113
+8000 loss 0.6134 seconds 121
+8500 loss 0.5404 seconds 128
+9000 loss 0.4748 seconds 136
+9500 loss 0.3332 seconds 144
+10000 loss 0.2564 seconds 151
+10500 loss 0.2883 seconds 159
+11000 loss 0.9723 seconds 166
+11500 loss 0.3408 seconds 174
+12000 loss 0.2064 seconds 181
+12500 loss 0.3447 seconds 189
+13000 loss 0.1612 seconds 197
+13500 loss 0.6955 seconds 204
+14000 loss 0.3651 seconds 212
+14500 loss 0.2744 seconds 219
+15000 loss 0.1685 seconds 227
+15500 loss 0.0816 seconds 235
+16000 loss 0.1841 seconds 243
+16500 loss 0.1167 seconds 250
+17000 loss 0.3151 seconds 258
+17500 loss 0.3948 seconds 265
+18000 loss 0.2715 seconds 273
+18500 loss 0.2913 seconds 280
+19000 loss 0.3531 seconds 288
+19500 loss 0.5052 seconds 296
+20000 loss 0.2078 seconds 304
+20500 loss 0.1719 seconds 311
+21000 loss 0.1723 seconds 318
+21500 loss 0.159 seconds 327
+22000 loss 0.4259 seconds 335
+22500 loss 0.107 seconds 342
+23000 loss 0.169 seconds 350
+23500 loss 0.1496 seconds 358
+24000 loss 0.0532 seconds 366
+24500 loss 0.0845 seconds 373
+25000 loss 0.0585 seconds 381
+25500 loss 0.0894 seconds 388
+26000 loss 0.181 seconds 395
+26500 loss 0.1636 seconds 402
+27000 loss 0.2067 seconds 410
+27500 loss 0.0921 seconds 417
+28000 loss 0.0323 seconds 424
+28500 loss 0.2399 seconds 431
+29000 loss 0.0798 seconds 439
+29500 loss 0.2756 seconds 445
+30000 loss 0.1164 seconds 453
+30500 loss 0.0601 seconds 461
+31000 loss 0.0669 seconds 468
+31500 loss 0.0367 seconds 475
+32000 loss 0.0249 seconds 483
+{
+  "name": "Banana Pixel 2.1",
+  "component": "personajes",
+  "system_release": "0.32",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 145156,
+  "external_weights": false,
+  "training_images": 3879,
+  "heldout_images": 9,
+  "unique_training_conditions": 3879,
+  "unique_heldout_conditions": 9,
+  "duplicate_note": "Unique condition includes view: front, profile, back. Synthetic evaluation only.",
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9870511957266694,
+  "heldout_foreground_RGB_MAE": 0.006633310294192698,
+  "views": [
+    "front",
+    "profile",
+    "back"
+  ],
+  "size": 128,
+  "hidden": 256,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot",
+    "perro",
+    "oso",
+    "zorro",
+    "persona"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown",
+    "coat",
+    "hat_coat",
+    "glasses"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Own neural backgrounds are retained; limb animation uses programmed 2D cutout rigs. Clothing/expression edits use controlled regional compositing."
+}

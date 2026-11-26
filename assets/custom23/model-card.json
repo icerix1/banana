@@ -1,0 +1,18 @@
+{
+  "name": "Banana Pixel2.3",
+  "component": "compositional creature mask field",
+  "external_weights": false,
+  "external_teacher": false,
+  "parameters": 10692,
+  "train_conditions": 1116,
+  "heldout_conditions": 180,
+  "heldout_foreground_IoU": 0.9485549512106322,
+  "features": [
+    "6 body forms",
+    "4 ear styles",
+    "3 tail styles",
+    "width/height",
+    "3 views"
+  ],
+  "limitations": "Finite own compositional style,64px masks; own existing learned faces/accessories composed after mask. Not universal text-to-image."
+}

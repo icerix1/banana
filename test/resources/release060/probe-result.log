@@ -1,0 +1,9 @@
+Performing Push Install
+	pkg: /data/local/tmp/Banana.apk
+Success
+
+['Banana\nCódigo permanente\nFirma importada: false\nCargué el código compilado incluido dentro de esta APK.\nLos módulos activos viven en datos privados y sobreviven a actualizaciones compatibles.\nPara incluirlos físicamente en una APK: importa firma privada → reconstruye mi apk.\nRespaldo: exporta mi codigo / importa mi codigo.\nEl paquete recompila todo Java, convierte las lambdas admitidas y genera un DEX nuevo. Los recursos empaquetados se conservan. Cambios coordinados de ABI son posibles si todo el proyecto compila. No modifica silenciosamente la APK instalada. Las actualizaciones del núcleo conservan el registro y vuelven a comprobar compatibilidad.']
+['Banana\nBiblioteca en disco: 2 documentos, 1322925 bytes UTF-8 y 637 fragmentos.\n• Libro completo · 1300068 caracteres\n• Antes · 49 caracteres\nLos textos completos están en archivos privados y se buscan mediante un índice local; no son pesos neuronales.']
+-rw------- u0_a55   u0_a55         49 2026-11-24 14:13 9e9faa00-8a45-4dbf-9a84-d6fb16c072fa.txt
+-rw------- u0_a55   u0_a55    1322876 2026-11-24 14:13 ea926704-a858-4487-a87d-91164d37195e.txt
+

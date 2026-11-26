@@ -1,0 +1,11 @@
+INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success /workspace/scratch/f1fa469e81ab/banana/review/Banana/out/BananaLab-Lite.apk: 1 file pushed, 0 skipped. 367.8 MB/s (1083132 bytes in 0.003s)
+LAUNCH Starting: Intent { cmp=com.bananalab.lite/.StartActivity }
+RUNTIME --------- beginning of main
+--------- beginning of system
+ANDROID_LAUNCH_CHECK PASS
+CHAT_TO_ANIMATION_UI PASS
+ANIMATION_GENERATED PASS
+ANIMATION_STATUS ['Escena compartida · parque\nbanana: aspecto original, centro\n1. banana baila', 'Personajes neuronales: 1 · fondo neuronal de terror. Movimiento cinematográfico.']
+POST_CHAT_FATAL False

@@ -1,0 +1,15 @@
+{
+  "name": "Banana",
+  "architecture": "shared embeddings + window MLP, contextual tagging and causal next-word head",
+  "external_weights": false,
+  "seed": 20261119,
+  "parameters": 16925,
+  "train_sentences": 10000,
+  "test_sentences": 600,
+  "metrics_synthetic_only": {
+    "token_accuracy": 0.9964385927045111,
+    "entity_recall": 1.0,
+    "next_word_cross_entropy": 3.369333267211914
+  },
+  "limitations": "Synthetic evaluation only; not a general conversational LLM. Unknown words and complex syntax may fail."
+}

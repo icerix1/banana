@@ -1,0 +1,9 @@
+type 0 presets 360 seconds 16
+type 1 presets 720 seconds 31
+type 2 presets 1080 seconds 46
+type 3 presets 1440 seconds 62
+type 4 presets 1800 seconds 77
+type 5 presets 2160 seconds 92
+type 6 presets 2520 seconds 107
+type 7 presets 2880 seconds 123
+type 8 presets 3240 seconds 139

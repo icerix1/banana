@@ -1,0 +1,43 @@
+{
+  "name": "Banana Pixel",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 58404,
+  "external_weights": false,
+  "training_images": 714,
+  "heldout_images": 6,
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9894639967129583,
+  "heldout_foreground_RGB_MAE": 0.03185215964913368,
+  "size": 96,
+  "hidden": 160,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Background and motion remain procedural.",
+  "unique_training_conditions": 357,
+  "unique_heldout_conditions": 3,
+  "duplicate_note": "Two identical zero-latent variants per condition; reported image counts include duplicates. Synthetic evaluation only.",
+  "component": "personajes",
+  "system_release": "0.30"
+}

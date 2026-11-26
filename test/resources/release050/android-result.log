@@ -1,0 +1,30 @@
+BOOT_READY
+Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+NATIVE_ALL_JAVA_COMPILES_NEW_PLANNER_ECJ_DX_TRIAL_AND_ACTIVATION_OK
+NATIVE_REAL_SCENE_IDENTITY_OWN_WEIGHT_LEARNING_ABSTENTION_AND_UNDO_OK
+NATIVE_PORTABLE_SOURCE_JOURNAL_AND_TAMPER_REJECTION_OK
+NATIVE_ANDROID_REPACKAGED_APK_WITH_COMPILED_CODE_V1_V2_V3_SIGNATURE_AND_OWNER_IDENTITY_OK
+PASS STAGE52 real Android planner, local learned weights, portable source journal, device-only private key wrapping, APK repackaging, manifest version, signing and embedded code.
+
+
+BAKED_APK_PULLED
+HOST_APK_SIGNATURE_VERIFIED
+UPDATE_INSTALL Performing Push Install
+	pkg: /data/local/tmp/baked.apk
+Success
+
+PASS STAGE52_REOPEN upgrade compiled planner, animation and own learned weights restored; owner authority true
+
+
+PASS STAGE52_REOPEN fresh compiled planner, animation and own learned weights restored; owner authority false
+
+
+PRODUCTION_INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PRODUCTION_CHAT_CODE_AND_LEARNING_HELP_AND_OWNER_IMPORT_PICKER_UI_OK
+NO_FATAL_EXCEPTION

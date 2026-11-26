@@ -1,0 +1,2 @@
+sprite presets 540
+{'source': 'Serialized neural weights evaluated offline; not teacher drawings or a procedural fallback', 'sprite_presets': 540, 'background_presets_seed0': 60, 'pixel2_sha256': '96e7d5af997c3e4c181cdd8378a43fe505c29254a2d43c3fc7c941b3ca846354', 'background_sha256': 'dc11f20e1a2ac670b074eb3217c94e127567ffe2b42554b12a19caa09c7825d9'}

@@ -1,0 +1,23 @@
+Preparé el dibujo.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: azul, derecha
+Duración: 3.0 s
+Cámara: automática
+Podés editarlo y reproducirlo en el resultado de este mensaje.
+Listo, cambié solo a pepino.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: azul, izquierda, pequeno
+Duración: 3.0 s
+Cámara: automática
+Listo, cambié solo a pepino.
+Escena compartida · parque · luz auto
+banana: sombrero, izquierda
+pepino: verde, izquierda, pequeno, detras del arbol
+1. [tiempo 1] pepino salta
+2. [tiempo 2] pepino saluda
+Duración: 3.0 s
+Cámara: automática
+[salta, saluda]
+PASS escena compartida: crear, editar, relaciones, conservar, aclarar, persistir, acciones y conversacion

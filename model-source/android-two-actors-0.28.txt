@@ -1,0 +1,10 @@
+INSTALL Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+LAUNCH Starting: Intent { cmp=com.bananalab.lite/.StartActivity }
+
+TWO_ACTOR_PLAN True TWO_SPRITES_GENERATED True
+STATUS ['Escena compartida · parque\nbanana: aspecto original, izquierda\npepino: aspecto original, derecha\n1. banana baila\n2. pepino acerca', 'Personajes neuronales: 2 · fondo neuronal de terror. Movimiento cinematográfico.']
+FINAL_TAKE ['Toma 3/3 · revelación']
+FATAL_EXCEPTION False

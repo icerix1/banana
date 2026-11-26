@@ -1,0 +1,33 @@
+500 0.00358 seconds 3
+1000 0.00258 seconds 7
+1500 0.00222 seconds 10
+2000 0.00194 seconds 13
+2500 0.00147 seconds 17
+3000 0.00172 seconds 20
+3500 0.00151 seconds 24
+4000 0.00152 seconds 27
+4500 0.00131 seconds 30
+5000 0.00128 seconds 35
+5500 0.0014 seconds 38
+6000 0.00127 seconds 42
+6500 0.00135 seconds 45
+7000 0.00127 seconds 49
+{
+  "name": "Banana Fondo1",
+  "external_weights": false,
+  "parameters": 10436,
+  "training_images": 390,
+  "heldout_images": 30,
+  "synthetic_heldout_RGB_MAE": 0.012626342723766963,
+  "training_size": 96,
+  "render_size": 128,
+  "types": [
+    "bosque/parque",
+    "playa",
+    "ciudad",
+    "montana",
+    "pasillo/interior"
+  ],
+  "channels": "RGB + learned foreground mask",
+  "limitations": "Own synthetic horror backgrounds, not universal scenes or neural video. Camera/compositing and animation remain code."
+}

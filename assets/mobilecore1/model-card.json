@@ -1,0 +1,504 @@
+{
+  "name": "Banana Mobile Core topic router 1",
+  "role": "Own learned topic selection for authored offline lessons. Not a general language generator.",
+  "external_weights": false,
+  "external_teacher": false,
+  "train_examples": 2610,
+  "heldout_examples": 80,
+  "heldout_accuracy_synthetic": 0.9375,
+  "confident_coverage": 0.7875,
+  "confident_accuracy": 1.0,
+  "threshold": 0.85,
+  "promoted": true,
+  "limitations": "Synthetic authored topic/paraphrase evaluation only; inference additionally requires a known topical keyword and excludes live/private/project commands. No claim of universal understanding.",
+  "heldout": [
+    {
+      "q": "me ayudas a comprender algoritmos",
+      "expected": "algoritmo",
+      "actual": "algoritmo",
+      "confidence": 0.9886050224304199
+    },
+    {
+      "q": "necesito una explicacion sencilla de algoritmos",
+      "expected": "algoritmo",
+      "actual": "algoritmo",
+      "confidence": 0.9483752846717834
+    },
+    {
+      "q": "podrias contarme para que sirve algoritmos",
+      "expected": "algoritmo",
+      "actual": "algoritmo",
+      "confidence": 0.9970027804374695
+    },
+    {
+      "q": "me ayudas a comprender variables",
+      "expected": "variable",
+      "actual": "variable",
+      "confidence": 0.9374454617500305
+    },
+    {
+      "q": "necesito una explicacion sencilla de variables",
+      "expected": "variable",
+      "actual": "variable",
+      "confidence": 0.922297477722168
+    },
+    {
+      "q": "podrias contarme para que sirve variables",
+      "expected": "variable",
+      "actual": "variable",
+      "confidence": 0.9965774416923523
+    },
+    {
+      "q": "me ayudas a comprender bucles",
+      "expected": "bucle",
+      "actual": "bucle",
+      "confidence": 0.9827715754508972
+    },
+    {
+      "q": "necesito una explicacion sencilla de bucles",
+      "expected": "bucle",
+      "actual": "bucle",
+      "confidence": 0.45289406180381775
+    },
+    {
+      "q": "podrias contarme para que sirve bucles",
+      "expected": "bucle",
+      "actual": "bucle",
+      "confidence": 0.9553009271621704
+    },
+    {
+      "q": "me ayudas a comprender funciones",
+      "expected": "funcion",
+      "actual": "funcion",
+      "confidence": 0.9227893948554993
+    },
+    {
+      "q": "necesito una explicacion sencilla de funciones",
+      "expected": "funcion",
+      "actual": "funcion",
+      "confidence": 0.9888178110122681
+    },
+    {
+      "q": "podrias contarme para que sirve funciones",
+      "expected": "funcion",
+      "actual": "funcion",
+      "confidence": 0.9918429255485535
+    },
+    {
+      "q": "me ayudas a comprender depuración",
+      "expected": "depuracion",
+      "actual": "depuracion",
+      "confidence": 0.9859592318534851
+    },
+    {
+      "q": "necesito una explicacion sencilla de depuración",
+      "expected": "depuracion",
+      "actual": "depuracion",
+      "confidence": 0.9306299686431885
+    },
+    {
+      "q": "podrias contarme para que sirve depuración",
+      "expected": "depuracion",
+      "actual": "depuracion",
+      "confidence": 0.5963964462280273
+    },
+    {
+      "q": "me ayudas a comprender fotosíntesis",
+      "expected": "fotosintesis",
+      "actual": "fotosintesis",
+      "confidence": 0.9417392015457153
+    },
+    {
+      "q": "necesito una explicacion sencilla de fotosíntesis",
+      "expected": "fotosintesis",
+      "actual": "fotosintesis",
+      "confidence": 0.9873128533363342
+    },
+    {
+      "q": "podrias contarme para que sirve fotosíntesis",
+      "expected": "fotosintesis",
+      "actual": "fotosintesis",
+      "confidence": 0.9980888962745667
+    },
+    {
+      "q": "me ayudas a comprender gravedad",
+      "expected": "gravedad",
+      "actual": "gravedad",
+      "confidence": 0.9946647882461548
+    },
+    {
+      "q": "necesito una explicacion sencilla de gravedad",
+      "expected": "gravedad",
+      "actual": "gravedad",
+      "confidence": 0.9236814379692078
+    },
+    {
+      "q": "podrias contarme para que sirve gravedad",
+      "expected": "gravedad",
+      "actual": "gravedad",
+      "confidence": 0.9590824842453003
+    },
+    {
+      "q": "me ayudas a comprender energía solar",
+      "expected": "energia_solar",
+      "actual": "energia_solar",
+      "confidence": 0.9976301193237305
+    },
+    {
+      "q": "necesito una explicacion sencilla de energía solar",
+      "expected": "energia_solar",
+      "actual": "energia_solar",
+      "confidence": 0.9806818962097168
+    },
+    {
+      "q": "podrias contarme para que sirve energía solar",
+      "expected": "energia_solar",
+      "actual": "energia_solar",
+      "confidence": 0.9983349442481995
+    },
+    {
+      "q": "me ayudas a comprender electricidad",
+      "expected": "electricidad",
+      "actual": "electricidad",
+      "confidence": 0.9579889178276062
+    },
+    {
+      "q": "necesito una explicacion sencilla de electricidad",
+      "expected": "electricidad",
+      "actual": "electricidad",
+      "confidence": 0.9707221388816833
+    },
+    {
+      "q": "podrias contarme para que sirve electricidad",
+      "expected": "electricidad",
+      "actual": "electricidad",
+      "confidence": 0.9976615905761719
+    },
+    {
+      "q": "me ayudas a comprender estados del agua",
+      "expected": "agua",
+      "actual": "agua",
+      "confidence": 0.9934717416763306
+    },
+    {
+      "q": "necesito una explicacion sencilla de estados del agua",
+      "expected": "agua",
+      "actual": "agua",
+      "confidence": 0.9460617899894714
+    },
+    {
+      "q": "podrias contarme para que sirve estados del agua",
+      "expected": "agua",
+      "actual": "agua",
+      "confidence": 0.9821192026138306
+    },
+    {
+      "q": "me ayudas a comprender sonido",
+      "expected": "sonido",
+      "actual": "unknown",
+      "confidence": 0.3353073000907898
+    },
+    {
+      "q": "necesito una explicacion sencilla de sonido",
+      "expected": "sonido",
+      "actual": "unknown",
+      "confidence": 0.521170437335968
+    },
+    {
+      "q": "podrias contarme para que sirve sonido",
+      "expected": "sonido",
+      "actual": "sonido",
+      "confidence": 0.7624850273132324
+    },
+    {
+      "q": "me ayudas a comprender color y luz",
+      "expected": "color",
+      "actual": "color",
+      "confidence": 0.7302502393722534
+    },
+    {
+      "q": "necesito una explicacion sencilla de color y luz",
+      "expected": "color",
+      "actual": "unknown",
+      "confidence": 0.6262642741203308
+    },
+    {
+      "q": "podrias contarme para que sirve color y luz",
+      "expected": "color",
+      "actual": "compresion",
+      "confidence": 0.36766159534454346
+    },
+    {
+      "q": "me ayudas a comprender principios de animación",
+      "expected": "animacion",
+      "actual": "animacion",
+      "confidence": 0.927851676940918
+    },
+    {
+      "q": "necesito una explicacion sencilla de principios de animación",
+      "expected": "animacion",
+      "actual": "animacion",
+      "confidence": 0.5479558706283569
+    },
+    {
+      "q": "podrias contarme para que sirve principios de animación",
+      "expected": "animacion",
+      "actual": "animacion",
+      "confidence": 0.9878147840499878
+    },
+    {
+      "q": "me ayudas a comprender perspectiva",
+      "expected": "perspectiva",
+      "actual": "perspectiva",
+      "confidence": 0.9934552311897278
+    },
+    {
+      "q": "necesito una explicacion sencilla de perspectiva",
+      "expected": "perspectiva",
+      "actual": "perspectiva",
+      "confidence": 0.9812756776809692
+    },
+    {
+      "q": "podrias contarme para que sirve perspectiva",
+      "expected": "perspectiva",
+      "actual": "perspectiva",
+      "confidence": 0.9773308038711548
+    },
+    {
+      "q": "me ayudas a comprender guion de una escena",
+      "expected": "guion",
+      "actual": "guion",
+      "confidence": 0.9467641711235046
+    },
+    {
+      "q": "necesito una explicacion sencilla de guion de una escena",
+      "expected": "guion",
+      "actual": "guion",
+      "confidence": 0.7798043489456177
+    },
+    {
+      "q": "podrias contarme para que sirve guion de una escena",
+      "expected": "guion",
+      "actual": "guion",
+      "confidence": 0.7411358952522278
+    },
+    {
+      "q": "me ayudas a comprender memoria de un asistente",
+      "expected": "memoria_ia",
+      "actual": "memoria_ia",
+      "confidence": 0.992366373538971
+    },
+    {
+      "q": "necesito una explicacion sencilla de memoria de un asistente",
+      "expected": "memoria_ia",
+      "actual": "memoria_ia",
+      "confidence": 0.9390380382537842
+    },
+    {
+      "q": "podrias contarme para que sirve memoria de un asistente",
+      "expected": "memoria_ia",
+      "actual": "memoria_ia",
+      "confidence": 0.9419525861740112
+    },
+    {
+      "q": "me ayudas a comprender modelos de inteligencia artificial",
+      "expected": "modelo_ia",
+      "actual": "modelo_ia",
+      "confidence": 0.9248895049095154
+    },
+    {
+      "q": "necesito una explicacion sencilla de modelos de inteligencia artificial",
+      "expected": "modelo_ia",
+      "actual": "modelo_ia",
+      "confidence": 0.8964405059814453
+    },
+    {
+      "q": "podrias contarme para que sirve modelos de inteligencia artificial",
+      "expected": "modelo_ia",
+      "actual": "modelo_ia",
+      "confidence": 0.9839260578155518
+    },
+    {
+      "q": "me ayudas a comprender entrenamiento y evaluación",
+      "expected": "entrenamiento_ia",
+      "actual": "entrenamiento_ia",
+      "confidence": 0.8018781542778015
+    },
+    {
+      "q": "necesito una explicacion sencilla de entrenamiento y evaluación",
+      "expected": "entrenamiento_ia",
+      "actual": "entrenamiento_ia",
+      "confidence": 0.4697069823741913
+    },
+    {
+      "q": "podrias contarme para que sirve entrenamiento y evaluación",
+      "expected": "entrenamiento_ia",
+      "actual": "entrenamiento_ia",
+      "confidence": 0.9611465930938721
+    },
+    {
+      "q": "me ayudas a comprender internet y búsqueda",
+      "expected": "internet",
+      "actual": "internet",
+      "confidence": 0.9932523369789124
+    },
+    {
+      "q": "necesito una explicacion sencilla de internet y búsqueda",
+      "expected": "internet",
+      "actual": "internet",
+      "confidence": 0.9646007418632507
+    },
+    {
+      "q": "podrias contarme para que sirve internet y búsqueda",
+      "expected": "internet",
+      "actual": "internet",
+      "confidence": 0.969103217124939
+    },
+    {
+      "q": "me ayudas a comprender fracciones",
+      "expected": "fracciones",
+      "actual": "fracciones",
+      "confidence": 0.9903993010520935
+    },
+    {
+      "q": "necesito una explicacion sencilla de fracciones",
+      "expected": "fracciones",
+      "actual": "fracciones",
+      "confidence": 0.9575743675231934
+    },
+    {
+      "q": "podrias contarme para que sirve fracciones",
+      "expected": "fracciones",
+      "actual": "fracciones",
+      "confidence": 0.9987632036209106
+    },
+    {
+      "q": "me ayudas a comprender porcentajes",
+      "expected": "porcentajes",
+      "actual": "porcentajes",
+      "confidence": 0.9825960397720337
+    },
+    {
+      "q": "necesito una explicacion sencilla de porcentajes",
+      "expected": "porcentajes",
+      "actual": "porcentajes",
+      "confidence": 0.9073780179023743
+    },
+    {
+      "q": "podrias contarme para que sirve porcentajes",
+      "expected": "porcentajes",
+      "actual": "porcentajes",
+      "confidence": 0.9954102635383606
+    },
+    {
+      "q": "me ayudas a comprender probabilidad",
+      "expected": "probabilidad",
+      "actual": "probabilidad",
+      "confidence": 0.9846038222312927
+    },
+    {
+      "q": "necesito una explicacion sencilla de probabilidad",
+      "expected": "probabilidad",
+      "actual": "probabilidad",
+      "confidence": 0.9058868288993835
+    },
+    {
+      "q": "podrias contarme para que sirve probabilidad",
+      "expected": "probabilidad",
+      "actual": "probabilidad",
+      "confidence": 0.968082845211029
+    },
+    {
+      "q": "me ayudas a comprender condiciones y lógica",
+      "expected": "logica",
+      "actual": "logica",
+      "confidence": 0.9981585144996643
+    },
+    {
+      "q": "necesito una explicacion sencilla de condiciones y lógica",
+      "expected": "logica",
+      "actual": "logica",
+      "confidence": 0.9990823268890381
+    },
+    {
+      "q": "podrias contarme para que sirve condiciones y lógica",
+      "expected": "logica",
+      "actual": "logica",
+      "confidence": 0.9999082088470459
+    },
+    {
+      "q": "me ayudas a comprender compresión de archivos",
+      "expected": "compresion",
+      "actual": "compresion",
+      "confidence": 0.9999009370803833
+    },
+    {
+      "q": "necesito una explicacion sencilla de compresión de archivos",
+      "expected": "compresion",
+      "actual": "compresion",
+      "confidence": 0.9560912847518921
+    },
+    {
+      "q": "podrias contarme para que sirve compresión de archivos",
+      "expected": "compresion",
+      "actual": "compresion",
+      "confidence": 0.9999347925186157
+    },
+    {
+      "q": "que tiempo va a hacer",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9444823861122131
+    },
+    {
+      "q": "quiero comprar una casa",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.6444700956344604
+    },
+    {
+      "q": "necesito arreglar mi escena",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9633325934410095
+    },
+    {
+      "q": "cambia la cola de Nube",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.5490894317626953
+    },
+    {
+      "q": "donde consigo un medicamento",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.8045480847358704
+    },
+    {
+      "q": "quien gano ayer",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9969691634178162
+    },
+    {
+      "q": "contame un chiste nuevo",
+      "expected": "unknown",
+      "actual": "bucle",
+      "confidence": 0.4690021574497223
+    },
+    {
+      "q": "quiero un dibujo lindo",
+      "expected": "unknown",
+      "actual": "unknown",
+      "confidence": 0.9004331231117249
+    }
+  ],
+  "runtime_gate_evaluation": {
+    "examples": 80,
+    "selected": 59,
+    "correct_selected": 59,
+    "coverage": 0.7375,
+    "precision_on_selected_synthetic_only": 1.0,
+    "note": "Includes question-pattern, keyword and confidence guards. Small own synthetic set only; not a general capability benchmark."
+  }
+}

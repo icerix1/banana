@@ -1,0 +1,18 @@
+{
+  "origin": "Original synthetic code and Spanish instructions authored for this project; no third-party code corpus",
+  "scope": "operator selection; six arithmetic operations; not general Java code generation",
+  "splits": {
+    "train": {
+      "examples": 216,
+      "sha256": "d309303185badf502e43372b9ceec544ad10c6de20de5ec8cc1c494aed6c900e"
+    },
+    "development": {
+      "examples": 12,
+      "sha256": "f10248988d0e8f488f68f7f0ae1bf065beeecadf53487e5e1406459d60db18cd"
+    },
+    "evaluation": {
+      "examples": 12,
+      "sha256": "3e2045e946451e841c6539ba7dbf25fb18092bbc4d1020d70d38cbaef4e3e33e"
+    }
+  }
+}

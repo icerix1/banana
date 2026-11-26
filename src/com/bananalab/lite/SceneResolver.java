@@ -1,0 +1,14 @@
+package com.bananalab.lite;
+import java.util.regex.*;
+final class SceneResolver{
+ static SceneDraft.Actor special(SceneDraft d,String text){String q=ChatLanguage.normalize(text).replaceAll("^(?:que |a |al )","").trim();if(q.matches("el|ella|este|esta|ese|esa|ese personaje|esa personaje|el seleccionado|la seleccionada|hacelo|hacela|ponelo|ponela|lo|la"))return d.get(d.focused);
+  if(q.matches("el anterior|la anterior|el de antes|la de antes"))return d.get(d.previousFocus);
+  String[] ord={"primero","segundo","tercero","cuarto","ultimo"};for(int i=0;i<ord.length;i++)if(q.equals("el "+ord[i])||q.equals("la "+ord[i])){int at=i==4?d.cast.size()-1:i;return at>=0&&at<d.cast.size()?d.cast.get(at):null;}
+  if(q.matches("el protagonista|la protagonista|el principal"))return d.cast.isEmpty()?null:d.cast.get(0);if(q.matches("el otro|la otra"))return ScenePlanner.other(d,d.get(d.focused));
+  if(q.matches("(?:el|la) que (?:habla|baila|salta)")){String action=q.endsWith("habla")?"habla":q.endsWith("baila")?"baila":"salta";int last=-1;SceneDraft.Actor found=null;for(int i=0;i<d.actions.size();i++)if(d.actions.get(i).equals(action)){int slot=d.slot(i);SceneDraft.Actor actor=d.cast.get(d.actors.get(i));if(slot>last){last=slot;found=actor;}else if(slot==last&&found!=actor)found=null;}return found;}
+  if(q.matches("(?:el|la) que (?:entro|entra|llego|aparecio)")){int last=-1;SceneDraft.Actor found=null;for(int i=0;i<d.actions.size();i++)if(d.actions.get(i).matches("entraizq|entrader")){int slot=d.slot(i);if(slot>last){last=slot;found=d.cast.get(d.actors.get(i));}else if(slot==last&&found!=d.cast.get(d.actors.get(i)))found=null;}return found;}
+  Matcher event=Pattern.compile("(?:el|la) que recibio (?:primero )?(?:la |el )?(caja|lampara)(?: de (.+))?").matcher(q);if(event.matches()){SceneDraft.Actor sender=event.group(2)==null?null:ScenePlanner.resolve(d,event.group(2),false);if(event.group(2)!=null&&sender==null)return null;return received(d,event.group(1),sender==null?"":sender.name,q.contains("primero"));}
+  Matcher owner=Pattern.compile("(?:el|la) que (?:tiene|sostiene) (?:la |el )?(caja|lampara)").matcher(q);if(owner.matches()){for(SceneDraft.Prop p:d.props)if(p.type.equals(owner.group(1)))return d.get(ObjectTransfer.at(d,p.id,1,ObjectTransfer.beats(d)).owner());}return null;
+ }
+ static SceneDraft.Actor received(SceneDraft d,String kind,String sender,boolean first){int at=first?99:-1;SceneDraft.Actor found=null;for(int i=0;i<d.actions.size();i++){SceneDraft.Prop p=d.prop(d.target(i));if(!d.actions.get(i).equals("entrega")||p==null||!p.type.equals(kind)||!sender.isEmpty()&&!d.cast.get(d.actors.get(i)).name.equals(sender))continue;int slot=d.slot(i);SceneDraft.Actor a=d.get(d.recipient(i));if(first?slot<at:slot>at){at=slot;found=a;}else if(slot==at&&found!=a)found=null;}return found;}
+}

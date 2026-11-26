@@ -1,0 +1,25 @@
+INSTALL_TEST Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+PREPARE_MS 47295
+RENDER_OK sprites96 background_readable
+SINGLE_MP4_AV_OK
+SERIES_MP4_AV_OK
+SCENE_CONTINUITY_OK
+PASS STAGE31 Android render, neural presets, simultaneous timing, AAC/H264 mux, series and identity.
+
+
+PULL 
+PULL 
+PULL 
+INSTALL_PRODUCTION Performing Push Install
+	pkg: /data/local/tmp/BananaLab-Lite.apk
+Success
+
+LAUNCH Starting: Intent { cmp=com.bananalab.lite/.StartActivity }
+
+CHAT31_BRAND True
+CHAT31_PARALLEL_PLAN True CLEAR_TWO_ACTORS_READY True
+VISIBLE_STATUS ['Escena compartida · parque\nbanana: aspecto original, izquierda\npepino: aspecto original, derecha\n1. [tiempo 1] banana baila\n2. [tiempo 1] pepino entra por la derecha\nCámara: automática', 'Personajes neuronales: 2. Lista para guardar GIF.']
+FATAL_EXCEPTION False

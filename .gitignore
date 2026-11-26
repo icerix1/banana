@@ -1,0 +1,10 @@
+# Firma privada: nunca versionar
+keys/
+*.p12
+*.jks
+*.keystore
+*.pk8
+# Salidas de compilacion
+out/
+classes/
+__pycache__/

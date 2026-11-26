@@ -1,0 +1,10 @@
+PASS | hola | hola! que queres crear o conversar hoy?
+FAIL | como me llamo | te escucho.
+FAIL | de que color es pepino | podemos inventar.
+FAIL | de que color es gato | podemos inventar.
+FAIL | 3 mas 4 | No conozco suficientes palabras de ese pedido. Proba una frase mas sencilla o usa el chat con fuentes.
+FAIL | 8 mas 6 | No conozco suficientes palabras de ese pedido. Proba una frase mas sencilla o usa el chat con fuentes.
+FAIL | escribi una frase donde gato salta en bosque | que te puedo ayudar?
+FAIL | dibuja un dragon | podemos inventar personajes, pensar una historia o charlar de algo que te guste. que preferis?
+FAIL | que paso hoy en el mundo | despues puede consultar referencias que mas te gusta de eso?
+CONTROLLED_SMOKE_SCORE 1/9

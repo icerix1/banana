@@ -1,0 +1,8205 @@
+{
+  "train": [
+    [
+      "como sigo la escena",
+      0
+    ],
+    [
+      "como sigo la escena porfa",
+      0
+    ],
+    [
+      "como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "banana como sigo la escena",
+      0
+    ],
+    [
+      "banana como sigo la escena porfa",
+      0
+    ],
+    [
+      "banana como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "che como sigo la escena",
+      0
+    ],
+    [
+      "che como sigo la escena porfa",
+      0
+    ],
+    [
+      "che como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "por favor como sigo la escena",
+      0
+    ],
+    [
+      "por favor como sigo la escena porfa",
+      0
+    ],
+    [
+      "por favor como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "me explicas como sigo la escena",
+      0
+    ],
+    [
+      "me explicas como sigo la escena porfa",
+      0
+    ],
+    [
+      "me explicas como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "una pregunta como sigo la escena",
+      0
+    ],
+    [
+      "una pregunta como sigo la escena porfa",
+      0
+    ],
+    [
+      "una pregunta como sigo la escena en este proyecto",
+      0
+    ],
+    [
+      "quiero continuar la historia",
+      0
+    ],
+    [
+      "quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "banana quiero continuar la historia",
+      0
+    ],
+    [
+      "banana quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "banana quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "che quiero continuar la historia",
+      0
+    ],
+    [
+      "che quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "che quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "por favor quiero continuar la historia",
+      0
+    ],
+    [
+      "por favor quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "por favor quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "me explicas quiero continuar la historia",
+      0
+    ],
+    [
+      "me explicas quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "me explicas quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "una pregunta quiero continuar la historia",
+      0
+    ],
+    [
+      "una pregunta quiero continuar la historia porfa",
+      0
+    ],
+    [
+      "una pregunta quiero continuar la historia en este proyecto",
+      0
+    ],
+    [
+      "como agrego otra accion",
+      0
+    ],
+    [
+      "como agrego otra accion porfa",
+      0
+    ],
+    [
+      "como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "banana como agrego otra accion",
+      0
+    ],
+    [
+      "banana como agrego otra accion porfa",
+      0
+    ],
+    [
+      "banana como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "che como agrego otra accion",
+      0
+    ],
+    [
+      "che como agrego otra accion porfa",
+      0
+    ],
+    [
+      "che como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "por favor como agrego otra accion",
+      0
+    ],
+    [
+      "por favor como agrego otra accion porfa",
+      0
+    ],
+    [
+      "por favor como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "me explicas como agrego otra accion",
+      0
+    ],
+    [
+      "me explicas como agrego otra accion porfa",
+      0
+    ],
+    [
+      "me explicas como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "una pregunta como agrego otra accion",
+      0
+    ],
+    [
+      "una pregunta como agrego otra accion porfa",
+      0
+    ],
+    [
+      "una pregunta como agrego otra accion en este proyecto",
+      0
+    ],
+    [
+      "seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "banana seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "banana seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "banana seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "che seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "che seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "che seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "por favor seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "por favor seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "por favor seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "me explicas seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "me explicas seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "me explicas seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "una pregunta seguir sin perder lo anterior",
+      0
+    ],
+    [
+      "una pregunta seguir sin perder lo anterior porfa",
+      0
+    ],
+    [
+      "una pregunta seguir sin perder lo anterior en este proyecto",
+      0
+    ],
+    [
+      "continuar con los mismos personajes",
+      0
+    ],
+    [
+      "continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "banana continuar con los mismos personajes",
+      0
+    ],
+    [
+      "banana continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "banana continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "che continuar con los mismos personajes",
+      0
+    ],
+    [
+      "che continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "che continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "por favor continuar con los mismos personajes",
+      0
+    ],
+    [
+      "por favor continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "por favor continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "me explicas continuar con los mismos personajes",
+      0
+    ],
+    [
+      "me explicas continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "me explicas continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "una pregunta continuar con los mismos personajes",
+      0
+    ],
+    [
+      "una pregunta continuar con los mismos personajes porfa",
+      0
+    ],
+    [
+      "una pregunta continuar con los mismos personajes en este proyecto",
+      0
+    ],
+    [
+      "quiero agregar algo despues",
+      0
+    ],
+    [
+      "quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "banana quiero agregar algo despues",
+      0
+    ],
+    [
+      "banana quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "banana quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "che quiero agregar algo despues",
+      0
+    ],
+    [
+      "che quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "che quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "por favor quiero agregar algo despues",
+      0
+    ],
+    [
+      "por favor quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "por favor quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "me explicas quiero agregar algo despues",
+      0
+    ],
+    [
+      "me explicas quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "me explicas quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "una pregunta quiero agregar algo despues",
+      0
+    ],
+    [
+      "una pregunta quiero agregar algo despues porfa",
+      0
+    ],
+    [
+      "una pregunta quiero agregar algo despues en este proyecto",
+      0
+    ],
+    [
+      "como continuo mi video",
+      0
+    ],
+    [
+      "como continuo mi video porfa",
+      0
+    ],
+    [
+      "como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "banana como continuo mi video",
+      0
+    ],
+    [
+      "banana como continuo mi video porfa",
+      0
+    ],
+    [
+      "banana como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "che como continuo mi video",
+      0
+    ],
+    [
+      "che como continuo mi video porfa",
+      0
+    ],
+    [
+      "che como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "por favor como continuo mi video",
+      0
+    ],
+    [
+      "por favor como continuo mi video porfa",
+      0
+    ],
+    [
+      "por favor como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "me explicas como continuo mi video",
+      0
+    ],
+    [
+      "me explicas como continuo mi video porfa",
+      0
+    ],
+    [
+      "me explicas como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "una pregunta como continuo mi video",
+      0
+    ],
+    [
+      "una pregunta como continuo mi video porfa",
+      0
+    ],
+    [
+      "una pregunta como continuo mi video en este proyecto",
+      0
+    ],
+    [
+      "que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "banana que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "banana que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "banana que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "che que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "che que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "che que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "por favor que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "por favor que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "por favor que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "me explicas que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "me explicas que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "me explicas que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "una pregunta que hago para seguir la secuencia",
+      0
+    ],
+    [
+      "una pregunta que hago para seguir la secuencia porfa",
+      0
+    ],
+    [
+      "una pregunta que hago para seguir la secuencia en este proyecto",
+      0
+    ],
+    [
+      "me perdi en el proyecto",
+      1
+    ],
+    [
+      "me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "banana me perdi en el proyecto",
+      1
+    ],
+    [
+      "banana me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "banana me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "che me perdi en el proyecto",
+      1
+    ],
+    [
+      "che me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "che me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "por favor me perdi en el proyecto",
+      1
+    ],
+    [
+      "por favor me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "por favor me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "me explicas me perdi en el proyecto",
+      1
+    ],
+    [
+      "me explicas me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "me explicas me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "una pregunta me perdi en el proyecto",
+      1
+    ],
+    [
+      "una pregunta me perdi en el proyecto porfa",
+      1
+    ],
+    [
+      "una pregunta me perdi en el proyecto en este proyecto",
+      1
+    ],
+    [
+      "resumime lo que hicimos",
+      1
+    ],
+    [
+      "resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "banana resumime lo que hicimos",
+      1
+    ],
+    [
+      "banana resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "banana resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "che resumime lo que hicimos",
+      1
+    ],
+    [
+      "che resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "che resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "por favor resumime lo que hicimos",
+      1
+    ],
+    [
+      "por favor resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "por favor resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "me explicas resumime lo que hicimos",
+      1
+    ],
+    [
+      "me explicas resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "me explicas resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "una pregunta resumime lo que hicimos",
+      1
+    ],
+    [
+      "una pregunta resumime lo que hicimos porfa",
+      1
+    ],
+    [
+      "una pregunta resumime lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "como va mi escena",
+      1
+    ],
+    [
+      "como va mi escena porfa",
+      1
+    ],
+    [
+      "como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "banana como va mi escena",
+      1
+    ],
+    [
+      "banana como va mi escena porfa",
+      1
+    ],
+    [
+      "banana como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "che como va mi escena",
+      1
+    ],
+    [
+      "che como va mi escena porfa",
+      1
+    ],
+    [
+      "che como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "por favor como va mi escena",
+      1
+    ],
+    [
+      "por favor como va mi escena porfa",
+      1
+    ],
+    [
+      "por favor como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "me explicas como va mi escena",
+      1
+    ],
+    [
+      "me explicas como va mi escena porfa",
+      1
+    ],
+    [
+      "me explicas como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "una pregunta como va mi escena",
+      1
+    ],
+    [
+      "una pregunta como va mi escena porfa",
+      1
+    ],
+    [
+      "una pregunta como va mi escena en este proyecto",
+      1
+    ],
+    [
+      "que estabamos preparando",
+      1
+    ],
+    [
+      "que estabamos preparando porfa",
+      1
+    ],
+    [
+      "que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "banana que estabamos preparando",
+      1
+    ],
+    [
+      "banana que estabamos preparando porfa",
+      1
+    ],
+    [
+      "banana que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "che que estabamos preparando",
+      1
+    ],
+    [
+      "che que estabamos preparando porfa",
+      1
+    ],
+    [
+      "che que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "por favor que estabamos preparando",
+      1
+    ],
+    [
+      "por favor que estabamos preparando porfa",
+      1
+    ],
+    [
+      "por favor que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "me explicas que estabamos preparando",
+      1
+    ],
+    [
+      "me explicas que estabamos preparando porfa",
+      1
+    ],
+    [
+      "me explicas que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "una pregunta que estabamos preparando",
+      1
+    ],
+    [
+      "una pregunta que estabamos preparando porfa",
+      1
+    ],
+    [
+      "una pregunta que estabamos preparando en este proyecto",
+      1
+    ],
+    [
+      "recordame donde quedamos",
+      1
+    ],
+    [
+      "recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "banana recordame donde quedamos",
+      1
+    ],
+    [
+      "banana recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "banana recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "che recordame donde quedamos",
+      1
+    ],
+    [
+      "che recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "che recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "por favor recordame donde quedamos",
+      1
+    ],
+    [
+      "por favor recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "por favor recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "me explicas recordame donde quedamos",
+      1
+    ],
+    [
+      "me explicas recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "me explicas recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "una pregunta recordame donde quedamos",
+      1
+    ],
+    [
+      "una pregunta recordame donde quedamos porfa",
+      1
+    ],
+    [
+      "una pregunta recordame donde quedamos en este proyecto",
+      1
+    ],
+    [
+      "quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "banana quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "banana quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "banana quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "che quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "che quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "che quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "por favor quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "por favor quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "por favor quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "me explicas quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "me explicas quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "me explicas quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "una pregunta quiero revisar el proyecto actual",
+      1
+    ],
+    [
+      "una pregunta quiero revisar el proyecto actual porfa",
+      1
+    ],
+    [
+      "una pregunta quiero revisar el proyecto actual en este proyecto",
+      1
+    ],
+    [
+      "mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "banana mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "banana mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "banana mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "che mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "che mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "che mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "por favor mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "por favor mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "por favor mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "me explicas mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "me explicas mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "me explicas mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "una pregunta mostrame un resumen del trabajo",
+      1
+    ],
+    [
+      "una pregunta mostrame un resumen del trabajo porfa",
+      1
+    ],
+    [
+      "una pregunta mostrame un resumen del trabajo en este proyecto",
+      1
+    ],
+    [
+      "no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "banana no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "banana no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "banana no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "che no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "che no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "che no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "por favor no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "por favor no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "por favor no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "me explicas no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "me explicas no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "me explicas no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "una pregunta no recuerdo lo que hicimos",
+      1
+    ],
+    [
+      "una pregunta no recuerdo lo que hicimos porfa",
+      1
+    ],
+    [
+      "una pregunta no recuerdo lo que hicimos en este proyecto",
+      1
+    ],
+    [
+      "como hago para que hablen",
+      2
+    ],
+    [
+      "como hago para que hablen porfa",
+      2
+    ],
+    [
+      "como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "banana como hago para que hablen",
+      2
+    ],
+    [
+      "banana como hago para que hablen porfa",
+      2
+    ],
+    [
+      "banana como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "che como hago para que hablen",
+      2
+    ],
+    [
+      "che como hago para que hablen porfa",
+      2
+    ],
+    [
+      "che como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "por favor como hago para que hablen",
+      2
+    ],
+    [
+      "por favor como hago para que hablen porfa",
+      2
+    ],
+    [
+      "por favor como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "me explicas como hago para que hablen",
+      2
+    ],
+    [
+      "me explicas como hago para que hablen porfa",
+      2
+    ],
+    [
+      "me explicas como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "una pregunta como hago para que hablen",
+      2
+    ],
+    [
+      "una pregunta como hago para que hablen porfa",
+      2
+    ],
+    [
+      "una pregunta como hago para que hablen en este proyecto",
+      2
+    ],
+    [
+      "quiero ponerles voces",
+      2
+    ],
+    [
+      "quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "banana quiero ponerles voces",
+      2
+    ],
+    [
+      "banana quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "banana quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "che quiero ponerles voces",
+      2
+    ],
+    [
+      "che quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "che quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "por favor quiero ponerles voces",
+      2
+    ],
+    [
+      "por favor quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "por favor quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "me explicas quiero ponerles voces",
+      2
+    ],
+    [
+      "me explicas quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "me explicas quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "una pregunta quiero ponerles voces",
+      2
+    ],
+    [
+      "una pregunta quiero ponerles voces porfa",
+      2
+    ],
+    [
+      "una pregunta quiero ponerles voces en este proyecto",
+      2
+    ],
+    [
+      "como escribo un dialogo",
+      2
+    ],
+    [
+      "como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "banana como escribo un dialogo",
+      2
+    ],
+    [
+      "banana como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "banana como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "che como escribo un dialogo",
+      2
+    ],
+    [
+      "che como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "che como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "por favor como escribo un dialogo",
+      2
+    ],
+    [
+      "por favor como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "por favor como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "me explicas como escribo un dialogo",
+      2
+    ],
+    [
+      "me explicas como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "me explicas como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "una pregunta como escribo un dialogo",
+      2
+    ],
+    [
+      "una pregunta como escribo un dialogo porfa",
+      2
+    ],
+    [
+      "una pregunta como escribo un dialogo en este proyecto",
+      2
+    ],
+    [
+      "quiero que digan una frase",
+      2
+    ],
+    [
+      "quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "banana quiero que digan una frase",
+      2
+    ],
+    [
+      "banana quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "banana quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "che quiero que digan una frase",
+      2
+    ],
+    [
+      "che quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "che quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "por favor quiero que digan una frase",
+      2
+    ],
+    [
+      "por favor quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "por favor quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "me explicas quiero que digan una frase",
+      2
+    ],
+    [
+      "me explicas quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "me explicas quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "una pregunta quiero que digan una frase",
+      2
+    ],
+    [
+      "una pregunta quiero que digan una frase porfa",
+      2
+    ],
+    [
+      "una pregunta quiero que digan una frase en este proyecto",
+      2
+    ],
+    [
+      "agregar voz a mis personajes",
+      2
+    ],
+    [
+      "agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "banana agregar voz a mis personajes",
+      2
+    ],
+    [
+      "banana agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "banana agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "che agregar voz a mis personajes",
+      2
+    ],
+    [
+      "che agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "che agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "por favor agregar voz a mis personajes",
+      2
+    ],
+    [
+      "por favor agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "por favor agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "me explicas agregar voz a mis personajes",
+      2
+    ],
+    [
+      "me explicas agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "me explicas agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "una pregunta agregar voz a mis personajes",
+      2
+    ],
+    [
+      "una pregunta agregar voz a mis personajes porfa",
+      2
+    ],
+    [
+      "una pregunta agregar voz a mis personajes en este proyecto",
+      2
+    ],
+    [
+      "hacer hablar a los personajes",
+      2
+    ],
+    [
+      "hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "banana hacer hablar a los personajes",
+      2
+    ],
+    [
+      "banana hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "banana hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "che hacer hablar a los personajes",
+      2
+    ],
+    [
+      "che hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "che hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "por favor hacer hablar a los personajes",
+      2
+    ],
+    [
+      "por favor hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "por favor hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "me explicas hacer hablar a los personajes",
+      2
+    ],
+    [
+      "me explicas hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "me explicas hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "una pregunta hacer hablar a los personajes",
+      2
+    ],
+    [
+      "una pregunta hacer hablar a los personajes porfa",
+      2
+    ],
+    [
+      "una pregunta hacer hablar a los personajes en este proyecto",
+      2
+    ],
+    [
+      "poner una frase hablada",
+      2
+    ],
+    [
+      "poner una frase hablada porfa",
+      2
+    ],
+    [
+      "poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "banana poner una frase hablada",
+      2
+    ],
+    [
+      "banana poner una frase hablada porfa",
+      2
+    ],
+    [
+      "banana poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "che poner una frase hablada",
+      2
+    ],
+    [
+      "che poner una frase hablada porfa",
+      2
+    ],
+    [
+      "che poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "por favor poner una frase hablada",
+      2
+    ],
+    [
+      "por favor poner una frase hablada porfa",
+      2
+    ],
+    [
+      "por favor poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "me explicas poner una frase hablada",
+      2
+    ],
+    [
+      "me explicas poner una frase hablada porfa",
+      2
+    ],
+    [
+      "me explicas poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "una pregunta poner una frase hablada",
+      2
+    ],
+    [
+      "una pregunta poner una frase hablada porfa",
+      2
+    ],
+    [
+      "una pregunta poner una frase hablada en este proyecto",
+      2
+    ],
+    [
+      "quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "banana quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "banana quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "banana quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "che quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "che quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "che quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "por favor quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "por favor quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "por favor quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "me explicas quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "me explicas quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "me explicas quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "una pregunta quiero crear una conversacion hablada",
+      2
+    ],
+    [
+      "una pregunta quiero crear una conversacion hablada porfa",
+      2
+    ],
+    [
+      "una pregunta quiero crear una conversacion hablada en este proyecto",
+      2
+    ],
+    [
+      "las voces son naturales",
+      3
+    ],
+    [
+      "las voces son naturales porfa",
+      3
+    ],
+    [
+      "las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "banana las voces son naturales",
+      3
+    ],
+    [
+      "banana las voces son naturales porfa",
+      3
+    ],
+    [
+      "banana las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "che las voces son naturales",
+      3
+    ],
+    [
+      "che las voces son naturales porfa",
+      3
+    ],
+    [
+      "che las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "por favor las voces son naturales",
+      3
+    ],
+    [
+      "por favor las voces son naturales porfa",
+      3
+    ],
+    [
+      "por favor las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "me explicas las voces son naturales",
+      3
+    ],
+    [
+      "me explicas las voces son naturales porfa",
+      3
+    ],
+    [
+      "me explicas las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "una pregunta las voces son naturales",
+      3
+    ],
+    [
+      "una pregunta las voces son naturales porfa",
+      3
+    ],
+    [
+      "una pregunta las voces son naturales en este proyecto",
+      3
+    ],
+    [
+      "de donde salen las voces",
+      3
+    ],
+    [
+      "de donde salen las voces porfa",
+      3
+    ],
+    [
+      "de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "banana de donde salen las voces",
+      3
+    ],
+    [
+      "banana de donde salen las voces porfa",
+      3
+    ],
+    [
+      "banana de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "che de donde salen las voces",
+      3
+    ],
+    [
+      "che de donde salen las voces porfa",
+      3
+    ],
+    [
+      "che de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "por favor de donde salen las voces",
+      3
+    ],
+    [
+      "por favor de donde salen las voces porfa",
+      3
+    ],
+    [
+      "por favor de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "me explicas de donde salen las voces",
+      3
+    ],
+    [
+      "me explicas de donde salen las voces porfa",
+      3
+    ],
+    [
+      "me explicas de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "una pregunta de donde salen las voces",
+      3
+    ],
+    [
+      "una pregunta de donde salen las voces porfa",
+      3
+    ],
+    [
+      "una pregunta de donde salen las voces en este proyecto",
+      3
+    ],
+    [
+      "que calidad tienen las voces",
+      3
+    ],
+    [
+      "que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "banana que calidad tienen las voces",
+      3
+    ],
+    [
+      "banana que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "banana que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "che que calidad tienen las voces",
+      3
+    ],
+    [
+      "che que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "che que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "por favor que calidad tienen las voces",
+      3
+    ],
+    [
+      "por favor que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "por favor que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "me explicas que calidad tienen las voces",
+      3
+    ],
+    [
+      "me explicas que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "me explicas que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "una pregunta que calidad tienen las voces",
+      3
+    ],
+    [
+      "una pregunta que calidad tienen las voces porfa",
+      3
+    ],
+    [
+      "una pregunta que calidad tienen las voces en este proyecto",
+      3
+    ],
+    [
+      "son voces neuronales",
+      3
+    ],
+    [
+      "son voces neuronales porfa",
+      3
+    ],
+    [
+      "son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "banana son voces neuronales",
+      3
+    ],
+    [
+      "banana son voces neuronales porfa",
+      3
+    ],
+    [
+      "banana son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "che son voces neuronales",
+      3
+    ],
+    [
+      "che son voces neuronales porfa",
+      3
+    ],
+    [
+      "che son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "por favor son voces neuronales",
+      3
+    ],
+    [
+      "por favor son voces neuronales porfa",
+      3
+    ],
+    [
+      "por favor son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "me explicas son voces neuronales",
+      3
+    ],
+    [
+      "me explicas son voces neuronales porfa",
+      3
+    ],
+    [
+      "me explicas son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "una pregunta son voces neuronales",
+      3
+    ],
+    [
+      "una pregunta son voces neuronales porfa",
+      3
+    ],
+    [
+      "una pregunta son voces neuronales en este proyecto",
+      3
+    ],
+    [
+      "la voz suena robotica",
+      3
+    ],
+    [
+      "la voz suena robotica porfa",
+      3
+    ],
+    [
+      "la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "banana la voz suena robotica",
+      3
+    ],
+    [
+      "banana la voz suena robotica porfa",
+      3
+    ],
+    [
+      "banana la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "che la voz suena robotica",
+      3
+    ],
+    [
+      "che la voz suena robotica porfa",
+      3
+    ],
+    [
+      "che la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "por favor la voz suena robotica",
+      3
+    ],
+    [
+      "por favor la voz suena robotica porfa",
+      3
+    ],
+    [
+      "por favor la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "me explicas la voz suena robotica",
+      3
+    ],
+    [
+      "me explicas la voz suena robotica porfa",
+      3
+    ],
+    [
+      "me explicas la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "una pregunta la voz suena robotica",
+      3
+    ],
+    [
+      "una pregunta la voz suena robotica porfa",
+      3
+    ],
+    [
+      "una pregunta la voz suena robotica en este proyecto",
+      3
+    ],
+    [
+      "usa otra ia para hablar",
+      3
+    ],
+    [
+      "usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "banana usa otra ia para hablar",
+      3
+    ],
+    [
+      "banana usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "banana usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "che usa otra ia para hablar",
+      3
+    ],
+    [
+      "che usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "che usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "por favor usa otra ia para hablar",
+      3
+    ],
+    [
+      "por favor usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "por favor usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "me explicas usa otra ia para hablar",
+      3
+    ],
+    [
+      "me explicas usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "me explicas usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "una pregunta usa otra ia para hablar",
+      3
+    ],
+    [
+      "una pregunta usa otra ia para hablar porfa",
+      3
+    ],
+    [
+      "una pregunta usa otra ia para hablar en este proyecto",
+      3
+    ],
+    [
+      "como sintetizas las voces",
+      3
+    ],
+    [
+      "como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "banana como sintetizas las voces",
+      3
+    ],
+    [
+      "banana como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "banana como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "che como sintetizas las voces",
+      3
+    ],
+    [
+      "che como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "che como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "por favor como sintetizas las voces",
+      3
+    ],
+    [
+      "por favor como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "por favor como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "me explicas como sintetizas las voces",
+      3
+    ],
+    [
+      "me explicas como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "me explicas como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "una pregunta como sintetizas las voces",
+      3
+    ],
+    [
+      "una pregunta como sintetizas las voces porfa",
+      3
+    ],
+    [
+      "una pregunta como sintetizas las voces en este proyecto",
+      3
+    ],
+    [
+      "que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "banana que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "banana que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "banana que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "che que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "che que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "che que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "por favor que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "por favor que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "por favor que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "me explicas que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "me explicas que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "me explicas que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "una pregunta que limitaciones tiene la voz",
+      3
+    ],
+    [
+      "una pregunta que limitaciones tiene la voz porfa",
+      3
+    ],
+    [
+      "una pregunta que limitaciones tiene la voz en este proyecto",
+      3
+    ],
+    [
+      "quiero inventar un personaje",
+      4
+    ],
+    [
+      "quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "banana quiero inventar un personaje",
+      4
+    ],
+    [
+      "banana quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "banana quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "che quiero inventar un personaje",
+      4
+    ],
+    [
+      "che quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "che quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "por favor quiero inventar un personaje",
+      4
+    ],
+    [
+      "por favor quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "por favor quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "me explicas quiero inventar un personaje",
+      4
+    ],
+    [
+      "me explicas quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "me explicas quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "una pregunta quiero inventar un personaje",
+      4
+    ],
+    [
+      "una pregunta quiero inventar un personaje porfa",
+      4
+    ],
+    [
+      "una pregunta quiero inventar un personaje en este proyecto",
+      4
+    ],
+    [
+      "como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "banana como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "banana como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "banana como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "che como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "che como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "che como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "por favor como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "por favor como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "por favor como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "me explicas como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "me explicas como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "me explicas como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "una pregunta como dibujo una criatura nueva",
+      4
+    ],
+    [
+      "una pregunta como dibujo una criatura nueva porfa",
+      4
+    ],
+    [
+      "una pregunta como dibujo una criatura nueva en este proyecto",
+      4
+    ],
+    [
+      "quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "banana quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "banana quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "banana quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "che quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "che quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "che quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "por favor quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "por favor quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "por favor quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "me explicas quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "me explicas quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "me explicas quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "una pregunta quiero cambiar la forma del cuerpo",
+      4
+    ],
+    [
+      "una pregunta quiero cambiar la forma del cuerpo porfa",
+      4
+    ],
+    [
+      "una pregunta quiero cambiar la forma del cuerpo en este proyecto",
+      4
+    ],
+    [
+      "puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "banana puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "banana puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "banana puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "che puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "che puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "che puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "por favor puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "por favor puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "por favor puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "me explicas puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "me explicas puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "me explicas puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "una pregunta puedo combinar orejas y cola",
+      4
+    ],
+    [
+      "una pregunta puedo combinar orejas y cola porfa",
+      4
+    ],
+    [
+      "una pregunta puedo combinar orejas y cola en este proyecto",
+      4
+    ],
+    [
+      "como creo un monstruo propio",
+      4
+    ],
+    [
+      "como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "banana como creo un monstruo propio",
+      4
+    ],
+    [
+      "banana como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "banana como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "che como creo un monstruo propio",
+      4
+    ],
+    [
+      "che como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "che como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "por favor como creo un monstruo propio",
+      4
+    ],
+    [
+      "por favor como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "por favor como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "me explicas como creo un monstruo propio",
+      4
+    ],
+    [
+      "me explicas como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "me explicas como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "una pregunta como creo un monstruo propio",
+      4
+    ],
+    [
+      "una pregunta como creo un monstruo propio porfa",
+      4
+    ],
+    [
+      "una pregunta como creo un monstruo propio en este proyecto",
+      4
+    ],
+    [
+      "quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "banana quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "banana quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "banana quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "che quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "che quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "che quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "por favor quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "por favor quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "por favor quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "me explicas quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "me explicas quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "me explicas quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "una pregunta quiero un personaje diferente del catalogo",
+      4
+    ],
+    [
+      "una pregunta quiero un personaje diferente del catalogo porfa",
+      4
+    ],
+    [
+      "una pregunta quiero un personaje diferente del catalogo en este proyecto",
+      4
+    ],
+    [
+      "como diseno una criatura combinable",
+      4
+    ],
+    [
+      "como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "banana como diseno una criatura combinable",
+      4
+    ],
+    [
+      "banana como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "banana como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "che como diseno una criatura combinable",
+      4
+    ],
+    [
+      "che como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "che como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "por favor como diseno una criatura combinable",
+      4
+    ],
+    [
+      "por favor como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "por favor como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "me explicas como diseno una criatura combinable",
+      4
+    ],
+    [
+      "me explicas como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "me explicas como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "una pregunta como diseno una criatura combinable",
+      4
+    ],
+    [
+      "una pregunta como diseno una criatura combinable porfa",
+      4
+    ],
+    [
+      "una pregunta como diseno una criatura combinable en este proyecto",
+      4
+    ],
+    [
+      "cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "banana cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "banana cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "banana cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "che cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "che cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "che cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "por favor cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "por favor cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "por favor cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "me explicas cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "me explicas cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "me explicas cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "una pregunta cuales son las formas de dibujo",
+      4
+    ],
+    [
+      "una pregunta cuales son las formas de dibujo porfa",
+      4
+    ],
+    [
+      "una pregunta cuales son las formas de dibujo en este proyecto",
+      4
+    ],
+    [
+      "como hago un video mas largo",
+      5
+    ],
+    [
+      "como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "banana como hago un video mas largo",
+      5
+    ],
+    [
+      "banana como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "banana como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "che como hago un video mas largo",
+      5
+    ],
+    [
+      "che como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "che como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "por favor como hago un video mas largo",
+      5
+    ],
+    [
+      "por favor como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "por favor como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "me explicas como hago un video mas largo",
+      5
+    ],
+    [
+      "me explicas como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "me explicas como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "una pregunta como hago un video mas largo",
+      5
+    ],
+    [
+      "una pregunta como hago un video mas largo porfa",
+      5
+    ],
+    [
+      "una pregunta como hago un video mas largo en este proyecto",
+      5
+    ],
+    [
+      "quiero aumentar la duracion",
+      5
+    ],
+    [
+      "quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "banana quiero aumentar la duracion",
+      5
+    ],
+    [
+      "banana quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "banana quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "che quiero aumentar la duracion",
+      5
+    ],
+    [
+      "che quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "che quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "por favor quiero aumentar la duracion",
+      5
+    ],
+    [
+      "por favor quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "por favor quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "me explicas quiero aumentar la duracion",
+      5
+    ],
+    [
+      "me explicas quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "me explicas quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "una pregunta quiero aumentar la duracion",
+      5
+    ],
+    [
+      "una pregunta quiero aumentar la duracion porfa",
+      5
+    ],
+    [
+      "una pregunta quiero aumentar la duracion en este proyecto",
+      5
+    ],
+    [
+      "como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "banana como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "banana como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "banana como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "che como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "che como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "che como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "por favor como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "por favor como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "por favor como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "me explicas como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "me explicas como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "me explicas como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "una pregunta como elijo cuantos segundos dura",
+      5
+    ],
+    [
+      "una pregunta como elijo cuantos segundos dura porfa",
+      5
+    ],
+    [
+      "una pregunta como elijo cuantos segundos dura en este proyecto",
+      5
+    ],
+    [
+      "puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "banana puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "banana puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "banana puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "che puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "che puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "che puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "por favor puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "por favor puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "por favor puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "me explicas puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "me explicas puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "me explicas puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "una pregunta puedo crear videos de un minuto",
+      5
+    ],
+    [
+      "una pregunta puedo crear videos de un minuto porfa",
+      5
+    ],
+    [
+      "una pregunta puedo crear videos de un minuto en este proyecto",
+      5
+    ],
+    [
+      "cual es el limite de tiempo",
+      5
+    ],
+    [
+      "cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "banana cual es el limite de tiempo",
+      5
+    ],
+    [
+      "banana cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "banana cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "che cual es el limite de tiempo",
+      5
+    ],
+    [
+      "che cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "che cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "por favor cual es el limite de tiempo",
+      5
+    ],
+    [
+      "por favor cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "por favor cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "me explicas cual es el limite de tiempo",
+      5
+    ],
+    [
+      "me explicas cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "me explicas cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "una pregunta cual es el limite de tiempo",
+      5
+    ],
+    [
+      "una pregunta cual es el limite de tiempo porfa",
+      5
+    ],
+    [
+      "una pregunta cual es el limite de tiempo en este proyecto",
+      5
+    ],
+    [
+      "necesito que el video dure mas",
+      5
+    ],
+    [
+      "necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "banana necesito que el video dure mas",
+      5
+    ],
+    [
+      "banana necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "banana necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "che necesito que el video dure mas",
+      5
+    ],
+    [
+      "che necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "che necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "por favor necesito que el video dure mas",
+      5
+    ],
+    [
+      "por favor necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "por favor necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "me explicas necesito que el video dure mas",
+      5
+    ],
+    [
+      "me explicas necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "me explicas necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "una pregunta necesito que el video dure mas",
+      5
+    ],
+    [
+      "una pregunta necesito que el video dure mas porfa",
+      5
+    ],
+    [
+      "una pregunta necesito que el video dure mas en este proyecto",
+      5
+    ],
+    [
+      "como unir varias tomas",
+      5
+    ],
+    [
+      "como unir varias tomas porfa",
+      5
+    ],
+    [
+      "como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "banana como unir varias tomas",
+      5
+    ],
+    [
+      "banana como unir varias tomas porfa",
+      5
+    ],
+    [
+      "banana como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "che como unir varias tomas",
+      5
+    ],
+    [
+      "che como unir varias tomas porfa",
+      5
+    ],
+    [
+      "che como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "por favor como unir varias tomas",
+      5
+    ],
+    [
+      "por favor como unir varias tomas porfa",
+      5
+    ],
+    [
+      "por favor como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "me explicas como unir varias tomas",
+      5
+    ],
+    [
+      "me explicas como unir varias tomas porfa",
+      5
+    ],
+    [
+      "me explicas como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "una pregunta como unir varias tomas",
+      5
+    ],
+    [
+      "una pregunta como unir varias tomas porfa",
+      5
+    ],
+    [
+      "una pregunta como unir varias tomas en este proyecto",
+      5
+    ],
+    [
+      "quiero una escena mas larga",
+      5
+    ],
+    [
+      "quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "banana quiero una escena mas larga",
+      5
+    ],
+    [
+      "banana quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "banana quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "che quiero una escena mas larga",
+      5
+    ],
+    [
+      "che quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "che quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "por favor quiero una escena mas larga",
+      5
+    ],
+    [
+      "por favor quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "por favor quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "me explicas quiero una escena mas larga",
+      5
+    ],
+    [
+      "me explicas quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "me explicas quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "una pregunta quiero una escena mas larga",
+      5
+    ],
+    [
+      "una pregunta quiero una escena mas larga porfa",
+      5
+    ],
+    [
+      "una pregunta quiero una escena mas larga en este proyecto",
+      5
+    ],
+    [
+      "como entrego una caja",
+      6
+    ],
+    [
+      "como entrego una caja porfa",
+      6
+    ],
+    [
+      "como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "banana como entrego una caja",
+      6
+    ],
+    [
+      "banana como entrego una caja porfa",
+      6
+    ],
+    [
+      "banana como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "che como entrego una caja",
+      6
+    ],
+    [
+      "che como entrego una caja porfa",
+      6
+    ],
+    [
+      "che como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "por favor como entrego una caja",
+      6
+    ],
+    [
+      "por favor como entrego una caja porfa",
+      6
+    ],
+    [
+      "por favor como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "me explicas como entrego una caja",
+      6
+    ],
+    [
+      "me explicas como entrego una caja porfa",
+      6
+    ],
+    [
+      "me explicas como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "una pregunta como entrego una caja",
+      6
+    ],
+    [
+      "una pregunta como entrego una caja porfa",
+      6
+    ],
+    [
+      "una pregunta como entrego una caja en este proyecto",
+      6
+    ],
+    [
+      "como se quien tiene un objeto",
+      6
+    ],
+    [
+      "como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "banana como se quien tiene un objeto",
+      6
+    ],
+    [
+      "banana como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "banana como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "che como se quien tiene un objeto",
+      6
+    ],
+    [
+      "che como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "che como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "por favor como se quien tiene un objeto",
+      6
+    ],
+    [
+      "por favor como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "por favor como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "me explicas como se quien tiene un objeto",
+      6
+    ],
+    [
+      "me explicas como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "me explicas como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "una pregunta como se quien tiene un objeto",
+      6
+    ],
+    [
+      "una pregunta como se quien tiene un objeto porfa",
+      6
+    ],
+    [
+      "una pregunta como se quien tiene un objeto en este proyecto",
+      6
+    ],
+    [
+      "no puede entregar esa caja",
+      6
+    ],
+    [
+      "no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "banana no puede entregar esa caja",
+      6
+    ],
+    [
+      "banana no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "banana no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "che no puede entregar esa caja",
+      6
+    ],
+    [
+      "che no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "che no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "por favor no puede entregar esa caja",
+      6
+    ],
+    [
+      "por favor no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "por favor no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "me explicas no puede entregar esa caja",
+      6
+    ],
+    [
+      "me explicas no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "me explicas no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "una pregunta no puede entregar esa caja",
+      6
+    ],
+    [
+      "una pregunta no puede entregar esa caja porfa",
+      6
+    ],
+    [
+      "una pregunta no puede entregar esa caja en este proyecto",
+      6
+    ],
+    [
+      "como paso un objeto a otro",
+      6
+    ],
+    [
+      "como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "banana como paso un objeto a otro",
+      6
+    ],
+    [
+      "banana como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "banana como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "che como paso un objeto a otro",
+      6
+    ],
+    [
+      "che como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "che como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "por favor como paso un objeto a otro",
+      6
+    ],
+    [
+      "por favor como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "por favor como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "me explicas como paso un objeto a otro",
+      6
+    ],
+    [
+      "me explicas como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "me explicas como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "una pregunta como paso un objeto a otro",
+      6
+    ],
+    [
+      "una pregunta como paso un objeto a otro porfa",
+      6
+    ],
+    [
+      "una pregunta como paso un objeto a otro en este proyecto",
+      6
+    ],
+    [
+      "quien puede sostener una lampara",
+      6
+    ],
+    [
+      "quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "banana quien puede sostener una lampara",
+      6
+    ],
+    [
+      "banana quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "banana quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "che quien puede sostener una lampara",
+      6
+    ],
+    [
+      "che quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "che quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "por favor quien puede sostener una lampara",
+      6
+    ],
+    [
+      "por favor quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "por favor quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "me explicas quien puede sostener una lampara",
+      6
+    ],
+    [
+      "me explicas quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "me explicas quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "una pregunta quien puede sostener una lampara",
+      6
+    ],
+    [
+      "una pregunta quien puede sostener una lampara porfa",
+      6
+    ],
+    [
+      "una pregunta quien puede sostener una lampara en este proyecto",
+      6
+    ],
+    [
+      "como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "banana como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "banana como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "banana como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "che como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "che como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "che como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "por favor como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "por favor como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "por favor como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "me explicas como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "me explicas como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "me explicas como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "una pregunta como funciona el intercambio de objetos",
+      6
+    ],
+    [
+      "una pregunta como funciona el intercambio de objetos porfa",
+      6
+    ],
+    [
+      "una pregunta como funciona el intercambio de objetos en este proyecto",
+      6
+    ],
+    [
+      "que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "banana que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "banana que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "banana que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "che que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "che que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "che que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "por favor que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "por favor que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "por favor que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "me explicas que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "me explicas que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "me explicas que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "una pregunta que pasa si no tiene el objeto",
+      6
+    ],
+    [
+      "una pregunta que pasa si no tiene el objeto porfa",
+      6
+    ],
+    [
+      "una pregunta que pasa si no tiene el objeto en este proyecto",
+      6
+    ],
+    [
+      "por que rechaza una entrega",
+      6
+    ],
+    [
+      "por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "banana por que rechaza una entrega",
+      6
+    ],
+    [
+      "banana por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "banana por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "che por que rechaza una entrega",
+      6
+    ],
+    [
+      "che por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "che por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "por favor por que rechaza una entrega",
+      6
+    ],
+    [
+      "por favor por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "por favor por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "me explicas por que rechaza una entrega",
+      6
+    ],
+    [
+      "me explicas por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "me explicas por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "una pregunta por que rechaza una entrega",
+      6
+    ],
+    [
+      "una pregunta por que rechaza una entrega porfa",
+      6
+    ],
+    [
+      "una pregunta por que rechaza una entrega en este proyecto",
+      6
+    ],
+    [
+      "no me entendiste bien",
+      7
+    ],
+    [
+      "no me entendiste bien porfa",
+      7
+    ],
+    [
+      "no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "banana no me entendiste bien",
+      7
+    ],
+    [
+      "banana no me entendiste bien porfa",
+      7
+    ],
+    [
+      "banana no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "che no me entendiste bien",
+      7
+    ],
+    [
+      "che no me entendiste bien porfa",
+      7
+    ],
+    [
+      "che no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "por favor no me entendiste bien",
+      7
+    ],
+    [
+      "por favor no me entendiste bien porfa",
+      7
+    ],
+    [
+      "por favor no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "me explicas no me entendiste bien",
+      7
+    ],
+    [
+      "me explicas no me entendiste bien porfa",
+      7
+    ],
+    [
+      "me explicas no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "una pregunta no me entendiste bien",
+      7
+    ],
+    [
+      "una pregunta no me entendiste bien porfa",
+      7
+    ],
+    [
+      "una pregunta no me entendiste bien en este proyecto",
+      7
+    ],
+    [
+      "quiero corregir solo una parte",
+      7
+    ],
+    [
+      "quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "banana quiero corregir solo una parte",
+      7
+    ],
+    [
+      "banana quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "banana quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "che quiero corregir solo una parte",
+      7
+    ],
+    [
+      "che quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "che quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "por favor quiero corregir solo una parte",
+      7
+    ],
+    [
+      "por favor quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "por favor quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "me explicas quiero corregir solo una parte",
+      7
+    ],
+    [
+      "me explicas quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "me explicas quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "una pregunta quiero corregir solo una parte",
+      7
+    ],
+    [
+      "una pregunta quiero corregir solo una parte porfa",
+      7
+    ],
+    [
+      "una pregunta quiero corregir solo una parte en este proyecto",
+      7
+    ],
+    [
+      "como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "banana como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "banana como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "banana como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "che como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "che como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "che como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "por favor como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "por favor como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "por favor como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "me explicas como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "me explicas como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "me explicas como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "una pregunta como cambio algo sin borrar todo",
+      7
+    ],
+    [
+      "una pregunta como cambio algo sin borrar todo porfa",
+      7
+    ],
+    [
+      "una pregunta como cambio algo sin borrar todo en este proyecto",
+      7
+    ],
+    [
+      "quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "banana quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "banana quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "banana quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "che quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "che quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "che quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "por favor quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "por favor quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "por favor quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "me explicas quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "me explicas quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "me explicas quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "una pregunta quiero deshacer el ultimo cambio",
+      7
+    ],
+    [
+      "una pregunta quiero deshacer el ultimo cambio porfa",
+      7
+    ],
+    [
+      "una pregunta quiero deshacer el ultimo cambio en este proyecto",
+      7
+    ],
+    [
+      "como modifico solo el sombrero",
+      7
+    ],
+    [
+      "como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "banana como modifico solo el sombrero",
+      7
+    ],
+    [
+      "banana como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "banana como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "che como modifico solo el sombrero",
+      7
+    ],
+    [
+      "che como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "che como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "por favor como modifico solo el sombrero",
+      7
+    ],
+    [
+      "por favor como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "por favor como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "me explicas como modifico solo el sombrero",
+      7
+    ],
+    [
+      "me explicas como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "me explicas como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "una pregunta como modifico solo el sombrero",
+      7
+    ],
+    [
+      "una pregunta como modifico solo el sombrero porfa",
+      7
+    ],
+    [
+      "una pregunta como modifico solo el sombrero en este proyecto",
+      7
+    ],
+    [
+      "no era lo que queria hacer",
+      7
+    ],
+    [
+      "no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "banana no era lo que queria hacer",
+      7
+    ],
+    [
+      "banana no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "banana no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "che no era lo que queria hacer",
+      7
+    ],
+    [
+      "che no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "che no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "por favor no era lo que queria hacer",
+      7
+    ],
+    [
+      "por favor no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "por favor no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "me explicas no era lo que queria hacer",
+      7
+    ],
+    [
+      "me explicas no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "me explicas no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "una pregunta no era lo que queria hacer",
+      7
+    ],
+    [
+      "una pregunta no era lo que queria hacer porfa",
+      7
+    ],
+    [
+      "una pregunta no era lo que queria hacer en este proyecto",
+      7
+    ],
+    [
+      "me equivoque de personaje",
+      7
+    ],
+    [
+      "me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "banana me equivoque de personaje",
+      7
+    ],
+    [
+      "banana me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "banana me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "che me equivoque de personaje",
+      7
+    ],
+    [
+      "che me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "che me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "por favor me equivoque de personaje",
+      7
+    ],
+    [
+      "por favor me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "por favor me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "me explicas me equivoque de personaje",
+      7
+    ],
+    [
+      "me explicas me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "me explicas me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "una pregunta me equivoque de personaje",
+      7
+    ],
+    [
+      "una pregunta me equivoque de personaje porfa",
+      7
+    ],
+    [
+      "una pregunta me equivoque de personaje en este proyecto",
+      7
+    ],
+    [
+      "como reparo mi escena",
+      7
+    ],
+    [
+      "como reparo mi escena porfa",
+      7
+    ],
+    [
+      "como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "banana como reparo mi escena",
+      7
+    ],
+    [
+      "banana como reparo mi escena porfa",
+      7
+    ],
+    [
+      "banana como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "che como reparo mi escena",
+      7
+    ],
+    [
+      "che como reparo mi escena porfa",
+      7
+    ],
+    [
+      "che como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "por favor como reparo mi escena",
+      7
+    ],
+    [
+      "por favor como reparo mi escena porfa",
+      7
+    ],
+    [
+      "por favor como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "me explicas como reparo mi escena",
+      7
+    ],
+    [
+      "me explicas como reparo mi escena porfa",
+      7
+    ],
+    [
+      "me explicas como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "una pregunta como reparo mi escena",
+      7
+    ],
+    [
+      "una pregunta como reparo mi escena porfa",
+      7
+    ],
+    [
+      "una pregunta como reparo mi escena en este proyecto",
+      7
+    ],
+    [
+      "dame una idea para seguir",
+      8
+    ],
+    [
+      "dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "banana dame una idea para seguir",
+      8
+    ],
+    [
+      "banana dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "banana dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "che dame una idea para seguir",
+      8
+    ],
+    [
+      "che dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "che dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "por favor dame una idea para seguir",
+      8
+    ],
+    [
+      "por favor dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "por favor dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "me explicas dame una idea para seguir",
+      8
+    ],
+    [
+      "me explicas dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "me explicas dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "una pregunta dame una idea para seguir",
+      8
+    ],
+    [
+      "una pregunta dame una idea para seguir porfa",
+      8
+    ],
+    [
+      "una pregunta dame una idea para seguir en este proyecto",
+      8
+    ],
+    [
+      "que podemos hacer ahora",
+      8
+    ],
+    [
+      "que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "banana que podemos hacer ahora",
+      8
+    ],
+    [
+      "banana que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "banana que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "che que podemos hacer ahora",
+      8
+    ],
+    [
+      "che que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "che que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "por favor que podemos hacer ahora",
+      8
+    ],
+    [
+      "por favor que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "por favor que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "me explicas que podemos hacer ahora",
+      8
+    ],
+    [
+      "me explicas que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "me explicas que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "una pregunta que podemos hacer ahora",
+      8
+    ],
+    [
+      "una pregunta que podemos hacer ahora porfa",
+      8
+    ],
+    [
+      "una pregunta que podemos hacer ahora en este proyecto",
+      8
+    ],
+    [
+      "proponeme un dialogo",
+      8
+    ],
+    [
+      "proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "banana proponeme un dialogo",
+      8
+    ],
+    [
+      "banana proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "banana proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "che proponeme un dialogo",
+      8
+    ],
+    [
+      "che proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "che proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "por favor proponeme un dialogo",
+      8
+    ],
+    [
+      "por favor proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "por favor proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "me explicas proponeme un dialogo",
+      8
+    ],
+    [
+      "me explicas proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "me explicas proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "una pregunta proponeme un dialogo",
+      8
+    ],
+    [
+      "una pregunta proponeme un dialogo porfa",
+      8
+    ],
+    [
+      "una pregunta proponeme un dialogo en este proyecto",
+      8
+    ],
+    [
+      "ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "banana ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "banana ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "banana ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "che ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "che ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "che ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "por favor ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "por favor ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "por favor ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "me explicas ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "me explicas ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "me explicas ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "una pregunta ayudame a pensar lo siguiente",
+      8
+    ],
+    [
+      "una pregunta ayudame a pensar lo siguiente porfa",
+      8
+    ],
+    [
+      "una pregunta ayudame a pensar lo siguiente en este proyecto",
+      8
+    ],
+    [
+      "que escena podria hacer",
+      8
+    ],
+    [
+      "que escena podria hacer porfa",
+      8
+    ],
+    [
+      "que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "banana que escena podria hacer",
+      8
+    ],
+    [
+      "banana que escena podria hacer porfa",
+      8
+    ],
+    [
+      "banana que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "che que escena podria hacer",
+      8
+    ],
+    [
+      "che que escena podria hacer porfa",
+      8
+    ],
+    [
+      "che que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "por favor que escena podria hacer",
+      8
+    ],
+    [
+      "por favor que escena podria hacer porfa",
+      8
+    ],
+    [
+      "por favor que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "me explicas que escena podria hacer",
+      8
+    ],
+    [
+      "me explicas que escena podria hacer porfa",
+      8
+    ],
+    [
+      "me explicas que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "una pregunta que escena podria hacer",
+      8
+    ],
+    [
+      "una pregunta que escena podria hacer porfa",
+      8
+    ],
+    [
+      "una pregunta que escena podria hacer en este proyecto",
+      8
+    ],
+    [
+      "no se que hacer despues",
+      8
+    ],
+    [
+      "no se que hacer despues porfa",
+      8
+    ],
+    [
+      "no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "banana no se que hacer despues",
+      8
+    ],
+    [
+      "banana no se que hacer despues porfa",
+      8
+    ],
+    [
+      "banana no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "che no se que hacer despues",
+      8
+    ],
+    [
+      "che no se que hacer despues porfa",
+      8
+    ],
+    [
+      "che no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "por favor no se que hacer despues",
+      8
+    ],
+    [
+      "por favor no se que hacer despues porfa",
+      8
+    ],
+    [
+      "por favor no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "me explicas no se que hacer despues",
+      8
+    ],
+    [
+      "me explicas no se que hacer despues porfa",
+      8
+    ],
+    [
+      "me explicas no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "una pregunta no se que hacer despues",
+      8
+    ],
+    [
+      "una pregunta no se que hacer despues porfa",
+      8
+    ],
+    [
+      "una pregunta no se que hacer despues en este proyecto",
+      8
+    ],
+    [
+      "sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "banana sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "banana sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "banana sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "che sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "che sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "che sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "por favor sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "por favor sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "por favor sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "me explicas sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "me explicas sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "me explicas sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "una pregunta sugeri algo para el proyecto",
+      8
+    ],
+    [
+      "una pregunta sugeri algo para el proyecto porfa",
+      8
+    ],
+    [
+      "una pregunta sugeri algo para el proyecto en este proyecto",
+      8
+    ],
+    [
+      "inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "banana inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "banana inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "banana inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "che inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "che inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "che inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "por favor inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "por favor inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "por favor inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "me explicas inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "me explicas inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "me explicas inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "una pregunta inventemos una idea con mis personajes",
+      8
+    ],
+    [
+      "una pregunta inventemos una idea con mis personajes porfa",
+      8
+    ],
+    [
+      "una pregunta inventemos una idea con mis personajes en este proyecto",
+      8
+    ],
+    [
+      "que podes hacer en banana",
+      9
+    ],
+    [
+      "que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "banana que podes hacer en banana",
+      9
+    ],
+    [
+      "banana que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "banana que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "che que podes hacer en banana",
+      9
+    ],
+    [
+      "che que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "che que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "por favor que podes hacer en banana",
+      9
+    ],
+    [
+      "por favor que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "por favor que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "me explicas que podes hacer en banana",
+      9
+    ],
+    [
+      "me explicas que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "me explicas que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "una pregunta que podes hacer en banana",
+      9
+    ],
+    [
+      "una pregunta que podes hacer en banana porfa",
+      9
+    ],
+    [
+      "una pregunta que podes hacer en banana en este proyecto",
+      9
+    ],
+    [
+      "cuales son tus funciones",
+      9
+    ],
+    [
+      "cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "banana cuales son tus funciones",
+      9
+    ],
+    [
+      "banana cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "banana cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "che cuales son tus funciones",
+      9
+    ],
+    [
+      "che cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "che cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "por favor cuales son tus funciones",
+      9
+    ],
+    [
+      "por favor cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "por favor cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "me explicas cuales son tus funciones",
+      9
+    ],
+    [
+      "me explicas cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "me explicas cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "una pregunta cuales son tus funciones",
+      9
+    ],
+    [
+      "una pregunta cuales son tus funciones porfa",
+      9
+    ],
+    [
+      "una pregunta cuales son tus funciones en este proyecto",
+      9
+    ],
+    [
+      "podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "banana podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "banana podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "banana podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "che podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "che podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "che podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "por favor podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "por favor podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "por favor podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "me explicas podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "me explicas podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "me explicas podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "una pregunta podes dibujar cualquier cosa",
+      9
+    ],
+    [
+      "una pregunta podes dibujar cualquier cosa porfa",
+      9
+    ],
+    [
+      "una pregunta podes dibujar cualquier cosa en este proyecto",
+      9
+    ],
+    [
+      "que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "banana que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "banana que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "banana que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "che que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "che que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "che que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "por favor que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "por favor que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "por favor que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "me explicas que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "me explicas que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "me explicas que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "una pregunta que herramientas tiene este proyecto",
+      9
+    ],
+    [
+      "una pregunta que herramientas tiene este proyecto porfa",
+      9
+    ],
+    [
+      "una pregunta que herramientas tiene este proyecto en este proyecto",
+      9
+    ],
+    [
+      "para que sirve banana",
+      9
+    ],
+    [
+      "para que sirve banana porfa",
+      9
+    ],
+    [
+      "para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "banana para que sirve banana",
+      9
+    ],
+    [
+      "banana para que sirve banana porfa",
+      9
+    ],
+    [
+      "banana para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "che para que sirve banana",
+      9
+    ],
+    [
+      "che para que sirve banana porfa",
+      9
+    ],
+    [
+      "che para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "por favor para que sirve banana",
+      9
+    ],
+    [
+      "por favor para que sirve banana porfa",
+      9
+    ],
+    [
+      "por favor para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "me explicas para que sirve banana",
+      9
+    ],
+    [
+      "me explicas para que sirve banana porfa",
+      9
+    ],
+    [
+      "me explicas para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "una pregunta para que sirve banana",
+      9
+    ],
+    [
+      "una pregunta para que sirve banana porfa",
+      9
+    ],
+    [
+      "una pregunta para que sirve banana en este proyecto",
+      9
+    ],
+    [
+      "que cosas podes crear",
+      9
+    ],
+    [
+      "que cosas podes crear porfa",
+      9
+    ],
+    [
+      "que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "banana que cosas podes crear",
+      9
+    ],
+    [
+      "banana que cosas podes crear porfa",
+      9
+    ],
+    [
+      "banana que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "che que cosas podes crear",
+      9
+    ],
+    [
+      "che que cosas podes crear porfa",
+      9
+    ],
+    [
+      "che que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "por favor que cosas podes crear",
+      9
+    ],
+    [
+      "por favor que cosas podes crear porfa",
+      9
+    ],
+    [
+      "por favor que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "me explicas que cosas podes crear",
+      9
+    ],
+    [
+      "me explicas que cosas podes crear porfa",
+      9
+    ],
+    [
+      "me explicas que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "una pregunta que cosas podes crear",
+      9
+    ],
+    [
+      "una pregunta que cosas podes crear porfa",
+      9
+    ],
+    [
+      "una pregunta que cosas podes crear en este proyecto",
+      9
+    ],
+    [
+      "cuales son tus limites",
+      9
+    ],
+    [
+      "cuales son tus limites porfa",
+      9
+    ],
+    [
+      "cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "banana cuales son tus limites",
+      9
+    ],
+    [
+      "banana cuales son tus limites porfa",
+      9
+    ],
+    [
+      "banana cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "che cuales son tus limites",
+      9
+    ],
+    [
+      "che cuales son tus limites porfa",
+      9
+    ],
+    [
+      "che cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "por favor cuales son tus limites",
+      9
+    ],
+    [
+      "por favor cuales son tus limites porfa",
+      9
+    ],
+    [
+      "por favor cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "me explicas cuales son tus limites",
+      9
+    ],
+    [
+      "me explicas cuales son tus limites porfa",
+      9
+    ],
+    [
+      "me explicas cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "una pregunta cuales son tus limites",
+      9
+    ],
+    [
+      "una pregunta cuales son tus limites porfa",
+      9
+    ],
+    [
+      "una pregunta cuales son tus limites en este proyecto",
+      9
+    ],
+    [
+      "como empiezo a usar esto",
+      9
+    ],
+    [
+      "como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "banana como empiezo a usar esto",
+      9
+    ],
+    [
+      "banana como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "banana como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "che como empiezo a usar esto",
+      9
+    ],
+    [
+      "che como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "che como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "por favor como empiezo a usar esto",
+      9
+    ],
+    [
+      "por favor como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "por favor como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "me explicas como empiezo a usar esto",
+      9
+    ],
+    [
+      "me explicas como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "me explicas como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "una pregunta como empiezo a usar esto",
+      9
+    ],
+    [
+      "una pregunta como empiezo a usar esto porfa",
+      9
+    ],
+    [
+      "una pregunta como empiezo a usar esto en este proyecto",
+      9
+    ],
+    [
+      "como guardo un recuerdo",
+      10
+    ],
+    [
+      "como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "banana como guardo un recuerdo",
+      10
+    ],
+    [
+      "banana como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "banana como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "che como guardo un recuerdo",
+      10
+    ],
+    [
+      "che como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "che como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "por favor como guardo un recuerdo",
+      10
+    ],
+    [
+      "por favor como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "por favor como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "me explicas como guardo un recuerdo",
+      10
+    ],
+    [
+      "me explicas como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "me explicas como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "una pregunta como guardo un recuerdo",
+      10
+    ],
+    [
+      "una pregunta como guardo un recuerdo porfa",
+      10
+    ],
+    [
+      "una pregunta como guardo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "banana quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "banana quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "banana quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "che quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "che quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "che quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "por favor quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "por favor quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "por favor quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "me explicas quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "me explicas quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "me explicas quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "una pregunta quiero recordar un dato del proyecto",
+      10
+    ],
+    [
+      "una pregunta quiero recordar un dato del proyecto porfa",
+      10
+    ],
+    [
+      "una pregunta quiero recordar un dato del proyecto en este proyecto",
+      10
+    ],
+    [
+      "como borro un recuerdo",
+      10
+    ],
+    [
+      "como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "banana como borro un recuerdo",
+      10
+    ],
+    [
+      "banana como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "banana como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "che como borro un recuerdo",
+      10
+    ],
+    [
+      "che como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "che como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "por favor como borro un recuerdo",
+      10
+    ],
+    [
+      "por favor como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "por favor como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "me explicas como borro un recuerdo",
+      10
+    ],
+    [
+      "me explicas como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "me explicas como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "una pregunta como borro un recuerdo",
+      10
+    ],
+    [
+      "una pregunta como borro un recuerdo porfa",
+      10
+    ],
+    [
+      "una pregunta como borro un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "como corrijo un dato guardado",
+      10
+    ],
+    [
+      "como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "banana como corrijo un dato guardado",
+      10
+    ],
+    [
+      "banana como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "banana como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "che como corrijo un dato guardado",
+      10
+    ],
+    [
+      "che como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "che como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "por favor como corrijo un dato guardado",
+      10
+    ],
+    [
+      "por favor como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "por favor como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "me explicas como corrijo un dato guardado",
+      10
+    ],
+    [
+      "me explicas como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "me explicas como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "una pregunta como corrijo un dato guardado",
+      10
+    ],
+    [
+      "una pregunta como corrijo un dato guardado porfa",
+      10
+    ],
+    [
+      "una pregunta como corrijo un dato guardado en este proyecto",
+      10
+    ],
+    [
+      "donde veo mis recuerdos",
+      10
+    ],
+    [
+      "donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "banana donde veo mis recuerdos",
+      10
+    ],
+    [
+      "banana donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "banana donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "che donde veo mis recuerdos",
+      10
+    ],
+    [
+      "che donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "che donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "por favor donde veo mis recuerdos",
+      10
+    ],
+    [
+      "por favor donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "por favor donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "me explicas donde veo mis recuerdos",
+      10
+    ],
+    [
+      "me explicas donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "me explicas donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "una pregunta donde veo mis recuerdos",
+      10
+    ],
+    [
+      "una pregunta donde veo mis recuerdos porfa",
+      10
+    ],
+    [
+      "una pregunta donde veo mis recuerdos en este proyecto",
+      10
+    ],
+    [
+      "puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "banana puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "banana puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "banana puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "che puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "che puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "che puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "por favor puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "por favor puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "por favor puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "me explicas puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "me explicas puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "me explicas puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "una pregunta puedo conservar datos entre conversaciones",
+      10
+    ],
+    [
+      "una pregunta puedo conservar datos entre conversaciones porfa",
+      10
+    ],
+    [
+      "una pregunta puedo conservar datos entre conversaciones en este proyecto",
+      10
+    ],
+    [
+      "como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "banana como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "banana como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "banana como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "che como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "che como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "che como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "por favor como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "por favor como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "por favor como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "me explicas como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "me explicas como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "me explicas como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "una pregunta como funciona la memoria del proyecto",
+      10
+    ],
+    [
+      "una pregunta como funciona la memoria del proyecto porfa",
+      10
+    ],
+    [
+      "una pregunta como funciona la memoria del proyecto en este proyecto",
+      10
+    ],
+    [
+      "como actualizo un recuerdo",
+      10
+    ],
+    [
+      "como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "banana como actualizo un recuerdo",
+      10
+    ],
+    [
+      "banana como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "banana como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "che como actualizo un recuerdo",
+      10
+    ],
+    [
+      "che como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "che como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "por favor como actualizo un recuerdo",
+      10
+    ],
+    [
+      "por favor como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "por favor como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "me explicas como actualizo un recuerdo",
+      10
+    ],
+    [
+      "me explicas como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "me explicas como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "una pregunta como actualizo un recuerdo",
+      10
+    ],
+    [
+      "una pregunta como actualizo un recuerdo porfa",
+      10
+    ],
+    [
+      "una pregunta como actualizo un recuerdo en este proyecto",
+      10
+    ],
+    [
+      "el video tiene sonido",
+      11
+    ],
+    [
+      "el video tiene sonido porfa",
+      11
+    ],
+    [
+      "el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "banana el video tiene sonido",
+      11
+    ],
+    [
+      "banana el video tiene sonido porfa",
+      11
+    ],
+    [
+      "banana el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "che el video tiene sonido",
+      11
+    ],
+    [
+      "che el video tiene sonido porfa",
+      11
+    ],
+    [
+      "che el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "por favor el video tiene sonido",
+      11
+    ],
+    [
+      "por favor el video tiene sonido porfa",
+      11
+    ],
+    [
+      "por favor el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "me explicas el video tiene sonido",
+      11
+    ],
+    [
+      "me explicas el video tiene sonido porfa",
+      11
+    ],
+    [
+      "me explicas el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "una pregunta el video tiene sonido",
+      11
+    ],
+    [
+      "una pregunta el video tiene sonido porfa",
+      11
+    ],
+    [
+      "una pregunta el video tiene sonido en este proyecto",
+      11
+    ],
+    [
+      "quiero escuchar el audio",
+      11
+    ],
+    [
+      "quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "banana quiero escuchar el audio",
+      11
+    ],
+    [
+      "banana quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "banana quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "che quiero escuchar el audio",
+      11
+    ],
+    [
+      "che quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "che quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "por favor quiero escuchar el audio",
+      11
+    ],
+    [
+      "por favor quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "por favor quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "me explicas quiero escuchar el audio",
+      11
+    ],
+    [
+      "me explicas quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "me explicas quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "una pregunta quiero escuchar el audio",
+      11
+    ],
+    [
+      "una pregunta quiero escuchar el audio porfa",
+      11
+    ],
+    [
+      "una pregunta quiero escuchar el audio en este proyecto",
+      11
+    ],
+    [
+      "los gif tienen audio",
+      11
+    ],
+    [
+      "los gif tienen audio porfa",
+      11
+    ],
+    [
+      "los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "banana los gif tienen audio",
+      11
+    ],
+    [
+      "banana los gif tienen audio porfa",
+      11
+    ],
+    [
+      "banana los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "che los gif tienen audio",
+      11
+    ],
+    [
+      "che los gif tienen audio porfa",
+      11
+    ],
+    [
+      "che los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "por favor los gif tienen audio",
+      11
+    ],
+    [
+      "por favor los gif tienen audio porfa",
+      11
+    ],
+    [
+      "por favor los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "me explicas los gif tienen audio",
+      11
+    ],
+    [
+      "me explicas los gif tienen audio porfa",
+      11
+    ],
+    [
+      "me explicas los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "una pregunta los gif tienen audio",
+      11
+    ],
+    [
+      "una pregunta los gif tienen audio porfa",
+      11
+    ],
+    [
+      "una pregunta los gif tienen audio en este proyecto",
+      11
+    ],
+    [
+      "como activo el sonido del mp4",
+      11
+    ],
+    [
+      "como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "banana como activo el sonido del mp4",
+      11
+    ],
+    [
+      "banana como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "banana como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "che como activo el sonido del mp4",
+      11
+    ],
+    [
+      "che como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "che como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "por favor como activo el sonido del mp4",
+      11
+    ],
+    [
+      "por favor como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "por favor como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "me explicas como activo el sonido del mp4",
+      11
+    ],
+    [
+      "me explicas como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "me explicas como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "una pregunta como activo el sonido del mp4",
+      11
+    ],
+    [
+      "una pregunta como activo el sonido del mp4 porfa",
+      11
+    ],
+    [
+      "una pregunta como activo el sonido del mp4 en este proyecto",
+      11
+    ],
+    [
+      "por que no escucho los pasos",
+      11
+    ],
+    [
+      "por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "banana por que no escucho los pasos",
+      11
+    ],
+    [
+      "banana por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "banana por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "che por que no escucho los pasos",
+      11
+    ],
+    [
+      "che por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "che por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "por favor por que no escucho los pasos",
+      11
+    ],
+    [
+      "por favor por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "por favor por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "me explicas por que no escucho los pasos",
+      11
+    ],
+    [
+      "me explicas por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "me explicas por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "una pregunta por que no escucho los pasos",
+      11
+    ],
+    [
+      "una pregunta por que no escucho los pasos porfa",
+      11
+    ],
+    [
+      "una pregunta por que no escucho los pasos en este proyecto",
+      11
+    ],
+    [
+      "que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "banana que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "banana que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "banana que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "che que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "che que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "che que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "por favor que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "por favor que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "por favor que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "me explicas que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "me explicas que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "me explicas que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "una pregunta que sonido se guarda al exportar",
+      11
+    ],
+    [
+      "una pregunta que sonido se guarda al exportar porfa",
+      11
+    ],
+    [
+      "una pregunta que sonido se guarda al exportar en este proyecto",
+      11
+    ],
+    [
+      "como desactivo el audio",
+      11
+    ],
+    [
+      "como desactivo el audio porfa",
+      11
+    ],
+    [
+      "como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "banana como desactivo el audio",
+      11
+    ],
+    [
+      "banana como desactivo el audio porfa",
+      11
+    ],
+    [
+      "banana como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "che como desactivo el audio",
+      11
+    ],
+    [
+      "che como desactivo el audio porfa",
+      11
+    ],
+    [
+      "che como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "por favor como desactivo el audio",
+      11
+    ],
+    [
+      "por favor como desactivo el audio porfa",
+      11
+    ],
+    [
+      "por favor como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "me explicas como desactivo el audio",
+      11
+    ],
+    [
+      "me explicas como desactivo el audio porfa",
+      11
+    ],
+    [
+      "me explicas como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "una pregunta como desactivo el audio",
+      11
+    ],
+    [
+      "una pregunta como desactivo el audio porfa",
+      11
+    ],
+    [
+      "una pregunta como desactivo el audio en este proyecto",
+      11
+    ],
+    [
+      "que incluye la pista de sonido",
+      11
+    ],
+    [
+      "que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "banana que incluye la pista de sonido",
+      11
+    ],
+    [
+      "banana que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "banana que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "che que incluye la pista de sonido",
+      11
+    ],
+    [
+      "che que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "che que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "por favor que incluye la pista de sonido",
+      11
+    ],
+    [
+      "por favor que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "por favor que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "me explicas que incluye la pista de sonido",
+      11
+    ],
+    [
+      "me explicas que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "me explicas que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "una pregunta que incluye la pista de sonido",
+      11
+    ],
+    [
+      "una pregunta que incluye la pista de sonido porfa",
+      11
+    ],
+    [
+      "una pregunta que incluye la pista de sonido en este proyecto",
+      11
+    ],
+    [
+      "cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "banana cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "banana cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "banana cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "che cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "che cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "che cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "por favor cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "por favor cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "por favor cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "me explicas cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "me explicas cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "me explicas cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "una pregunta cuanto vale el dolar hoy",
+      12
+    ],
+    [
+      "una pregunta cuanto vale el dolar hoy porfa",
+      12
+    ],
+    [
+      "una pregunta cuanto vale el dolar hoy en este proyecto",
+      12
+    ],
+    [
+      "quien gano el partido",
+      12
+    ],
+    [
+      "quien gano el partido porfa",
+      12
+    ],
+    [
+      "quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "banana quien gano el partido",
+      12
+    ],
+    [
+      "banana quien gano el partido porfa",
+      12
+    ],
+    [
+      "banana quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "che quien gano el partido",
+      12
+    ],
+    [
+      "che quien gano el partido porfa",
+      12
+    ],
+    [
+      "che quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "por favor quien gano el partido",
+      12
+    ],
+    [
+      "por favor quien gano el partido porfa",
+      12
+    ],
+    [
+      "por favor quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "me explicas quien gano el partido",
+      12
+    ],
+    [
+      "me explicas quien gano el partido porfa",
+      12
+    ],
+    [
+      "me explicas quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "una pregunta quien gano el partido",
+      12
+    ],
+    [
+      "una pregunta quien gano el partido porfa",
+      12
+    ],
+    [
+      "una pregunta quien gano el partido en este proyecto",
+      12
+    ],
+    [
+      "como se cura una enfermedad",
+      12
+    ],
+    [
+      "como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "banana como se cura una enfermedad",
+      12
+    ],
+    [
+      "banana como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "banana como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "che como se cura una enfermedad",
+      12
+    ],
+    [
+      "che como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "che como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "por favor como se cura una enfermedad",
+      12
+    ],
+    [
+      "por favor como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "por favor como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "me explicas como se cura una enfermedad",
+      12
+    ],
+    [
+      "me explicas como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "me explicas como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "una pregunta como se cura una enfermedad",
+      12
+    ],
+    [
+      "una pregunta como se cura una enfermedad porfa",
+      12
+    ],
+    [
+      "una pregunta como se cura una enfermedad en este proyecto",
+      12
+    ],
+    [
+      "cual es mi direccion",
+      12
+    ],
+    [
+      "cual es mi direccion porfa",
+      12
+    ],
+    [
+      "cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "banana cual es mi direccion",
+      12
+    ],
+    [
+      "banana cual es mi direccion porfa",
+      12
+    ],
+    [
+      "banana cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "che cual es mi direccion",
+      12
+    ],
+    [
+      "che cual es mi direccion porfa",
+      12
+    ],
+    [
+      "che cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "por favor cual es mi direccion",
+      12
+    ],
+    [
+      "por favor cual es mi direccion porfa",
+      12
+    ],
+    [
+      "por favor cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "me explicas cual es mi direccion",
+      12
+    ],
+    [
+      "me explicas cual es mi direccion porfa",
+      12
+    ],
+    [
+      "me explicas cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "una pregunta cual es mi direccion",
+      12
+    ],
+    [
+      "una pregunta cual es mi direccion porfa",
+      12
+    ],
+    [
+      "una pregunta cual es mi direccion en este proyecto",
+      12
+    ],
+    [
+      "que esta pasando en las noticias",
+      12
+    ],
+    [
+      "que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "banana que esta pasando en las noticias",
+      12
+    ],
+    [
+      "banana que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "banana que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "che que esta pasando en las noticias",
+      12
+    ],
+    [
+      "che que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "che que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "por favor que esta pasando en las noticias",
+      12
+    ],
+    [
+      "por favor que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "por favor que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "me explicas que esta pasando en las noticias",
+      12
+    ],
+    [
+      "me explicas que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "me explicas que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "una pregunta que esta pasando en las noticias",
+      12
+    ],
+    [
+      "una pregunta que esta pasando en las noticias porfa",
+      12
+    ],
+    [
+      "una pregunta que esta pasando en las noticias en este proyecto",
+      12
+    ],
+    [
+      "cual es la capital de alemania",
+      12
+    ],
+    [
+      "cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "banana cual es la capital de alemania",
+      12
+    ],
+    [
+      "banana cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "banana cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "che cual es la capital de alemania",
+      12
+    ],
+    [
+      "che cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "che cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "por favor cual es la capital de alemania",
+      12
+    ],
+    [
+      "por favor cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "por favor cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "me explicas cual es la capital de alemania",
+      12
+    ],
+    [
+      "me explicas cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "me explicas cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "una pregunta cual es la capital de alemania",
+      12
+    ],
+    [
+      "una pregunta cual es la capital de alemania porfa",
+      12
+    ],
+    [
+      "una pregunta cual es la capital de alemania en este proyecto",
+      12
+    ],
+    [
+      "quien es el presidente",
+      12
+    ],
+    [
+      "quien es el presidente porfa",
+      12
+    ],
+    [
+      "quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "banana quien es el presidente",
+      12
+    ],
+    [
+      "banana quien es el presidente porfa",
+      12
+    ],
+    [
+      "banana quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "che quien es el presidente",
+      12
+    ],
+    [
+      "che quien es el presidente porfa",
+      12
+    ],
+    [
+      "che quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "por favor quien es el presidente",
+      12
+    ],
+    [
+      "por favor quien es el presidente porfa",
+      12
+    ],
+    [
+      "por favor quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "me explicas quien es el presidente",
+      12
+    ],
+    [
+      "me explicas quien es el presidente porfa",
+      12
+    ],
+    [
+      "me explicas quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "una pregunta quien es el presidente",
+      12
+    ],
+    [
+      "una pregunta quien es el presidente porfa",
+      12
+    ],
+    [
+      "una pregunta quien es el presidente en este proyecto",
+      12
+    ],
+    [
+      "cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "banana cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "banana cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "banana cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "che cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "che cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "che cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "por favor cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "por favor cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "por favor cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "me explicas cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "me explicas cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "me explicas cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "una pregunta cual es la cotizacion del bitcoin",
+      12
+    ],
+    [
+      "una pregunta cual es la cotizacion del bitcoin porfa",
+      12
+    ],
+    [
+      "una pregunta cual es la cotizacion del bitcoin en este proyecto",
+      12
+    ],
+    [
+      "como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "banana como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "banana como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "banana como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "che como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "che como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "che como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "por favor como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "por favor como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "por favor como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "me explicas como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "me explicas como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "me explicas como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "una pregunta como resuelvo una ecuacion",
+      12
+    ],
+    [
+      "una pregunta como resuelvo una ecuacion porfa",
+      12
+    ],
+    [
+      "una pregunta como resuelvo una ecuacion en este proyecto",
+      12
+    ],
+    [
+      "quiero comprar una computadora",
+      12
+    ],
+    [
+      "quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "banana quiero comprar una computadora",
+      12
+    ],
+    [
+      "banana quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "banana quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "che quiero comprar una computadora",
+      12
+    ],
+    [
+      "che quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "che quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "por favor quiero comprar una computadora",
+      12
+    ],
+    [
+      "por favor quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "por favor quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "me explicas quiero comprar una computadora",
+      12
+    ],
+    [
+      "me explicas quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "me explicas quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "una pregunta quiero comprar una computadora",
+      12
+    ],
+    [
+      "una pregunta quiero comprar una computadora porfa",
+      12
+    ],
+    [
+      "una pregunta quiero comprar una computadora en este proyecto",
+      12
+    ],
+    [
+      "que tiempo hace manana",
+      12
+    ],
+    [
+      "que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "banana que tiempo hace manana",
+      12
+    ],
+    [
+      "banana que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "banana que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "che que tiempo hace manana",
+      12
+    ],
+    [
+      "che que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "che que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "por favor que tiempo hace manana",
+      12
+    ],
+    [
+      "por favor que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "por favor que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "me explicas que tiempo hace manana",
+      12
+    ],
+    [
+      "me explicas que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "me explicas que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "una pregunta que tiempo hace manana",
+      12
+    ],
+    [
+      "una pregunta que tiempo hace manana porfa",
+      12
+    ],
+    [
+      "una pregunta que tiempo hace manana en este proyecto",
+      12
+    ],
+    [
+      "por que gira la tierra",
+      12
+    ],
+    [
+      "por que gira la tierra porfa",
+      12
+    ],
+    [
+      "por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "banana por que gira la tierra",
+      12
+    ],
+    [
+      "banana por que gira la tierra porfa",
+      12
+    ],
+    [
+      "banana por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "che por que gira la tierra",
+      12
+    ],
+    [
+      "che por que gira la tierra porfa",
+      12
+    ],
+    [
+      "che por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "por favor por que gira la tierra",
+      12
+    ],
+    [
+      "por favor por que gira la tierra porfa",
+      12
+    ],
+    [
+      "por favor por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "me explicas por que gira la tierra",
+      12
+    ],
+    [
+      "me explicas por que gira la tierra porfa",
+      12
+    ],
+    [
+      "me explicas por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "una pregunta por que gira la tierra",
+      12
+    ],
+    [
+      "una pregunta por que gira la tierra porfa",
+      12
+    ],
+    [
+      "una pregunta por que gira la tierra en este proyecto",
+      12
+    ],
+    [
+      "que es una proteina",
+      12
+    ],
+    [
+      "que es una proteina porfa",
+      12
+    ],
+    [
+      "que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "banana que es una proteina",
+      12
+    ],
+    [
+      "banana que es una proteina porfa",
+      12
+    ],
+    [
+      "banana que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "che que es una proteina",
+      12
+    ],
+    [
+      "che que es una proteina porfa",
+      12
+    ],
+    [
+      "che que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "por favor que es una proteina",
+      12
+    ],
+    [
+      "por favor que es una proteina porfa",
+      12
+    ],
+    [
+      "por favor que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "me explicas que es una proteina",
+      12
+    ],
+    [
+      "me explicas que es una proteina porfa",
+      12
+    ],
+    [
+      "me explicas que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "una pregunta que es una proteina",
+      12
+    ],
+    [
+      "una pregunta que es una proteina porfa",
+      12
+    ],
+    [
+      "una pregunta que es una proteina en este proyecto",
+      12
+    ],
+    [
+      "dame una receta para comer",
+      12
+    ],
+    [
+      "dame una receta para comer porfa",
+      12
+    ],
+    [
+      "dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "banana dame una receta para comer",
+      12
+    ],
+    [
+      "banana dame una receta para comer porfa",
+      12
+    ],
+    [
+      "banana dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "che dame una receta para comer",
+      12
+    ],
+    [
+      "che dame una receta para comer porfa",
+      12
+    ],
+    [
+      "che dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "por favor dame una receta para comer",
+      12
+    ],
+    [
+      "por favor dame una receta para comer porfa",
+      12
+    ],
+    [
+      "por favor dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "me explicas dame una receta para comer",
+      12
+    ],
+    [
+      "me explicas dame una receta para comer porfa",
+      12
+    ],
+    [
+      "me explicas dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "una pregunta dame una receta para comer",
+      12
+    ],
+    [
+      "una pregunta dame una receta para comer porfa",
+      12
+    ],
+    [
+      "una pregunta dame una receta para comer en este proyecto",
+      12
+    ],
+    [
+      "busca hoteles en noruega",
+      12
+    ],
+    [
+      "busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "banana busca hoteles en noruega",
+      12
+    ],
+    [
+      "banana busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "banana busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "che busca hoteles en noruega",
+      12
+    ],
+    [
+      "che busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "che busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "por favor busca hoteles en noruega",
+      12
+    ],
+    [
+      "por favor busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "por favor busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "me explicas busca hoteles en noruega",
+      12
+    ],
+    [
+      "me explicas busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "me explicas busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "una pregunta busca hoteles en noruega",
+      12
+    ],
+    [
+      "una pregunta busca hoteles en noruega porfa",
+      12
+    ],
+    [
+      "una pregunta busca hoteles en noruega en este proyecto",
+      12
+    ],
+    [
+      "contame de una celebridad",
+      12
+    ],
+    [
+      "contame de una celebridad porfa",
+      12
+    ],
+    [
+      "contame de una celebridad en este proyecto",
+      12
+    ],
+    [
+      "banana contame de una celebridad",
+      12
+    ],
+    [
+      "banana contame de una celebridad porfa",
+      12
+    ],
+    [
+      "banana contame de una celebridad en este proyecto",
+      12
+    ],
+    [
+      "che contame de una celebridad",
+      12
+    ],
+    [
+      "che contame de una celebridad porfa",
+      12
+    ],
+    [
+      "che contame de una celebridad en este proyecto",
+      12
+    ],
+    [
+      "por favor contame de una celebridad",
+      12
+    ],
+    [
+      "por favor contame de una celebridad porfa",
+      12
+    ],
+    [
+      "por favor contame de una celebridad en este proyecto",
+      12
+    ],
+    [
+      "me explicas contame de una celebridad",
+      12
+    ],
+    [
+      "me explicas contame de una celebridad porfa",
+      12
+    ],
+    [
+      "me explicas contame de una celebridad en este proyecto",
+      12
+    ],
+    [
+      "una pregunta contame de una celebridad",
+      12
+    ],
+    [
+      "una pregunta contame de una celebridad porfa",
+      12
+    ],
+    [
+      "una pregunta contame de una celebridad en este proyecto",
+      12
+    ]
+  ],
+  "heldout": [
+    [
+      "de que manera puedo seguir con la misma historia",
+      0
+    ],
+    [
+      "podemos sumar lo que pasa despues sin reemplazar",
+      0
+    ],
+    [
+      "podrias recordarme como quedo el trabajo",
+      1
+    ],
+    [
+      "en que punto dejamos el proyecto",
+      1
+    ],
+    [
+      "se les puede poner dialogos a los personajes",
+      2
+    ],
+    [
+      "quiero escuchar al personaje decir hola",
+      2
+    ],
+    [
+      "que tan humana es la voz de banana",
+      3
+    ],
+    [
+      "la voz hablada es un modelo neuronal",
+      3
+    ],
+    [
+      "me gustaria disenar un personaje nuevo",
+      4
+    ],
+    [
+      "puedo mezclar diferentes cuerpos orejas y colas",
+      4
+    ],
+    [
+      "necesito alargar el video que estoy haciendo",
+      5
+    ],
+    [
+      "se pueden juntar escenas para tener mas tiempo",
+      5
+    ],
+    [
+      "como hago que uno le pase la caja al otro",
+      6
+    ],
+    [
+      "si no tiene la lampara puede entregarla",
+      6
+    ],
+    [
+      "podemos arreglar una parte sin perder el resto",
+      7
+    ],
+    [
+      "el cambio no era para ese personaje",
+      7
+    ],
+    [
+      "me propones alguna idea con este elenco",
+      8
+    ],
+    [
+      "no se como seguir podrias sugerir algo",
+      8
+    ],
+    [
+      "explicame que se puede hacer con banana",
+      9
+    ],
+    [
+      "que sabes crear dentro del proyecto",
+      9
+    ],
+    [
+      "como hago para que no olvides ese dato",
+      10
+    ],
+    [
+      "quiero editar uno de mis recuerdos guardados",
+      10
+    ],
+    [
+      "el mp4 sale con una pista de audio",
+      11
+    ],
+    [
+      "el gif exportado tambien tiene voces",
+      11
+    ],
+    [
+      "quien gano la eleccion de ayer",
+      12
+    ],
+    [
+      "cual es el tratamiento para la gripe",
+      12
+    ],
+    [
+      "como hago una pizza",
+      12
+    ],
+    [
+      "cuanto cuesta una casa",
+      12
+    ],
+    [
+      "hay vida en otros planetas",
+      12
+    ],
+    [
+      "cual es mi numero de telefono",
+      12
+    ]
+  ],
+  "labels": [
+    "continue",
+    "recap",
+    "voice",
+    "voice_limits",
+    "custom",
+    "duration",
+    "objects",
+    "correction",
+    "ideas",
+    "capability",
+    "memory",
+    "audio",
+    "unknown"
+  ]
+}

@@ -1,0 +1,1 @@
+package com.bananalab.signcompat.stream; public interface LongStream{long sum();}

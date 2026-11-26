@@ -1,0 +1,8 @@
+{
+  "train_examples": 4642,
+  "test_examples": 481,
+  "t3_training_scenarios": 582,
+  "t3_heldout_scenarios": 59,
+  "exact_overlap": 0,
+  "split": "Whole T3 actor/name/color/place dialogue scenarios held out, including all follow-up questions; legacy T2 portion split by unique row. Synthetic distribution only."
+}

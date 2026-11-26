@@ -1,0 +1,67 @@
+BANANA 0.40 — TALLER DE COMPORTAMIENTOS CON ACTUALIZACIÓN LOCAL
+
+Instalá este APK una vez sobre0.39.1. Agrega el intérprete y el editor. Después, los cambios de código de módulo se guardan, prueban y activan dentro de la misma instalación de Android, sin reinstalar el APK ni usar una PC.
+
+QUÉ CÓDIGO PUEDE CAMBIAR
+Código JSON de un lenguaje de comportamientos propio: patrones con parámetros y secuencias de acciones. El motor lo lee cada vez que recibe un pedido. Editar y activar sus pasos cambia de verdad la secuencia ejecutada en el siguiente pedido.
+No modifica el Java del APK, el compilador Android, los pesos neuronales ni cualquier parte arbitraria de la aplicación. Tampoco inventa nuevos movimientos primitivos: compone los que ya existen. No hay un programador general autónomo escondido detrás de esta función.
+
+PRUEBA RÁPIDA
+crea a Fito un zorro; agrega una banana llamada Bani
+Fito le de un besito a Bani
+
+Con reparación automática activada (valor inicial), la segunda frase detecta una formulación conocida que el motor base no cubría: genera un módulo de interpretación, ejecuta sus pruebas, activa una revisión y vuelve a intentar ese pedido. El beso utiliza el movimiento con contacto ya implementado. La activación y el resultado quedan explicados en el chat. Para evitar ambigüedad deben existir dos personajes identificables y distintos.
+El reparador reconoce formulaciones concretas de besito y festejo. La generación es mediante plantillas propias, no un modelo que escribe cualquier programa. No cambia código si no dispone de una reparación conocida. La reparación explícita admite algunas formulaciones adicionales de enviar un beso, interpretadas como beso con contacto.
+
+CONTROLES DESDE EL CHAT
+estado de modulos
+diagnostica modulos
+ver codigo de modulos
+prepara ejemplo de modulo
+prueba modulos
+activa modulos
+revierte modulos
+descarta codigo de modulos
+pausa reparacion local
+activa reparacion local
+repara este pedido: Fito le de un besito a Bani
+
+Pausar detiene la creación automática de nuevas reparaciones; conserva los módulos ya activos. Una reparación solicitada expresamente sigue disponible. Un destinatario desconocido o una toma llena produce una aclaración sin cambiar la escena, y no desactiva un módulo válido.
+
+EDITOR EN ANDROID
+Proyecto → Taller de módulos.
+1. Prepará el módulo de ejemplo.
+2. Abrí Editar borrador. El ejemplo tiene la frase {actor} celebra con {target}.
+3. Sus pasos son actor baila, target saluda y actor salta.
+4. Guardá el borrador. Eso todavía no cambia el código activo.
+5. Usá Probar y activar ahora. La aplicación vuelve a comprobar las pruebas antes de guardar la revisión.
+6. Pedí Fito celebra con Bani: usa el nuevo módulo.
+7. Para cambiarlo, abrí Editar código activo. Por ejemplo, cambiá el primer op baila por aplaude y cambiá también la primera acción esperada de su prueba. Guardá y activá.
+8. El próximo pedido ejecuta aplauso en lugar de baile, sin otro APK.
+9. Volver a revisión anterior recupera el comportamiento previo. La escena ya creada conserva sus acciones; la recuperación afecta los pedidos siguientes.
+
+El editor contiene el programa completo, con todos sus módulos. Conservá los módulos que quieras mantener al editarlo. Se guardan hasta cinco revisiones anteriores. Cada activación o recuperación aumenta el número de revisión; recuperar código viejo no reduce ese contador.
+
+LENGUAJE Y PRUEBAS
+Programa: version1 y lista modules. Hasta dieciséis módulos, ocho pasos por módulo y32KiB UTF-8 de código.
+Cada módulo contiene id, pattern, steps y tests. El patrón empieza con {actor}; puede incluir {target}. Cada parámetro aparece una vez. Se usan nombres o tipos existentes y únicos; los controles del chat no son reinterpretados como parámetros de una escena.
+Cada paso tiene op y who; las interacciones necesitan to. who/to usan actor o target.
+Operaciones: salta, baila, saluda, camina, gira, aplaude, espera, besa, mira y acercaactor. besa se expande en acercamiento, beso y recepción; por eso su prueba espera tres acciones. No hay bucles, ejecución Java, comandos del sistema, acceso del módulo a red o archivos, ni evaluación de código externo.
+Las pruebas usan una escena separada con Fito (zorro) y Bani (banana). tests incluye input y actions, con la secuencia esperada exacta. Cada módulo necesita entre una y tres pruebas. Si una falla, el código activo sigue sin cambios. También se comprueban límites, destinatarios y conservación de diseños y secuencia previa. Pasar pruebas estructurales no garantiza calidad visual ni todos los pedidos posibles.
+Los planes del núcleo pueden incluir módulos. Se ejecutan sobre copias y publican al final. Una revisión nueva de módulos invalida planes preparados bajo otro código para evitar que cambien de significado al aplicarlos. Planes anteriores a esta versión pueden necesitar prepararse nuevamente.
+
+RECUPERACIÓN Y DIAGNÓSTICO
+El código activo y el historial se guardan juntos en una operación local. Se rechazan editores basados en una revisión vieja. Los errores esperables de escena conservan el código. Si el intérprete detecta código activo corrupto o un error inesperado, intenta recuperar una revisión comprobada; si no hay una válida, desactiva los módulos y vuelve al motor base. Esto no repara fallos generales del render, Android o la red.
+El diagnóstico registra el último pedido de módulo y la causa. Los cambios no se obtienen de páginas web ni modifican credenciales. Las escenas generadas siguen pasando la validación habitual y usan el mismo render para vista previa y exportación.
+
+MODELOS E INDEPENDENCIA
+Chat3.4, MobileCore1, Pixel2.3 y sus pesos siguen iguales. Las reglas de reparación, el intérprete, el editor y las pruebas son propios. No usa Qwen, modelos externos, servidores de IA ni una PC para activar estos módulos. Las demás búsquedas de Internet siguen siendo las de0.38.
+
+VALIDACIÓN
+Stage42ModulesCheck y los diecinueve controles anteriores pasaron. Se comprobó que editar el código cambia las acciones reales del siguiente pedido y que volver a una revisión restaura la secuencia anterior. Incluye pruebas fallidas sin activación, error de almacenamiento sin activación parcial, editor viejo, recuperación ante corrupción, destinatarios inválidos, reparación y reintento, autodetección acotada, integración en planes y rechazo de planes tras cambiar módulos.
+Los registros Android incluidos distinguen pruebas nativas del motor y la comprobación visual/operativa de la interfaz. No se presenta esto como reparación general de todo el código de Banana.
+
+El ZIP contiene las fuentes privadas y la firma: no publicar. Se incluye un JSON de ejemplo para revisar o copiar al editor. Las funciones anteriores se describen en las guías conservadas dentro de las fuentes.
+
+RESULTADO ANDROID
+Pasó la detección y reparación automática, edición real de código, activación, recuperación y rechazo de pruebas fallidas. Tras reiniciar el proceso, se conservó la revisión4 y se ejecutó su comportamiento. El editor guardó un borrador desde pantalla y el chat activó la revisión5. Sin cierre fatal.

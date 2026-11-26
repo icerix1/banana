@@ -1,0 +1,5 @@
+{
+  "evaluation": "30 independent synthetic backgrounds, same target generator and inputs for both versions; not perceptual quality",
+  "fondo1_rgb_mae": 0.01273127996052305,
+  "fondo2_rgb_mae": 0.010805825951198738
+}

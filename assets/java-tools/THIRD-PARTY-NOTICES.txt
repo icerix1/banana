@@ -1,0 +1,9 @@
+Third-party compiler components. These are compilers, not AI model weights.
+ECJ 4.6.1 — Eclipse Public License 1.0 — https://repo.maven.apache.org/maven2/org/eclipse/jdt/core/compiler/ecj/4.6.1/
+DX 1.7 — Android Open Source Project — Apache License 2.0 — https://repo.maven.apache.org/maven2/com/google/android/tools/dx/1.7/
+
+Android API35 compilation stubs: android-api.jar includes upstream NOTICES/ entries; class files only, no framework resources or runtime implementation. Provenance in android-api-provenance.json.
+
+apksig.jar (added in Banana0.50): com.android.apksig classes from Android SDK Build Tools35.0.0 apksigner.jar, converted toDEX by D8 for use on Android. Apache License2.0; see Apache-2.0.txt. Upstream: https://android.googlesource.com/platform/tools/apksig/ . Reproduction helper: tools/signer_dex.py. This is an APK signing/verification tool, not an AI model.
+
+For API23 compatibility only, Java8 utility references are redirected to small original helpers (tools/signcompat-src) by tools/signcompat_patch.py. The APK signing and verification algorithms remain upstream apksig. Utilities include eager streams, basic Base64, Comparator/List helpers and OptionalInt; test-signing/SigningCompatibilityCheck.java compares behavior and signs/verifies a real APK.

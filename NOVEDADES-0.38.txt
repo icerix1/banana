@@ -1,0 +1,49 @@
+BANANA 0.38 — INVESTIGACIÓN Y BIBLIOTECA ACTUALIZABLE
+
+Esta fase amplía la consulta y el contexto de Banana Chat. No convierte el modelo pequeño en una inteligencia general ni promete entender todo. Los pesos siguen siendo Chat 3.4 + Context1 propios; Pixel 2.3, creación, voces y animación de 0.37 se conservan.
+
+QUÉ CAMBIÓ
+• Preguntas generales largas y naturales, sin el viejo límite de cinco palabras por tema.
+• Investigación con buscador web y lectura de hasta tres páginas públicas HTTPS.
+• Fuentes, fragmentos relevantes y fecha de consulta visibles; fechas de consulta no se presentan como fechas de publicación.
+• Repreguntas: contame mas / y por que / actualiza eso / resumi eso. Pedir más avanza a otro fragmento guardado y avisa si ya no hay más; no repite indefinidamente el primero.
+• Comparaciones: busca por separado ambos temas y reúne evidencia. No inventa un ganador ni afirma haber verificado contradicciones.
+• Biblioteca local recuperable sin conexión: hasta 80 documentos, 6000 caracteres por documento.
+• Seguimiento de hasta ocho temas, con actualización periódica y estado visible.
+• Pausar, retomar, quitar un tema y borrar biblioteca.
+• Las preguntas de investigación nuevas se siguen automáticamente hasta completar ocho temas; se puede desactivar en Proyecto → Internet y aprendizaje. Las repreguntas no consumen un tema nuevo.
+
+PROBÁ
+como funciona la energia solar
+contame mas
+y por que
+compara energia solar con energia eolica
+actualiza eso
+aprende sobre animacion de personajes
+estado del aprendizaje
+busca en tu biblioteca energia solar
+lee https://www.mediawiki.org/wiki/API:REST_API
+pausa el aprendizaje
+activa aprendizaje
+deja de aprender sobre animacion de personajes
+biblioteca web
+borra biblioteca web
+
+ACTUALIZACIÓN EN SEGUNDO PLANO
+Objetivo: una ronda por hora, un tema por ronda, rotando el que lleva más tiempo sin revisar. Por defecto usa red sin medición (normalmente Wi-Fi). Funciona sin mantener abierta la pantalla y la programación persiste tras reiniciar el dispositivo. Android decide la ejecución y puede postergarla por batería, red o restricciones. No es navegación continua ni garantiza horarios exactos. Forzar detención o restringir la app puede impedir actualizaciones. Sin temas seguidos no descarga nada. Las preguntas activas pueden buscar aunque el seguimiento esté pausado; la pausa afecta el trabajo de fondo. Se controla desde Proyecto → Internet y aprendizaje o desde el chat.
+
+INTERNET Y PRIVACIDAD
+Se envía la consulta al buscador y se visitan las fuentes. No se envían el historial completo, el proyecto ni los recuerdos personales. Algunos patrones de datos sensibles se mantienen fuera del buscador; no sustituye revisar lo que se escribe en la consulta. No se envían credenciales. Solo HTTPS público, sin puertos alternativos ni direcciones privadas; validación de DNS y redirecciones, límites de tiempo, tamaño y páginas. Proveedores sin clave: DuckDuckGo HTML; si no hay páginas legibles, Wikipedia en español. DuckDuckGo puede cambiar o bloquear consultas: no es una API con disponibilidad garantizada. Si solo hay Wikipedia, Banana muestra esa cobertura limitada. No sirve como garantía de noticias completas, precios en vivo o hechos verificados.
+
+QUÉ SIGNIFICA APRENDER AQUÍ
+Almacena fuentes fechadas y las recupera por pertinencia. Las páginas no ejecutan órdenes, cambian escenas ni entrenan automáticamente los pesos. Se retiró la observación automática de texto externo en las rutas antiguas de lectura. Mantiene la independencia de modelos: sin Qwen, modelos preentrenados ni servicios de generación de terceros. Usa Internet como fuente de datos, no como otro chatbot. Las respuestas de investigación son extractivas y limitadas; no son razonamiento general ni una síntesis neuronal fiable. Para acercarse más a un asistente general todavía hacen falta corpus propios más amplios, entrenamiento y evaluación separados.
+
+La biblioteca web nueva está separada de las referencias visuales y los recuerdos que vos guardás. Borrar biblioteca web no borra el proyecto ni esas referencias anteriores. La pausa, borrado y eliminación de temas se comprueban antes de guardar una actualización de fondo en curso, para evitar que reaparezcan datos borrados.
+
+INSTALACIÓN Y CREACIÓN
+Instalar el APK con la misma firma sobre la versión anterior. El código privado contiene las claves de firma: no publicar el ZIP. Para personajes, voces, duraciones y tomas se incluye GUIA-CREACION-0.37.txt. No hay nuevos modelos de dibujo ni cambios de calidad de voz en esta entrega.
+
+PRUEBAS Y LÍMITES DE LA VERIFICACIÓN
+Pasaron Stage39ResearchCheck y los 16 controles anteriores. Incluyen contexto de preguntas, comparación, citas, recuperación sin conexión, errores del proveedor, límites, pausa, eliminación durante una consulta y rechazo de direcciones privadas.
+Android API23: preguntas desde el motor, repreguntas y conservación de la escena con evidencia sintética de prueba; registro real de JobScheduler persistente cada hora en red sin medición, cancelación al pausar y reanudación. Las fuentes sintéticas están solo en las pruebas, no en el APK de producción.
+Consulta pública real: búsqueda de energía solar y lectura de una fuente pública con extracción de contenido y atribución, usando el transporte HTTP normal de este entorno. La JVM directa no resolvió DNS aquí; por eso se utilizó un adaptador HTTP de prueba para la verificación real. No se verificó la navegación pública de extremo a extremo dentro de Android ni una ronda horaria espontánea en un teléfono físico. El test Android verifica el programador real y el flujo con datos de prueba, no debe confundirse con esa comprobación pendiente.

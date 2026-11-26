@@ -1,0 +1,62 @@
+500 loss 0.206 seconds 4
+1000 loss 0.1156 seconds 8
+1500 loss 0.2131 seconds 12
+2000 loss 0.0997 seconds 16
+2500 loss 0.1935 seconds 19
+3000 loss 0.1273 seconds 23
+3500 loss 0.1029 seconds 27
+4000 loss 0.1154 seconds 31
+4500 loss 0.126 seconds 35
+5000 loss 0.0803 seconds 39
+5500 loss 0.0567 seconds 43
+6000 loss 0.0856 seconds 47
+6500 loss 0.0861 seconds 50
+7000 loss 0.0735 seconds 54
+7500 loss 0.0562 seconds 58
+8000 loss 0.0669 seconds 62
+8500 loss 0.0709 seconds 66
+9000 loss 0.0563 seconds 70
+9500 loss 0.0668 seconds 74
+10000 loss 0.0612 seconds 78
+10500 loss 0.0711 seconds 82
+11000 loss 0.0581 seconds 86
+11500 loss 0.055 seconds 90
+12000 loss 0.0481 seconds 95
+{
+  "name": "Banana Pixel2 Clear",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 58404,
+  "external_weights": false,
+  "training_images": 714,
+  "heldout_images": 6,
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9894639967129583,
+  "heldout_foreground_RGB_MAE": 0.03185215964913368,
+  "size": 96,
+  "hidden": 160,
+  "coordinate_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Background and motion remain procedural."
+}

@@ -1,0 +1,13 @@
+NATIVE_REAL_LEGACY_MIGRATION_OK
+NATIVE_FULL_STREAM_AND_FTS_TAIL_OK chars=1300068 chunks=637
+NATIVE_ARCHIVE_RESTORE_AND_CLEAR_GUARDS_OK
+NATIVE_READING_WEIGHTS_STARTED
+Entrené y activé pesos conversacionales nuevos con una parte de esta lectura.
+Pérdida de validación: 7.95250 → 7.93226.
+No quedan bloques pendientes en esta cola.
+Son tandas pequeñas y evaluaciones locales: no garantizan comprensión general ni recordar toda la fuente en los pesos. El documento completo sigue disponible en la biblioteca.
+NATIVE_READING_WEIGHTS_CHECKPOINT_OK sha=42c5bd6bc1780d08164f6a07873560de965a0747b8d13da2b8c8deb0ea835591
+NATIVE_BUILD_WITH_STREAMING_KNOWLEDGE_STARTED
+NATIVE_FULL_APK_WITH_DOCUMENT_ARCHIVE_OK
+PASS NATIVE65 actual migration, streamed1.3million-character source, real SQLite FTS tail, bounded retrieval, complete archive restore, failed-stream rollback, clear guards and normal rebuilt APK with streaming knowledge.
+

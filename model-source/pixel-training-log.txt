@@ -1,0 +1,70 @@
+200 loss 0.2972 seconds 2
+400 loss 0.4245 seconds 3
+600 loss 0.253 seconds 5
+800 loss 0.3197 seconds 7
+1000 loss 0.2387 seconds 8
+1200 loss 0.278 seconds 10
+1400 loss 0.2171 seconds 11
+1600 loss 0.2356 seconds 13
+1800 loss 0.1812 seconds 15
+2000 loss 0.1779 seconds 16
+2200 loss 0.1295 seconds 18
+2400 loss 0.1754 seconds 20
+2600 loss 0.1512 seconds 21
+2800 loss 0.1902 seconds 23
+3000 loss 0.1584 seconds 25
+3200 loss 0.1172 seconds 26
+3400 loss 0.2056 seconds 28
+3600 loss 0.1907 seconds 30
+3800 loss 0.1562 seconds 31
+4000 loss 0.133 seconds 33
+4200 loss 0.125 seconds 35
+4400 loss 0.1368 seconds 36
+4600 loss 0.1356 seconds 38
+4800 loss 0.1617 seconds 39
+5000 loss 0.1338 seconds 41
+5200 loss 0.1188 seconds 42
+5400 loss 0.1208 seconds 44
+5600 loss 0.1592 seconds 46
+5800 loss 0.0949 seconds 48
+6000 loss 0.1448 seconds 49
+6200 loss 0.1485 seconds 51
+6400 loss 0.1492 seconds 52
+6600 loss 0.0989 seconds 54
+6800 loss 0.1507 seconds 56
+7000 loss 0.1399 seconds 57
+7200 loss 0.0711 seconds 59
+7400 loss 0.1003 seconds 61
+7600 loss 0.1458 seconds 62
+7800 loss 0.1335 seconds 64
+8000 loss 0.0959 seconds 66
+{
+  "name": "Banana Pixel1",
+  "architecture": "conditional coordinate MLP with Fourier coordinates, 3 hidden layers, RGBA output",
+  "parameters": 22372,
+  "external_weights": false,
+  "training_images": 1071,
+  "heldout_images": 9,
+  "heldout_combination": "blue cucumber + hat",
+  "heldout_alpha_IoU": 0.9665093303962258,
+  "heldout_foreground_RGB_MAE": 0.07356542183293237,
+  "size": 64,
+  "types": [
+    "banana",
+    "pepino",
+    "gato",
+    "conejo",
+    "robot"
+  ],
+  "accessories": [
+    "none",
+    "hat",
+    "crown"
+  ],
+  "expressions": [
+    "happy",
+    "sad",
+    "surprised"
+  ],
+  "limitations": "Neural renderer learned from our own synthetic cartoons. Not diffusion or universal text-to-image. Background and motion remain procedural."
+}

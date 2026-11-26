@@ -1,0 +1,6 @@
+package com.bananalab.lite;
+import java.io.*;import java.util.*;
+public class Stage38VoiceCheck{
+ static void le(DataOutputStream o,int v,int n)throws Exception{for(int i=0;i<n;i++)o.writeByte(v>>(i*8));}
+ public static void main(String[] args)throws Exception{short[] a=VoiceSynth.render("Hola, soy Tony. Yo tengo la caja.","media",123),b=VoiceSynth.render("Hola, soy Tony. Yo tengo la caja.","media",123),c=VoiceSynth.render("Hola, soy Tony. Yo tengo la caja.","aguda",123);if(!Arrays.equals(a,b)||Arrays.equals(a,c))throw new AssertionError("voice determinism/preset");int peak=0;long energy=0;for(short v:a){peak=Math.max(peak,Math.abs((int)v));energy+=(long)v*v;}if(peak<10000||energy/a.length<10000)throw new AssertionError("voice silent");File f=new File(args[0]);try(DataOutputStream out=new DataOutputStream(new FileOutputStream(f))){out.writeBytes("RIFF");le(out,36+a.length*2,4);out.writeBytes("WAVEfmt ");le(out,16,4);le(out,1,2);le(out,1,2);le(out,16000,4);le(out,32000,4);le(out,2,2);le(out,16,2);out.writeBytes("data");le(out,a.length*2,4);for(short v:a)le(out,v,2);}System.out.println("PASS own voice deterministic; distinct pitch; "+a.length+" samples, peak="+peak+", file="+f.getName());}
+}

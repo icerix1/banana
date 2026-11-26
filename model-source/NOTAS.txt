@@ -1,0 +1,9 @@
+BANANASEMILLA 1
+Pesos inicializados desde cero, sin importar checkpoints de terceros.
+Corpus sintetico propio generado con semilla fija, no corpus copiado de paginas.
+Ejecutar train_language.py con Python3 y NumPy reproduce entrenamiento y exporta
+pesos. No requiere PyTorch ni librerias de modelos externos.
+Inferencia Java independiente del entorno de entrenamiento.
+La app ajusta solo la cabeza causal con pares de palabras de las paginas leidas.
+No entrena categorias usando el contenido web ni amplia el vocabulario.
+Metrica sintetica != comprension general. Mas datos y evaluacion real pendientes.

@@ -1,0 +1,12 @@
+{
+  "external_weights": false,
+  "model_sha256": "3bc5f44eaeb3d0c0ab45b9ac3f3fc921008e68e88607284b78be24a966c6f9e8",
+  "presets": 360,
+  "views": [
+    "front",
+    "profile",
+    "back"
+  ],
+  "local_edit": "Neural variants composited by fixed regions. Median/palette cleanup of neural pixels, not universal inpainting.",
+  "encoding": "lossless WebP"
+}

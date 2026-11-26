@@ -1,0 +1,5 @@
+NATIVE_REAL_METHOD_SOURCE_COMPILED_AND_DIFF_OK
+NATIVE_REAL_CHAT_CHANGED_AND_RELOAD_OK
+NATIVE_FULL_METHOD_BODY_CONTROLS_AND_UNDO_OK
+PASS STAGE47 real Java method source editing, independent process tests, before/after review, activation, actual chat response, persisted restore, bounded full body, protected controls, API rejection, version recovery, stale guard and curve protocol regression.
+

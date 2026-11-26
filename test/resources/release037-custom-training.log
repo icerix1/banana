@@ -1,0 +1,9 @@
+1000 0.1811 2
+2000 0.1719 3
+3000 0.1294 5
+4000 0.1498 6
+5000 0.111 8
+6000 0.1029 9
+7000 0.0895 11
+8000 0.071 12
+{"name": "Banana Pixel2.3", "component": "compositional creature mask field", "external_weights": false, "external_teacher": false, "parameters": 10692, "train_conditions": 1116, "heldout_conditions": 180, "heldout_foreground_IoU": 0.9485549512106322, "features": ["6 body forms", "4 ear styles", "3 tail styles", "width/height", "3 views"], "limitations": "Finite own compositional style,64px masks; own existing learned faces/accessories composed after mask. Not universal text-to-image."}

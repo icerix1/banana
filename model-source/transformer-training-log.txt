@@ -1,0 +1,36 @@
+100 loss 1.1368 seconds 3
+200 loss 0.3849 seconds 6
+300 loss 0.2679 seconds 9
+400 loss 0.2594 seconds 12
+500 loss 0.1689 seconds 15
+600 loss 0.2061 seconds 18
+700 loss 0.1743 seconds 20
+800 loss 0.1339 seconds 23
+900 loss 0.138 seconds 26
+1000 loss 0.1316 seconds 30
+1100 loss 0.1838 seconds 32
+1200 loss 0.2426 seconds 36
+{
+  "name": "Banana T1",
+  "architecture": "causal decoder-only Transformer, pre-LN, ReLU FFN",
+  "parameters": 87244,
+  "layers": 2,
+  "heads": 4,
+  "width": 48,
+  "context_tokens": 96,
+  "external_weights": false,
+  "training_examples": 5245,
+  "test_examples": 240,
+  "heldout_reply_loss_synthetic_only": 0.1939026340842247,
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy ?",
+    "quien sos": "soy banana , un modelo propio pequeno y experimental .",
+    "que podes hacer": "podemos pensar personajes y acciones . para dibujarlos , usa animaciones .",
+    "gracias": "de nada . que mas queres probar ?",
+    "dame una frase con gato": "el gato baila en la ciudad .",
+    "sabes todo": "no se todo . soy un modelo experimental y puedo generar texto incorrecto .",
+    "como me llamo": "no me dijiste tu nombre en este contexto .",
+    "contexto nombre": "te escucho ."
+  },
+  "limitations": "Tiny synthetic corpus; not general knowledge or reasoning. Can repeat or generate incorrect text. Initial training during development; inference in Android."
+}

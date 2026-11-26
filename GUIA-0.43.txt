@@ -1,0 +1,50 @@
+BANANA 0.43 — MÓDULOS JAVA DESDE EL CHAT
+
+Instalá Banana-0.43-Android.apk como actualización; no hace falta borrar la versión anterior.
+Mismo identificador y firma de la versión 0.42. Conserva los proyectos.
+
+PEDIDOS DIRECTOS
+• Agranda el texto del chat.
+• Pone el texto del chat a 20.
+• Agranda los botones de la app.
+• Aumenta el espacio entre mensajes.
+• Pone el tema de la app violeta.
+• Crea una pantalla de proyectos.
+• Mostrame la pantalla de proyectos.
+• Aumenta la altura de los saltos.
+• Hace los gestos mas suaves.
+• Usa seis pares de mensajes como contexto.
+
+PRUEBA ANTES DE APLICAR
+prepara estos cambios: agranda el texto del chat; aumenta la altura de los saltos; crea una pantalla de proyectos
+ver cambios pendientes de la app
+aplica los cambios de la app
+O bien: descarta los cambios de la app
+
+Con “prepara estos cambios:” se compila una copia sin activar. Los pedidos directos también se compilan y comprueban, y se activan en el mismo turno. Podés agrupar hasta ocho ajustes separados con punto y coma. Una cláusula desconocida rechaza el lote entero. No mezcles estas órdenes con órdenes de escena en el mismo lote.
+
+RECUPERACIÓN
+versiones de la app
+deshace el ultimo cambio de la app
+volve a la version 0 de la app
+Se conservan hasta once versiones anteriores. Las recuperaciones se registran como un cambio nuevo, por lo que también se pueden deshacer. El historial es de módulos de app: es independiente del historial de escenas y del Java de celebración/beso.
+
+CÓDIGO Y DIAGNÓSTICO
+mostrame el mapa del codigo
+mostrame el codigo de Scene.java
+mostrame los modulos de la app
+busca el error de la app
+La consulta web es explícita y utiliza la búsqueda existente. Conserva sus límites de disponibilidad y fuentes. No envía los archivos del proyecto al buscador ni reentrena automáticamente la IA.
+
+ALCANCE REAL
+Se generan y compilan cuatro archivos Java preparados: BananaBehavior.java (puente del compilador), BananaInterface.java, BananaAnimation.java y BananaDialogue.java. Se prueban sus métodos reales cargados desde DEX; una operación de almacenamiento activa todos los módulos juntos. Estos módulos controlan tamaño de texto/botones, separación visual de mensajes, cuatro temas oscuros, acceso al panel de proyectos, altura de salto, amplitud de gestos y hasta ocho pares de contexto.
+El panel de proyectos reúne accesos a escenas guardadas, personajes, escena y borrador actual, y versiones. Es una pantalla preparada que se habilita por chat; no un generador de pantallas arbitrarias.
+Los ajustes de movimiento son globales; las escenas conservan sus datos y se reproducen con los valores activos. El contexto adicional no elimina las limitaciones del modelo ni garantiza que comprenda todo.
+Las celebraciones y el beso de 0.42 siguen disponibles con sus comandos e historial separados.
+
+NO IMPLEMENTADO AÚN
+No es un programador Java general, ni modifica cualquier clase ya cargada del APK. No crea funciones arbitrarias, cambia permisos/bibliotecas ni reconstruye y firma todo el APK en Android. El mapa permite leer el código instalado, no editar libremente todos sus archivos. No se incorporaron Qwen ni pesos de otros modelos. El compilador ECJ/DX usa sus bibliotecas externas ya presentes en 0.41/0.42; independencia del modelo no significa ausencia de dependencias de software.
+El trabajo que falta y sus criterios de aceptación están en PROXIMA-ETAPA.md.
+
+VERIFICACIÓN
+Consultar VALIDACION-0.43.md en las fuentes para resultados y límites de las pruebas. No se probó físicamente en la tablet del usuario.

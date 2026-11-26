@@ -1,0 +1,11 @@
+{
+  "name": "Banana Pixel 2.2",
+  "component": "tomato field",
+  "external_weights": false,
+  "parameters": 58244,
+  "training_conditions": 423,
+  "heldout_conditions": 9,
+  "heldout_alpha_IoU": 0.9880590968661838,
+  "heldout_foreground_RGB_MAE": 0.011767313039551178,
+  "limitations": "Own synthetic tomato, finite catalog only. Original 2.1 own fields retained for other bodies."
+}

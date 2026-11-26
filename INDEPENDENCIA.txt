@@ -1,0 +1,51 @@
+ENTREGA0.36
+Chat3.5 es un experimento derivado únicamente del checkpoint propio Chat3.4 y
+corpus propio. No se integró como modelo activo tras la revisión de calidad.
+Pesos, corpus, comparaciones y código quedan incluidos para reproducir el ensayo.
+Los cambios activos de esta etapa son contexto, continuidad y coherencia.
+No se usaron modelos o profesores externos.
+
+ENTREGA0.35
+No se descargaron ni integraron modelos externos. Todos los4865 archivos de
+assets son idénticos por SHA256 a las fuentes0.34; siguen Chat3.4 y Pixel2.2 propios.
+Los cambios nuevos son planificación por pasos, edición contextual, memoria y
+consultas del estado. No se afirma un reentrenamiento o un salto de IA general.
+
+ENTREGA0.34: Chat3.4 se entrenó desde cero sobre corpus propio revisado.
+Pixel2.2 añade campos propios entrenados desde cero para tomate, caras y fondos,
+y un clasificador propio de diez tipos. Conserva los cuerpos propios2.1.
+No hay pesos externos ni profesor externo. Los PNG/WebP del banco son salidas de
+los pesos serializados propios con composición/limpieza de paleta documentadas.
+
+BANANA: MODELOS PROPIOS
+Banana Chat 3.3 y Banana Pixel 2.1 se inicializaron aleatoriamente y se entrenaron
+con corpus, dibujos sinteticos y salidas neuronales propios del proyecto.
+No se incorporan pesos Qwen, Llama, Stable Diffusion ni otros modelos preentrenados.
+La descarga de Qwen iniciada por error se retiro antes de integrarla.
+No se utilizo Qwen como profesor ni para generar los datos de esta entrega.
+
+Se utilizan bibliotecas de programacion/entrenamiento (Java/Android, PyTorch,
+NumPy, Pillow), no sus modelos preentrenados. Los scripts de entrenamiento y
+evaluacion estan incluidos en model-source.
+La inferencia de las redes de Banana es local. Las funciones existentes de
+consulta de referencias publicas por Internet son herramientas de datos
+separadas, no un servicio de IA.
+
+Los presets comunes son salidas evaluadas de nuestras redes serializadas.
+Las animaciones articuladas, composicion y camara usan codigo 2D.
+La edicion por regiones no es inpainting universal; las referencias no forman
+un sistema general de comprension fotografica.
+
+Esta entrega agrega vistas sinteticas originales al entrenamiento propio,
+planificacion por codigo y transferencias 2D. No usa un modelo externo como
+profesor ni para producir el corpus. Las paletas y mascaras son explicitas.
+
+ACTUALIZACIÓN 0.37
+INDEPENDENCIA
+Sin Qwen, modelos preentrenados, profesores externos ni APIs de generación. Pesos nuevos entrenados desde cero con datos propios. El sonido es DSP original. Las herramientas generales de entrenamiento, Android y codificación no son modelos de terceros.
+
+ACTUALIZACIÓN 0.38
+Internet aporta documentos públicos atribuidos a una biblioteca separada. No usa modelos externos ni ajusta los pesos con páginas web. Los módulos de búsqueda y recuperación son propios. Pesos activos sin cambios.
+
+ACTUALIZACIÓN 0.39
+MobileCore1 usa pesos propios entrenados desde cero y lecciones redactadas para el proyecto. Inferencia Java local en Android, sin PC ni API de otro modelo. Las frases y correcciones son datos explícitos, no actualización automática de pesos. Chat3.4 generativo anterior permanece activo.

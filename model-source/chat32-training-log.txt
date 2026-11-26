@@ -1,0 +1,50 @@
+200 loss 1.2315 seconds 9
+400 loss 1.5889 seconds 17
+600 loss 0.0407 seconds 25
+800 loss 0.0151 seconds 33
+1000 loss 0.3525 seconds 41
+1200 loss 0.3056 seconds 50
+1400 loss 0.0106 seconds 59
+1600 loss 0.3296 seconds 67
+1800 loss 0.0076 seconds 75
+2000 loss 0.0186 seconds 83
+2200 loss 0.0646 seconds 92
+2400 loss 0.0518 seconds 100
+2600 loss 0.001 seconds 108
+2800 loss 0.0008 seconds 117
+3000 loss 0.1412 seconds 125
+3200 loss 0.0078 seconds 133
+3400 loss 0.218 seconds 141
+3600 loss 0.0265 seconds 150
+3800 loss 0.002 seconds 158
+4000 loss 0.0007 seconds 166
+4200 loss 0.0082 seconds 174
+{
+  "name": "Banana Chat 3.2",
+  "external_weights": false,
+  "parameters": 465602,
+  "layers": 3,
+  "width": 96,
+  "heads": 4,
+  "context_tokens": 384,
+  "tokenizer": "UTF-8 byte BPE trained on own corpus",
+  "vocab_size": 482,
+  "training_examples": 5970,
+  "test_examples": 484,
+  "heldout_loss_synthetic_only": 1.565730120241642,
+  "reserved_names": [
+    "uma",
+    "raquel",
+    "dario"
+  ],
+  "manual_outputs": {
+    "hola": "hola ! que queres crear o conversar hoy ?",
+    "como te llamas": "soy banana chat 3.2 , un modelo experimental propio .",
+    "sos independiente": "mis pesos se entrenaron desde cero con datos propios del proyecto . no uso un modelo preentrenado .",
+    "que significa mientras": "mientras indica que dos acciones ocurren al mismo tiempo .",
+    "que es una animacion": "una animacion muestra imagenes sucesivas para representar movimiento .",
+    "quiero una idea de detectives": "una banana detective encuentra una puerta cerrada y escucha pasos del otro lado .",
+    "unseen_name": "se llama ua ."
+  },
+  "limitations": "Own small synthetic corpus; not a general-knowledge assistant or equivalent to ChatGPT. UTF-8 coverage does not imply understanding arbitrary text."
+}

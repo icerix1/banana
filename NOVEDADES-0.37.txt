@@ -1,0 +1,37 @@
+BANANA 0.37 — CONVERSACIÓN, PERSONAJES, ANIMACIÓN, VOCES Y TOMAS
+
+Instalar el APK sobre la versión anterior: misma firma. Conservá una copia de tus proyectos antes de cambiar de dispositivo.
+
+CONVERSACIÓN
+Mantiene Chat 3.4 propio y suma un clasificador contextual neuronal propio: ayuda, resúmenes, aclaraciones y propuestas basadas en la escena. Si falta el personaje, respondé su nombre para completar el pedido. Las propuestas se ejecutan al decir "aplica esa idea" y se rechazan si la escena cambió. No equivale a un asistente general como ChatGPT. El candidato Chat 3.5 anterior sigue experimental y no está activado.
+
+DIBUJO — BANANA PIXEL 2.3
+Nuevo modelo propio para criaturas combinables: seis cuerpos (redondo, ovalado, cuadrado, estrella, gota, capsula), cuatro opciones de orejas y tres de cola. Máscaras generadas por nuestro modelo, colores y expresiones propios. El editor permite cambiar forma, orejas y cola sin perder la identidad. No es generación universal de imágenes; alas, anatomías y accesorios fuera de estas familias pueden rechazarse.
+Ejemplo: crea a Nube una criatura estrella azul con orejas largas y cola corta
+Ejemplo: cambia el cuerpo de Nube a gota
+
+ANIMACIÓN
+Objetos sujetos siguen el salto y baile del personaje. Puede saludar con la mano libre mientras sostiene una caja. La boca sigue la envolvente temporal del diálogo sintetizado. Las referencias importadas conservan una boca estática.
+
+VOCES PROPIAS EXPERIMENTALES
+Síntesis original por formantes, sin servicios de voz, grabaciones ni pesos externos. Sonido robótico: no es un modelo neuronal de voz ni garantiza pronunciación humana natural. Voces media, grave, aguda y robotica. El MP4 incluye el diálogo; el GIF no tiene audio.
+Ejemplo: voz de Nube aguda
+Ejemplo: Nube dice "Hola, soy Nube."
+Ejemplo: Tony dice "Hola, vamos."
+Hasta 120 caracteres por frase y 32 frases. Usar letras españolas y puntuación; escribir los números con palabras. El tiempo automático se amplía para alojar la voz; una duración fija insuficiente se rechaza.
+
+VIDEOS Y CONTINUIDAD
+Hasta 120 segundos por escena, 32 tiempos y 64 acciones. Hasta ocho tomas y 300 segundos por serie. La preparación de las tomas es progresiva para reducir memoria. Vista previa y exportación usan los mismos tiempos; la reproducción con audio sigue el reloj de audio y descarta cuadros si el dispositivo no llega.
+Ejemplo: hace que dure 30 segundos
+Ejemplo: prepara siguiente toma
+La nueva toma conserva personajes, diseños, voces, posiciones finales y portador del objeto; permite escribir acciones y diálogos nuevos.
+"nueva serie desde aqui" inicia otra serie con copia recuperable.
+"recupera serie anterior" recupera la cadena previa.
+"usa escenas guardadas" selecciona la biblioteca anterior para exportar.
+Videos largos requieren más tiempo, batería y espacio. Los máximos se verificaron con pruebas de límites; no se codificó una serie completa de cinco minutos en todos los teléfonos.
+
+VALIDACIÓN DE ESTA ENTREGA
+Todos los controles de regresión y los tres nuevos Stage38 pasaron. Paridad Python/Java de los dos nuevos modelos verificada. Android: creación de criatura, aclaración contextual, editor de forma y diálogo desde pantalla; sin cierre fatal. Exportación real de MP4 de 15 segundos con voces y serie continua de 18 segundos / dos tomas con audio; conservación de diseño, voz y objeto verificada. Se incluye demo y muestra WAV para evaluar el sonido.
+
+INDEPENDENCIA
+Sin Qwen, modelos preentrenados, profesores externos ni APIs de generación. Pesos nuevos entrenados desde cero con datos propios. El sonido es DSP original. Las herramientas generales de entrenamiento, Android y codificación no son modelos de terceros.

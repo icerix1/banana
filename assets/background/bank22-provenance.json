@@ -1,0 +1,6 @@
+{
+  "external_weights": false,
+  "model_sha256": "3e07aaf881ee871f37acab998a6a146b2c7fae85ea70aa6d0c376de034b534fd",
+  "presets": 60,
+  "postprocessing": "Unsharp filter on own neural RGB; threshold of own neural foreground mask. Fog is explicit at runtime."
+}

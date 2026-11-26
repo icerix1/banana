@@ -1,0 +1,4 @@
+NATIVE_GROUNDED_QUESTION_AND_FOLLOWUP_OK
+NATIVE_PERSISTENT_JOB_PAUSE_RESUME_OK
+PASS STAGE39 Android engine, source retrieval, followup, scene preservation and actual JobScheduler registration/pause/resume. Test evidence is synthetic; no claim of live Android internet.
+
