@@ -1,3 +1,16 @@
+BANANA0.73 — MISMA APP QUE0.71.3, CON NÚMERO DE VERSIÓN MAYOR
+
+No hay funciones nuevas respecto de0.71.3. Sólo cambia el número de versión (0.73, código 730000) para que Android la acepte como actualización en un dispositivo que tenga instalada una0.72.
+
+ATENCIÓN SI TENÉS UNA0.72 INSTALADA
+Esta línea de versiones (0.67 a0.73) se construyó a partir de las fuentes de0.66. No incluye nada de lo que traía tu0.72 anterior, y no conoce los formatos de datos que esa versión haya agregado. Al instalarla encima:
+• Android conserva los datos de la app, pero esta versión puede no saber leerlos, leerlos mal o fallar al abrir.
+• Las funciones propias de tu0.72 desaparecen.
+• No se puede volver atrás instalando la0.72 otra vez: Android rechaza bajar de versión sin desinstalar, y desinstalar borra los datos.
+Antes de instalar, en tu0.72: «respaldá mi conocimiento» y guardá el ZIP fuera de la app; guardá también tu APK reconstruida si tenés una. Lo más seguro es probar primero en otro dispositivo, o aceptar que puede hacer falta desinstalar y empezar con datos limpios.
+
+--- Funciones anteriores ---
+
 BANANA0.71.3 — APRENDE DE TUS CALIFICACIONES Y SE AJUSTA SOLA
 
 Todo lo de esta versión se alimenta de lo mismo: que después de una respuesta le digas «esa respuesta estuvo bien» o «esa respuesta estuvo mal». Sin calificaciones, nada de esto cambia.
