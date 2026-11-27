@@ -1,3 +1,9 @@
+# Banana0.71.2: charla por selección, seguimiento, respuesta corta y autoprueba previa
+
+ChatBank carga assets/lector3/respuestas.json (30 respuestas con 6 formas cada una), ordena por palabras compartidas más coseno de vectores del modelo, y sólo responde si Lector.yes confirma la primera con0.5 sobre «respuesta : R» [user] mensaje. BananaEngine lo consulta antes de la generación libre de Chat3.4. FollowUp quita «y», convierte «en qué año/lugar» y completa una pregunta sin sujeto con el de la anterior (10 minutos). Lector.brief recorta fecha, lugar, cantidad o nombre desde donde la oración nombra el asunto. Lector.read devuelve Found.alternative cuando dos documentos dan oraciones distintas con seguridad a menos de0.04. Lector.select puntúa cada candidata hasta tres veces (título+anterior, título, sola) y toma el mayor; plainQuestion quita todas las tildes; order() usa palabras compartidas y el coseno con peso0.05. RealExam guarda pregunta, oración y veredicto. CodeBank.search, errorKind y autoVerify. SelfCheck.before carga el DEX nuevo y la APK instalada en DexClassLoader aislados y compara pure().
+
+--- Arquitectura previa ---
+
 # Banana0.71.1: cadena de dos pasos, conflictos entre fuentes y red de seguridad del selector
 
 LectorChain reconoce una forma fija de pregunta, la parte en «quien VERBO COSA» y «CUÁNDO/DÓNDE VERBO %s», resuelve el primer paso con Lector.read, extrae un nombre propio de la oración (tras «por» o el primero que no sea la cosa) y resuelve el segundo con una nueva recuperación. KnowledgeNotebook.reply la intenta antes de la ruta normal.

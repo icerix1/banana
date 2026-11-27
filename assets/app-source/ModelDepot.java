@@ -2,7 +2,7 @@ package com.bananalab.lite;
 import android.content.*;import java.io.*;import java.util.*;import org.json.*;
 /** Verified own-model checkpoints, pointers and rollback. Weights never execute code. */
 final class ModelDepot{
- static final String CHAT="chat34/chat34.bin",PIXEL="pixel-v2/character21.bin",READER="lector3/lector31.bin";static int limit(String kind){return kind.startsWith("reader")?96000000:8000000;}
+ static final String CHAT="chat34/chat34.bin",PIXEL="pixel-v2/character21.bin",READER="lector3/lector32.bin";static int limit(String kind){return kind.startsWith("reader")?96000000:8000000;}
  static SharedPreferences prefs(Context c){return c.getSharedPreferences("banana-model-training",0);}
  static String asset(String kind){if(kind.equals("chat"))return CHAT;if(kind.equals("pixel"))return PIXEL;if(kind.equals("reader"))return READER;throw new IllegalArgumentException("Modelo desconocido.");}
  static JSONObject row(Context c,String kind)throws Exception{return new JSONObject(prefs(c).getString(kind,"{}"));}

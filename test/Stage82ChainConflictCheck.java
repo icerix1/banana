@@ -2,7 +2,7 @@ package com.bananalab.lite;
 import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
 public final class Stage82ChainConflictCheck{
  static void check(boolean b,String s){if(!b)throw new AssertionError(s);}
- public static void main(String[] args)throws Exception{Path root=Paths.get(args[0]);BananaTransformer m;try(InputStream in=Files.newInputStream(root.resolve("assets/lector3/lector31.bin"))){m=BananaTransformer.container(in);}
+ public static void main(String[] args)throws Exception{Path root=Paths.get(args[0]);BananaTransformer m;try(InputStream in=Files.newInputStream(root.resolve("assets/lector3/lector32.bin"))){m=BananaTransformer.container(in);}
   // Library: larger cap, room report, trimming only old web pages
   check(NotebookDisk.MAX_DOCUMENTS==4096&&PageCrawl.MAX_PAGES<=NotebookDisk.MAX_DOCUMENTS,"library cap");CreatorPersistenceCheck.Fake c=new CreatorPersistenceCheck.Fake();final NotebookDisk disk=NotebookDisk.of(c);
   String filler=" Este texto agrega contenido suficiente para que el documento tenga varias oraciones útiles y distintas entre sí.";

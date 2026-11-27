@@ -1,0 +1,51 @@
+step 200 min 1.7 loss 2.350 label 0.351 lr 0.00040 tokens 720058 seq/s 89
+step 400 min 3.3 loss 2.774 label 0.261 lr 0.00060 tokens 1431056 seq/s 71
+step 600 min 4.9 loss 1.301 label 0.426 lr 0.00059 tokens 2150779 seq/s 150
+step 800 min 6.4 loss 1.120 label 0.272 lr 0.00059 tokens 2862335 seq/s 136
+step 1000 min 8.0 loss 2.511 label 0.446 lr 0.00058 tokens 3580496 seq/s 94
+step 1200 min 9.7 loss 2.589 label 0.265 lr 0.00058 tokens 4293617 seq/s 70
+EVAL min 10.0 top1 0.9 refuse_absent 0.9 chat 13/60 lectura-como-charla 0/30 {'mention': 0.838, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 1400 min 11.4 loss 2.444 label 0.531 lr 0.00057 tokens 5014669 seq/s 94
+step 1600 min 12.9 loss 2.946 label 0.208 lr 0.00056 tokens 5727269 seq/s 39
+step 1800 min 14.5 loss 2.669 label 0.015 lr 0.00055 tokens 6452372 seq/s 4
+step 2000 min 16.0 loss 2.305 label 0.350 lr 0.00054 tokens 7174357 seq/s 93
+step 2200 min 17.5 loss 1.423 label 0.405 lr 0.00053 tokens 7886166 seq/s 126
+step 2400 min 18.9 loss 2.155 label 0.531 lr 0.00052 tokens 8606717 seq/s 108
+step 2600 min 20.4 loss 1.291 label 0.668 lr 0.00050 tokens 9333589 seq/s 142
+step 2800 min 22.0 loss 2.558 label 0.421 lr 0.00049 tokens 10052813 seq/s 72
+step 3000 min 23.6 loss 1.147 label 0.241 lr 0.00047 tokens 10762152 seq/s 148
+step 3200 min 25.1 loss 2.523 label 0.557 lr 0.00046 tokens 11476131 seq/s 76
+step 3400 min 26.6 loss 1.244 label 0.567 lr 0.00044 tokens 12207491 seq/s 194
+step 3600 min 28.2 loss 2.515 label 0.169 lr 0.00043 tokens 12933600 seq/s 75
+step 3800 min 29.6 loss 2.529 label 0.202 lr 0.00041 tokens 13653971 seq/s 83
+EVAL min 30.0 top1 0.933 refuse_absent 0.9 chat 17/60 lectura-como-charla 0/30 {'mention': 0.919, 'relation': 1.0, 'define': 1.0, 'year': 0.0}
+step 4000 min 31.2 loss 2.718 label 0.098 lr 0.00039 tokens 14383598 seq/s 75
+step 4200 min 32.8 loss 2.424 label 0.515 lr 0.00037 tokens 15100168 seq/s 94
+step 4400 min 34.3 loss 2.510 label 0.039 lr 0.00036 tokens 15825364 seq/s 83
+step 4600 min 35.7 loss 2.638 label 0.346 lr 0.00034 tokens 16538836 seq/s 71
+step 4800 min 37.1 loss 1.490 label 0.213 lr 0.00032 tokens 17252736 seq/s 129
+step 5000 min 38.7 loss 1.262 label 0.381 lr 0.00030 tokens 17971008 seq/s 157
+step 5200 min 40.3 loss 2.855 label 0.022 lr 0.00028 tokens 18690157 seq/s 37
+step 5400 min 41.9 loss 1.318 label 0.503 lr 0.00027 tokens 19410596 seq/s 193
+step 5600 min 43.5 loss 2.121 label 0.562 lr 0.00025 tokens 20131125 seq/s 109
+step 5800 min 45.2 loss 2.594 label 0.312 lr 0.00023 tokens 20856962 seq/s 77
+step 6000 min 46.9 loss 2.449 label 0.448 lr 0.00021 tokens 21576200 seq/s 85
+step 6200 min 48.5 loss 1.320 label 0.414 lr 0.00019 tokens 22303588 seq/s 158
+EVAL min 50.0 top1 0.967 refuse_absent 0.85 chat 22/60 lectura-como-charla 0/30 {'mention': 0.946, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 6400 min 50.3 loss 1.574 label 0.410 lr 0.00017 tokens 23021297 seq/s 125
+step 6600 min 51.9 loss 1.193 label 0.153 lr 0.00016 tokens 23739242 seq/s 159
+step 6800 min 53.5 loss 1.997 label 0.682 lr 0.00014 tokens 24458812 seq/s 112
+step 7000 min 55.0 loss 3.506 label 0.013 lr 0.00013 tokens 25180604 seq/s 2
+step 7200 min 56.8 loss 2.588 label 0.716 lr 0.00011 tokens 25897504 seq/s 74
+step 7400 min 58.6 loss 2.590 label 0.299 lr 0.00010 tokens 26624792 seq/s 69
+step 7600 min 60.4 loss 2.441 label 0.145 lr 0.00009 tokens 27350544 seq/s 84
+step 7800 min 62.1 loss 2.482 label 0.295 lr 0.00008 tokens 28065976 seq/s 84
+step 8000 min 63.9 loss 1.007 label 0.176 lr 0.00007 tokens 28774747 seq/s 142
+step 8200 min 65.8 loss 2.283 label 0.176 lr 0.00006 tokens 29492424 seq/s 91
+step 8400 min 67.5 loss 0.827 label 0.294 lr 0.00005 tokens 30202369 seq/s 139
+step 8600 min 69.2 loss 1.028 label 0.482 lr 0.00004 tokens 30933602 seq/s 184
+EVAL min 70.0 top1 0.983 refuse_absent 0.95 chat 16/60 lectura-como-charla 0/30 {'mention': 0.973, 'relation': 1.0, 'define': 1.0, 'year': 1.0}
+step 8800 min 71.1 loss 1.088 label 0.288 lr 0.00004 tokens 31653756 seq/s 155
+step 9000 min 73.1 loss 2.515 label 0.029 lr 0.00004 tokens 32378429 seq/s 74
+step 9200 min 74.9 loss 0.936 label 0.373 lr 0.00004 tokens 33095897 seq/s 137
+FINAL steps 9211 tokens 33135555 top1 0.956 refuse_absent 0.957 chat 18/60 lectura-como-charla 0/30 {'mention': 0.941, 'relation': 1.0, 'define': 0.917, 'year': 1.0}

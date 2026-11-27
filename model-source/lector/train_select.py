@@ -41,7 +41,15 @@ def evaluate(model,tok,examples):
             p=scores(model,tok,t,ctx,q,yes,no);top=max(range(len(p)),key=lambda i:p[i])
             if answer is None:best_neg.append(p[top]);continue
             total[kind]+=1;ok=ctx[top]==answer;hit[kind]+=int(ok);best_pos.append((p[top],ok))
-    model.train();acc=sum(hit.values())/max(1,sum(total.values()));refuse=sum(1 for v in best_neg if v<.5)/max(1,len(best_neg))
+    import chat_intents as C
+    _,held=C.split();chat=0;stray=0
+    with torch.no_grad():
+        def ask(reply,message):
+            ids=S.encode_reply(tok,reply,message,True);ids=ids[0][:ids[1]];l=model(torch.tensor([ids]))[0,-1];return torch.softmax(l[[yes,no]],0)[0].item()
+        for message,reply in held:
+            ps=[ask(r,message) for r,_ in C.INTENTS];chat+=int(C.INTENTS[max(range(len(ps)),key=lambda i:ps[i])][0]==reply)
+        for t,ctx,q,answer,kind in examples[:30]:stray+=int(max(ask(r,q) for r,_ in C.INTENTS[::3])>=.8)
+    model.train();acc=sum(hit.values())/max(1,sum(total.values()));refuse=sum(1 for v in best_neg if v<.5)/max(1,len(best_neg));evaluate.chat=(chat,len(held),stray)
     return {k:round(hit[k]/total[k],3) for k in total},round(acc,3),round(refuse,3)
 if __name__=='__main__':
     rows=pickle.load(open(sys.argv[1],'rb'));merges=json.load(open(sys.argv[2]))['merges'];out=sys.argv[3];minutes=float(sys.argv[4]);init=sys.argv[5];os.makedirs(out,exist_ok=True)
@@ -70,6 +78,6 @@ if __name__=='__main__':
         if step%200==0:
             ans=(la*(w==1)).sum()/(w==1).sum();line=f'step {step} min {el/60:.1f} loss {loss.item():.3f} label {ans.item():.3f} lr {lr:.5f} tokens {seen} seq/s {step*x.size(0)/el:.0f}';print(line,flush=True);log.write(line+'\n');log.flush()
         if el>nextsave:
-            nextsave+=1200;save();by,acc,refuse=evaluate(model,tok,examples[:80]);line=f'EVAL min {el/60:.1f} top1 {acc} refuse_absent {refuse} {by}';print(line,flush=True);log.write(line+'\n');log.flush()
-    save();by,acc,refuse=evaluate(model,tok,examples);line=f'FINAL steps {step} tokens {seen} top1 {acc} refuse_absent {refuse} {by}';print(line,flush=True);log.write(line+'\n')
+            nextsave+=1200;save();by,acc,refuse=evaluate(model,tok,examples[:80]);line=f'EVAL min {el/60:.1f} top1 {acc} refuse_absent {refuse} chat {evaluate.chat[0]}/{evaluate.chat[1]} lectura-como-charla {evaluate.chat[2]}/30 {by}';print(line,flush=True);log.write(line+'\n');log.flush()
+    save();by,acc,refuse=evaluate(model,tok,examples);line=f'FINAL steps {step} tokens {seen} top1 {acc} refuse_absent {refuse} chat {evaluate.chat[0]}/{evaluate.chat[1]} lectura-como-charla {evaluate.chat[2]}/30 {by}';print(line,flush=True);log.write(line+'\n')
     json.dump({'name':'Banana Lector 3 (selector)','external_weights':False,'continues_from':'Lector 1','parameters':sum(t.numel() for t in model.tensors()),'layers':CFG['layers'],'width':CFG['d'],'heads':CFG['heads'],'context_tokens':CFG['context'],'vocab_size':tok.vocab_size,'task':'si/no: ¿esta oración responde la pregunta?; tarea menor: escribir una pregunta para una oración','training_text':'Wikipedia en español (dump 20231101, CC BY-SA 4.0), 80000 artículos','steps':step,'training_tokens':seen,'heldout_top1':acc,'heldout_refuses_absent':refuse,'heldout_by_kind':by,'heldout_note':'160 preguntas de plantilla sobre artículos no vistos; acierto = la oración mejor puntuada es la correcta','limitations':'Elige entre oraciones del fragmento; no redacta respuestas ni razona. Sólo español.'},open(os.path.join(out,'model-card.json'),'w'),ensure_ascii=False,indent=1)

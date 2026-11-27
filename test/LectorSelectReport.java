@@ -5,7 +5,7 @@ import org.json.*;import java.io.*;import java.nio.file.*;import java.util.*;
 public final class LectorSelectReport{
  static final double[] LEVELS={0,.3,.5,.7,.8,.9,.95};
  static String flat(String s){return new Lector.Flat(s,true).text.toString();}
- public static void main(String[] a)throws Exception{Path root=Paths.get(a[0]);BananaTransformer m;try(InputStream in=Files.newInputStream(root.resolve("assets/lector3/lector31.bin"))){m=BananaTransformer.container(in);}
+ public static void main(String[] a)throws Exception{Path root=Paths.get(a[0]);BananaTransformer m;try(InputStream in=Files.newInputStream(root.resolve("assets/lector3/lector32.bin"))){m=BananaTransformer.container(in);}
   JSONArray examples=new JSONArray(new String(Files.readAllBytes(Paths.get(a[1])),"UTF-8"));Map<String,int[]> by=new TreeMap<>();int n=0,right=0,lexical=0,lexicalSilent=0,unaligned=0,absent=0;int[] shown=new int[LEVELS.length],good=new int[LEVELS.length],fallbackShown=new int[LEVELS.length],fallbackGood=new int[LEVELS.length],absentShown=new int[LEVELS.length];long time=System.nanoTime();
   for(int i=0;i<examples.length();i++){JSONArray e=examples.getJSONArray(i);String ctx=e.getString(0),q=e.getString(1),target=e.getString(2),kind=e.getString(3);List<String> sentences=new ArrayList<>();for(String s:KnowledgeNotebook.chunks(ctx))if(s.length()>=20)sentences.add(s);if(sentences.isEmpty())continue;
    if(kind.equals("negative")){absent++;Lector.Pick pick=Lector.select(m,null,sentences,q,Lector.MAX_CANDIDATES);for(int t=0;t<LEVELS.length;t++)if(pick!=null&&pick.confidence>=LEVELS[t])absentShown[t]++;continue;}

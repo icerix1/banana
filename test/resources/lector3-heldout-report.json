@@ -1,38 +1,38 @@
 {
- "readerBestSentenceRight": 331,
+ "readerBestSentenceRight": 330,
  "absentExamples": 50,
  "note": "Ejemplos de plantilla sobre artículos no vistos; el extractor léxico se mide sobre el mismo fragmento único. No es un benchmark externo.",
  "shownAtLevel": [
   343,
-  333,
-  329,
-  311,
-  301,
-  271,
-  230
+  330,
+  324,
+  312,
+  298,
+  269,
+  229
  ],
  "rightAtLevel": [
-  331,
-  323,
-  320,
-  303,
+  330,
+  319,
+  315,
+  305,
   294,
-  266,
+  267,
   228
  ],
  "fallbackRightAtLevel": [
-  171,
-  168,
-  166,
+  173,
+  167,
+  164,
   157,
-  152,
-  133,
-  112
+  150,
+  140,
+  117
  ],
  "absentWronglyShownAtLevel": [
   50,
-  6,
-  3,
+  2,
+  1,
   1,
   1,
   1,
@@ -42,17 +42,17 @@
   "year": {
    "lexical": 5,
    "examples": 13,
-   "reader": 12
+   "reader": 11
   },
   "define": {
    "lexical": 48,
    "examples": 57,
-   "reader": 55
+   "reader": 54
   },
   "mention": {
    "lexical": 95,
    "examples": 194,
-   "reader": 186
+   "reader": 187
   },
   "relation": {
    "lexical": 14,
@@ -63,12 +63,12 @@
  "lexicalSilent": 174,
  "fallbackShownAtLevel": [
   174,
-  171,
-  169,
-  160,
-  154,
-  134,
-  113
+  168,
+  164,
+  157,
+  150,
+  140,
+  117
  ],
  "examples": 343,
  "confidenceLevels": [
@@ -81,7 +81,7 @@
   0.95
  ],
  "appThreshold": 0.7,
- "secondsPerExampleHostJvm": 0.8718205056666667,
+ "secondsPerExampleHostJvm": 0.8724747842569975,
  "lexicalSameSentence": 162,
  "skippedBySentenceSplit": 7
 }

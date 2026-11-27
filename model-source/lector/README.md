@@ -50,3 +50,7 @@ venv/bin/python train_select.py rows.pkl tokenizer.json etapa2/ 120 etapa1/state
 ## Lector 3.1 y prueba de 8 capas (0.71.1)
 
 `lector31/` guarda los registros. Dos continuaciones de 150 minutos desde Lector 3 con `train_select.py ... 6 2` y `... 8 2` (capas e hilos), con negativos de otros párrafos y de otra relación y seis relaciones nuevas en `lector_data.py`. `eval_hard.py` mide con unas 22 oraciones candidatas del mismo artículo: Lector 3 0,82; 6 capas 0,78; 8 capas 0,813. Sin diferencia real. La app usa la de 6 capas (`assets/lector3/lector31.bin`); la de 8 capas no se incluye.
+
+## Lector 3.2: respuestas de conversación (0.71.2)
+
+`chat_intents.py` tiene 30 respuestas redactadas con ocho formas de pedir cada una (las dos últimas apartadas). `lector_select.chat_item` agrega a la mezcla «respuesta : R» [user] mensaje → si/no, con negativos de otra respuesta, de preguntas de lectura y de saludos ante oraciones leídas. `train_select.py rows.pkl tokenizer.json salida/ 75 lector31-final.pt 6 3`. `lector32/` guarda registro y ficha. El modelo solo elige bien 18 de 60 formas apartadas; la app sólo responde cuando coincide con el parecido de palabras (11 de 12).

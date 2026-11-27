@@ -5,7 +5,7 @@ final class BananaEngine{
  static final class Result{String text,topic,mode,studioId="";boolean importReference,changed,draft;SceneDraft scene;}
  static Result run(Context c,String message,List<String[]> history,String topic,boolean useTransformer,Semilla planner)throws Exception{Result out=MobileCore.run(c,message,history,topic,useTransformer,planner);if(out!=null&&out.text!=null)ConversationFeedback.observe(c,message,out);return out;}
  static Result raw(Context c,String message,List<String[]> history,String topic,boolean useTransformer,Semilla planner)throws Exception{
-  BananaChat.Reply reply;String mode="conversacion",studioId="";boolean showAnimation=false,importReference=false;
+  BananaChat.Reply reply;String chosen=null;String mode="conversacion",studioId="";boolean showAnimation=false,importReference=false;
     String normalized=ChatLanguage.normalize(message);
     CreatorSession creator=CreatorMemory.load(c);
     SceneLibrary.Action saved=SceneLibrary.apply(c,message,creator.pending!=null?creator.pending:SceneStore.load(c));
@@ -31,6 +31,8 @@ if(utility==null)utility=ProjectMemory.reply(c,message);
      if(dialogue!=null)reply=new BananaChat.Reply(dialogue,topic);
      else if(normalized.matches("(?s)^(?:busca|investiga|que es|quien es|que sabes sobre|busca informacion).*")){
       reply=BananaChat.reply(c,message,topic);mode="fuentes";
+     }else if(useTransformer&&(chosen=ChatBank.reply(c,message))!=null){
+      reply=new BananaChat.Reply(chosen,topic);mode="conversacion";
      }else if(useTransformer){
       String notes=ProjectMemory.related(c,message);
       java.util.List<String[]> turns=new java.util.ArrayList<>(history);

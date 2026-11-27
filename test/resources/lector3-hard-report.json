@@ -1,0 +1,10 @@
+{
+ "note": "Unas 22 oraciones candidatas del mismo artículo; preguntas de plantilla. La elección final sólo se mide con el último peso. «answerAmongJudged» se midió con 12 candidatas; la app usa 10.",
+ "weight0.05": {
+  "chosenRight": 153,
+  "examples": 200,
+  "answerAmongJudged": 198,
+  "shownAtAppThreshold": 183,
+  "shownRight": 147
+ }
+}

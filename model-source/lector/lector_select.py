@@ -21,7 +21,25 @@ def draw(pool,rng):
     answer=None if ex[2]==D.NEGATIVE else ex[2]
     if answer is not None and answer not in ctx:return None
     return t,ctx,ex[1],answer,ex[3]
-def training_item(pool,tok,rng,question_share=.15):
+def encode_reply(tok,reply,message,label):
+    """¿Este mensaje pide esta respuesta del banco de conversación?"""
+    c=tok.encode('respuesta : '+reply);q=tok.encode(message);a=tok.encode('si' if label else 'no')
+    if len(c)>170 or len(q)>40:return None
+    ids=[2,3]+c+[3]+q+[4]+a+[5];return ids,len(ids)-len(a)-1
+def chat_item(pool,tok,rng):
+    """Positivo, otra respuesta del banco, una pregunta de lectura ante una respuesta, o un saludo ante una oración leída."""
+    import chat_intents as C
+    train,_=C.split();message,reply=rng.choice(train);r=rng.random()
+    if r<.36:return encode_reply(tok,reply,message,True)
+    if r<.78:
+        other=rng.choice(C.INTENTS)[0]
+        return encode_reply(tok,other,message,False) if other!=reply else None
+    d=draw(pool,rng)
+    if not d:return None
+    if r<.9:return encode_reply(tok,reply,d[2],False)
+    return encode_pair(tok,None,None,rng.choice(d[1]),message,False)
+def training_item(pool,tok,rng,question_share=.15,chat_share=.22):
+    if rng.random()<chat_share:return chat_item(pool,tok,rng)
     d=draw(pool,rng)
     if not d:return None
     t,ctx,q,answer,kind=d

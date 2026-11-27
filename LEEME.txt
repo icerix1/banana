@@ -1,3 +1,39 @@
+BANANA0.71.2 — CHARLA, SEGUIMIENTO DE LA CONVERSACIÓN Y RESPUESTAS CORTAS
+
+SEGUIR EL HILO
+Después de una respuesta sobre tus lecturas podés preguntar «¿y dónde murió?» o «¿y en qué año nació?» sin repetir de quién hablás: toma el sujeto de la pregunta anterior y te avisa cómo lo entendió. Dura diez minutos y se pierde si cambiás de tema con una pregunta completa. También entiende «en qué año…» y «en qué lugar…» como «cuándo…» y «dónde…».
+
+RESPUESTA CORTA
+Arriba de la oración elegida aparece «En corto:» con la fecha, el lugar, la cantidad o el nombre que responde, cuando se puede recortar con claridad. Es un pedazo literal de la oración, nunca texto escrito por el modelo. Si no está claro, muestra sólo la oración.
+
+CUANDO HAY DOS RESPUESTAS POSIBLES
+Si dos fuentes distintas dan oraciones distintas y las dos convencen por igual, ya no elige una en silencio: muestra las dos con su fuente y te pregunta cuál buscás.
+
+CHARLA ELEGIDA, NO INVENTADA
+Para la conversación general hay un banco de 30 respuestas redactadas (quién es, qué puede hacer, cómo aprende, saludos, ánimo, cómo pedir cada cosa). El lector decide si tu mensaje pide alguna; si no está seguro, sigue el camino de siempre. Medido con 60 formas de decir las cosas que no había visto: responde en 12 y acierta en 11. Con las formas conocidas o muy parecidas responde casi siempre; ante una forma nueva, una de cada cinco veces. El modelo solo elegía bien 22 de 60 y el parecido de palabras solo 30: se usa únicamente cuando los dos coinciden. Ocho preguntas de conocimiento de prueba no fueron tomadas por charla. Las rutas anteriores (saludos y órdenes reconocidas) siguen yendo primero.
+
+EXAMEN CON TUS PREGUNTAS
+Después de una respuesta sobre tus lecturas podés decir «esa respuesta estuvo bien» o «esa respuesta estuvo mal». «Examen con mis preguntas» vuelve a hacer las calificadas: cuenta cuántas de las buenas conserva y cuántas de las malas cambiaron. Es la única medida hecha con preguntas tuyas; guarda hasta 200.
+
+EJEMPLOS DE JAVA
+«Ejemplos de Java sobre listas» busca entre los guardados los que nombran lo que pedís (por palabras, no porque entienda el código). La lista dice en palabras simples por qué no compila cada uno. Con el cargador puesto y la app cerrada compila sola hasta tres ejemplos sin comprobar por día.
+
+AUTOPRUEBA ANTES DE INSTALAR
+Al reconstruir la APK, cinco comprobaciones corren dentro del código recién compilado antes de preparar la actualización. Si falla alguna que en la versión instalada pasa, no prepara la APK y te dice cuál. Si el mecanismo no puede ejecutarse en tu dispositivo, sigue como antes y lo deja anotado. Las otras cuatro comprobaciones, que necesitan los modelos instalados, siguen corriendo después de instalar.
+
+EL LECTOR
+Mismo tamaño; se entrenó 75 minutos más para elegir respuestas de conversación sin perder lectura: 330 de 343 en la prueba de siempre y 1 error en 50 preguntas sin dato. En la prueba difícil (unas 22 oraciones candidatas) elige bien 153 de 200.
+Tres ajustes por fallas encontradas al probar: la pregunta se pasa sin tildes, porque mezclar palabras con y sin tilde bajaba mucho el acierto; cada oración se evalúa también sin el título del documento, porque un título sobre otra cosa escondía la respuesta; y lee 10 oraciones candidatas en vez de 12, porque ahora cada una se evalúa hasta tres veces.
+La búsqueda por parecido de significado se probó y no sirvió: con palabras en común la respuesta correcta ya llega al lector en 199 de 200 casos, y con el parecido bajaba. Quedó sólo para desempatar.
+
+AL ACTUALIZAR
+Cambió el lector base: lo aprendido en el dispositivo con la versión anterior se descarta y el estudio empieza de nuevo. Tus documentos no se tocan.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.71.2.md. No se ejecutó en emulador ni en dispositivo.
+
+--- Funciones anteriores; prevalecen los cambios0.71.2 descritos arriba ---
+
 BANANA0.71.1 — DOS LECTURAS UNIDAS, CONTRADICCIONES Y BIBLIOTECA MÁS GRANDE
 
 PREGUNTAS QUE JUNTAN DOS LECTURAS
