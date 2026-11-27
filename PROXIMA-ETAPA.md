@@ -1,5 +1,7 @@
 # Mejoras propuestas después de0.69
 
+Estado tras0.71.3: la app usa las calificaciones del usuario para ajustar su umbral, estudiar y aprender formas de hablar. Todo depende ahora de datos de uso real, que no existen: ninguna versión corrió en un dispositivo.
+
 Estado tras0.71.2: hechos seguimiento de la conversación, respuesta corta, pregunta ante dos respuestas, charla por selección (cobertura baja ante formas nuevas), examen con preguntas del usuario, búsqueda de ejemplos, motivos del compilador y autoprueba previa a instalar. La búsqueda por significado barata no ayudó. Pendiente: GPU, y sobre todo probar en el dispositivo.
 
 Estado tras0.71.1: hechas las preguntas de dos pasos (forma fija), la detección de contradicciones entre definiciones y la biblioteca de 4096 documentos con limpieza a pedido. Se probó un modelo de 8 capas y no mejoró. Con este cómputo, el próximo salto de comprensión no saldrá de entrenar más acá sino de medir y corregir con uso real en la tablet.

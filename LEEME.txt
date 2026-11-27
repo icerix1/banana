@@ -1,3 +1,35 @@
+BANANA0.71.3 — APRENDE DE TUS CALIFICACIONES Y SE AJUSTA SOLA
+
+Todo lo de esta versión se alimenta de lo mismo: que después de una respuesta le digas «esa respuesta estuvo bien» o «esa respuesta estuvo mal». Sin calificaciones, nada de esto cambia.
+
+SE AJUSTA SOLA
+La app elige por su cuenta cuánta seguridad le pide al lector antes de responder. Con al menos 8 respuestas calificadas, prueba cinco niveles (0,5 a 0,9) contra tus preguntas y se queda con el que conserva más respuestas buenas y repite menos malas. Lo hace al final de cada «examen con mis preguntas», o cuando decís «ajustate con mis preguntas». Te dice qué eligió y por qué. «Volvé a los valores de fábrica» lo deshace. Sólo cambia ese número, dentro de esos límites; no toca su código.
+
+ESTUDIA CON TUS CALIFICACIONES
+Cada respuesta calificada pasa a ser material de estudio del lector en segundo plano: una «bien» le enseña que esa oración sí respondía y que la vecina no; una «mal», que esa oración no era la respuesta. Son las únicas etiquetas que vienen de vos y no de plantillas. Además estudia primero los documentos sobre los que hiciste preguntas.
+
+APRENDE TUS FORMAS DE HABLAR
+Si una respuesta de charla estuvo bien, guarda tu frase exacta: la próxima vez responde directo, sin dudar. Si estuvo mal, no vuelve a dar esa respuesta para ese mensaje. Guarda hasta 300. Así sube la cobertura justo donde era floja (una de cada cinco formas nuevas). La calificación va a lo último que habló: la charla o el lector.
+
+TE PROPONE CÓMO SEGUIR
+Después de una respuesta sobre tus lecturas, a veces agrega una pregunta que escribe ella misma sobre la oración siguiente del texto, para que puedas seguir. Sólo la muestra si todas sus palabras salen del texto o de lo que venías preguntando: al probar, el modelo inventó un nombre que no existía («qué estudió antonio de lara») y esa regla lo descarta. La misma regla vale ahora para las preguntas propias con que estudia.
+
+ESTUDIA MÁS RÁPIDO
+En el dispositivo ya no ajusta todo el modelo sino sus dos capas de arriba y la salida. Las capas de abajo se calculan una vez por ejemplo y se reutilizan. Un bloque de estudio cuesta bastante menos de la mitad que antes; cuánto exactamente en tu tablet no está medido. Las capas que se agregan al crecer quedan arriba, así que son las que se entrenan.
+
+MÁS COMPROBACIONES ANTES DE INSTALAR
+La autoprueba que corre sobre el código recién compilado pasó de 5 a 8 comprobaciones: suma seguimiento y respuesta corta, preguntas en dos pasos y contradicciones, y recorrido, PDF y ajuste propio.
+
+LO QUE NO SE HIZO Y POR QUÉ
+• Ejercicios de programación con prueba automática: el buscador de programas de0.56 ya hace eso para listas y texto; ampliarlo exige cambiar un mecanismo que no puedo probar acá.
+• Que el banco de charla crezca con páginas de preguntas frecuentes: ya podés enseñarle respuestas con «cuando te diga "X" respondas "Y"», y las preguntas frecuentes que lee las responde el lector con su fuente.
+• Recordar tu nombre y tus temas en la charla: toca rutas de conversación anteriores que podían romperse.
+
+ALCANCE COMPROBADO
+Ver VALIDACION-0.71.3.md. No se ejecutó en emulador ni en dispositivo.
+
+--- Funciones anteriores; prevalecen los cambios0.71.3 descritos arriba ---
+
 BANANA0.71.2 — CHARLA, SEGUIMIENTO DE LA CONVERSACIÓN Y RESPUESTAS CORTAS
 
 SEGUIR EL HILO
